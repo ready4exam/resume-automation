@@ -4,6 +4,11 @@ on:
   issues:
     types: [opened]
 
+# IMPORTANT: allow the workflow to write comments on issues
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   tailor:
     runs-on: ubuntu-latest
@@ -37,18 +42,18 @@ jobs:
             const jobTitle = extractSingle("Job Title");
             const extra = extractSingle("Extra");
 
-            // Everything after "Job Description:" is the JD
-            const jdMarker = "Job Description:";
-            let jdText = "";
-            const idx = body.indexOf(jdMarker);
+            // JD starts after "Job Description:"
+            const marker = "Job Description:";
+            let jd = "";
+            const idx = body.indexOf(marker);
             if (idx !== -1) {
-              jdText = body.substring(idx + jdMarker.length).trim();
+              jd = body.substring(idx + marker.length).trim();
             }
 
             core.setOutput("company", company || "Unknown Company");
             core.setOutput("job_title", jobTitle || "Unknown Role");
             core.setOutput("extra", extra || "");
-            core.setOutput("job_description", jdText || "");
+            core.setOutput("job_description", jd || "");
 
       - name: Save JD to file
         run: |
@@ -84,16 +89,4 @@ jobs:
             const url = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
 
             const body = [
-              "✅ Your tailored resume has been generated.",
-              "",
-              `You can download the Markdown and DOCX files from the Actions run: ${url}`,
-              "",
-              "Look for the artifact named `tailored-resume-${issue_number}`."
-            ].join("\n");
-
-            await github.rest.issues.createComment({
-              owner,
-              repo,
-              issue_number,
-              body
-            });
+              "✅ Your tailored resume has been generated successfully.",
