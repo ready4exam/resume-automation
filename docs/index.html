@@ -2,71 +2,99 @@
 <html>
 <head>
   <title>Private Resume Tailor</title>
+  <meta charset="utf-8" />
   <style>
-    body { font-family: Arial; margin: 40px; max-width: 700px; }
-    input, textarea { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #888; margin-bottom: 15px; }
-    button { padding: 12px 20px; background: black; color: white; border: none; border-radius: 6px; cursor: pointer; }
-    button:hover { background: #444; }
+    body { font-family: Arial, sans-serif; margin: 40px; max-width: 800px; }
+    h2 { margin-bottom: 10px; }
+    label { font-weight: bold; display: block; margin-top: 15px; }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #888;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border-radius: 6px;
+      border: none;
+      background: #000;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #333; }
+    #status { margin-top: 15px; font-size: 14px; }
   </style>
 </head>
 <body>
 
-<h2>AI Resume Tailor (Private)</h2>
+<h2>AI Resume Tailor (Issue Triggered)</h2>
+<p>
+  Fill the details below and click <b>Create GitHub Issue</b>. <br>
+  A new Issue will open in this repo with all the information pre-filled. <br>
+  Review it and click <b>"Submit new issue"</b>. That will trigger the GitHub Action to generate your tailored resume.
+</p>
 
 <form id="form">
   <label>Company</label>
-  <input id="company" required>
+  <input id="company" required />
 
   <label>Job Title</label>
-  <input id="jobTitle" required>
+  <input id="jobTitle" required />
 
   <label>Job Description</label>
   <textarea id="jobDesc" rows="10" required></textarea>
 
-  <label>Extra Instructions</label>
+  <label>Extra Instructions (optional)</label>
   <textarea id="extra" rows="4"></textarea>
 
-  <button type="submit">Generate Resume</button>
+  <button type="submit">Create GitHub Issue</button>
 </form>
 
 <p id="status"></p>
 
 <script>
-  const token = "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";  <!-- insert your PAT -->
-  const repo = "ready4exam/resume-automation";  <!-- ex: keshavkarn/resume-ai -->
+  // IMPORTANT: set this to your repo full name
+  const repoFullName = "ready4exam/resume-automation"; // owner/repo
 
-  document.getElementById("form").addEventListener("submit", async (e) => {
+  document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    document.getElementById("status").innerText = "Starting resume generation...";
+    const company = document.getElementById("company").value.trim();
+    const jobTitle = document.getElementById("jobTitle").value.trim();
+    const jobDesc = document.getElementById("jobDesc").value.trim();
+    const extra = document.getElementById("extra").value.trim();
 
-    const url = `https://api.github.com/repos/${repo}/actions/workflows/tailor-resume.yml/dispatches`;
-
-    const body = {
-      ref: "main",
-      inputs: {
-        company: document.getElementById("company").value,
-        job_title: document.getElementById("jobTitle").value,
-        job_description: document.getElementById("jobDesc").value,
-        extra: document.getElementById("extra").value
-      }
-    };
-
-    const resp = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Accept": "application/vnd.github+json",
-        "Authorization": `Bearer ${token}`
-      },
-      body: JSON.stringify(body)
-    });
-
-    if (resp.ok) {
-      document.getElementById("status").innerHTML =
-        "<b>Resume generation started!</b><br>Check GitHub Actions in 20–30 seconds.";
-    } else {
-      document.getElementById("status").innerText = "Failed: " + (await resp.text());
+    if (!company || !jobTitle || !jobDesc) {
+      document.getElementById("status").innerText = "Please fill Company, Job Title, and Job Description.";
+      return;
     }
+
+    const title = `Tailor Resume: ${company} - ${jobTitle}`;
+
+    // Body format designed to be easy for the workflow to parse
+    const body = [
+      `Company: ${company}`,
+      `Job Title: ${jobTitle}`,
+      `Extra: ${extra || "(none)"}`,
+      "",
+      "Job Description:",
+      jobDesc
+    ].join("\n");
+
+    const url = `https://github.com/${repoFullName}/issues/new` +
+      `?title=${encodeURIComponent(title)}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    document.getElementById("status").innerHTML =
+      "Opening GitHub Issue page in a new tab...<br>" +
+      "Make sure you are logged into GitHub and then click <b>\"Submit new issue\"</b>.";
+
+    window.open(url, "_blank");
   });
 </script>
 
