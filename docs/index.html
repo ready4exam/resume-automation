@@ -1,42 +1,20 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Resume Tailor</title>
+  <title>Private Resume Tailor</title>
   <style>
-    body {
-      font-family: Arial;
-      margin: 40px;
-      max-width: 700px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #aaa;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-    button {
-      padding: 12px 20px;
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 18px;
-    }
+    body { font-family: Arial; margin: 40px; max-width: 700px; }
+    input, textarea { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #888; margin-bottom: 15px; }
+    button { padding: 12px 20px; background: black; color: white; border: none; border-radius: 6px; cursor: pointer; }
     button:hover { background: #444; }
   </style>
 </head>
 <body>
 
-<h2>Tailor Your Resume (Gemini Powered)</h2>
+<h2>AI Resume Tailor (Private)</h2>
 
-<form id="tailorForm">
-  <label>Company Name</label>
+<form id="form">
+  <label>Company</label>
   <input id="company" required>
 
   <label>Job Title</label>
@@ -45,7 +23,7 @@
   <label>Job Description</label>
   <textarea id="jobDesc" rows="10" required></textarea>
 
-  <label>Extra Instructions (Optional)</label>
+  <label>Extra Instructions</label>
   <textarea id="extra" rows="4"></textarea>
 
   <button type="submit">Generate Resume</button>
@@ -54,14 +32,13 @@
 <p id="status"></p>
 
 <script>
-  document.getElementById("tailorForm").addEventListener("submit", async (e) => {
+  const token = "YOUR_GITHUB_PAT_HERE";  <!-- insert your PAT -->
+  const repo = "YOUR_USERNAME/YOUR_REPO";  <!-- ex: keshavkarn/resume-ai -->
+
+  document.getElementById("form").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const status = document.getElementById("status");
-    status.innerText = "Sending request to GitHub Actions...";
-
-    const repo = "YOUR_USERNAME/YOUR_REPO";
-    const token = "YOUR_GITHUB_PAT"; // Must be stored in Secrets if embedding
+    document.getElementById("status").innerText = "Starting resume generation...";
 
     const url = `https://api.github.com/repos/${repo}/actions/workflows/tailor-resume.yml/dispatches`;
 
@@ -85,9 +62,10 @@
     });
 
     if (resp.ok) {
-      status.innerHTML = "<b>Resume generation started!</b><br>Check GitHub Actions in 20s.";
+      document.getElementById("status").innerHTML =
+        "<b>Resume generation started!</b><br>Check GitHub Actions in 20–30 seconds.";
     } else {
-      status.innerText = "Failed: " + (await resp.text());
+      document.getElementById("status").innerText = "Failed: " + (await resp.text());
     }
   });
 </script>
