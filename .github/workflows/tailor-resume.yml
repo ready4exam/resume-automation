@@ -1,1 +1,56 @@
 
+name: Tailor Resume
+
+on:
+  workflow_dispatch:
+    inputs:
+      company:
+        description: "Company name"
+        required: true
+      job_title:
+        description: "Job title"
+        required: true
+      job_description:
+        description: "Job description (paste text)"
+        required: true
+      extra:
+        description: "Extra instructions (optional)"
+        required: false
+        default: ""
+
+jobs:
+  tailor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install deps
+        run: npm install
+
+      - name: Save JD to file
+        run: |
+          mkdir -p tmp
+          echo "${{ github.event.inputs.job_description }}" > tmp/jd.txt
+
+      - name: Run tailoring script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          node tailor_resume.mjs \
+            --company "${{ github.event.inputs.company }}" \
+            --job-title "${{ github.event.inputs.job_title }}" \
+            --job-desc-file "tmp/jd.txt" \
+            --extra "${{ github.event.inputs.extra }}"
+
+      - name: Upload tailored resume
+        uses: actions/upload-artifact@v4
+        with:
+          name: tailored-resume
+          path: output/
