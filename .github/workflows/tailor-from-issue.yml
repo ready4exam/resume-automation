@@ -1,0 +1,99 @@
+name: Tailor Resume from Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  tailor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Parse issue body
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || "";
+
+            function extractSingle(label) {
+              const re = new RegExp(`^${label}: *(.*)$`, "mi");
+              const m = body.match(re);
+              return m ? m[1].trim() : "";
+            }
+
+            const company = extractSingle("Company");
+            const jobTitle = extractSingle("Job Title");
+            const extra = extractSingle("Extra");
+
+            // Everything after "Job Description:" is the JD
+            const jdMarker = "Job Description:";
+            let jdText = "";
+            const idx = body.indexOf(jdMarker);
+            if (idx !== -1) {
+              jdText = body.substring(idx + jdMarker.length).trim();
+            }
+
+            core.setOutput("company", company || "Unknown Company");
+            core.setOutput("job_title", jobTitle || "Unknown Role");
+            core.setOutput("extra", extra || "");
+            core.setOutput("job_description", jdText || "");
+
+      - name: Save JD to file
+        run: |
+          mkdir -p tmp
+          cat << 'EOF' > tmp/jd.txt
+          ${{ steps.parse.outputs.job_description }}
+          EOF
+
+      - name: Run tailoring script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          node tailor_resume.mjs \
+            --company "${{ steps.parse.outputs.company }}" \
+            --job-title "${{ steps.parse.outputs.job_title }}" \
+            --job-desc-file tmp/jd.txt \
+            --extra "${{ steps.parse.outputs.extra }}"
+
+      - name: Upload tailored resume artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: "tailored-resume-${{ github.event.issue.number }}"
+          path: jobs/
+
+      - name: Comment back on issue with link to run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = context.payload.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const runId = process.env.GITHUB_RUN_ID;
+            const url = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
+
+            const body = [
+              "✅ Your tailored resume has been generated.",
+              "",
+              `You can download the Markdown and DOCX files from the Actions run: ${url}`,
+              "",
+              "Look for the artifact named `tailored-resume-${issue_number}`."
+            ].join("\n");
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number,
+              body
+            });
