@@ -1,14 +1,36 @@
 import fs from "fs";
 import path from "path";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { Document, Packer, Paragraph, TextRun } from "docx";
 
-// Load Gemini API Key
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 function getArg(flag, defaultValue = "") {
   const idx = process.argv.indexOf(flag);
   if (idx === -1 || idx === process.argv.length - 1) return defaultValue;
   return process.argv[idx + 1];
+}
+
+function mdToDocxParagraphs(text) {
+  return text.split("\n").map(line =>
+    new Paragraph({
+      children: [new TextRun(line)],
+    })
+  );
+}
+
+async function generateDocx(markdown, outPath) {
+  const doc = new Document({
+    sections: [
+      {
+        properties: {},
+        children: mdToDocxParagraphs(markdown)
+      }
+    ]
+  });
+
+  const buffer = await Packer.toBuffer(doc);
+  fs.writeFileSync(outPath, buffer);
 }
 
 async function main() {
@@ -31,39 +53,45 @@ ${systemPrompt}
 
 ---------------------
 COMPANY: ${company}
-TARGET JOB TITLE: ${jobTitle}
+TARGET ROLE: ${jobTitle}
 
 JOB DESCRIPTION:
 ${jobDesc}
 
-EXTRA INSTRUCTIONS:
-${extra || "(none)"}
+EXTRA:
+${extra}
 
 BASE RESUME:
 ${baseResume}
 ---------------------
-
-REMEMBER:
-- Tailor the resume
-- Then act as recruiter & improve it
-- Output FINAL resume only
   `.trim();
 
-  // Using Gemini Flash 1.5 — FREE tier
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
   const result = await model.generateContent(prompt);
   const text = result.response.text();
 
   const safeCompany = company.replace(/[^a-z0-9]+/gi, "_");
   const safeTitle = jobTitle.replace(/[^a-z0-9]+/gi, "_");
-  const outDir = path.join(process.cwd(), "output");
-  const outFile = path.join(outDir, `resume_${safeCompany}_${safeTitle}.md`);
+  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
 
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
+  const versionDir = path.join(
+    process.cwd(),
+    "jobs",
+    safeCompany,
+    safeTitle,
+    timestamp
+  );
 
-  fs.writeFileSync(outFile, text);
-  console.log("Tailored resume saved to:", outFile);
+  fs.mkdirSync(versionDir, { recursive: true });
+
+  const mdOut = path.join(versionDir, `resume_${safeCompany}_${safeTitle}.md`);
+  const docOut = mdOut.replace(".md", ".docx");
+
+  fs.writeFileSync(mdOut, text);
+  await generateDocx(text, docOut);
+
+  console.log("Saved:", mdOut);
+  console.log("Saved:", docOut);
 }
 
 main().catch(err => {
