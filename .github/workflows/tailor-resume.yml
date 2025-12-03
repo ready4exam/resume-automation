@@ -1,4 +1,3 @@
-
 name: Tailor Resume
 
 on:
@@ -11,10 +10,10 @@ on:
         description: "Job title"
         required: true
       job_description:
-        description: "Job description (paste text)"
+        description: "Paste the full Job Description"
         required: true
       extra:
-        description: "Extra instructions (optional)"
+        description: "Extra tailoring notes (optional)"
         required: false
         default: ""
 
@@ -23,15 +22,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repo
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 20
 
-      - name: Install deps
+      - name: Install dependencies
         run: npm install
 
       - name: Save JD to file
@@ -39,9 +38,9 @@ jobs:
           mkdir -p tmp
           echo "${{ github.event.inputs.job_description }}" > tmp/jd.txt
 
-      - name: Run tailoring script
+      - name: Run resume tailoring script
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           node tailor_resume.mjs \
             --company "${{ github.event.inputs.company }}" \
