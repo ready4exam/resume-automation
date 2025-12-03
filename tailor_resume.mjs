@@ -1,11 +1,9 @@
-
 import fs from "fs";
 import path from "path";
-import OpenAI from "openai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
+// Load Gemini API Key
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 function getArg(flag, defaultValue = "") {
   const idx = process.argv.indexOf(flag);
@@ -24,62 +22,51 @@ async function main() {
     process.exit(1);
   }
 
-  const baseResumePath = path.join(process.cwd(), "base_resume.md");
-  const systemPromptPath = path.join(process.cwd(), "templates", "system_prompt.txt");
-  const jobDescPath = path.join(process.cwd(), jobDescFile);
+  const baseResume = fs.readFileSync("base_resume.md", "utf8");
+  const systemPrompt = fs.readFileSync("templates/system_prompt.txt", "utf8");
+  const jobDesc = fs.readFileSync(jobDescFile, "utf8");
 
-  const baseResume = fs.readFileSync(baseResumePath, "utf8");
-  const systemPrompt = fs.readFileSync(systemPromptPath, "utf8");
-  const jobDesc = fs.readFileSync(jobDescPath, "utf8");
+  const prompt = `
+${systemPrompt}
 
-  const userPrompt = `
+---------------------
 COMPANY: ${company}
 TARGET JOB TITLE: ${jobTitle}
 
 JOB DESCRIPTION:
 ${jobDesc}
 
-EXTRA INSTRUCTIONS FROM CANDIDATE (OPTIONAL):
+EXTRA INSTRUCTIONS:
 ${extra || "(none)"}
 
 BASE RESUME:
 ${baseResume}
-`.trim();
+---------------------
 
-  const response = await client.responses.create({
-    model: "gpt-5.1-mini", // or gpt-4.1 or any suitable model
-    input: [
-      {
-        role: "system",
-        content: systemPrompt
-      },
-      {
-        role: "user",
-        content: userPrompt
-      }
-    ]
-  });
+REMEMBER:
+- Tailor the resume
+- Then act as recruiter & improve it
+- Output FINAL resume only
+  `.trim();
 
-  const text =
-    response.output[0].content[0].text || "ERROR: No text output from model.";
+  // Using Gemini Flash 1.5 — FREE tier
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+  const result = await model.generateContent(prompt);
+  const text = result.response.text();
 
   const safeCompany = company.replace(/[^a-z0-9]+/gi, "_");
   const safeTitle = jobTitle.replace(/[^a-z0-9]+/gi, "_");
-  const outFile = path.join(
-    process.cwd(),
-    "output",
-    `resume_${safeCompany}_${safeTitle}.md`
-  );
+  const outDir = path.join(process.cwd(), "output");
+  const outFile = path.join(outDir, `resume_${safeCompany}_${safeTitle}.md`);
 
-  if (!fs.existsSync(path.join(process.cwd(), "output"))) {
-    fs.mkdirSync(path.join(process.cwd(), "output"));
-  }
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
 
-  fs.writeFileSync(outFile, text, "utf8");
-  console.log(`Tailored resume written to: ${outFile}`);
+  fs.writeFileSync(outFile, text);
+  console.log("Tailored resume saved to:", outFile);
 }
 
-main().catch((err) => {
+main().catch(err => {
   console.error(err);
   process.exit(1);
 });
