@@ -1,13 +1,11 @@
-
 {
   "name": "resume-tailor",
-  "type": "module",
   "version": "1.0.0",
-  "main": "tailor_resume.mjs",
+  "type": "module",
   "scripts": {
     "tailor": "node tailor_resume.mjs"
   },
   "dependencies": {
-    "openai": "^4.0.0"
+    "@google/generative-ai": "^0.11.0"
   }
 }
