@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Tailor</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 40px;
+      max-width: 700px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 20px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    button:hover { background: #444; }
+  </style>
+</head>
+<body>
+
+<h2>Tailor Your Resume (Gemini Powered)</h2>
+
+<form id="tailorForm">
+  <label>Company Name</label>
+  <input id="company" required>
+
+  <label>Job Title</label>
+  <input id="jobTitle" required>
+
+  <label>Job Description</label>
+  <textarea id="jobDesc" rows="10" required></textarea>
+
+  <label>Extra Instructions (Optional)</label>
+  <textarea id="extra" rows="4"></textarea>
+
+  <button type="submit">Generate Resume</button>
+</form>
+
+<p id="status"></p>
+
+<script>
+  document.getElementById("tailorForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const status = document.getElementById("status");
+    status.innerText = "Sending request to GitHub Actions...";
+
+    const repo = "YOUR_USERNAME/YOUR_REPO";
+    const token = "YOUR_GITHUB_PAT"; // Must be stored in Secrets if embedding
+
+    const url = `https://api.github.com/repos/${repo}/actions/workflows/tailor-resume.yml/dispatches`;
+
+    const body = {
+      ref: "main",
+      inputs: {
+        company: document.getElementById("company").value,
+        job_title: document.getElementById("jobTitle").value,
+        job_description: document.getElementById("jobDesc").value,
+        extra: document.getElementById("extra").value
+      }
+    };
+
+    const resp = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Accept": "application/vnd.github+json",
+        "Authorization": `Bearer ${token}`
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (resp.ok) {
+      status.innerHTML = "<b>Resume generation started!</b><br>Check GitHub Actions in 20s.";
+    } else {
+      status.innerText = "Failed: " + (await resp.text());
+    }
+  });
+</script>
+
+</body>
+</html>
