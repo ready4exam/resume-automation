@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { GoogleGenerativeAI } from "@google-generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import {
   Document,
   Packer,
