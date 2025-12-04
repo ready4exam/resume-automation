@@ -67,7 +67,7 @@ jobs:
           ${{ steps.parse.outputs.job_description }}
           EOF
 
-      - name: Run tailoring script
+      - name: Run tailoring script (Phase 1)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -79,11 +79,30 @@ jobs:
             --resume-mode "${{ steps.parse.outputs.resume_mode }}" \
             --methods "${{ steps.parse.outputs.methods }}"
 
-      - name: Upload tailored resume artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: "tailored-resume-${{ github.event.issue.number }}"
-          path: jobs/
+      # 🔹 NEW: Run Phase-2 refinement and store outputs in the same jobs folder
+      - name: Run refine script (Phase 2 – review & improve)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          # Find the most recently created/modified job folder under jobs/
+          LATEST_JOB_DIR=$(ls -td jobs/* | head -n 1)
+
+          echo "Detected latest job folder: $LATEST_JOB_DIR"
+
+          # Run Phase-2 refinement
+          node refine_resume.mjs \
+            --job-desc-file tmp/jd.txt \
+            --raw-file "$LATEST_JOB_DIR/raw.txt" \
+            --out-dir "$LATEST_JOB_DIR/phase2"
+
+          echo "Phase-2 output stored in: $LATEST_JOB_DIR/phase2"
+
+      # ❌ REMOVED: upload-artifact step
+      # - name: Upload tailored resume artifacts
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: "tailored-resume-${{ github.event.issue.number }}"
+      #     path: jobs/
 
       - name: Commit generated resumes into repo
         run: |
@@ -94,7 +113,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add jobs/ || echo "Nothing to add in jobs/"
-          git commit -m "Add tailored resume for issue #${{ github.event.issue.number }}" || echo "Nothing to commit"
+          git commit -m "Add tailored + refined resume for issue #${{ github.event.issue.number }}" || echo "Nothing to commit"
           git push || echo "Nothing to push or push failed"
 
       - name: Comment back on issue with link to run
@@ -109,13 +128,14 @@ jobs:
             const url = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
 
             const body = [
-              "✅ Your tailored resume has been generated.",
+              "✅ Your tailored resume *and* refined resume (reviewed + improved) have been generated.",
               "",
-              `🔗 Actions run (download artifacts here): ${url}`,
+              "🗂 Files have been committed under the `jobs/` folder in this repo.",
               "",
-              "🗂 Resumes have also been committed under the jobs/ folder in this repo.",
+              "- Phase 1: raw + DOCX in the job folder",
+              "- Phase 2: review + refined resume under `phase2/` inside that job folder",
               "",
-              `Artifact name: tailored-resume-${issue_number}`
+              `🔗 Actions run: ${url}`
             ].join("\n");
 
             await github.rest.issues.createComment({
