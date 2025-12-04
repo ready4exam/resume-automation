@@ -1,0 +1,81 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+[/CONTACT]
+
+[SUMMARY]
+Distinguished technology executive with 21+ years of experience leading global T&I organizations in complex, large-scale consulting and enterprise environments. Proven ability to define strategy and drive innovation, ensuring seamless service delivery and adherence to operational KPIs for global infrastructure services. Expert in building and leading high-performing USI-based and global virtual teams, optimizing multi-million dollar budgets, and partnering with senior leadership to champion new services that meet enterprise business needs.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Architected and executed a cost containment strategy across a $25M OPEX portfolio, delivering over $8M in savings through strategic automation and global vendor renegotiation.
+- Led a $30M+ vendor displacement program, successfully insourcing critical infrastructure services and driving service delivery improvements for over 100,000 global IT assets.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+Global T&I Strategy & Innovation | IT Service Delivery & Operational KPIs | End-User Technology Strategy | Budget & Cost Management | Global Team Leadership (USI & Onshore) | Stakeholder & PMO Partnership | Risk Management & Security Compliance | Continuous Service Improvement | Cloud Transformation & FinOps
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Leads strategic IT and FinOps advisory for enterprise clients, partnering with Managing Directors and client executives to align technology roadmaps with business objectives.
+- Drives platform modernization strategies in collaboration with the PMO, ensuring alignment with enterprise security standards, NIST, and ITIL frameworks.
+- Develops hybrid-cloud cost optimization frameworks to enable proactive budget management and cost containment, driving operational efficiencies for clients.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Provided executive leadership for the Global Service Reliability Engineering organization, leading USI-based and global teams to exceed operational KPIs across a 100,000+ asset portfolio.
+- Defined and executed the strategic roadmap for End-User Technologies and Cloud & DevOps enablement, championing AIOps integration to reduce production downtime.
+- Championed a culture of continuous improvement across integrated onshore and offshore teams, enhancing service delivery models and identifying new services to deliver enhanced business value.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Directed global service delivery for complex engagements, partnering with culturally and geographically diverse virtual teams to ensure seamless execution and risk mitigation.
+- Owned and managed a $25M IT budget, achieving significant operational efficiencies and cost containment through rigorous financial governance and process automation.
+- Scaled the global Capacity Management CoE from 10 to 250 members across 5 countries and integrated security standards into core service delivery processes to sustain compliance.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Led ITSM consulting engagements for major telecom and BFSI clients, performing strategic gap analysis to define roadmaps for enhanced compliance and efficiency.
+- Championed new methods to improve the service delivery lifecycle, designing SOPs and performance dashboards that met evolving client needs and enhanced value.
+- Established and led Change Advisory Board (CAB) governance to balance costs, risks, and schedules, successfully reducing production downtime incidents.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Led infrastructure monitoring solutions for global clients including British Telecom, deploying enterprise tools such as Nagios, Zabbix, and HP OpenView.
+- Managed major release deployments with minimal business disruption and provided application support for critical NHS UK healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as the lead technical escalation point for mission-critical telecom systems, reducing downtime through rapid and effective root cause analysis and resolution.
+- Authored technical documentation and trained L1/L2 engineers, establishing best practices for operational support and troubleshooting.
+[/EXPERIENCE]
+
+[PROJECTS]
+Vendor Displacement & Service Insourcing Program
+- Led a strategic $30M+ program to insource critical infrastructure services, displacing legacy vendors to enhance control and reduce operational risk. Achieved over 15% cost reduction while improving service delivery KPIs for a global portfolio of 100,000+ IT assets.
+Global Service Reliability Engineering (SRE) Transformation
+- Championed and executed a global SRE transformation by integrating AIOps platforms and migrating key services to AWS. Improved system reliability by 20% and established deep technical performance analysis capabilities to identify issues pre-production.
+Global Capacity Management Center of Excellence (CoE)
+- Built and scaled a global CoE from 10 to 250 professionals across 5 countries, establishing a world-class capability for infrastructure planning. Standardized processes and reporting, resulting in a 30% improvement in resource allocation efficiency.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Strategic Platforms: AWS, Azure, Google Cloud, ServiceNow, VMware
+Methodologies & Governance: ITIL, COBIT, FinOps, Agile, SRE, NIST
+Service Management & FinOps Tools: Jira, Datadog, ScienceLogic, Flexera, CoreStack
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3, COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]

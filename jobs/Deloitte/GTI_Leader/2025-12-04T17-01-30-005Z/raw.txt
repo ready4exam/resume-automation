@@ -1,0 +1,78 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Accomplished technology executive with over 21 years of experience leading global T&I organizations in large-scale, complex consulting and enterprise environments. Proven track record of driving service delivery excellence, optimizing multi-million dollar budgets, and exceeding operational KPIs to enhance infrastructure reliability and efficiency. Expert in building and leading high-performing onshore/offshore teams to execute enterprise-wide transformation and innovation initiatives. Adept at partnering with senior leadership to align technology strategy with business objectives and ensure seamless global service delivery.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Directed a $25M annual OPEX portfolio, achieving $8M in savings through strategic automation, global vendor renegotiation, and targeted license optimization.
+- Led a $30M+ vendor displacement program, successfully insourcing critical infrastructure services while overseeing operations for 100,000+ global IT assets.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+Global IT Service Delivery | Technology Strategy & Innovation | Operational Excellence & KPIs | Budget & Cost Management | Large-Scale Program Leadership | Stakeholder & Partner Management | Global Team Leadership | Risk Management & Compliance | Cloud & Infrastructure Modernization
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Provides strategic IT and FinOps advisory to senior leadership at enterprise healthcare and BFSI clients, aligning technology roadmaps with business objectives.
+- Partners with Managing Directors and client executives to deliver platform modernization strategies, ensuring alignment with NIST and ITIL standards.
+- Leads a global FinOps team in developing hybrid-cloud cost optimization frameworks and accelerators to drive proactive budget management and cost containment.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led global technology service delivery as Head of Global Service Reliability Engineering, ensuring adherence to operational KPIs for mission-critical data center portfolios.
+- Drove improvements in the service delivery model by championing Cloud & DevOps enablement, including strategic AWS migrations and AIOps integration.
+- Managed and cultivated a culture of continuous improvement across integrated onshore and offshore teams responsible for 100,000+ physical IT assets.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Provided global delivery leadership for complex service engagements, partnering with stakeholders across a culturally diverse organization to ensure seamless delivery.
+- Developed and managed a $25M IT budget plan, consistently achieving operational efficiencies and cost containment through rigorous financial governance.
+- Built and scaled the global Capacity Management Center of Excellence from 10 to 250 members across 5 countries, managing recruitment, goal setting, and resource allocation.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting services for major telecom and BFSI customers, conducting gap analysis and ITIL assessments to enhance compliance and efficiency.
+- Developed strategies to improve the service delivery lifecycle, introducing new SOPs and performance dashboards to enhance delivery speed and quality.
+- Led Problem and Change Management governance, chairing the CAB and implementing risk-controlled changes to reduce production downtime incidents.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Led infrastructure monitoring solutions for global clients including British Telecom, deploying enterprise tools like Nagios, Zabbix, and HP OpenView.
+- Managed major release deployments with minimal business disruption and provided application support for critical NHS UK healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as a technical escalation point for mission-critical telecom systems, reducing downtime through rapid and effective issue resolution.
+- Authored technical documentation and trained L1/L2 engineers, establishing best practices for operational support and troubleshooting.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure, AWS, Google Cloud, CoreStack, Flexera
+ITSM & AIOps: ServiceNow, Jira Service Management, Datadog, ScienceLogic, New Relic
+Infrastructure & Automation: VMware, Ansible, SolarWinds, Zabbix
+Methodologies: ITIL, COBIT, FinOps, Agile
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3, COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
