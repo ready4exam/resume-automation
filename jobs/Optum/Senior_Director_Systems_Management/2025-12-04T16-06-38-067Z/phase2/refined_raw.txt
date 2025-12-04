@@ -1,0 +1,74 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Visionary Senior Director with 21+ years of experience leading global end-user technology engineering and executing large-scale platform transformations in complex, matrixed organizations. Expert in driving the strategic transition from legacy systems to modern Unified Endpoint Management (UEM) solutions, enhancing scalability, security, and user experience. Proven leader in building and mentoring high-performing engineering teams, leveraging AI-powered automation and GenAI strategies to deliver measurable improvements in reliability and operational efficiency.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Spearheaded a $30M+ platform modernization program, leading the transition from legacy vendors to a secure, scalable insourced model, directly improving device lifecycle management and user experience for 100,000+ endpoints.
+- Engineered and deployed an AI-driven automation framework for major healthcare clients, including Avance Health and NHS trusts, reducing repeat system failures by 60% and enhancing end-user technology reliability.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+UEM Strategy & Modernization | End-User Technology Engineering | AI-Powered Automation & GenAI | Platform Transformation | Device Lifecycle Management | Global Change Leadership | SRE & Reliability | Stakeholder Engagement | Software Distribution | User Experience Optimization
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Spearheaded IT strategy for enterprise healthcare clients like Avance Health, architecting a technology modernization roadmap for transitioning towards a Unified Endpoint Management (UEM) model to enhance security and user experience.
+- Engineered an AI-driven automation and GenAI framework to enhance system reliability and proactive support, reducing repeat service failures by 60% and improving end-user productivity for key accounts.
+- Delivered hybrid-cloud FinOps dashboards for Managing Directors and client leadership, identifying 15-20% in potential cost savings and enabling data-driven technology investment decisions.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led the global End-User Technology Engineering and SRE functions, accountable for the full device lifecycle, software distribution, and user experience for over 100,000 physical and virtual endpoints (including VMware environments).
+- Drove a $30M+ strategic platform modernization program, successfully engineering the transition from multiple legacy vendors to a centralized, insourced model that improved scalability, security, and operational control.
+- Championed the adoption of an Agentic AI system that autonomously actioned AIOps insights, reducing manual engineering intervention for service degradation events by 40% and improving response times.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Held Director-equivalent responsibility for global ITSM and Capacity Management, managing a $25M OPEX and delivering over $8M in savings through strategic automation and service optimization.
+- Built and scaled the global Capacity Management Center of Excellence from 10 to 250 engineers across 5 countries, fostering a culture of technical excellence and agile delivery.
+- Engineered and deployed standardized frameworks for end-to-end systems management, ensuring consistent, high-quality service delivery and operational performance for global clients.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI clients, leading initiatives that improved platform change velocity and service delivery quality.
+- Chaired the global Change Advisory Board (CAB), mitigating risk for large-scale software distribution and infrastructure changes across enterprise environments.
+- Implemented ITIL-based assessment frameworks to enhance service delivery compliance and operational efficiency for key customer accounts.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Provided senior application and infrastructure support for NHS UK, ensuring the stability and performance of critical healthcare platforms and delivering high-quality end-user technology services.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+UEM & Endpoint Management: Microsoft Endpoint Manager, VMware Workspace ONE, ServiceNow, Jira Service Management
+Cloud & FinOps: Azure, AWS, CoreStack, Flexera, Grafana
+ITSM & AIOps: Datadog, ScienceLogic, New Relic
+Infrastructure & Automation: VMware, Ansible, Zabbix, Nagios, SolarWinds
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]

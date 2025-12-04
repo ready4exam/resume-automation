@@ -1,0 +1,79 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Accomplished Senior Director with over 21 years of experience leading global technology engineering and platform operations for enterprise-scale organizations. Proven expertise in driving large-scale transformation from legacy systems to modern, scalable platforms, mirroring the transition to UEM standards. Expert in leveraging AI-driven automation and Agentic AI to enhance system reliability, optimize user experience, and achieve significant cost savings. A strategic change leader skilled in building and mentoring high-performing, global teams within complex, matrixed environments.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Led a $30M+ strategic platform modernization and vendor displacement program, insourcing critical infrastructure services to enhance agility, security, and user experience across a global enterprise.
+- Architected and deployed an AI-driven automation framework for major healthcare clients, reducing repeat system failures by 60% and significantly improving end-user technology reliability.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+Platform Transformation | End-User Technology Strategy | UEM Modernization | Global Service Delivery | AI-Driven Automation | Change Leadership | SRE & Reliability | FinOps & Cost Optimization | Stakeholder Engagement | Scalability & Security | IT Service Management (ITSM)
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Advised Managing Directors and client leadership at enterprise healthcare (including Avance Health) and BFSI firms on IT strategy, aligning platform modernization roadmaps with NIST and ITIL standards.
+- Architected an AI-driven automation framework to enhance system reliability, reducing repeat service failures by 60% and directly improving end-user experience.
+- Directed a FinOps team in developing hybrid-cloud cost dashboards and accelerators, enabling proactive budget optimization and influencing technology investment decisions.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led global Service Reliability Engineering (SRE) and Platform Operations, overseeing 100,000+ physical and virtual endpoints and ensuring high availability for mission-critical systems.
+- Drove a $30M+ platform modernization program, successfully transitioning from legacy vendors to an insourced model, improving scalability, security, and operational control.
+- Championed the adoption of an Agentic AI system that autonomously responded to AIOps insights, reducing manual intervention and improving response times for service degradations.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Held Director-equivalent responsibility for global ITSM and Capacity Management, managing a $25M annual OPEX and delivering $8M in savings through strategic automation and vendor renegotiation.
+- Built and scaled the global Capacity Management Center of Excellence from 10 to 250 members across 5 countries, fostering technical excellence and leadership.
+- Standardized ITIL-based frameworks for end-to-end capacity and systems management, ensuring consistent, high-quality service delivery for global clients like Scotiabank.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, leading to significant improvements in delivery speed and quality.
+- Led Problem and Change Management functions, chairing the Change Advisory Board (CAB) to ensure risk-controlled implementation of platform changes.
+- Conducted ITIL assessments and implemented tailored frameworks to enhance service delivery compliance and operational efficiency.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Provided senior application and infrastructure support for NHS UK, maintaining the stability and performance of critical healthcare platforms and ensuring high-quality end-user service delivery.
+- Managed major release deployments with minimal business disruption for British Telecom's enterprise systems.
+- Deployed and managed enterprise monitoring tools including Nagios, Zabbix, and HP OpenView to ensure system uptime and performance.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as the technical escalation point for high-impact incidents, troubleshooting mission-critical telecom systems to minimize service downtime.
+- Authored standard operating procedures (SOPs) and trained L1/L2 engineers to improve first-call resolution rates.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure, AWS, CoreStack, Flexera, Grafana
+ITSM & AIOps: ServiceNow, Jira Service Management, Datadog, ScienceLogic, New Relic
+Infrastructure & Automation: VMware, Ansible, Zabbix, Nagios, SolarWinds
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
