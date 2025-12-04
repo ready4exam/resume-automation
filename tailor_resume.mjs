@@ -1,20 +1,13 @@
 import fs from "fs";
 import path from "path";
-import { GoogleGenerativeAI } from "@google/generative-ai";
-import {
-  Document,
-  Packer,
-  Paragraph,
-  TextRun,
-  AlignmentType,
-} from "docx";
+import { GoogleGenerativeAI } from "@google-generative-ai";
 
 // ---------------------------------------------------
 // GEMINI SETUP
 // ---------------------------------------------------
-// Primary: gemini-pro-latest (maps to gemini-2.5-pro)
-// Fallbacks: flash, 2.0-flash
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+// Primary + fallbacks
 const PRIMARY_MODEL = "gemini-pro-latest";
 const FALLBACK_MODELS = ["gemini-flash-latest", "gemini-2.0-flash"];
 
@@ -40,234 +33,25 @@ async function generateWithFallback(prompt) {
       const model = genAI.getGenerativeModel({ model: modelName });
       const resp = await model.generateContent(prompt);
       const text = resp.response.text() || "";
-      console.log(`Model ${modelName} succeeded. Length: ${text.length}`);
       if (!text.trim()) {
-        console.error("⚠ Model returned empty text, trying next fallback (if any)...");
-        lastErr = new Error("Empty response from model " + modelName);
+        console.error(`Empty response from model ${modelName}, trying fallback...`);
+        lastErr = new Error("Empty response");
         continue;
       }
       return text;
     } catch (err) {
       lastErr = err;
       const status = err?.status;
-      console.error(`Model ${modelName} error (${status}):`, err.message || err);
+      console.error(`Model ${modelName} failed (${status}): ${err.message}`);
       if (status === 500 || status === 503) {
-        console.log("Retrying with next model...");
+        console.log("Trying next fallback model...");
         continue;
       }
       throw err;
     }
   }
 
-  throw lastErr || new Error("All Gemini models failed or returned empty output.");
-}
-
-// ---------------------------------------------------
-// SECTION EXTRACTORS
-// ---------------------------------------------------
-function extract(tag, text) {
-  const re = new RegExp(`\\[${tag}\\]([\\s\\S]*?)\\[\\/${tag}\\]`, "i");
-  const m = text.match(re);
-  return m ? m[1].trim() : "";
-}
-
-function splitLines(txt) {
-  return txt
-    .split("\n")
-    .map((x) => x.trim())
-    .filter((x) => x.length > 0);
-}
-
-// ---------------------------------------------------
-// DOCX HELPERS
-// ---------------------------------------------------
-const FONT = "Calibri";
-const SIZE = 22; // 11 pt
-
-function run(text, opts = {}) {
-  return new TextRun({ text, font: FONT, size: SIZE, ...opts });
-}
-
-function heading(text) {
-  return new Paragraph({
-    children: [
-      new TextRun({
-        text,
-        font: FONT,
-        size: 26, // ~13pt
-        bold: true,
-        allCaps: true,
-      }),
-    ],
-    spacing: { before: 200, after: 120 },
-  });
-}
-
-function nameHeading(text) {
-  return new Paragraph({
-    children: [
-      new TextRun({
-        text,
-        font: FONT,
-        size: 40, // ~20pt
-        bold: true,
-      }),
-    ],
-    alignment: AlignmentType.CENTER,
-    spacing: { after: 80 },
-  });
-}
-
-function bullet(text) {
-  return new Paragraph({
-    text,
-    bullet: { level: 0 },
-    spacing: { after: 60 },
-  });
-}
-
-function normal(text) {
-  return new Paragraph({
-    children: [run(text)],
-    spacing: { after: 120 },
-  });
-}
-
-// ---------------------------------------------------
-// BUILD DOCX FROM TAGGED AI OUTPUT
-// ---------------------------------------------------
-async function buildDocx(text, outPath) {
-  const CONTACT = extract("CONTACT", text);
-  const SUMMARY = extract("SUMMARY", text);
-  const CORE = extract("CORE_SKILLS", text);
-  const EXP = extract("EXPERIENCE", text);
-  const PROJ = extract("PROJECTS", text);
-  const TECH = extract("TECHNICAL_SKILLS", text);
-  const CERT = extract("CERTIFICATIONS", text);
-  const EDU = extract("EDUCATION", text);
-
-  const children = [];
-
-  // CONTACT
-  if (CONTACT) {
-    const lines = splitLines(CONTACT);
-    const name = lines[0] || "";
-    const rest = lines.slice(1);
-
-    if (name) {
-      children.push(nameHeading(name));
-    }
-    rest.forEach((l) =>
-      children.push(
-        new Paragraph({
-          children: [run(l)],
-          alignment: AlignmentType.CENTER,
-          spacing: { after: 40 },
-        })
-      )
-    );
-  }
-
-  // SUMMARY
-  if (SUMMARY) {
-    children.push(heading("PROFESSIONAL SUMMARY"));
-    splitLines(SUMMARY).forEach((x) => children.push(normal(x)));
-  }
-
-  // CORE SKILLS
-  if (CORE) {
-    children.push(heading("CORE SKILLS & COMPETENCIES"));
-    splitLines(CORE).forEach((x) =>
-      children.push(bullet(x.replace(/^-+\s*/, "")))
-    );
-  }
-
-  // EXPERIENCE
-  if (EXP) {
-    children.push(heading("PROFESSIONAL EXPERIENCE"));
-
-    const lines = EXP.split("\n");
-    let block = [];
-
-    function flush() {
-      if (block.length === 0) return;
-      const jobLines = splitLines(block.join("\n"));
-      if (jobLines.length === 0) return;
-
-      const header = jobLines[0];
-      children.push(
-        new Paragraph({
-          children: [run(header, { bold: true })],
-          spacing: { before: 160, after: 80 },
-        })
-      );
-
-      jobLines.slice(1).forEach((l) =>
-        children.push(bullet(l.replace(/^-+\s*/, "")))
-      );
-
-      block = [];
-    }
-
-    for (const raw of lines) {
-      if (raw.trim().toLowerCase().startsWith("company:")) {
-        flush();
-        block = [raw];
-      } else {
-        block.push(raw);
-      }
-    }
-    flush();
-  }
-
-  // PROJECTS
-  if (PROJ) {
-    children.push(heading("PROJECTS & INDEPENDENT WORK"));
-    splitLines(PROJ).forEach((line) => {
-      if (line.startsWith("-"))
-        children.push(bullet(line.replace(/^-+\s*/, "")));
-      else children.push(normal(line));
-    });
-  }
-
-  // TECHNICAL SKILLS
-  if (TECH) {
-    children.push(heading("TECHNICAL SKILLS"));
-    splitLines(TECH).forEach((x) => children.push(normal(x)));
-  }
-
-  // CERTIFICATIONS
-  if (CERT) {
-    children.push(heading("CERTIFICATIONS"));
-    splitLines(CERT).forEach((x) => children.push(bullet(x)));
-  }
-
-  // EDUCATION
-  if (EDU) {
-    children.push(heading("EDUCATION"));
-    splitLines(EDU).forEach((x) => children.push(normal(x)));
-  }
-
-  const doc = new Document({
-    sections: [
-      {
-        properties: {
-          page: {
-            margin: {
-              top: 1440,
-              bottom: 1440,
-              left: 1150,
-              right: 1150,
-            },
-          },
-        },
-        children,
-      },
-    ],
-  });
-
-  const buffer = await Packer.toBuffer(doc);
-  fs.writeFileSync(outPath, buffer);
+  throw lastErr || new Error("All Gemini models failed.");
 }
 
 // ---------------------------------------------------
@@ -288,12 +72,16 @@ async function main() {
     process.exit(1);
   }
 
-  // resume mode mapping
+  // ---------------------------------------------------
+  // MAP RESUME MODE
+  // ---------------------------------------------------
   let resumeMode = "INFRA_ONLY";
   if (rmArg.toLowerCase() === "dev") resumeMode = "DEV_ONLY";
   else if (rmArg.toLowerCase() === "hybrid") resumeMode = "INFRA_PLUS_DEV";
 
-  // methods
+  // ---------------------------------------------------
+  // METHOD LIST
+  // ---------------------------------------------------
   const methods = methodsArg
     .split(",")
     .map((x) => x.trim().toLowerCase())
@@ -303,7 +91,9 @@ async function main() {
   if (methods.includes("agile")) methodologyList.push("Agile");
   if (methods.includes("finops")) methodologyList.push("FinOps");
 
-  // load files
+  // ---------------------------------------------------
+  // LOAD FILES
+  // ---------------------------------------------------
   const baseResume = fs.readFileSync("base_resume.md", "utf8");
   const systemPrompt = fs.readFileSync("templates/system_prompt.txt", "utf8");
   const devSkills =
@@ -311,7 +101,7 @@ async function main() {
       ? fs.readFileSync("development.md", "utf8")
       : "";
 
-  // big-tech detection
+  // BIG-TECH TEMPLATE
   const companyUpper = company.toUpperCase();
   const isBigTech = ["GOOGLE", "MICROSOFT", "AMAZON", "AWS", "META", "APPLE", "NETFLIX"].some(
     (tag) => companyUpper.includes(tag)
@@ -323,10 +113,12 @@ async function main() {
       : "(none)";
 
   const jdText = fs.readFileSync(jdFile, "utf8");
-
   const includeProjects =
     resumeMode === "DEV_ONLY" || resumeMode === "INFRA_PLUS_DEV" ? "YES" : "NO";
 
+  // ---------------------------------------------------
+  // FINAL AI PROMPT
+  // ---------------------------------------------------
   const prompt = `
 ${systemPrompt}
 
@@ -355,9 +147,14 @@ ${devGoogleTemplate}
 ================================================
   `.trim();
 
+  // ---------------------------------------------------
+  // CALL GEMINI (Phase-1)
+  // ---------------------------------------------------
   const aiText = await generateWithFallback(prompt);
 
-  // output paths
+  // ---------------------------------------------------
+  // SAVE RAW OUTPUT (NO DOCX IN PHASE-1)
+  // ---------------------------------------------------
   const safeCompany = company.replace(/[^a-z0-9]+/gi, "_");
   const safeTitle = jobTitle.replace(/[^a-z0-9]+/gi, "_");
   const stamp = new Date().toISOString().replace(/[:.]/g, "-");
@@ -366,13 +163,10 @@ ${devGoogleTemplate}
   fs.mkdirSync(outDir, { recursive: true });
 
   const rawOut = path.join(outDir, "raw.txt");
-  const docxOut = path.join(outDir, "resume.docx");
-
   fs.writeFileSync(rawOut, aiText || "", "utf8");
-  await buildDocx(aiText || "", docxOut);
 
-  console.log("Raw output:", rawOut);
-  console.log("DOCX saved:", docxOut);
+  console.log("Raw output written:", rawOut);
+  console.log("Phase-1 completed WITHOUT DOCX (as required).");
 }
 
 main().catch((err) => {
