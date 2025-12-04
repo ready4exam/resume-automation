@@ -4,9 +4,6 @@ on:
   issues:
     types: [opened]
 
-# Needed so the workflow can:
-# - write comments on issues
-# - commit the jobs/ folder back to the repo
 permissions:
   contents: write
   issues: write
@@ -19,7 +16,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # required so we can commit and push
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -45,6 +42,8 @@ jobs:
             const company = extractSingle("Company");
             const jobTitle = extractSingle("Job Title");
             const extra = extractSingle("Extra");
+            const resumeMode = extractSingle("Resume Mode");       // infra | hybrid | dev
+            const methods = extractSingle("Methodologies");        // e.g. "Agile,FinOps"
 
             // Everything after "Job Description:" is the JD
             const marker = "Job Description:";
@@ -58,6 +57,8 @@ jobs:
             core.setOutput("job_title", jobTitle || "Unknown Role");
             core.setOutput("extra", extra || "");
             core.setOutput("job_description", jd || "");
+            core.setOutput("resume_mode", resumeMode || "infra");
+            core.setOutput("methods", methods || "");
 
       - name: Save JD to file
         run: |
@@ -70,12 +71,13 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          # You can later extend this to pass --resume-mode and --methods
           node tailor_resume.mjs \
             --company "${{ steps.parse.outputs.company }}" \
             --job-title "${{ steps.parse.outputs.job_title }}" \
             --job-desc-file tmp/jd.txt \
-            --extra "${{ steps.parse.outputs.extra }}"
+            --extra "${{ steps.parse.outputs.extra }}" \
+            --resume-mode "${{ steps.parse.outputs.resume_mode }}" \
+            --methods "${{ steps.parse.outputs.methods }}"
 
       - name: Upload tailored resume artifacts
         uses: actions/upload-artifact@v4
@@ -85,21 +87,14 @@ jobs:
 
       - name: Commit generated resumes into repo
         run: |
-          # Show what changed (for debugging)
           echo "Git status before commit:"
           git status
 
-          # Configure bot identity
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          # Stage jobs/ changes (if any)
           git add jobs/ || echo "Nothing to add in jobs/"
-
-          # Commit, but don't fail if there is nothing new
           git commit -m "Add tailored resume for issue #${{ github.event.issue.number }}" || echo "Nothing to commit"
-
-          # Push back to the same branch this workflow ran on
           git push || echo "Nothing to push or push failed"
 
       - name: Comment back on issue with link to run
@@ -118,9 +113,9 @@ jobs:
               "",
               `🔗 Actions run (download artifacts here): ${url}`,
               "",
-              `🗂 Resumes have also been committed under the jobs/ folder in this repo.`,
+              "🗂 Resumes have also been committed under the jobs/ folder in this repo.",
               "",
-              `Look for the artifact named: tailored-resume-${issue_number}`
+              `Artifact name: tailored-resume-${issue_number}`
             ].join("\n");
 
             await github.rest.issues.createComment({
