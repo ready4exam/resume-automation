@@ -7,9 +7,6 @@ import {
   Paragraph,
   TextRun,
   AlignmentType,
-  HeadingLevel,
-  TabStopType,
-  TabStopPosition
 } from "docx";
 
 // -----------------------------
@@ -17,7 +14,7 @@ import {
 // -----------------------------
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-// Primary + fallback models (all supported by your key)
+// Primary + fallback models (all available for your key)
 const PRIMARY_MODEL = "gemini-flash-latest";
 const FALLBACK_MODELS = ["gemini-2.0-flash", "gemini-pro-latest"];
 
@@ -69,13 +66,10 @@ async function generateWithFallback(prompt) {
 }
 
 // -----------------------------
-// Parsing helper for tagged sections
+// Tagged text helpers
 // -----------------------------
 function extractSection(tag, text) {
-  const re = new RegExp(
-    `\\[${tag}\\]([\\s\\S]*?)\\[\\/${tag}\\]`,
-    "i"
-  );
+  const re = new RegExp(`\\[${tag}\\]([\\s\\S]*?)\\[\\/${tag}\\]`, "i");
   const m = text.match(re);
   return m ? m[1].trim() : "";
 }
@@ -88,10 +82,10 @@ function splitLines(block) {
 }
 
 // -----------------------------
-// DOCX helpers
+// DOCX helpers: Calibri 11, headings, bullets
 // -----------------------------
 const BODY_FONT = "Calibri";
-const BODY_SIZE = 22; // 22 half-points = 11pt
+const BODY_SIZE = 22; // half-points => 11pt
 
 function bodyRun(text, opts = {}) {
   return new TextRun({
@@ -106,7 +100,7 @@ function headingRun(text) {
   return new TextRun({
     text,
     font: BODY_FONT,
-    size: 28, // ~14pt
+    size: 26, // ~13pt
     bold: true,
     allCaps: true,
   });
@@ -144,7 +138,7 @@ function bulletParagraph(text) {
 }
 
 // -----------------------------
-// Build DOCX from tagged text
+// Build DOCX from tagged AI text
 // -----------------------------
 async function buildDocxFromTaggedText(taggedText, outPath) {
   const contactBlock = extractSection("CONTACT", taggedText);
@@ -155,7 +149,7 @@ async function buildDocxFromTaggedText(taggedText, outPath) {
   const certBlock = extractSection("CERTIFICATIONS", taggedText);
   const techBlock = extractSection("TECHNICAL_SKILLS", taggedText);
 
-  const docChildren = [];
+  const children = [];
 
   // CONTACT
   if (contactBlock) {
@@ -163,8 +157,7 @@ async function buildDocxFromTaggedText(taggedText, outPath) {
     const name = lines[0] || "";
     const rest = lines.slice(1);
 
-    // Name centered
-    docChildren.push(
+    children.push(
       new Paragraph({
         children: [nameRun(name)],
         alignment: AlignmentType.CENTER,
@@ -172,9 +165,8 @@ async function buildDocxFromTaggedText(taggedText, outPath) {
       })
     );
 
-    // Contact lines centered
     rest.forEach((line) => {
-      docChildren.push(
+      children.push(
         new Paragraph({
           children: [bodyRun(line)],
           alignment: AlignmentType.CENTER,
@@ -186,25 +178,24 @@ async function buildDocxFromTaggedText(taggedText, outPath) {
 
   // SUMMARY
   if (summaryBlock) {
-    docChildren.push(sectionHeading("PROFESSIONAL SUMMARY"));
+    children.push(sectionHeading("PROFESSIONAL SUMMARY"));
     splitLines(summaryBlock).forEach((line) => {
-      docChildren.push(simpleParagraph(line));
+      children.push(simpleParagraph(line));
     });
   }
 
   // CORE SKILLS
   if (skillsBlock) {
-    docChildren.push(sectionHeading("CORE SKILLS & COMPETENCIES"));
+    children.push(sectionHeading("CORE SKILLS & COMPETENCIES"));
     splitLines(skillsBlock).forEach((line) => {
-      // If line starts with "- ", remove and treat as bullet
-      const clean = line.replace(/^-\s*/, "");
-      docChildren.push(bulletParagraph(clean));
+      const clean = line.replace(/^-+\s*/, "");
+      children.push(bulletParagraph(clean));
     });
   }
 
   // EXPERIENCE
   if (expBlock) {
-    docChildren.push(sectionHeading("PROFESSIONAL EXPERIENCE"));
+    children.push(sectionHeading("PROFESSIONAL EXPERIENCE"));
 
     const expLines = expBlock.split("\n");
     let currentJobLines = [];
@@ -220,19 +211,17 @@ async function buildDocxFromTaggedText(taggedText, outPath) {
       const headerLine = jobLines[0];
       const bulletLines = jobLines.slice(1);
 
-      // Job header
-      docChildren.push(
+      children.push(
         new Paragraph({
           children: [bodyRun(headerLine, { bold: true })],
           spacing: { before: 160, after: 80 },
         })
       );
 
-      // Bullets
       bulletLines.forEach((l) => {
-        const clean = l.replace(/^-\s*/, "");
+        const clean = l.replace(/^-+\s*/, "");
         if (clean.length > 0) {
-          docChildren.push(bulletParagraph(clean));
+          children.push(bulletParagraph(clean));
         }
       });
     };
@@ -240,12 +229,8 @@ async function buildDocxFromTaggedText(taggedText, outPath) {
     for (const rawLine of expLines) {
       const line = rawLine.trim();
       if (line.toLowerCase().startsWith("company:")) {
-        // New job starts
         flushJob();
         currentJobLines = [line];
-      } else if (line.length === 0) {
-        // blank line -> separator in many cases
-        currentJobLines.push(line);
       } else {
         currentJobLines.push(line);
       }
@@ -255,46 +240,46 @@ async function buildDocxFromTaggedText(taggedText, outPath) {
 
   // EDUCATION
   if (eduBlock) {
-    docChildren.push(sectionHeading("EDUCATION"));
+    children.push(sectionHeading("EDUCATION"));
     splitLines(eduBlock).forEach((line) => {
-      const clean = line.replace(/^-\s*/, "");
-      docChildren.push(simpleParagraph(clean));
+      const clean = line.replace(/^-+\s*/, "");
+      children.push(simpleParagraph(clean));
     });
   }
 
   // CERTIFICATIONS
   if (certBlock) {
-    docChildren.push(sectionHeading("CERTIFICATIONS"));
+    children.push(sectionHeading("CERTIFICATIONS"));
     splitLines(certBlock).forEach((line) => {
-      const clean = line.replace(/^-\s*/, "");
-      docChildren.push(bulletParagraph(clean));
+      const clean = line.replace(/^-+\s*/, "");
+      children.push(bulletParagraph(clean));
     });
   }
 
   // TECHNICAL SKILLS
   if (techBlock) {
-    docChildren.push(sectionHeading("TECHNICAL SKILLS"));
+    children.push(sectionHeading("TECHNICAL SKILLS"));
     splitLines(techBlock).forEach((line) => {
-      const clean = line.replace(/^-\s*/, "");
-      docChildren.push(simpleParagraph(clean));
+      const clean = line.replace(/^-+\s*/, "");
+      children.push(simpleParagraph(clean));
     });
   }
 
-  // Page setup: Calibri, ~1" margins (fit in 1–2 pages)
+  // Page margins: about 1 inch all around (for 1–2 page resume)
   const doc = new Document({
     sections: [
       {
         properties: {
           page: {
             margin: {
-              top: 720, // 0.5 in = 360, 1 in = 1440 -> here ~0.5 in? we choose 0.5–0.75 in range
-              bottom: 720,
-              left: 720,
-              right: 720,
+              top: 1440, // 1 inch
+              bottom: 1440,
+              left: 1150, // slightly narrower horizontally
+              right: 1150,
             },
           },
         },
-        children: docChildren,
+        children,
       },
     ],
   });
@@ -311,13 +296,31 @@ async function main() {
   const jobTitle = getArg("--job-title");
   const jobDescFile = getArg("--job-desc-file");
   const extra = getArg("--extra", "");
+  const resumeModeArg = getArg("--resume-mode", "infra"); // infra | hybrid | dev
+  const methodsArg = getArg("--methods", ""); // e.g. "agile,finops"
 
   if (!company || !jobTitle || !jobDescFile) {
     console.error(
-      'Usage: node tailor_resume.mjs --company "X" --job-title "Y" --job-desc-file jd.txt [--extra "notes"]'
+      'Usage: node tailor_resume.mjs --company "X" --job-title "Y" --job-desc-file jd.txt [--extra "notes"] [--resume-mode infra|hybrid|dev] [--methods "agile,finops"]'
     );
     process.exit(1);
   }
+
+  const resumeMode =
+    resumeModeArg.toLowerCase() === "dev"
+      ? "DEV_ONLY"
+      : resumeModeArg.toLowerCase() === "hybrid"
+      ? "INFRA_PLUS_DEV"
+      : "INFRA_ONLY";
+
+  const methodsList = methodsArg
+    .split(",")
+    .map((m) => m.trim().toLowerCase())
+    .filter((m) => m.length > 0);
+
+  const methodologies = [];
+  if (methodsList.includes("agile")) methodologies.push("Agile");
+  if (methodsList.includes("finops")) methodologies.push("FinOps");
 
   const baseResumePath = path.join(process.cwd(), "base_resume.md");
   const systemPromptPath = path.join(
@@ -325,27 +328,45 @@ async function main() {
     "templates",
     "system_prompt.txt"
   );
+  const devResumePath = path.join(process.cwd(), "development.md");
 
   const baseResume = fs.readFileSync(baseResumePath, "utf8");
   const systemPrompt = fs.readFileSync(systemPromptPath, "utf8");
   const jobDesc = fs.readFileSync(jobDescFile, "utf8");
 
+  let devResumeAddon = "";
+  if (resumeMode === "INFRA_PLUS_DEV" || resumeMode === "DEV_ONLY") {
+    if (fs.existsSync(devResumePath)) {
+      devResumeAddon = fs.readFileSync(devResumePath, "utf8");
+    } else {
+      console.warn(
+        "development.md not found, but a dev mode was requested. Continuing without dev add-on."
+      );
+    }
+  }
+
   const prompt = `
 ${systemPrompt}
 
----------------------
-COMPANY: ${company}
-TARGET ROLE: ${jobTitle}
+================ INPUT CONTEXT ================
+TARGET_COMPANY: ${company}
+TARGET_ROLE: ${jobTitle}
 
-JOB DESCRIPTION:
+RESUME_MODE: ${resumeMode}
+METHODOLOGIES: ${methodologies.join(", ") || "None"}
+
+JOB_DESCRIPTION:
 ${jobDesc}
 
-EXTRA:
-${extra}
+EXTRA_INSTRUCTIONS:
+${extra || "(none)"}
 
-BASE RESUME:
+BASE_RESUME:
 ${baseResume}
----------------------
+
+DEV_RESUME_ADDON:
+${devResumeAddon || "(none)"}
+================================================
   `.trim();
 
   const aiText = await generateWithFallback(prompt);
@@ -363,22 +384,13 @@ ${baseResume}
   );
   fs.mkdirSync(versionDir, { recursive: true });
 
-  const rawOut = path.join(
-    versionDir,
-    `raw_${safeCompany}_${safeTitle}.txt`
-  );
-  const docxOut = path.join(
-    versionDir,
-    `resume_${safeCompany}_${safeTitle}.docx`
-  );
+  const rawOut = path.join(versionDir, `raw_${safeCompany}_${safeTitle}.txt`);
+  const docxOut = path.join(versionDir, `resume_${safeCompany}_${safeTitle}.docx`);
 
-  // Save raw AI text for debugging
   fs.writeFileSync(rawOut, aiText, "utf8");
-
-  // Build professional DOCX
   await buildDocxFromTaggedText(aiText, docxOut);
 
-  console.log("Saved raw AI text:", rawOut);
+  console.log("Saved raw AI output:", rawOut);
   console.log("Saved professional DOCX resume:", docxOut);
 }
 
