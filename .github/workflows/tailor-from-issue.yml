@@ -79,12 +79,13 @@ jobs:
             --resume-mode "${{ steps.parse.outputs.resume_mode }}" \
             --methods "${{ steps.parse.outputs.methods }}"
 
-      # 🔹 NEW: Run Phase-2 refinement and store outputs in the same jobs folder
+      # 🔹 NEW: Phase 2 – refine the resume using refine_resume.mjs,
+      #         and keep output INSIDE the same jobs/<...> folder.
       - name: Run refine script (Phase 2 – review & improve)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          # Find the most recently created/modified job folder under jobs/
+          # Find the most recently modified job folder under jobs/
           LATEST_JOB_DIR=$(ls -td jobs/* | head -n 1)
 
           echo "Detected latest job folder: $LATEST_JOB_DIR"
@@ -96,13 +97,6 @@ jobs:
             --out-dir "$LATEST_JOB_DIR/phase2"
 
           echo "Phase-2 output stored in: $LATEST_JOB_DIR/phase2"
-
-      # ❌ REMOVED: upload-artifact step
-      # - name: Upload tailored resume artifacts
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: "tailored-resume-${{ github.event.issue.number }}"
-      #     path: jobs/
 
       - name: Commit generated resumes into repo
         run: |
@@ -139,8 +133,4 @@ jobs:
             ].join("\n");
 
             await github.rest.issues.createComment({
-              owner,
-              repo,
-              issue_number,
-              body
-            });
+              owner
