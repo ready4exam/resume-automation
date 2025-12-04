@@ -1,0 +1,84 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Global delivery leader with 21+ years of experience directing large-scale BFSI operations and transformation for insurance sector clients. Proven in managing $25M+ operational budgets, delivering $8M in annual cost savings, and continuously improving cost-to-serve metrics. Expert in architecting GenAI-enabled operating models to drive automation and efficiency, scaling multi-site delivery teams to 250+ members. Adept at managing executive client relationships and ensuring service delivery excellence, contract adherence, and robust risk management.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Global Delivery Leadership
+- P&L & Budget Management ($25M+ OPEX)
+- Large-Scale Operations Leadership
+- Client Leadership & Governance (CXO-Level)
+- Transformation, Automation & GenAI Strategy
+- SLA Rigor & KPI Management
+- Risk, Compliance & Controls
+- Cost-to-Serve Optimization
+- Commercial Construct Analysis
+- RFI/RFP Solutioning Support
+- Business Continuity & DR Planning
+- ITIL Service Management
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Advised enterprise BFSI clients on operations strategy, designing AI-driven automation frameworks that reduced repeat service failures by 60%, enhancing operational resilience.
+- Led cost optimization engagements, developing hybrid-cloud FinOps models and performance dashboards to improve budget forecasting and control for large-scale operations.
+- Managed executive stakeholder relationships to deliver complex platform modernization roadmaps, ensuring alignment with regulatory and compliance standards (NIST, ITIL).
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed global service delivery for mission-critical client operations, ensuring high availability and performance for a portfolio of over 100,000 IT assets.
+- Architected a GenAI-enabled operating model featuring an Agentic AI system to autonomously action AIOps insights, enabling proactive issue resolution and service stability.
+- Led a $30M+ service insourcing and vendor displacement program, improving operational agility and delivering significant improvements to cost-to-serve metrics.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, delivering $8M in tangible savings through strategic automation, software license optimization, and vendor contract renegotiation.
+- Scaled a global Center of Excellence from 10 to 250+ members across 5 countries, establishing a resilient, multi-site delivery estate for major BFSI clients.
+- Ensured strict contract adherence and SLA rigor across global delivery centers, managing client governance and performance reporting for key accounts.
+- Modernized contact center support operations by integrating AI-driven analytics, which significantly accelerated incident response times and improved service levels.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation solutions for major BFSI and telecom clients, focusing on service design and operational efficiency improvements.
+- Implemented robust Problem and Change Management functions, improving service stability and establishing performance dashboards to enhance SLA attainment.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Led application support teams for NHS UK, ensuring high availability for critical platforms and adhering to stringent service level agreements.
+- Deployed and managed enterprise monitoring solutions to ensure operational health and proactive incident management for clients including British Telecom.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as the senior escalation point for high-impact incidents, minimizing business disruption and authoring technical documentation to improve first-call resolution (FCR) rates.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Transformation & Automation: GenAI Operating Models, Agentic AI, AIOps, RPA Concepts, Ansible
+Cloud & FinOps: Azure, AWS, FinOps, CoreStack, Flexera
+Service Management & BI: ServiceNow, Jira, Remedy, Power BI, ITIL, COBIT
+Monitoring & Infrastructure: ScienceLogic, Datadog, New Relic, VMware Tanzu, SolarWinds
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- ITIL v3
+- COBIT 4.1
+- Multiple IBM Architect & Consulting Badges
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
