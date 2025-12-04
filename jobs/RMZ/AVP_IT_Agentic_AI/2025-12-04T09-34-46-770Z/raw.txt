@@ -1,0 +1,102 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Accomplished technology executive with over 21 years of experience driving business transformation through strategic AI adoption and platform modernization. Proven leader in managing the end-to-end product lifecycle for innovative technology solutions, including designing an Agentic AI system that autonomously enhanced service reliability. Expert in developing AI-driven technology roadmaps, championing product adoption, and leveraging FinOps principles to achieve significant cost savings and operational excellence in complex, global environments.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Agentic AI & Multi-Agent System Design
+- AI Product Strategy & Lifecycle Management
+- Retrieval-Augmented Generation (RAG)
+- Cloud Architecture & Modernization (AWS, Azure)
+- Service Reliability Engineering (SRE) & AIOps
+- DevOps, CI/CD & Automation (Python, Ansible)
+- FinOps & Strategic Cost Optimization
+- Technology Roadmapping & Business Alignment
+- Global Team Leadership & Stakeholder Management
+- Data Strategy & Context Engineering
+- Change Management & AI Adoption
+- Impact Measurement & KPI Governance
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Delivered strategic advisory for healthcare and BFSI clients, developing technology product roadmaps for platform modernization aligned with business goals.
+- Engineered and championed the adoption of an AI-driven automation framework that reduced repeat failures by 60%, directly improving service reliability and user experience.
+- Led FinOps initiatives to create hybrid-cloud cost optimization dashboards, enabling proactive budget management and data-driven financial decisions.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led the end-to-end delivery and operation of a global service reliability engineering function, overseeing 100,000+ IT assets.
+- Designed and implemented an Agentic AI system to autonomously respond to AIOps insights, enhancing decision-making and operational response speed.
+- Directed a $30M+ vendor displacement program, successfully insourcing critical infrastructure services to enhance agility and strategic control.
+- Championed Cloud & DevOps adoption, leading AWS migration projects and fostering a culture of continuous improvement and automation.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, delivering $8M in savings through strategic automation, FinOps-aligned vendor renegotiation, and license optimization.
+- Scaled the global Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing a world-class service delivery function.
+- Modernized contact center operations by integrating AI-driven insights, which significantly accelerated issue resolution and improved customer satisfaction KPIs.
+- Standardized ITIL-based frameworks for end-to-end capacity and service management, ensuring consistent delivery for major BFSI clients like Scotiabank.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, enhancing operational efficiency and compliance.
+- Drove problem management through rigorous RCA processes and chaired the Change Advisory Board (CAB) to govern risk-controlled changes.
+- Implemented performance dashboards and standardized SOPs, resulting in measurable improvements in service delivery speed and quality.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Led infrastructure monitoring solutions for enterprise clients, deploying and managing tools such as Nagios, Zabbix, and HP OpenView.
+- Managed major release deployments for British Telecom, ensuring minimal business disruption and successful technology rollout.
+- Provided critical application support for NHS UK, ensuring high availability for essential healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Acted as a key technical escalation point for mission-critical telecom systems, reducing downtime through rapid and effective troubleshooting.
+- Authored comprehensive SOP documentation and trained L1/L2 engineers, improving team capabilities and incident response times.
+[/EXPERIENCE]
+
+[PROJECTS]
+Agentic AI for FinOps & Service Reliability
+- Designed and prototyped a multi-agent system using CrewAI to analyze cloud spend (FinOps) and operational data (SRE) in real-time.
+- Integrated a RAG pipeline to provide agents with contextual, proprietary data, enabling autonomous identification of cost-saving opportunities and prediction of service degradations.
+
+Ready4Industry - AI-Powered Skilling Platform
+- Led the end-to-end product development of an AI-driven educational platform, from concept and architecture to deployment and user feedback iteration.
+- Engineered backend services, API integrations, and CI/CD pipelines using Python, JavaScript, and GitHub Actions, demonstrating rapid prototyping and delivery capabilities.
+
+Ready4Exam - Automated Educational Content Delivery
+- Developed and maintain an open-source static site for educational content, leveraging automated CI/CD workflows for zero-touch deployments.
+- Managed the platform's infrastructure and data strategy, ensuring high availability and efficient content delivery to users.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+AI Frameworks: CrewAI, LangChain, OpenAI Frameworks
+Cloud & DevOps: AWS, Azure, GCP, Ansible, GitHub Actions, CI/CD, Terraform
+Languages: Python, JavaScript, Shell Scripting
+ITSM & Observability: ServiceNow, Jira, Datadog, New Relic, Prometheus, Grafana, ScienceLogic
+FinOps Tools: CoreStack, Flexera, Azure Monitor, CloudWatch
+Infrastructure: VMware Tanzu, Zabbix, HP OpenView, SolarWinds
+BI & Modeling: Power BI, MS Visio
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
