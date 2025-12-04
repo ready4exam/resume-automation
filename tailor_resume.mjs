@@ -12,9 +12,11 @@ import {
 // ---------------------------------------------------
 // GEMINI SETUP
 // ---------------------------------------------------
+// Primary: gemini-pro-latest (maps to gemini-2.5-pro)
+// Fallbacks: flash, 2.0-flash
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const PRIMARY_MODEL = "gemini-flash-latest";
-const FALLBACK_MODELS = ["gemini-2.0-flash", "gemini-pro-latest"];
+const PRIMARY_MODEL = "gemini-pro-latest";
+const FALLBACK_MODELS = ["gemini-flash-latest", "gemini-2.0-flash"];
 
 // ---------------------------------------------------
 // CLI ARG HANDLER
@@ -37,13 +39,18 @@ async function generateWithFallback(prompt) {
       console.log(`Using Gemini model: ${modelName}`);
       const model = genAI.getGenerativeModel({ model: modelName });
       const resp = await model.generateContent(prompt);
-      console.log(`Model ${modelName} succeeded.`);
-      return resp.response.text();
+      const text = resp.response.text() || "";
+      console.log(`Model ${modelName} succeeded. Length: ${text.length}`);
+      if (!text.trim()) {
+        console.error("⚠ Model returned empty text, trying next fallback (if any)...");
+        lastErr = new Error("Empty response from model " + modelName);
+        continue;
+      }
+      return text;
     } catch (err) {
       lastErr = err;
       const status = err?.status;
-      console.error(`Model ${modelName} error (${status}):`, err.message);
-
+      console.error(`Model ${modelName} error (${status}):`, err.message || err);
       if (status === 500 || status === 503) {
         console.log("Retrying with next model...");
         continue;
@@ -52,11 +59,11 @@ async function generateWithFallback(prompt) {
     }
   }
 
-  throw lastErr || new Error("All Gemini models failed.");
+  throw lastErr || new Error("All Gemini models failed or returned empty output.");
 }
 
 // ---------------------------------------------------
-// EXTRACT SECTION FROM TAGGED TEXT
+// SECTION EXTRACTORS
 // ---------------------------------------------------
 function extract(tag, text) {
   const re = new RegExp(`\\[${tag}\\]([\\s\\S]*?)\\[\\/${tag}\\]`, "i");
@@ -87,7 +94,7 @@ function heading(text) {
       new TextRun({
         text,
         font: FONT,
-        size: 26,
+        size: 26, // ~13pt
         bold: true,
         allCaps: true,
       }),
@@ -102,7 +109,7 @@ function nameHeading(text) {
       new TextRun({
         text,
         font: FONT,
-        size: 40,
+        size: 40, // ~20pt
         bold: true,
       }),
     ],
@@ -141,13 +148,15 @@ async function buildDocx(text, outPath) {
 
   const children = [];
 
-  // CONTACT SECTION
+  // CONTACT
   if (CONTACT) {
     const lines = splitLines(CONTACT);
     const name = lines[0] || "";
     const rest = lines.slice(1);
 
-    children.push(nameHeading(name));
+    if (name) {
+      children.push(nameHeading(name));
+    }
     rest.forEach((l) =>
       children.push(
         new Paragraph({
@@ -204,7 +213,9 @@ async function buildDocx(text, outPath) {
       if (raw.trim().toLowerCase().startsWith("company:")) {
         flush();
         block = [raw];
-      } else block.push(raw);
+      } else {
+        block.push(raw);
+      }
     }
     flush();
   }
@@ -213,7 +224,8 @@ async function buildDocx(text, outPath) {
   if (PROJ) {
     children.push(heading("PROJECTS & INDEPENDENT WORK"));
     splitLines(PROJ).forEach((line) => {
-      if (line.startsWith("-")) children.push(bullet(line.replace(/^-+\s*/, "")));
+      if (line.startsWith("-"))
+        children.push(bullet(line.replace(/^-+\s*/, "")));
       else children.push(normal(line));
     });
   }
@@ -259,7 +271,7 @@ async function buildDocx(text, outPath) {
 }
 
 // ---------------------------------------------------
-// MAIN EXECUTION
+// MAIN
 // ---------------------------------------------------
 async function main() {
   const company = getArg("--company");
@@ -270,7 +282,9 @@ async function main() {
   const methodsArg = getArg("--methods", "");
 
   if (!company || !jobTitle || !jdFile) {
-    console.error("Missing required args.");
+    console.error(
+      'Usage: node tailor_resume.mjs --company "X" --job-title "Y" --job-desc-file jd.txt [--extra "notes"] [--resume-mode infra|hybrid|dev] [--methods "agile,finops"]'
+    );
     process.exit(1);
   }
 
@@ -279,7 +293,7 @@ async function main() {
   if (rmArg.toLowerCase() === "dev") resumeMode = "DEV_ONLY";
   else if (rmArg.toLowerCase() === "hybrid") resumeMode = "INFRA_PLUS_DEV";
 
-  // methodology flags
+  // methods
   const methods = methodsArg
     .split(",")
     .map((x) => x.trim().toLowerCase())
@@ -289,32 +303,30 @@ async function main() {
   if (methods.includes("agile")) methodologyList.push("Agile");
   if (methods.includes("finops")) methodologyList.push("FinOps");
 
-  // FILES
+  // load files
   const baseResume = fs.readFileSync("base_resume.md", "utf8");
   const systemPrompt = fs.readFileSync("templates/system_prompt.txt", "utf8");
-  const devSkills = fs.existsSync("development.md")
-    ? fs.readFileSync("development.md", "utf8")
-    : "";
+  const devSkills =
+    resumeMode !== "INFRA_ONLY" && fs.existsSync("development.md")
+      ? fs.readFileSync("development.md", "utf8")
+      : "";
 
-  // BIG-TECH CHECK
+  // big-tech detection
   const companyUpper = company.toUpperCase();
-  const isBigTech = ["GOOGLE","MICROSOFT","AMAZON","AWS","META","APPLE","NETFLIX"]
-    .some(tag => companyUpper.includes(tag));
+  const isBigTech = ["GOOGLE", "MICROSOFT", "AMAZON", "AWS", "META", "APPLE", "NETFLIX"].some(
+    (tag) => companyUpper.includes(tag)
+  );
 
-  // load tone reference template
-  const devGoogleTemplate = isBigTech
-    ? fs.readFileSync("development_google_template.md", "utf8")
-    : "(none)";
+  const devGoogleTemplate =
+    isBigTech && fs.existsSync("development_google_template.md")
+      ? fs.readFileSync("development_google_template.md", "utf8")
+      : "(none)";
 
   const jdText = fs.readFileSync(jdFile, "utf8");
 
-  // Should projects be inserted?
   const includeProjects =
-    resumeMode === "DEV_ONLY" || resumeMode === "INFRA_PLUS_DEV"
-      ? "YES"
-      : "NO";
+    resumeMode === "DEV_ONLY" || resumeMode === "INFRA_PLUS_DEV" ? "YES" : "NO";
 
-  // FINAL PROMPT
   const prompt = `
 ${systemPrompt}
 
@@ -330,13 +342,13 @@ JOB_DESCRIPTION:
 ${jdText}
 
 EXTRA_INSTRUCTIONS:
-${extra}
+${extra || "(none)"}
 
 BASE_RESUME:
 ${baseResume}
 
 DEV_SKILLS_BLOCK:
-${resumeMode !== "INFRA_ONLY" ? devSkills : "(none)"}
+${devSkills || "(none)"}
 
 BIG_TECH_TONE_REFERENCE:
 ${devGoogleTemplate}
@@ -345,7 +357,7 @@ ${devGoogleTemplate}
 
   const aiText = await generateWithFallback(prompt);
 
-  // OUTPUT PATHS
+  // output paths
   const safeCompany = company.replace(/[^a-z0-9]+/gi, "_");
   const safeTitle = jobTitle.replace(/[^a-z0-9]+/gi, "_");
   const stamp = new Date().toISOString().replace(/[:.]/g, "-");
@@ -353,11 +365,11 @@ ${devGoogleTemplate}
   const outDir = path.join("jobs", safeCompany, safeTitle, stamp);
   fs.mkdirSync(outDir, { recursive: true });
 
-  const rawOut = path.join(outDir, `raw.txt`);
-  const docxOut = path.join(outDir, `resume.docx`);
+  const rawOut = path.join(outDir, "raw.txt");
+  const docxOut = path.join(outDir, "resume.docx");
 
-  fs.writeFileSync(rawOut, aiText, "utf8");
-  await buildDocx(aiText, docxOut);
+  fs.writeFileSync(rawOut, aiText || "", "utf8");
+  await buildDocx(aiText || "", docxOut);
 
   console.log("Raw output:", rawOut);
   console.log("DOCX saved:", docxOut);
