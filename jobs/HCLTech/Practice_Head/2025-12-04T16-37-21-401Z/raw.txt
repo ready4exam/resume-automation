@@ -1,0 +1,80 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Strategic Service Engineering Leader with 21+ years of experience building and scaling high-performance technology practices and Centers of Excellence (CoE). Proven expertise in developing go-to-market strategies for emerging technologies, transforming managed services, and driving significant revenue impact. Adept at managing large-scale investments, fostering relationships with C-level stakeholders, and partnering with offering and delivery service lines. Renowned for incubating competency by recruiting, training, and deploying global teams from the ground up.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Architected and scaled the global Capacity Management Center of Excellence (CoE) from 10 to 250+ experts across 5 countries, establishing a new service engineering competency and delivery practice.
+- Drove a $30M+ vendor displacement program by insourcing critical infrastructure services and managed a $25M OPEX, achieving $8M in savings through strategic automation and optimization.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+Practice Leadership | Service Engineering | CoE Development | GTM Strategy | Competency Building | Managed Services Transformation | Stakeholder & Customer Relationship Management | FinOps & Investment Management | Global Team Leadership | Cloud & SRE
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Developed practice strategy for ITSM and FinOps advisory, leading engagements with senior client stakeholders (Managing Directors, VPs) to align platform modernization roadmaps with business objectives.
+- Recruited, trained, and deployed a specialized FinOps team to develop hybrid-cloud cost dashboards and accelerators, enabling proactive budget optimization for enterprise clients.
+- Incubated an AI-driven automation concept, developing a proof-of-concept that reduced repeat failures by 60% and created a new GTM offering for service reliability.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led the Global Service Reliability Engineering practice, defining the service delivery strategy for mission-critical data center portfolios and enhancing capacity management for over 100,000 IT assets.
+- Executed a strategic $30M+ vendor displacement program, engineering and transitioning services in-house to create positive revenue impact and improve delivery agility.
+- Partnered with offering and R&D teams to incubate emerging technologies, including a proof-of-concept for an Agentic AI system to autonomously manage AIOps insights.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Established and led the global Capacity Management Center of Excellence (CoE), seeding the core team and scaling the practice from 10 to 250+ professionals across 5 countries.
+- Managed practice operations with a $25M annual investment, delivering $8M in savings through automation, vendor consolidation, and license optimization initiatives.
+- Directed the transformation of managed service projects from T&M to work packages for key accounts like Scotiabank, creating incremental value and strengthening customer relationships.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, building strong customer relationships and identifying value creation opportunities.
+- Developed and implemented standardized SOPs and governance dashboards that significantly improved managed service delivery speed and quality.
+- Led Problem and Change Management functions, chairing the CAB and implementing risk-controlled changes to ensure service stability and compliance.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring tools (Nagios, Zabbix, HP OpenView) for large-scale managed service environments.
+- Led major release deployments with minimal business disruption for key customer British Telecom.
+- Provided application support for NHS UK, ensuring timely resolution of issues across critical healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as the lead technical escalation point for mission-critical telecom systems, reducing downtime through rapid issue resolution.
+- Authored comprehensive SOP documentation and trained L1/L2 engineers to improve team competency and performance.
+- Troubleshot and resolved high-impact incidents, ensuring service continuity for key clients.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure, AWS, Google Cloud, CoreStack, Flexera, Apptio Cloudability
+ITSM & AIOps: ServiceNow, Jira, Remedy, Datadog, ScienceLogic, New Relic
+Infrastructure & Automation: VMware, Ansible, Nagios, Zabbix, SolarWinds, HP OpenView
+BI & Reporting: Power BI, Grafana, MS Visio
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Certified: Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Cloud Certified Digital Leader
+- ITIL v3 Foundation
+- COBIT 4.1 Foundation
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management, IIT Roorkee (Pursuing)
+- Master of Science (Information Technology), Manipal Academy of Higher Education
+- Bachelor of Science, Anugrah Narayan College, Patna University
+[/EDUCATION]

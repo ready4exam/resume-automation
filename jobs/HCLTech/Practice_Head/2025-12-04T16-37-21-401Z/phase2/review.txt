@@ -1,0 +1,9 @@
+[REVIEW]
+- The Contact section includes highly unprofessional and irrelevant links (Ready4Industry, Ready4Exam GitHub) that must be removed immediately, as they detract from the senior leadership image.
+- The early career experience (Wipro, Tech Mahindra, Mainstay) is too detailed for a 21+ year strategic leader. For a strict audit, these roles should be consolidated into 1-2 bullet points each to maintain focus on the last 10-12 years of high-impact leadership (IBM, Kyndryl, PwC).
+- While practice leadership is evident, there is a weak alignment to the JD requirement "Review practice weekly and consistently prove performance." The resume lacks concrete evidence or keywords relating to governance cadence, weekly reviews, or specific performance measurement frameworks beyond general metrics.
+- The JD specifically asks the candidate to "nurture project management practices." This specific competency keyword/phrase is currently missing or weakly implied; the resume focuses more on practice operations and competency building.
+- The current PwC tenure (Sep 2024 – Present) is extremely short, which is a significant risk factor requiring explanation or clarification during screening (e.g., if this is a future joining date or a very recent transition).
+- The Projects section is empty, missing a critical opportunity to showcase complex program delivery, large-scale internal investments, or thought leadership initiatives relevant to the Service Engineering leadership role.
+- The Summary, while keyword-rich, is slightly generic in its opening. It should immediately ground the candidate's core domain expertise (e.g., "Strategic Capacity Management/SRE Practice Leader...") to maximize impact and reinforce the specific COE requirement.
+[/REVIEW]
