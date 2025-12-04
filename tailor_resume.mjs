@@ -9,127 +9,109 @@ import {
   AlignmentType,
 } from "docx";
 
-// -----------------------------
-// Gemini setup
-// -----------------------------
+// ---------------------------------------------------
+// GEMINI SETUP
+// ---------------------------------------------------
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
-// Primary + fallback models (all available for your key)
 const PRIMARY_MODEL = "gemini-flash-latest";
 const FALLBACK_MODELS = ["gemini-2.0-flash", "gemini-pro-latest"];
 
-// -----------------------------
-// CLI args helper
-// -----------------------------
-function getArg(flag, defaultValue = "") {
+// ---------------------------------------------------
+// CLI ARG HANDLER
+// ---------------------------------------------------
+function getArg(flag, def = "") {
   const idx = process.argv.indexOf(flag);
-  if (idx === -1 || idx === process.argv.length - 1) return defaultValue;
+  if (idx === -1 || idx === process.argv.length - 1) return def;
   return process.argv[idx + 1];
 }
 
-// -----------------------------
-// Gemini call with fallback
-// -----------------------------
+// ---------------------------------------------------
+// CALL GEMINI WITH FALLBACK
+// ---------------------------------------------------
 async function generateWithFallback(prompt) {
   const modelsToTry = [PRIMARY_MODEL, ...FALLBACK_MODELS];
-  let lastError = null;
+  let lastErr = null;
 
   for (const modelName of modelsToTry) {
     try {
       console.log(`Using Gemini model: ${modelName}`);
       const model = genAI.getGenerativeModel({ model: modelName });
-      const result = await model.generateContent(prompt);
-      const text = result.response.text();
+      const resp = await model.generateContent(prompt);
       console.log(`Model ${modelName} succeeded.`);
-      return text;
+      return resp.response.text();
     } catch (err) {
-      lastError = err;
+      lastErr = err;
       const status = err?.status;
-      console.error(
-        `Model ${modelName} failed with status ${status}:`,
-        err.message || err
-      );
+      console.error(`Model ${modelName} error (${status}):`, err.message);
 
-      if (status === 503 || status === 500) {
-        console.error(
-          `Model ${modelName} unavailable, trying next fallback model...`
-        );
+      if (status === 500 || status === 503) {
+        console.log("Retrying with next model...");
         continue;
       }
-
-      // Non-transient error (auth, invalid request, etc.)
       throw err;
     }
   }
 
-  throw lastError || new Error("All Gemini models failed.");
+  throw lastErr || new Error("All Gemini models failed.");
 }
 
-// -----------------------------
-// Tagged text helpers
-// -----------------------------
-function extractSection(tag, text) {
+// ---------------------------------------------------
+// EXTRACT SECTION FROM TAGGED TEXT
+// ---------------------------------------------------
+function extract(tag, text) {
   const re = new RegExp(`\\[${tag}\\]([\\s\\S]*?)\\[\\/${tag}\\]`, "i");
   const m = text.match(re);
   return m ? m[1].trim() : "";
 }
 
-function splitLines(block) {
-  return block
+function splitLines(txt) {
+  return txt
     .split("\n")
-    .map((l) => l.trim())
-    .filter((l) => l.length > 0);
+    .map((x) => x.trim())
+    .filter((x) => x.length > 0);
 }
 
-// -----------------------------
-// DOCX helpers: Calibri 11, headings, bullets
-// -----------------------------
-const BODY_FONT = "Calibri";
-const BODY_SIZE = 22; // half-points => 11pt
+// ---------------------------------------------------
+// DOCX HELPERS
+// ---------------------------------------------------
+const FONT = "Calibri";
+const SIZE = 22; // 11 pt
 
-function bodyRun(text, opts = {}) {
-  return new TextRun({
-    text,
-    font: BODY_FONT,
-    size: BODY_SIZE,
-    ...opts,
-  });
+function run(text, opts = {}) {
+  return new TextRun({ text, font: FONT, size: SIZE, ...opts });
 }
 
-function headingRun(text) {
-  return new TextRun({
-    text,
-    font: BODY_FONT,
-    size: 26, // ~13pt
-    bold: true,
-    allCaps: true,
-  });
-}
-
-function nameRun(text) {
-  return new TextRun({
-    text,
-    font: BODY_FONT,
-    size: 40, // ~20pt
-    bold: true,
-  });
-}
-
-function sectionHeading(text) {
+function heading(text) {
   return new Paragraph({
-    children: [headingRun(text)],
-    spacing: { before: 200, after: 100 },
+    children: [
+      new TextRun({
+        text,
+        font: FONT,
+        size: 26,
+        bold: true,
+        allCaps: true,
+      }),
+    ],
+    spacing: { before: 200, after: 120 },
   });
 }
 
-function simpleParagraph(text, opts = {}) {
+function nameHeading(text) {
   return new Paragraph({
-    children: [bodyRun(text, opts)],
-    spacing: { after: 120 },
+    children: [
+      new TextRun({
+        text,
+        font: FONT,
+        size: 40,
+        bold: true,
+      }),
+    ],
+    alignment: AlignmentType.CENTER,
+    spacing: { after: 80 },
   });
 }
 
-function bulletParagraph(text) {
+function bullet(text) {
   return new Paragraph({
     text,
     bullet: { level: 0 },
@@ -137,144 +119,132 @@ function bulletParagraph(text) {
   });
 }
 
-// -----------------------------
-// Build DOCX from tagged AI text
-// -----------------------------
-async function buildDocxFromTaggedText(taggedText, outPath) {
-  const contactBlock = extractSection("CONTACT", taggedText);
-  const summaryBlock = extractSection("SUMMARY", taggedText);
-  const skillsBlock = extractSection("CORE_SKILLS", taggedText);
-  const expBlock = extractSection("EXPERIENCE", taggedText);
-  const eduBlock = extractSection("EDUCATION", taggedText);
-  const certBlock = extractSection("CERTIFICATIONS", taggedText);
-  const techBlock = extractSection("TECHNICAL_SKILLS", taggedText);
+function normal(text) {
+  return new Paragraph({
+    children: [run(text)],
+    spacing: { after: 120 },
+  });
+}
+
+// ---------------------------------------------------
+// BUILD DOCX FROM TAGGED AI OUTPUT
+// ---------------------------------------------------
+async function buildDocx(text, outPath) {
+  const CONTACT = extract("CONTACT", text);
+  const SUMMARY = extract("SUMMARY", text);
+  const CORE = extract("CORE_SKILLS", text);
+  const EXP = extract("EXPERIENCE", text);
+  const PROJ = extract("PROJECTS", text);
+  const TECH = extract("TECHNICAL_SKILLS", text);
+  const CERT = extract("CERTIFICATIONS", text);
+  const EDU = extract("EDUCATION", text);
 
   const children = [];
 
-  // CONTACT
-  if (contactBlock) {
-    const lines = splitLines(contactBlock);
+  // CONTACT SECTION
+  if (CONTACT) {
+    const lines = splitLines(CONTACT);
     const name = lines[0] || "";
     const rest = lines.slice(1);
 
-    children.push(
-      new Paragraph({
-        children: [nameRun(name)],
-        alignment: AlignmentType.CENTER,
-        spacing: { after: 80 },
-      })
-    );
-
-    rest.forEach((line) => {
+    children.push(nameHeading(name));
+    rest.forEach((l) =>
       children.push(
         new Paragraph({
-          children: [bodyRun(line)],
+          children: [run(l)],
           alignment: AlignmentType.CENTER,
           spacing: { after: 40 },
         })
-      );
-    });
+      )
+    );
   }
 
   // SUMMARY
-  if (summaryBlock) {
-    children.push(sectionHeading("PROFESSIONAL SUMMARY"));
-    splitLines(summaryBlock).forEach((line) => {
-      children.push(simpleParagraph(line));
-    });
+  if (SUMMARY) {
+    children.push(heading("PROFESSIONAL SUMMARY"));
+    splitLines(SUMMARY).forEach((x) => children.push(normal(x)));
   }
 
   // CORE SKILLS
-  if (skillsBlock) {
-    children.push(sectionHeading("CORE SKILLS & COMPETENCIES"));
-    splitLines(skillsBlock).forEach((line) => {
-      const clean = line.replace(/^-+\s*/, "");
-      children.push(bulletParagraph(clean));
-    });
+  if (CORE) {
+    children.push(heading("CORE SKILLS & COMPETENCIES"));
+    splitLines(CORE).forEach((x) =>
+      children.push(bullet(x.replace(/^-+\s*/, "")))
+    );
   }
 
   // EXPERIENCE
-  if (expBlock) {
-    children.push(sectionHeading("PROFESSIONAL EXPERIENCE"));
+  if (EXP) {
+    children.push(heading("PROFESSIONAL EXPERIENCE"));
 
-    const expLines = expBlock.split("\n");
-    let currentJobLines = [];
+    const lines = EXP.split("\n");
+    let block = [];
 
-    const flushJob = () => {
-      if (currentJobLines.length === 0) return;
-      const jobText = currentJobLines.join("\n").trim();
-      if (!jobText) return;
-
-      const jobLines = splitLines(jobText);
+    function flush() {
+      if (block.length === 0) return;
+      const jobLines = splitLines(block.join("\n"));
       if (jobLines.length === 0) return;
 
-      const headerLine = jobLines[0];
-      const bulletLines = jobLines.slice(1);
-
+      const header = jobLines[0];
       children.push(
         new Paragraph({
-          children: [bodyRun(headerLine, { bold: true })],
+          children: [run(header, { bold: true })],
           spacing: { before: 160, after: 80 },
         })
       );
 
-      bulletLines.forEach((l) => {
-        const clean = l.replace(/^-+\s*/, "");
-        if (clean.length > 0) {
-          children.push(bulletParagraph(clean));
-        }
-      });
-    };
+      jobLines.slice(1).forEach((l) =>
+        children.push(bullet(l.replace(/^-+\s*/, "")))
+      );
 
-    for (const rawLine of expLines) {
-      const line = rawLine.trim();
-      if (line.toLowerCase().startsWith("company:")) {
-        flushJob();
-        currentJobLines = [line];
-      } else {
-        currentJobLines.push(line);
-      }
+      block = [];
     }
-    flushJob();
+
+    for (const raw of lines) {
+      if (raw.trim().toLowerCase().startsWith("company:")) {
+        flush();
+        block = [raw];
+      } else block.push(raw);
+    }
+    flush();
   }
 
-  // EDUCATION
-  if (eduBlock) {
-    children.push(sectionHeading("EDUCATION"));
-    splitLines(eduBlock).forEach((line) => {
-      const clean = line.replace(/^-+\s*/, "");
-      children.push(simpleParagraph(clean));
-    });
-  }
-
-  // CERTIFICATIONS
-  if (certBlock) {
-    children.push(sectionHeading("CERTIFICATIONS"));
-    splitLines(certBlock).forEach((line) => {
-      const clean = line.replace(/^-+\s*/, "");
-      children.push(bulletParagraph(clean));
+  // PROJECTS
+  if (PROJ) {
+    children.push(heading("PROJECTS & INDEPENDENT WORK"));
+    splitLines(PROJ).forEach((line) => {
+      if (line.startsWith("-")) children.push(bullet(line.replace(/^-+\s*/, "")));
+      else children.push(normal(line));
     });
   }
 
   // TECHNICAL SKILLS
-  if (techBlock) {
-    children.push(sectionHeading("TECHNICAL SKILLS"));
-    splitLines(techBlock).forEach((line) => {
-      const clean = line.replace(/^-+\s*/, "");
-      children.push(simpleParagraph(clean));
-    });
+  if (TECH) {
+    children.push(heading("TECHNICAL SKILLS"));
+    splitLines(TECH).forEach((x) => children.push(normal(x)));
   }
 
-  // Page margins: about 1 inch all around (for 1–2 page resume)
+  // CERTIFICATIONS
+  if (CERT) {
+    children.push(heading("CERTIFICATIONS"));
+    splitLines(CERT).forEach((x) => children.push(bullet(x)));
+  }
+
+  // EDUCATION
+  if (EDU) {
+    children.push(heading("EDUCATION"));
+    splitLines(EDU).forEach((x) => children.push(normal(x)));
+  }
+
   const doc = new Document({
     sections: [
       {
         properties: {
           page: {
             margin: {
-              top: 1440, // 1 inch
+              top: 1440,
               bottom: 1440,
-              left: 1150, // slightly narrower horizontally
+              left: 1150,
               right: 1150,
             },
           },
@@ -288,110 +258,109 @@ async function buildDocxFromTaggedText(taggedText, outPath) {
   fs.writeFileSync(outPath, buffer);
 }
 
-// -----------------------------
-// MAIN
-// -----------------------------
+// ---------------------------------------------------
+// MAIN EXECUTION
+// ---------------------------------------------------
 async function main() {
   const company = getArg("--company");
   const jobTitle = getArg("--job-title");
-  const jobDescFile = getArg("--job-desc-file");
+  const jdFile = getArg("--job-desc-file");
   const extra = getArg("--extra", "");
-  const resumeModeArg = getArg("--resume-mode", "infra"); // infra | hybrid | dev
-  const methodsArg = getArg("--methods", ""); // e.g. "agile,finops"
+  const rmArg = getArg("--resume-mode", "infra");
+  const methodsArg = getArg("--methods", "");
 
-  if (!company || !jobTitle || !jobDescFile) {
-    console.error(
-      'Usage: node tailor_resume.mjs --company "X" --job-title "Y" --job-desc-file jd.txt [--extra "notes"] [--resume-mode infra|hybrid|dev] [--methods "agile,finops"]'
-    );
+  if (!company || !jobTitle || !jdFile) {
+    console.error("Missing required args.");
     process.exit(1);
   }
 
-  const resumeMode =
-    resumeModeArg.toLowerCase() === "dev"
-      ? "DEV_ONLY"
-      : resumeModeArg.toLowerCase() === "hybrid"
-      ? "INFRA_PLUS_DEV"
-      : "INFRA_ONLY";
+  // resume mode mapping
+  let resumeMode = "INFRA_ONLY";
+  if (rmArg.toLowerCase() === "dev") resumeMode = "DEV_ONLY";
+  else if (rmArg.toLowerCase() === "hybrid") resumeMode = "INFRA_PLUS_DEV";
 
-  const methodsList = methodsArg
+  // methodology flags
+  const methods = methodsArg
     .split(",")
-    .map((m) => m.trim().toLowerCase())
-    .filter((m) => m.length > 0);
+    .map((x) => x.trim().toLowerCase())
+    .filter(Boolean);
 
-  const methodologies = [];
-  if (methodsList.includes("agile")) methodologies.push("Agile");
-  if (methodsList.includes("finops")) methodologies.push("FinOps");
+  const methodologyList = [];
+  if (methods.includes("agile")) methodologyList.push("Agile");
+  if (methods.includes("finops")) methodologyList.push("FinOps");
 
-  const baseResumePath = path.join(process.cwd(), "base_resume.md");
-  const systemPromptPath = path.join(
-    process.cwd(),
-    "templates",
-    "system_prompt.txt"
-  );
-  const devResumePath = path.join(process.cwd(), "development.md");
+  // FILES
+  const baseResume = fs.readFileSync("base_resume.md", "utf8");
+  const systemPrompt = fs.readFileSync("templates/system_prompt.txt", "utf8");
+  const devSkills = fs.existsSync("development.md")
+    ? fs.readFileSync("development.md", "utf8")
+    : "";
 
-  const baseResume = fs.readFileSync(baseResumePath, "utf8");
-  const systemPrompt = fs.readFileSync(systemPromptPath, "utf8");
-  const jobDesc = fs.readFileSync(jobDescFile, "utf8");
+  // BIG-TECH CHECK
+  const companyUpper = company.toUpperCase();
+  const isBigTech = ["GOOGLE","MICROSOFT","AMAZON","AWS","META","APPLE","NETFLIX"]
+    .some(tag => companyUpper.includes(tag));
 
-  let devResumeAddon = "";
-  if (resumeMode === "INFRA_PLUS_DEV" || resumeMode === "DEV_ONLY") {
-    if (fs.existsSync(devResumePath)) {
-      devResumeAddon = fs.readFileSync(devResumePath, "utf8");
-    } else {
-      console.warn(
-        "development.md not found, but a dev mode was requested. Continuing without dev add-on."
-      );
-    }
-  }
+  // load tone reference template
+  const devGoogleTemplate = isBigTech
+    ? fs.readFileSync("development_google_template.md", "utf8")
+    : "(none)";
 
+  const jdText = fs.readFileSync(jdFile, "utf8");
+
+  // Should projects be inserted?
+  const includeProjects =
+    resumeMode === "DEV_ONLY" || resumeMode === "INFRA_PLUS_DEV"
+      ? "YES"
+      : "NO";
+
+  // FINAL PROMPT
   const prompt = `
 ${systemPrompt}
 
-================ INPUT CONTEXT ================
+================ CONTEXT INPUT ================
 TARGET_COMPANY: ${company}
 TARGET_ROLE: ${jobTitle}
 
 RESUME_MODE: ${resumeMode}
-METHODOLOGIES: ${methodologies.join(", ") || "None"}
+INCLUDE_PROJECTS: ${includeProjects}
+METHODOLOGIES: ${methodologyList.join(", ") || "None"}
 
 JOB_DESCRIPTION:
-${jobDesc}
+${jdText}
 
 EXTRA_INSTRUCTIONS:
-${extra || "(none)"}
+${extra}
 
 BASE_RESUME:
 ${baseResume}
 
-DEV_RESUME_ADDON:
-${devResumeAddon || "(none)"}
+DEV_SKILLS_BLOCK:
+${resumeMode !== "INFRA_ONLY" ? devSkills : "(none)"}
+
+BIG_TECH_TONE_REFERENCE:
+${devGoogleTemplate}
 ================================================
   `.trim();
 
   const aiText = await generateWithFallback(prompt);
 
+  // OUTPUT PATHS
   const safeCompany = company.replace(/[^a-z0-9]+/gi, "_");
   const safeTitle = jobTitle.replace(/[^a-z0-9]+/gi, "_");
-  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const stamp = new Date().toISOString().replace(/[:.]/g, "-");
 
-  const versionDir = path.join(
-    process.cwd(),
-    "jobs",
-    safeCompany,
-    safeTitle,
-    timestamp
-  );
-  fs.mkdirSync(versionDir, { recursive: true });
+  const outDir = path.join("jobs", safeCompany, safeTitle, stamp);
+  fs.mkdirSync(outDir, { recursive: true });
 
-  const rawOut = path.join(versionDir, `raw_${safeCompany}_${safeTitle}.txt`);
-  const docxOut = path.join(versionDir, `resume_${safeCompany}_${safeTitle}.docx`);
+  const rawOut = path.join(outDir, `raw.txt`);
+  const docxOut = path.join(outDir, `resume.docx`);
 
   fs.writeFileSync(rawOut, aiText, "utf8");
-  await buildDocxFromTaggedText(aiText, docxOut);
+  await buildDocx(aiText, docxOut);
 
-  console.log("Saved raw AI output:", rawOut);
-  console.log("Saved professional DOCX resume:", docxOut);
+  console.log("Raw output:", rawOut);
+  console.log("DOCX saved:", docxOut);
 }
 
 main().catch((err) => {
