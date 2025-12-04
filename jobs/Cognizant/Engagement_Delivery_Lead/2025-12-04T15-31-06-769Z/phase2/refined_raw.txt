@@ -1,0 +1,83 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Strategic Global Delivery Leader with 21+ years of experience directing large-scale, multi-site operations and transformation initiatives for premier BFSI clients. Proven ability to lead global teams of 250+ and manage complex operational budgets ($25M), delivering significant efficiency gains ($8M savings). Expert in designing GenAI-enabled operating models to enhance service reliability and drive business outcomes. Adept at executive stakeholder management, governance, and aligning technology solutions with strategic client objectives.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Directed a $25M operational budget, achieving $8M in cost savings through strategic automation, vendor consolidation, and process re-engineering for global BFSI service delivery.
+- Pioneered a GenAI-enabled operating model for a major financial services client, reducing critical service disruptions by 60% and significantly improving business process continuity.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+Global Delivery Leadership | Large-Scale Operations (250+ FTE) | Client Leadership & Governance | Transformation Strategy | GenAI-Enabled Operating Models | BFSI Service Delivery | Operational Budget Management | Risk & Compliance | SLA Management
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Advised Managing Directors and C-level client executives at leading BFSI firms on transforming service delivery operations, aligning strategic roadmaps with business objectives and regulatory frameworks.
+- Designed the strategic blueprint for a GenAI-enabled operating model to enhance business process reliability, demonstrating a 60% reduction in service disruptions in pilot programs.
+- Led client solutioning engagements focused on optimizing technology spend and developing transformation-backed TCO/ROI narratives for large-scale modernization programs.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed global service delivery for a 100,000+ asset portfolio, leading a multi-site team to ensure operational resilience and SLA adherence for enterprise BFSI clients.
+- Led a strategic $30M+ vendor insourcing program, negotiating contracts and managing the transition to improve operational control, agility, and cost-to-serve.
+- Championed the adoption of an Agentic AI system to automate AIOps insights, establishing a foundational capability for intelligent automation and GenAI-driven service management.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Owned and optimized a $25M annual operational budget, delivering $8M in savings by leading global initiatives in automation, vendor renegotiation, and strategic process improvements.
+- Built and scaled the global Capacity Management Center of Excellence from 10 to 250 professionals across 5 countries, establishing robust governance, SLAs, and performance management frameworks.
+- Provided global delivery leadership for key BFSI accounts (e.g., Scotiabank) and led initiatives to modernize contact center support operations by integrating AI-driven analytics to improve service levels.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM transformation consulting for major BFSI and telecom clients, designing automation strategies to enhance service quality and operational efficiency.
+- Established and chaired the Change Advisory Board (CAB), implementing rigorous governance and risk controls to ensure operational stability for mission-critical client systems.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Managed major release deployments and provided application support for clients including British Telecom and NHS UK, ensuring high availability of critical systems.
+- Deployed and managed enterprise monitoring solutions including Nagios, Zabbix, and HP OpenView to proactively identify and resolve infrastructure issues.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as a key escalation point for mission-critical telecom systems, reducing downtime through expert troubleshooting and authoring of technical SOPs.
+- Trained and mentored L1/L2 support engineers to improve team-wide technical proficiency and resolution capabilities.
+[/EXPERIENCE]
+
+[PROJECTS]
+GenAI-Enabled Operating Model Design
+- Architected the strategic framework for applying GenAI to core IT service management, creating a blueprint for enhancing business process resilience and reducing operational risk for a large BFSI client.
+Global Center of Excellence (CoE) Build-Out
+- Led the end-to-end creation and scaling of a global CoE to 250+ members, establishing standardized processes, governance, and delivery metrics across 5 international locations.
+Strategic Vendor Insourcing & Transition
+- Directed a $30M program to insource critical infrastructure services, managing the full lifecycle from business case development and contract negotiation to operational transition and stabilization.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Transformation Frameworks: GenAI Application Design, ITIL, NIST, COBIT
+Service Management & Automation: ServiceNow, Jira, AIOps (ScienceLogic, Datadog), Ansible
+Cloud Platforms & FinOps Strategy: Azure, AWS, GCP; Cost Optimization & TCO Modeling
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- FinOps Certified Practitioner
+- ITIL v3 Foundation
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- Google Digital Leader
+- COBIT 4.1 Foundation
+- Multiple IBM Architect & Consulting Badges
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management, IIT Roorkee (2025)
+- Master’s in Information Technology, Manipal Academy of Higher Education (2002)
+- Bachelor of Science, Anugrah Narayan College, Patna University (1999)
+[/EDUCATION]

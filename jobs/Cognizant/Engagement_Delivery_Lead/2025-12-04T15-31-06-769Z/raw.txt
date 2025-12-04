@@ -1,0 +1,74 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Accomplished Global Delivery Leader with over 21 years of experience managing large-scale technology operations and multi-million dollar P&Ls for leading BFSI and Healthcare clients. Proven expert in driving operational excellence and transformation through GenAI-enabled automation, SRE, and cloud modernization, delivering significant cost savings and reliability improvements. Adept at building executive-level client relationships, leading global teams of 250+, and shaping strategic roadmaps to achieve critical business outcomes.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Managed a $25M annual OPEX budget, delivering $8M in savings through strategic automation, vendor consolidation, and license optimization initiatives.
+- Engineered and deployed a GenAI-enabled automation framework that reduced repeat incident failures by 60%, significantly enhancing service reliability for mission-critical systems.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+Global Delivery Leadership | P&L Management | Client Leadership & Governance | Transformation & GenAI | Large-Scale Operations | Service Delivery & SLA Management | BFSI Operations | Risk & Compliance | Cloud Modernization | FinOps | SRE
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Advised senior leadership at enterprise BFSI and healthcare clients on IT strategy, aligning ITSM frameworks with NIST and ITIL standards to enhance compliance and operational maturity.
+- Engineered a GenAI-driven automation framework that reduced repeat failures by 60%, directly improving service reliability and business continuity for critical client operations.
+- Directed FinOps engagements to develop hybrid-cloud cost optimization strategies, enabling proactive budget management for platform modernization programs.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led global technology service delivery for a mission-critical data center portfolio of 100,000+ IT assets, ensuring high availability, reliability, and capacity management for enterprise clients.
+- Directed a $30M+ vendor displacement program, successfully insourcing critical infrastructure services to enhance operational agility and improve cost-to-serve.
+- Championed Cloud & DevOps enablement, including the implementation of an Agentic AI system to autonomously action AIOps insights, a precursor to modern GenAI-enabled operating models.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Owned a $25M annual OPEX budget, achieving $8M in savings through targeted automation, strategic vendor renegotiation, and software license optimization.
+- Built and scaled the global Capacity Management Center of Excellence from 10 to 250 members across 5 countries, demonstrating capability to build and manage large, multi-site delivery teams.
+- Provided global delivery leadership for complex BFSI service engagements (e.g., Scotiabank) and modernized contact center operations by integrating AI-driven insights to improve response times.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major BFSI and telecom clients, enhancing service delivery quality and speed-to-market.
+- Established robust Problem and Change Management governance, chaired the Change Advisory Board (CAB), and implemented risk controls to ensure operational stability and compliance.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Managed major release deployments and provided application support for clients including British Telecom and NHS UK, ensuring high availability of critical systems.
+- Deployed and managed enterprise monitoring solutions including Nagios, Zabbix, and HP OpenView to proactively identify and resolve infrastructure issues.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as a key escalation point for mission-critical telecom systems, reducing downtime through expert troubleshooting and authoring of technical SOPs.
+- Trained and mentored L1/L2 support engineers to improve team-wide technical proficiency and resolution capabilities.
+[/EXPERIENCE]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure, AWS, Google Cloud, Flexera, CoreStack
+ITSM & Operations: ServiceNow, Jira, Remedy, ScienceLogic, Datadog, Ansible
+Transformation & AI: GenAI & Automation Frameworks, AIOps, Power BI
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- ITIL v3 Foundation
+- COBIT 4.1 Foundation
+- Multiple IBM Architect & Consulting Badges
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management, IIT Roorkee (2025)
+- Master’s in Information Technology, Manipal Academy of Higher Education (2002)
+- Bachelor of Science, Anugrah Narayan College, Patna University (1999)
+[/EDUCATION]

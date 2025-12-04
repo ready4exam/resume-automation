@@ -1,0 +1,16 @@
+[REVIEW]
+- **Fundamental Domain Mismatch:** The most critical issue is the candidate's experience is in IT Infrastructure & Technology Operations (SRE, ITSM, Cloud, Data Centers), not the required Life, Annuities & Retirement (LAR) BPO/BPS domain. The resume lacks any mention of core LAR processes like underwriting support, policy administration, claims processing, or retirement recordkeeping. The role is for a business operations leader, not a technology leader.
+
+- **Significant Leadership Scale Gap:** The job requires proven leadership of an 800+ FTE team and a $50M+ P&L. The candidate's resume maxes out at a 250-member team and management of a $25M OPEX budget. Managing a cost budget (OPEX) is fundamentally different and less complex than owning a full P&L with revenue, margin, and growth responsibilities.
+
+- **Missing Core BPO/Contact Center Keywords & Metrics:** The resume is devoid of essential BPO and contact center terminology. Keywords like `WFM`, `AHT`, `FCR`, `TAT`, `CSAT`, `COPC`, `Underwriting`, `Claims`, `Policy Admin`, `Commissions`, `Reconciliation` are completely absent. The metrics provided (incident reduction, cost savings) are IT-focused, not the required operational KPIs (e.g., STP%, automation rate, NIGO reduction).
+
+- **Transformation Context is Misaligned:** The candidate mentions "GenAI" and "automation," but the context is for IT Service Management (reducing incident failures, AIOps). This does not align with the job's requirement to transform specific LAR business processes like claims adjudication or underwriting triage using tools like RPA (UiPath/AA) and IDP (ABBYY), which are not mentioned.
+
+- **No Evidence of Sales, Solutioning, or Commercial Acumen:** A core part of the Director role is leading RFI/RFP responses, designing operating models, and shaping commercial constructs (Gainshare, Txn pricing). The resume shows no experience in new business solutioning, deal wins, transition management, or complex commercial modeling.
+
+- **Lack of Relevant Certifications and Platform Knowledge:** The listed certifications (Azure, AWS, ITIL) and technical skills are for cloud and IT infrastructure. They are irrelevant to the role. The resume is missing key preferred certifications (LOMA ALMI/FLMI, Lean Six Sigma Black Belt, COPC) and shows no familiarity with the required LAR platforms (ALIP/VPAS) or CX tech (Genesys/NICE).
+
+- **Inconsistent Seniority and Tone:** While the job titles seem senior, the bullet points focus on technical and project-level execution ("Engineered a GenAI-driven automation framework," "Deployed and managed enterprise monitoring solutions") rather than the strategic, business-outcome-oriented leadership required at a Director level responsible for a large P&L and executive client relationships.
+
+- **ATS Risk due to Keyword Deficiency:** The resume is optimized for an IT Infrastructure leadership role and would almost certainly be filtered out by an ATS screening for this BPO position. The complete absence of domain-specific keywords makes it invisible for this specific search.
