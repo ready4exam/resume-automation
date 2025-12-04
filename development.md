@@ -1,73 +1,136 @@
-KESHAV KARN
-Hyderabad, India | 8520977573 | keshav.karn@gmail.com
-LinkedIn: https://www.linkedin.com/in/keshavkarn/ 
-Ready4Industry: https://ready4industry.in 
-Ready4Exam: https://ready4exam.github.io/ready4exam-class-11/index.html
-EXECUTIVE SUMMARY
-Cloud Support Engineering Manager & SRE Transformation Leader with 21+ years of experience managing global L2/L3 technical teams, driving cloud modernization (GCP/Azure/AWS), handling high-severity production escalations, and troubleshooting complex enterprise platforms. Hands-on experience building hosted SaaS services, automation pipelines, SQL/BigQuery analytics, and full-stack troubleshooting.
-CORE TECHNICAL SKILLS
-•	Cloud: Google Cloud, Azure, AWS
-•	Languages: Python, JavaScript, Shell
-•	Data: SQL, BigQuery, Postgres (Supabase), ETL & pipeline debugging
-•	SaaS Engineering: Vercel, Supabase, Firebase, GitHub Actions, CI/CD
-•	SRE: Incident response, RCA, MTTR reduction, SLO/SLA management
-•	Monitoring: Datadog, New Relic, Prometheus, ScienceLogic, CloudWatch, Azure Monitor
-•	ITSM: ServiceNow, Remedy, ITIL
-•	Automation: GitHub Actions, AIOps, Agentic AI Workflows
-GITHUB & SAAS ENGINEERING PROJECTS
-Ready4Exam — Full-Stack SaaS Platform (Architect & Developer)
-URL: https://ready4exam.github.io/ready4exam-class-11/index.html 
-- Deployed cloud-hosted SaaS platform on Vercel + Supabase serving 10,000+ users.
-- Automated 500+ DB tables using GitHub Actions (JavaScript + Shell).
-- Built troubleshooting workflows for API, SQL, and authentication issues.
-- Created ETL pipeline Supabase → Firebase → Looker Studio.
-Ready4Industry — Career Intelligence Engine
-URL: https://ready4industry.in 
-- Built AI-driven assessment platform with automated scoring and analytics.
-- Designed scalable architecture, optimized queries, and production error handling.
+# **Master Skill & Capability Summary**
+### *(Product Architect | AI Engineer | Full-Stack Developer | EdTech Innovator | IT Transformation Leader)*  
+A uniquely powerful combination of skills across **AI, Product Architecture, Full-Stack Engineering, Automation, Psychometrics, EdTech Systems, and IT Delivery Leadership**.
 
-PROFESSIONAL EXPERIENCE
-PwC — Senior Manager, IT Strategy & FinOps Advisor
-Sep 2024 – Present | India
-•	Partnered with Engineering and Product teams to design cloud modernization roadmaps.
-•	Built AI-driven AIOps framework reducing repeat incidents by 60%.
-•	Delivered hybrid-cloud FinOps optimization across Azure/AWS/GCP.
-•	Managed customer escalations and improved MTTR through automation.
-Kyndryl — Associate Director, Head of Global SRE & Platform Operations
-Sep 2021 – Aug 2024
-•	Led global 24×7 SRE & platform support teams managing 100,000+ IT assets.
-•	Executed $30M+ cloud modernization & vendor displacement initiative.
-•	Implemented Agentic AI auto-remediation reducing manual ops by 50%.
-•	Improved RCA efficiency by 40% through automation and observability.
-IBM —  Global Process Owner (ITSM & Capacity Management)
-Jan 2014 – Aug 2021
-•	Managed $25M OPEX budget delivering $8M annual savings.
-•	Built and scaled Capacity Management CoE from 10 → 250 engineers.
-•	Improved service availability using predictive analytics.
-•	Led ITSM modernization across global delivery centers.
-Wipro — Senior Consultant, ITSM & Automation
-Jun 2010 – Nov 2013
-•	Delivered ITSM automation strategies improving operational KPIs.
-•	Enabled RCA-driven process improvements for telecom/BFSI clients.
-•	Managed cross-functional application engineering teams, driving defect resolution, SLA adherence, and customer advocacy with product/engineering teams.
-Tech Mahindra — Senior Technical Associate
-Oct 2006 – May 2010
-•	Led an enterprise Application Support Group managing L2/L3 escalations for hosted services, SaaS platforms, and backend/web applications for NHS.
-•	Performed daily database health checks, SQL tuning, and platform stability analysis across Oracle/PostgreSQL environments.
-•	Developed troubleshooting playbooks for Linux/Unix-based applications, improving RCA quality and reducing repeat incidents by 30%.
-Mainstay Teleservices — Sr. 2nd Line Specialist
-Mar 2003 – Oct 2006
-•	Handled L2/L3 escalations for telecom clients, reducing downtime.
-•	Trained engineers and built SOP documentation.
-CERTIFICATIONS
-•	Google Cloud Digital Leader
-•	Microsoft Azure Solutions Architect Expert
-•	AWS Cloud Practitioner
-•	FinOps Certified Practitioner
-•	IBM Architect & Consultant Badges
-•	ITIL v3, COBIT 4.1
+---
 
-EDUCATION
-Post Graduate Programme in Project Management — IIT Roorkee, 2025
-Master’s in Information Technology — Manipal Academy of Higher Education, 2002
-Bachelor’s in Science — A.N. College (Patna University), 1999
+# ⭐ **AI, Automation & Intelligence Systems**
+- Architected end-to-end **AI-driven academic intelligence systems** for Classes 6–12.  
+- Designed and implemented **AI-based Career Stream Selector** using psychometrics, competency models, and industry analytics.  
+- Built AI analytics pipelines for:
+  - difficulty scoring  
+  - question generation  
+  - student mastery mapping  
+  - performance insights  
+- Engineered automated systems for:
+  - curriculum ingestion  
+  - syllabus mapping  
+  - question bank automation  
+  - student progress tracking  
+- Integrated AI models to generate:
+  - personalized learning paths  
+  - career recommendations  
+  - concept-level remediation strategies  
+
+---
+
+# 🧠 **Psychometrics & Educational Data Engineering**
+- Implemented **Aptitude–Interest–Personality (AIP) profiling** for scientific stream selection.  
+- Developed **Competency Alignment Matrix** for matching student traits to career paths.  
+- Converted psychometric frameworks into **algorithmic scoring engines** and automated reports.  
+- Mapped learning outcomes to mastery tiers: **Know → Apply → Analyze** across subjects and classes.
+
+---
+
+# 🏗️ **Full-Stack Product Architecture (End-to-End Build)**
+*(Every page, workflow, UI flow, backend API, automation script, and deployment built independently.)*
+
+### **Platforms Architected & Developed**
+- **Ready4Industry** → Career readiness, psychometrics, stream selection  
+- **Ready4Exam** → Academic mastery, syllabus mapping, quiz engines, student analytics  
+
+### **Frontend Engineering**
+- Built modular UI systems using **HTML, TailwindCSS, JavaScript**  
+- Designed component-driven architecture for dynamic rendering and responsiveness  
+
+### **Backend & Platform Engineering**
+- Supabase for **DB, Auth, APIs, Logging, Storage**  
+- Engineered modular systems:
+  - `curriculum.js` → syllabus engine  
+  - `quiz-engine.js`  
+  - `chapter-selection.js`  
+  - table-generation automation  
+  - Supabase usage logs & analytics ingestion  
+
+### **Dynamic Application Flow**
+- Automated navigation for:  
+  **Board → Class → Subject → Chapter → Quiz**
+
+---
+
+# 🛠️ **Software Engineering & Automation**
+- Built **GitHub Actions CI/CD pipelines** for:
+  - repository creation  
+  - curriculum generation  
+  - deployment workflows  
+  - class-specific site builds  
+- Created reusable JavaScript modules for:
+  - quiz rendering  
+  - table building  
+  - authentication  
+  - score logging  
+- Achieved **zero-manual-touch automation** for academic content deployment.
+
+---
+
+# 📊 **Data Visualization & Academic Intelligence Dashboards**
+Designed end-to-end analytics systems for:
+
+- Student performance  
+- Teacher metrics & effectiveness  
+- Difficulty vs. percentage  
+- Chapter readiness  
+- Scatter analysis (performance correlations)  
+- Board → class → subject academic trends  
+
+Built principal-facing intelligence dashboards with:
+- actionable insights  
+- academic gap detection  
+- intervention recommendations  
+
+Automated ingestion of Supabase logs into institution-level reporting layers.
+
+---
+
+# 🎨 **UX/UI & Learning Experience Design**
+- Designed clean, modular user experiences for:
+  - Students  
+  - Teachers  
+  - Parents  
+  - Principals  
+- Built intuitive navigation across complete academic journeys.  
+- Created responsive layouts and consistent UI frameworks.  
+- Designed seamless assessment flows and visualization-driven dashboards.
+
+---
+
+# 🧭 **Career Counselling & EdTech Strategy (Pathfinder System)**
+### **Architected a Complete Class 11 Stream Selection System**
+- Psychometrics-based AIP profiling  
+- Career & industry demand mapping  
+- Salary forecasting engine  
+- Automated AIP report generation  
+- Dual-guidance model:
+  - AI recommendation layer  
+  - Human counsellor layer  
+
+Developed structured **career opportunity modules** for:
+- Science  
+- Commerce  
+- Humanities  
+
+Built tools that reduce confusion for students and provide clarity for parents.
+
+---
+
+# 🚀 **Summary**
+This skillset positions you as a **rare hybrid leader** who can simultaneously operate as:
+
+- **AI Architect**  
+- **Full-Stack Product Engineer**  
+- **Automation & Data Pipeline Engineer**  
+- **EdTech System Designer**  
+- **IT Transformation Leader**
+
+A combination extremely valuable in modern SaaS, EdTech, consulting, and AI-driven product companies.
+
