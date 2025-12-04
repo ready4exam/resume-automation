@@ -1,0 +1,81 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+Senior AI Product Leader with over 21 years of experience driving business transformation by delivering innovative technology solutions. Expert in owning the end-to-end product lifecycle for Agentic AI and RAG-based systems, from strategic roadmap definition to delivery and impact measurement. Proven track record of translating complex business challenges into high-impact AI products that enhance operational efficiency, optimize costs through FinOps, and drive significant business growth.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- End-to-End AI Product Leadership (Strategy, Roadmap, Lifecycle)
+- Multi-Agentic System Design (CrewAI, LangChain, RAG)
+- AI Impact Measurement & Business KPI Alignment
+- Data Strategy & Context Engineering for AI
+- Cloud FinOps & Cost Optimization Strategy
+- Cross-Functional Leadership & Change Management
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Owned the product vision and delivery for an Agentic AI system that autonomously actioned AIOps insights, improving incident response times and system reliability across a portfolio of over 100,000 IT assets.
+- Led a $30M+ strategic vendor displacement program, insourcing critical infrastructure to improve product delivery agility and reduce operational risk.
+- Drove Cloud & DevOps enablement initiatives, including large-scale AWS migrations and platform modernization efforts to support new product capabilities.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX, achieving $8M in savings by implementing product-led automation, FinOps principles, and strategic license optimization.
+- Drove the product strategy for modernizing contact center operations, integrating AI-driven insights to accelerate issue resolution and elevate user satisfaction.
+- Scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing global frameworks that improved forecasting accuracy and resource allocation.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Provided ITSM consulting for major BFSI and telecom clients, including a leading capital markets firm, identifying opportunities for process automation and efficiency gains.
+- Led Change and Problem Management functions, implementing risk-controlled changes and conducting root cause analysis to improve service stability for enterprise clients.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring solutions (Nagios, Zabbix, HP OpenView) for clients including British Telecom.
+- Led application support for NHS UK, ensuring high availability for critical healthcare platforms through timely issue resolution.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as a technical SME, handling high-impact escalations and ensuring uptime for mission-critical telecom systems.
+- Authored SOPs and trained L1/L2 engineers, improving team capabilities and standardizing support processes.
+[/EXPERIENCE]
+
+[PROJECTS]
+Agentic AI for Hybrid-Cloud FinOps
+- Architected and prototyped a multi-agent system using CrewAI and LangChain to automate cloud cost anomaly detection, root cause analysis, and remediation workflows.
+- Implemented a RAG pipeline connecting LLMs to real-time vendor pricing data and internal usage policies, improving optimization recommendation accuracy by over 40%.
+- Delivered a 15% reduction in cloud spend anomalies and cut manual FinOps reporting time by over 75% through automated, agent-driven financial governance.
+
+Agentic AI for IT Service Reliability
+- Owned the product lifecycle of an AI-driven automation product designed to address high-volume, repeat service failures in enterprise IT environments.
+- Designed an agentic system with a RAG pipeline to analyze incident patterns, query knowledge bases for root causes, and autonomously deploy remediation scripts.
+- Reduced repeat service failures by 60%, directly improving system reliability, enhancing user experience, and reducing manual intervention for support teams.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+AI Frameworks: LangChain, CrewAI, MS Agents Framework
+Cloud & FinOps: AWS, Azure, GCP, CoreStack, Flexera, Apptio Cloudability
+ITSM & Orchestration: ServiceNow, Jira, Remedy, Ansible
+Observability & Monitoring: Datadog, New Relic, ScienceLogic, Prometheus, Grafana
+Programming & Scripting: Python, Shell Scripting, JavaScript
+Data & BI: Power BI, MS Visio, ETL Pipelines
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
