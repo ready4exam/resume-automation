@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -26,117 +24,86 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Parse issue body
+      - name: Parse issue
         id: parse
         uses: actions/github-script@v7
         with:
           script: |
             const body = context.payload.issue.body || "";
 
-            function extractSingle(label) {
+            function extract(label) {
               const re = new RegExp(`^${label}: *(.*)$`, "mi");
               const m = body.match(re);
               return m ? m[1].trim() : "";
             }
 
-            const company = extractSingle("Company");
-            const jobTitle = extractSingle("Job Title");
-            const extra = extractSingle("Extra");
-            const resumeMode = extractSingle("Resume Mode");       // infra | hybrid | dev
-            const methods = extractSingle("Methodologies");        // e.g. "Agile,FinOps"
+            const company = extract("Company");
+            const role = extract("Job Title");
+            const extra = extract("Extra");
+            const resumeMode = extract("Resume Mode");
+            const methods = extract("Methodologies");
 
-            // Everything after "Job Description:" is JD
-            const marker = "Job Description:";
-            let jd = "";
-            const idx = body.indexOf(marker);
-            if (idx !== -1) jd = body.substring(idx + marker.length).trim();
+            const jdMark = "Job Description:";
+            const idx = body.indexOf(jdMark);
+            const jd = idx >= 0 ? body.substring(idx + jdMark.length).trim() : "";
 
-            core.setOutput("company", company || "Unknown Company");
-            core.setOutput("job_title", jobTitle || "Unknown Role");
-            core.setOutput("extra", extra || "");
-            core.setOutput("job_description", jd || "");
-            core.setOutput("resume_mode", resumeMode || "infra");
-            core.setOutput("methods", methods || "");
+            core.setOutput("company", company);
+            core.setOutput("role", role);
+            core.setOutput("extra", extra);
+            core.setOutput("resume_mode", resumeMode);
+            core.setOutput("methods", methods);
+            core.setOutput("jd", jd);
 
       - name: Save JD to file
         run: |
           mkdir -p tmp
-          cat << 'EOF' > tmp/jd.txt
-          ${{ steps.parse.outputs.job_description }}
-          EOF
+          echo "${{ steps.parse.outputs.jd }}" > tmp/jd.txt
 
-      - name: Run tailoring script (Phase 1)
+      - name: Phase-1 (tailor)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           node tailor_resume.mjs \
             --company "${{ steps.parse.outputs.company }}" \
-            --job-title "${{ steps.parse.outputs.job_title }}" \
+            --job-title "${{ steps.parse.outputs.role }}" \
             --job-desc-file tmp/jd.txt \
             --extra "${{ steps.parse.outputs.extra }}" \
             --resume-mode "${{ steps.parse.outputs.resume_mode }}" \
             --methods "${{ steps.parse.outputs.methods }}"
 
-      - name: Debug — show jobs folder structure
+      - name: Find latest job folder
+        id: find
         run: |
-          echo "Jobs folder structure:"
-          find jobs -maxdepth 3 -type d || true
+          LATEST=$(ls -td jobs/*/*/* | head -n 1)
+          echo "folder=$LATEST" >> $GITHUB_OUTPUT
 
-      - name: Run refine script (Phase 2 – review & improve)
+      - name: Phase-2 (refine)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          # Detect deepest timestamped folder: jobs/*/*/*
-          LATEST_JOB_DIR=$(ls -td jobs/*/*/* 2>/dev/null | head -n 1)
-
-          echo "Detected latest job folder: $LATEST_JOB_DIR"
-
-          if [ -z "$LATEST_JOB_DIR" ]; then
-            echo "❌ ERROR: No job folder found in jobs/*/*/*"
-            exit 1
-          fi
-
+          FOLDER="${{ steps.find.outputs.folder }}"
           node refine_resume.mjs \
             --job-desc-file tmp/jd.txt \
-            --raw-file "$LATEST_JOB_DIR/raw.txt" \
-            --out-dir "$LATEST_JOB_DIR/phase2"
+            --raw-file "$FOLDER/raw.txt" \
+            --out-dir "$FOLDER/phase2"
 
-          echo "Phase-2 output stored in: $LATEST_JOB_DIR/phase2"
-
-      - name: Commit generated resumes into repo
+      - name: Commit results
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          git add jobs/
+          git commit -m "Add tailored + refined resume" || true
+          git push || true
 
-          git add jobs/ || echo "Nothing to add"
-          git commit -m "Add tailored + refined resume for issue #${{ github.event.issue.number }}" || echo "Nothing to commit"
-          git push || echo "Push skipped"
-
-      - name: Comment back on issue with link to run
+      - name: Comment back
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const issue_number = context.payload.issue.number;
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
             const runId = process.env.GITHUB_RUN_ID;
-
-            const url = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
-
-            const body = [
-              "✅ Your tailored resume *and* refined recruiter-reviewed resume have been generated.",
-              "",
-              "📂 Output stored under the `jobs/` folder in the repository:",
-              "- Phase 1 → raw.txt",
-              "- Phase 2 → refined_raw.txt + refined_resume.docx",
-              "",
-              `🔗 View workflow run: ${url}`
-            ].join("\n");
-
-            await github.rest.issues.createComment({
-              owner,
-              repo,
-              issue_number,
-              body
+            const url = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${runId}`;
+            github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: context.issue.number,
+              body: `Your tailored + refined resume is ready.\n\nView run: ${url}`
             });
