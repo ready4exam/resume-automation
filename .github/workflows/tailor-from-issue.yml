@@ -4,9 +4,12 @@ on:
   issues:
     types: [opened]
 
+# Needed so the workflow can:
+# - write comments on issues
+# - commit the jobs/ folder back to the repo
 permissions:
+  contents: write
   issues: write
-  contents: read
 
 jobs:
   tailor:
@@ -15,6 +18,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # required so we can commit and push
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -41,6 +46,7 @@ jobs:
             const jobTitle = extractSingle("Job Title");
             const extra = extractSingle("Extra");
 
+            // Everything after "Job Description:" is the JD
             const marker = "Job Description:";
             let jd = "";
             const idx = body.indexOf(marker);
@@ -64,6 +70,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
+          # You can later extend this to pass --resume-mode and --methods
           node tailor_resume.mjs \
             --company "${{ steps.parse.outputs.company }}" \
             --job-title "${{ steps.parse.outputs.job_title }}" \
@@ -75,6 +82,25 @@ jobs:
         with:
           name: "tailored-resume-${{ github.event.issue.number }}"
           path: jobs/
+
+      - name: Commit generated resumes into repo
+        run: |
+          # Show what changed (for debugging)
+          echo "Git status before commit:"
+          git status
+
+          # Configure bot identity
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          # Stage jobs/ changes (if any)
+          git add jobs/ || echo "Nothing to add in jobs/"
+
+          # Commit, but don't fail if there is nothing new
+          git commit -m "Add tailored resume for issue #${{ github.event.issue.number }}" || echo "Nothing to commit"
+
+          # Push back to the same branch this workflow ran on
+          git push || echo "Nothing to push or push failed"
 
       - name: Comment back on issue with link to run
         uses: actions/github-script@v7
@@ -88,9 +114,11 @@ jobs:
             const url = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
 
             const body = [
-              "✅ Your tailored resume has been generated successfully.",
+              "✅ Your tailored resume has been generated.",
               "",
-              `👉 Download it from this Actions run: ${url}`,
+              `🔗 Actions run (download artifacts here): ${url}`,
+              "",
+              `🗂 Resumes have also been committed under the jobs/ folder in this repo.`,
               "",
               `Look for the artifact named: tailored-resume-${issue_number}`
             ].join("\n");
