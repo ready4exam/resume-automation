@@ -1,106 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Resume Tailor Automation</title>
-<style>
+  <meta charset="UTF-8" />
+  <title>Resume Tailor Engine</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        padding: 40px;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
     }
     .container {
-        max-width: 800px;
-        margin: auto;
-        background: white;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px #ccc;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
     }
     h2 {
-        margin-top: 0;
+      margin-top: 0;
     }
     label {
-        font-weight: bold;
-        display: block;
-        margin-top: 20px;
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
     }
     input, textarea, select {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border-radius: 6px;
-        border: 1px solid #bbb;
-        font-size: 15px;
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+      font-size: 15px;
+      box-sizing: border-box;
     }
     textarea {
-        height: 160px;
-        resize: vertical;
+      height: 150px;
+      resize: vertical;
     }
     .checkbox-row {
-        margin-top: 10px;
+      margin-top: 8px;
     }
     .checkbox-row input {
-        width: auto;
-        transform: scale(1.2);
-        margin-right: 8px;
+      width: auto;
+      transform: scale(1.1);
+      margin-right: 6px;
     }
     button {
-        margin-top: 30px;
-        width: 100%;
-        padding: 15px;
-        background: #1a73e8;
-        color: white;
-        font-size: 18px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      background: #111827;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
     button:hover {
-        background: #155cc0;
+      background: #1f2937;
     }
-</style>
+    #status {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Resume Tailor Engine</h2>
-    <p>Fill the fields below to generate your tailored resume.</p>
+  <h2>AI Resume Tailor (GitHub Issue Trigger)</h2>
+  <p>
+    Fill the details and click <b>Create GitHub Issue</b>. A new tab will open on GitHub with a pre-filled Issue.  
+    Check it and click <b>"Submit new issue"</b> to start the resume generation.
+  </p>
 
+  <form id="resumeForm">
     <label>Company Name</label>
-    <input id="company" placeholder="e.g., Google, Microsoft, Cognizant" />
+    <input id="company" placeholder="e.g., Google, Microsoft, Cognizant" required />
 
     <label>Job Title</label>
-    <input id="jobTitle" placeholder="e.g., Engagement Delivery Lead" />
+    <input id="jobTitle" placeholder="e.g., Engagement Delivery Lead" required />
 
     <label>Resume Type</label>
     <select id="resumeMode">
-        <option value="infra">Infra Only</option>
-        <option value="hybrid">Infra + Development</option>
-        <option value="dev">Development Only</option>
+      <option value="infra">Infra Only</option>
+      <option value="hybrid">Infra + Development</option>
+      <option value="dev">Development Only</option>
     </select>
 
     <label>Apply Methodologies</label>
     <div class="checkbox-row">
-        <input type="checkbox" id="agile" /> <span>Agile</span>
+      <input type="checkbox" id="agile" /> <span>Agile</span>
     </div>
     <div class="checkbox-row">
-        <input type="checkbox" id="finops" /> <span>FinOps</span>
+      <input type="checkbox" id="finops" /> <span>FinOps</span>
     </div>
 
     <label>Job Description</label>
-    <textarea id="jobDesc" placeholder="Paste the full job description here..."></textarea>
+    <textarea id="jobDesc" placeholder="Paste the full job description here..." required></textarea>
 
     <label>Extra Instructions (Optional)</label>
-    <textarea id="extra" placeholder="Any additional instructions (optional)..."></textarea>
+    <textarea id="extra" placeholder="Any additional instructions..."></textarea>
 
-    <button onclick="submitIssue()">Generate Resume</button>
+    <button type="submit">Create GitHub Issue</button>
+  </form>
 
-    <p id="msg" style="margin-top:20px; font-weight:bold;"></p>
+  <p id="status"></p>
 </div>
 
 <script>
-async function submitIssue() {
+  // Set this to your repo: owner/repo
+  const repoFullName = "ready4exam/resume-automation";
+
+  document.getElementById("resumeForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
     const company = document.getElementById("company").value.trim();
     const jobTitle = document.getElementById("jobTitle").value.trim();
     const resumeMode = document.getElementById("resumeMode").value;
@@ -110,54 +125,45 @@ async function submitIssue() {
     const agile = document.getElementById("agile").checked;
     const finops = document.getElementById("finops").checked;
 
+    const statusEl = document.getElementById("status");
+
     if (!company || !jobTitle || !jobDesc) {
-        document.getElementById("msg").innerText = "❌ Company, Job Title, and Job Description are required.";
-        return;
+      statusEl.innerText = "❌ Company, Job Title, and Job Description are required.";
+      return;
     }
 
     const methodologies = [];
     if (agile) methodologies.push("Agile");
     if (finops) methodologies.push("FinOps");
 
-    // Build issue body EXACTLY as workflow expects
-    const body =
-`Company: ${company}
-Job Title: ${jobTitle}
-Resume Mode: ${resumeMode}
-Methodologies: ${methodologies.join(",")}
+    // Body format that the workflow will parse
+    const bodyLines = [
+      `Company: ${company}`,
+      `Job Title: ${jobTitle}`,
+      `Resume Mode: ${resumeMode}`,
+      `Methodologies: ${methodologies.join(",")}`,
+      "",
+      "Job Description:",
+      jobDesc,
+      "",
+      "Extra:",
+      extra || "(none)"
+    ];
 
-Job Description:
-${jobDesc}
+    const title = `Tailor Resume: ${jobTitle} at ${company}`;
+    const body = bodyLines.join("\n");
 
-Extra:
-${extra}`;
+    const url =
+      `https://github.com/${repoFullName}/issues/new` +
+      `?title=${encodeURIComponent(title)}` +
+      `&body=${encodeURIComponent(body)}`;
 
-    const msgEl = document.getElementById("msg");
-    msgEl.innerText = "Submitting...";
+    statusEl.innerHTML =
+      "✅ Opening GitHub Issue page in a new tab...<br>" +
+      "Make sure you are logged into GitHub, then click <b>\"Submit new issue\"</b> there.";
 
-    try {
-        const response = await fetch("https://api.github.com/repos/ready4exam/resume-automation/issues", {
-            method: "POST",
-            headers: {
-                "Authorization": "Bearer YOUR_GITHUB_PAT",
-                "Accept": "application/vnd.github+json"
-            },
-            body: JSON.stringify({
-                title: `Tailor Resume: ${jobTitle} at ${company}`,
-                body: body
-            })
-        });
-
-        if (response.ok) {
-            msgEl.innerText = "✅ Issue created! Workflow is running. Refresh GitHub Issues.";
-        } else {
-            msgEl.innerText = "❌ Failed to create issue: " + response.status;
-        }
-
-    } catch (err) {
-        msgEl.innerText = "❌ Error: " + err;
-    }
-}
+    window.open(url, "_blank");
+  });
 </script>
 
 </body>
