@@ -45,13 +45,11 @@ jobs:
             const resumeMode = extractSingle("Resume Mode");       // infra | hybrid | dev
             const methods = extractSingle("Methodologies");        // e.g. "Agile,FinOps"
 
-            // Everything after "Job Description:" is the JD
+            // Everything after "Job Description:" is JD
             const marker = "Job Description:";
             let jd = "";
             const idx = body.indexOf(marker);
-            if (idx !== -1) {
-              jd = body.substring(idx + marker.length).trim();
-            }
+            if (idx !== -1) jd = body.substring(idx + marker.length).trim();
 
             core.setOutput("company", company || "Unknown Company");
             core.setOutput("job_title", jobTitle || "Unknown Role");
@@ -79,18 +77,25 @@ jobs:
             --resume-mode "${{ steps.parse.outputs.resume_mode }}" \
             --methods "${{ steps.parse.outputs.methods }}"
 
-      # 🔹 NEW: Phase 2 – refine the resume using refine_resume.mjs,
-      #         and keep output INSIDE the same jobs/<...> folder.
+      - name: Debug — show jobs folder structure
+        run: |
+          echo "Jobs folder structure:"
+          find jobs -maxdepth 3 -type d || true
+
       - name: Run refine script (Phase 2 – review & improve)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          # Find the most recently modified job folder under jobs/
-          LATEST_JOB_DIR=$(ls -td jobs/* | head -n 1)
+          # Detect deepest timestamped folder: jobs/*/*/*
+          LATEST_JOB_DIR=$(ls -td jobs/*/*/* 2>/dev/null | head -n 1)
 
           echo "Detected latest job folder: $LATEST_JOB_DIR"
 
-          # Run Phase-2 refinement
+          if [ -z "$LATEST_JOB_DIR" ]; then
+            echo "❌ ERROR: No job folder found in jobs/*/*/*"
+            exit 1
+          fi
+
           node refine_resume.mjs \
             --job-desc-file tmp/jd.txt \
             --raw-file "$LATEST_JOB_DIR/raw.txt" \
@@ -100,15 +105,12 @@ jobs:
 
       - name: Commit generated resumes into repo
         run: |
-          echo "Git status before commit:"
-          git status
-
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add jobs/ || echo "Nothing to add in jobs/"
+          git add jobs/ || echo "Nothing to add"
           git commit -m "Add tailored + refined resume for issue #${{ github.event.issue.number }}" || echo "Nothing to commit"
-          git push || echo "Nothing to push or push failed"
+          git push || echo "Push skipped"
 
       - name: Comment back on issue with link to run
         uses: actions/github-script@v7
@@ -119,18 +121,22 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const runId = process.env.GITHUB_RUN_ID;
+
             const url = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
 
             const body = [
-              "✅ Your tailored resume *and* refined resume (reviewed + improved) have been generated.",
+              "✅ Your tailored resume *and* refined recruiter-reviewed resume have been generated.",
               "",
-              "🗂 Files have been committed under the `jobs/` folder in this repo.",
+              "📂 Output stored under the `jobs/` folder in the repository:",
+              "- Phase 1 → raw.txt",
+              "- Phase 2 → refined_raw.txt + refined_resume.docx",
               "",
-              "- Phase 1: raw + DOCX in the job folder",
-              "- Phase 2: review + refined resume under `phase2/` inside that job folder",
-              "",
-              `🔗 Actions run: ${url}`
+              `🔗 View workflow run: ${url}`
             ].join("\n");
 
             await github.rest.issues.createComment({
-              owner
+              owner,
+              repo,
+              issue_number,
+              body
+            });
