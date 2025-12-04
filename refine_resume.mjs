@@ -9,29 +9,46 @@ import {
   AlignmentType,
 } from "docx";
 
-// --------------------------------------------
+// ---------------------------------------------------
 // GEMINI SETUP
-// --------------------------------------------
+// ---------------------------------------------------
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const PRIMARY_MODEL = "gemini-pro-latest";
+const FALLBACK_MODELS = ["gemini-flash-latest", "gemini-2.0-flash"];
 
-// --------------------------------------------
-// SMALL HELPERS
-// --------------------------------------------
+// ---------------------------------------------------
+// HELPERS
+// ---------------------------------------------------
 function getArg(flag, def = "") {
   const idx = process.argv.indexOf(flag);
   if (idx === -1 || idx === process.argv.length - 1) return def;
   return process.argv[idx + 1];
 }
 
-async function ai(model, prompt) {
-  const m = genAI.getGenerativeModel({ model });
-  const r = await m.generateContent(prompt);
-  return r.response.text();
+// AI with fallback
+async function ai(prompt) {
+  const models = [PRIMARY_MODEL, ...FALLBACK_MODELS];
+  let lastErr = null;
+
+  for (const modelName of models) {
+    try {
+      console.log("Phase-2 using:", modelName);
+      const model = genAI.getGenerativeModel({ model: modelName });
+      const result = await model.generateContent(prompt);
+      const txt = result.response.text() || "";
+      if (!txt.trim()) throw new Error("Empty response");
+      return txt;
+    } catch (err) {
+      lastErr = err;
+      if (err.status === 500 || err.status === 503) continue;
+      throw err;
+    }
+  }
+
+  throw lastErr;
 }
 
-// --------------------------------------------
-// EXTRACTION HELPERS
-// --------------------------------------------
+// Tag extractors
 function extract(tag, text) {
   const re = new RegExp(`\\[${tag}\\]([\\s\\S]*?)\\[\\/${tag}\\]`, "i");
   const m = text.match(re);
@@ -40,14 +57,14 @@ function extract(tag, text) {
 
 function splitLines(txt) {
   return txt
-    .split(/\r?\n/)
+    .split("\n")
     .map((x) => x.trim())
     .filter((x) => x.length > 0);
 }
 
-// --------------------------------------------
-// DOCX BUILDER (COPIED FROM PHASE-1)
-// --------------------------------------------
+// ---------------------------------------------------
+// DOCX builder helpers
+// ---------------------------------------------------
 const FONT = "Calibri";
 const SIZE = 22; // 11pt
 
@@ -55,18 +72,18 @@ function run(text, opts = {}) {
   return new TextRun({ text, font: FONT, size: SIZE, ...opts });
 }
 
-function heading(text) {
+function sectionHeading(text) {
   return new Paragraph({
-    children: [new TextRun({ text, font: FONT, size: 26, bold: true, allCaps: true })],
+    children: [
+      new TextRun({
+        text,
+        font: FONT,
+        size: 26,
+        bold: true,
+        allCaps: true,
+      }),
+    ],
     spacing: { before: 200, after: 120 },
-  });
-}
-
-function nameHeading(text) {
-  return new Paragraph({
-    children: [new TextRun({ text, font: FONT, size: 40, bold: true })],
-    alignment: AlignmentType.CENTER,
-    spacing: { after: 80 },
   });
 }
 
@@ -85,104 +102,148 @@ function normal(text) {
   });
 }
 
-async function buildDocx(aiText, outPath) {
-  const CONTACT = extract("CONTACT", aiText);
-  const SUMMARY = extract("SUMMARY", aiText);
-  const CORE = extract("CORE_SKILLS", aiText);
-  const EXP = extract("EXPERIENCE", aiText);
-  const PROJ = extract("PROJECTS", aiText);
-  const TECH = extract("TECHNICAL_SKILLS", aiText);
-  const CERT = extract("CERTIFICATIONS", aiText);
-  const EDU = extract("EDUCATION", aiText);
+// ---------------------------------------------------
+// BUILD DOCX
+// ---------------------------------------------------
+async function buildDocx(text, outPath) {
+  const CONTACT = extract("CONTACT", text);
+  const SUMMARY = extract("SUMMARY", text);
+  const CORE = extract("CORE_SKILLS", text);
+  const EXP = extract("EXPERIENCE", text);
+  const PROJ = extract("PROJECTS", text);
+  const TECH = extract("TECHNICAL_SKILLS", text);
+  const CERT = extract("CERTIFICATIONS", text);
+  const EDU = extract("EDUCATION", text);
 
   const children = [];
 
-  // CONTACT
+  // ---------------------------------------------------
+  // CONTACT (left-aligned compact header)
+  // ---------------------------------------------------
   if (CONTACT) {
     const lines = splitLines(CONTACT);
     const name = lines[0] || "";
-    const rest = lines.slice(1);
+    const details = lines.slice(1);
 
-    if (name) children.push(nameHeading(name));
-    rest.forEach((l) =>
+    // NAME
+    children.push(
+      new Paragraph({
+        children: [
+          new TextRun({
+            text: name,
+            font: FONT,
+            bold: true,
+            size: 40,
+          }),
+        ],
+        alignment: AlignmentType.LEFT,
+        spacing: { after: 80 },
+      })
+    );
+
+    // CONTACT DETAILS (compact, left aligned)
+    details.forEach((l) =>
       children.push(
         new Paragraph({
           children: [run(l)],
-          alignment: AlignmentType.CENTER,
-          spacing: { after: 40 },
+          alignment: AlignmentType.LEFT,
+          spacing: { after: 20 },
         })
       )
     );
+
+    children.push(new Paragraph({ spacing: { after: 80 } }));
   }
 
-  if (SUMMARY) {
-    children.push(heading("PROFESSIONAL SUMMARY"));
-    splitLines(SUMMARY).forEach((x) => children.push(normal(x)));
+  // ---------------------------------------------------
+  // SUMMARY
+  // ---------------------------------------------------
+  children.push(sectionHeading("PROFESSIONAL SUMMARY"));
+  splitLines(SUMMARY).forEach((x) => children.push(normal(x)));
+
+  // ---------------------------------------------------
+  // CORE SKILLS
+  // ---------------------------------------------------
+  children.push(sectionHeading("CORE SKILLS"));
+  splitLines(CORE).forEach((x) => children.push(bullet(x.replace(/^-+\s*/, ""))));
+
+  // ---------------------------------------------------
+  // EXPERIENCE
+  // ---------------------------------------------------
+  children.push(sectionHeading("EXPERIENCE"));
+
+  const expLines = EXP.split("\n");
+  let block = [];
+
+  function flush() {
+    if (!block.length) return;
+    const job = splitLines(block.join("\n"));
+    if (!job.length) return;
+
+    const header = job[0];
+    children.push(
+      new Paragraph({
+        children: [run(header, { bold: true })],
+        spacing: { before: 160, after: 80 },
+      })
+    );
+
+    job.slice(1).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
+    block = [];
   }
 
-  if (CORE) {
-    children.push(heading("CORE SKILLS & COMPETENCIES"));
-    splitLines(CORE).forEach((x) => children.push(bullet(x.replace(/^-+\s*/, ""))));
+  for (const line of expLines) {
+    if (line.trim().startsWith("Company:")) {
+      flush();
+      block = [line];
+    } else block.push(line);
   }
+  flush();
 
-  if (EXP) {
-    children.push(heading("PROFESSIONAL EXPERIENCE"));
-
-    const lines = EXP.split("\n");
-    let block = [];
-
-    function flush() {
-      if (!block.length) return;
-      const jobLines = splitLines(block.join("\n"));
-      if (jobLines.length === 0) return;
-
-      const header = jobLines[0];
-      children.push(
-        new Paragraph({ children: [run(header, { bold: true })], spacing: { before: 160, after: 80 } })
-      );
-
-      jobLines.slice(1).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
-      block = [];
-    }
-
-    for (const raw of lines) {
-      if (raw.trim().toLowerCase().startsWith("company:")) {
-        flush();
-        block = [raw];
-      } else block.push(raw);
-    }
-    flush();
-  }
-
-  if (PROJ) {
-    children.push(heading("PROJECTS & INDEPENDENT WORK"));
+  // ---------------------------------------------------
+  // PROJECTS
+  // ---------------------------------------------------
+  if (PROJ && PROJ.trim()) {
+    children.push(sectionHeading("PROJECTS"));
     splitLines(PROJ).forEach((line) => {
-      if (line.startsWith("-")) children.push(bullet(line.replace(/^-+\s*/, "")));
+      if (line.startsWith("-"))
+        children.push(bullet(line.replace(/^-+\s*/, "")));
       else children.push(normal(line));
     });
   }
 
-  if (TECH) {
-    children.push(heading("TECHNICAL SKILLS"));
-    splitLines(TECH).forEach((x) => children.push(normal(x)));
-  }
+  // ---------------------------------------------------
+  // TECHNICAL SKILLS
+  // ---------------------------------------------------
+  children.push(sectionHeading("TECHNICAL SKILLS"));
+  splitLines(TECH).forEach((x) => children.push(normal(x)));
 
-  if (CERT) {
-    children.push(heading("CERTIFICATIONS"));
-    splitLines(CERT).forEach((x) => children.push(bullet(x)));
-  }
+  // ---------------------------------------------------
+  // CERTIFICATIONS
+  // ---------------------------------------------------
+  children.push(sectionHeading("CERTIFICATIONS"));
+  splitLines(CERT).forEach((x) => children.push(bullet(x)));
 
-  if (EDU) {
-    children.push(heading("EDUCATION"));
-    splitLines(EDU).forEach((x) => children.push(normal(x)));
-  }
+  // ---------------------------------------------------
+  // EDUCATION
+  // ---------------------------------------------------
+  children.push(sectionHeading("EDUCATION"));
+  splitLines(EDU).forEach((x) => children.push(normal(x)));
 
+  // ---------------------------------------------------
+  // WRITE DOCX
+  // ---------------------------------------------------
   const doc = new Document({
     sections: [
       {
         properties: {
           page: {
-            margin: { top: 1440, bottom: 1440, left: 1150, right: 1150 },
+            margin: {
+              top: 1440,
+              bottom: 1440,
+              left: 1150,
+              right: 1150,
+            },
           },
         },
         children,
@@ -194,28 +255,28 @@ async function buildDocx(aiText, outPath) {
   fs.writeFileSync(outPath, buffer);
 }
 
-// --------------------------------------------
-// MAIN PHASE-2 LOGIC
-// --------------------------------------------
+// ---------------------------------------------------
+// MAIN
+// ---------------------------------------------------
 async function main() {
   const jdFile = getArg("--job-desc-file");
   const rawFile = getArg("--raw-file");
   const outDir = getArg("--out-dir", "refined_output");
 
   if (!jdFile || !rawFile) {
-    console.error('Usage: node refine_resume.mjs --job-desc-file jd.txt --raw-file raw.txt');
+    console.error("Usage: refine_resume.mjs --job-desc-file jd.txt --raw-file raw.txt");
     process.exit(1);
   }
 
   const jd = fs.readFileSync(jdFile, "utf8");
   const rawResume = fs.readFileSync(rawFile, "utf8");
-  const systemPrompt = fs.readFileSync(path.join("templates", "system_prompt.txt"), "utf8");
+  const systemPrompt = fs.readFileSync("templates/system_prompt.txt", "utf8");
 
-  // --------------------------------------------
-  // STEP 1 — Recruiter Review
-  // --------------------------------------------
+  // ---------------------------------------------------
+  // REVIEW STEP (auto weakness detection)
+  // ---------------------------------------------------
   const reviewPrompt = `
-You are a senior recruiter.
+You are a senior recruiter performing a deep resume audit.
 
 JOB DESCRIPTION:
 ${jd}
@@ -223,53 +284,69 @@ ${jd}
 RESUME:
 ${rawResume}
 
-Provide improvement feedback ONLY inside:
+TASK:
+Identify every weakness using Auto Weakness Detection:
+- Weak verbs
+- No metrics
+- No outcomes
+- Generic text
+- Missing keywords
+- Leadership gaps
+- Repetition
+- Passive voice
+- ATS alignment issues
+
+Output only:
 
 [REVIEW]
 - item
 - item
+- item
 [/REVIEW]
-  `.trim();
+`;
 
-  let review = await ai("gemini-pro-latest", reviewPrompt);
-  if (!review.includes("[REVIEW]")) review = "[REVIEW]\n(No review)\n[/REVIEW]";
+  let review = await ai(reviewPrompt);
+  if (!review.includes("[REVIEW]")) {
+    review = "[REVIEW]\n(No review returned)\n[/REVIEW]";
+  }
 
-  // --------------------------------------------
-  // STEP 2 — Generate refined resume
-  // --------------------------------------------
+  // ---------------------------------------------------
+  // REWRITE STEP
+  // ---------------------------------------------------
   const improvePrompt = `
 ${systemPrompt}
 
-REVIEW_NOTES:
+USING REVIEW NOTES + JOB DESCRIPTION:
 ${review}
 
-JOB_DESCRIPTION:
+JOB DESCRIPTION:
 ${jd}
 
 ORIGINAL_RESUME:
 ${rawResume}
 
-Now output ONLY the final resume using STRICT TAG FORMAT.
-  `.trim();
+Now output an improved resume using ONLY the strict tag structure.
+`;
 
-  const improved = await ai("gemini-pro-latest", improvePrompt);
+  const improved = await ai(improvePrompt);
 
-  // --------------------------------------------
-  // OUTPUT
-  // --------------------------------------------
+  // ---------------------------------------------------
+  // WRITE FILES
+  // ---------------------------------------------------
   fs.mkdirSync(outDir, { recursive: true });
 
-  const reviewOut = path.join(outDir, "review.txt");
-  const refinedRawOut = path.join(outDir, "refined_raw.txt");
-  const refinedDocxOut = path.join(outDir, "refined_resume.docx");
+  fs.writeFileSync(path.join(outDir, "review.txt"), review, "utf8");
+  fs.writeFileSync(path.join(outDir, "refined_raw.txt"), improved, "utf8");
 
-  fs.writeFileSync(reviewOut, review, "utf8");
-  fs.writeFileSync(refinedRawOut, improved, "utf8");
+  // Dynamic DOCX filename
+  const companyMatch = rawFile.split("/")[1] || "Company";
+  const roleMatch = rawFile.split("/")[2] || "Role";
+  const docxName = `resume_${companyMatch}_${roleMatch}.docx`.replace(/_+/g, "_");
 
-  // FINAL: Only DOCX in entire pipeline
-  await buildDocx(improved, refinedDocxOut);
+  const docxOut = path.join(outDir, docxName);
+  await buildDocx(improved, docxOut);
 
-  console.log("Refined files created in:", outDir);
+  console.log("Final DOCX:", docxOut);
 }
 
 main().catch((err) => {
