@@ -1,0 +1,94 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+linkedin.com/in/keshav-karn
+[/CONTACT]
+
+[SUMMARY]
+Senior technology and architecture leader with over 21 years of experience directing platform modernization, cloud transformation, and strategic engineering initiatives for global enterprises in regulated sectors. Proven expertise in architecting and operating secure, scalable, and high-performance data-intensive platforms. Adept at leading cross-functional teams, shaping technical roadmaps, and managing multi-million dollar budgets to drive business outcomes. Specializes in defining architectural strategy for mission-critical batch and data processing systems, ensuring alignment with AWS Well-Architected Framework, quality engineering standards, and robust FinOps principles. Positioned to drive the evolution of the UKI Batch Platform and deliver cost-efficient, resilient solutions as Director Architecture at Experian.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Solution & Enterprise Architecture
+- AWS Cloud Strategy & Design
+- Data Platform & Batch Processing Architecture
+- FinOps & Cloud Cost Optimization
+- Architectural Strategy & Roadmap Definition
+- AI-Driven Automation & System Design
+- Platform Scalability, Performance & Reliability
+- Stakeholder Management (Product & Engineering)
+- Quality Engineering & Non-Functional Requirements
+- IT Service Management (ITSM) & ITIL
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic advisory engagements, defining platform modernization roadmaps and solution architectures for enterprise healthcare and BFSI clients.
+- Engineered an AI-driven automation framework using API-driven workflows to diagnose and remediate systemic issues, reducing repeat service failures by 60%.
+- Directed a FinOps advisory team to architect and develop hybrid-cloud cost optimization dashboards, enabling proactive budget management and cloud efficiency.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led global Service Reliability Engineering and Platform Operations for mission-critical data center portfolios, enhancing architectural resilience and scalability for over 100,000 IT assets.
+- Architected and executed a $30M+ vendor displacement program, insourcing critical infrastructure services to improve platform agility and operational control.
+- Championed the design and implementation of an Agentic AI system that autonomously processed AIOps insights to orchestrate remediation, improving platform reliability.
+- Drove cloud and DevOps enablement initiatives, including guiding AWS migration strategies and establishing best practices for platform observability and performance.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, delivering $8M in savings through strategic automation, platform optimization, and rigorous FinOps governance.
+- Provided global delivery leadership for service engagements with major financial institutions like Scotiabank, ensuring architectural consistency and delivery excellence.
+- Scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing a global function for platform performance and scalability analysis.
+- Modernized contact center platforms by integrating AI-driven insights to analyze telemetry and accelerate incident response times.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and architected automation strategies for major telecom and BFSI customers, improving service delivery frameworks.
+- Led Problem and Change Management functions, chairing the CAB and implementing risk-controlled changes to ensure platform stability and governance.
+- Conducted ITIL assessments and implemented tailored frameworks to enhance operational efficiency and compliance for enterprise clients.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring solutions including Nagios, Zabbix, and HP OpenView to ensure high availability for critical infrastructure.
+- Led major release deployments for British Telecom, ensuring minimal service disruption through structured planning and execution.
+- Provided application support for NHS UK, ensuring timely resolution of issues across mission-critical healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Acted as the senior technical escalation point for high-impact incidents, troubleshooting and resolving complex issues on mission-critical telecom systems.
+- Authored standard operating procedures (SOPs) and technical documentation to standardize issue resolution and improve service quality.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Architected a scalable, multi-tenant platform featuring an agentic AI system designed to automate personalized learning and skill-gap analysis workflows.
+- Engineered backend data processing pipelines using Python to ingest, analyze, and correlate user performance data with industry competency frameworks.
+- Designed and implemented a modular, API-driven architecture to support reusable components for user authentication, data storage, and analytics.
+
+Ready4Exam
+- Developed an AI-powered engine for the automated generation, classification, and validation of assessment questions from unstructured text sources.
+- Engineered event-driven automation workflows using serverless functions to process user submissions, provide real-time feedback, and update performance analytics.
+- Built automated CI/CD pipelines using GitHub Actions for streamlined testing and deployment of backend services and AI models.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud: AWS, Microsoft Azure, GCP
+FinOps: CoreStack, ECAM, Flexera, Cloud Cost Management & Optimization
+Architecture & Design: AWS Well-Architected Framework, Solution Design, MS Visio, Power BI
+Automation & Development: Python, JavaScript, Shell Scripting, Ansible, GitHub Actions
+ITSM & Observability: ServiceNow, Jira, Datadog, New Relic, Prometheus, ScienceLogic, Azure Monitor, CloudWatch
+Infrastructure: VMware Tanzu, HP OpenView, SolarWinds, Zabbix, Nagios
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee
+- Master’s in Information Technology – Manipal Academy of Higher Education
+- Bachelor of Science – Anugrah Narayan College, Patna University
+[/EDUCATION]
