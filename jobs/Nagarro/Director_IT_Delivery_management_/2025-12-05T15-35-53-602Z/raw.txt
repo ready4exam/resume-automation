@@ -1,0 +1,82 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Accomplished IT Delivery Director with 21+ years of experience leading complex, large-scale technology programs for global enterprise clients. Proven track record in P&L ownership, managing $25M+ budgets, and driving significant cost savings through strategic initiatives. Expert in Agile methodologies, client-facing consulting, and stakeholder management across all organizational levels. Blends deep expertise in cloud platforms (AWS/Azure), DevOps, and SRE with hands-on experience in modern application development.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Directed a $30M+ vendor displacement program, successfully insourcing critical infrastructure services to enhance operational agility and service delivery control for a mission-critical data center portfolio.
+- Managed a $25M annual OPEX budget, achieving $8M in savings through strategic automation, vendor renegotiation, and targeted FinOps-driven license optimization.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+IT Delivery & Program Management | P&L Ownership & Financial Management | Client-Facing Consulting | Agile Methodologies | Cloud Platforms (AWS, Azure) | DevOps & SRE | Stakeholder Management | Global Team Leadership
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic IT advisory and client-facing consulting engagements for enterprise healthcare and BFSI clients, defining platform modernization roadmaps and ensuring ITIL/NIST alignment.
+- Architected and delivered an AI-driven automation framework that reduced repeat failures by 60%, directly improving service reliability and customer satisfaction.
+- Directed a FinOps team to develop hybrid-cloud cost optimization dashboards, enabling proactive financial management and budget adherence for senior stakeholders.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led global technology service delivery as Head of Service Reliability Engineering, overseeing large-scale programs for a mission-critical data center portfolio of 100,000+ assets.
+- Owned the delivery of a $30M+ vendor displacement initiative, insourcing services to improve agility and reduce dependency while managing risk and ensuring service continuity.
+- Championed cloud adoption and DevOps enablement, leading AWS migration projects and sponsoring an Agentic AI system to automate AIOps incident response.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Held P&L ownership for a $25M annual OPEX budget, delivering $8M in savings through automation and vendor consolidation while leading a global team of 250+ professionals.
+- Provided global delivery leadership for complex programs for enterprise clients like Scotiabank, ensuring consistent governance and high-quality outcomes across global delivery centers.
+- Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, standardizing ITIL-based frameworks for global operations.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, enhancing compliance and operational efficiency.
+- Led Problem and Change Management functions, chairing the Change Advisory Board (CAB) and implementing risk-controlled processes to improve service stability.
+- Implemented performance dashboards and standardized operating procedures that significantly improved delivery speed and quality for client engagements.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring solutions (Nagios, Zabbix, HP OpenView) for clients including British Telecom and NHS UK.
+- Led application support teams and managed major release deployments with minimal business disruption for critical healthcare and telecom platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Acted as the technical escalation point for high-impact incidents on mission-critical telecom systems, reducing downtime through rapid root cause analysis.
+- Authored standard operating procedure (SOP) documentation and trained L1/L2 engineers to improve first-call resolution rates.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry & Ready4Exam (Founder & Lead Developer)
+- Architected and developed a full-stack EdTech platform using React and Angular for the frontend to deliver interactive, component-driven user experiences.
+- Built and deployed scalable backend services on a cloud platform, integrating APIs and managing data models for user authentication, content delivery, and progress tracking.
+- Developed and launched cross-platform mobile applications for iOS and Android, providing on-the-go access to educational resources and assessments.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & DevOps: AWS, Azure, GCP, CI/CD (GitHub Actions), Ansible, Infrastructure-as-Code
+Development: Python, JavaScript, React, Angular, API Development, Mobile (iOS/Android)
+ITSM & Observability: ServiceNow, Jira, Datadog, New Relic, Prometheus, Grafana
+FinOps Tools: CoreStack, Flexera, Cloudability, Power BI
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- ITIL v3 & COBIT 4.1
+- Multiple IBM Architect & Consulting Badges
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management, IIT Roorkee (Pursuing)
+- Master’s in Information Technology, Manipal Academy of Higher Education
+- Bachelor of Science, Anugrah Narayan College, Patna University
+[/EDUCATION]
