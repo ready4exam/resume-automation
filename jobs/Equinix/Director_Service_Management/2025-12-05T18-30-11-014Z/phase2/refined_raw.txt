@@ -1,0 +1,81 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+linkedin.com/in/keshavkarn
+[/CONTACT]
+
+[SUMMARY]
+Visionary and execution-focused Service Management Director with over 21 years of experience leading the transformation of global service operations for Fortune 500 enterprises. Proven ability to build and lead high-performing teams, maturing ITSM functions to drive operational excellence and business value. Expert in reimagining traditional service management by embedding AIOps, observability, and automation to create proactive, journey-centric service delivery models. Deep experience aligning ITIL v4 principles with DevOps and SRE cultures to improve service reliability and foster a culture of ownership. Positioned to drive the future of digital service delivery as the Director of Service Management at Equinix.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Digital Service Management Strategy
+- ITIL v4 Process Modernization (IPC)
+- AIOps & Observability Integration
+- Journey-Centric Service Delivery
+- SRE & DevOps Partnership
+- Proactive & Predictive Operations
+- Incident & Problem Management at Scale
+- Service Reliability & Performance Metrics (MTTR/MTTD)
+- Global Team Leadership & Mentoring
+- Executive Stakeholder Management
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Leads strategic ITSM advisory engagements for enterprise clients, conducting maturity assessments and developing transformation roadmaps to modernize service operations using ITIL v4 and AIOps.
+- Analyzes client pain points across the service lifecycle, delivering actionable recommendations to improve reliability, customer experience, and operational efficiency.
+- Architects AI-driven automation frameworks and hybrid-cloud FinOps strategies to remediate systemic issues, reduce operational costs, and improve service stability.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed global service reliability engineering and platform operations for a mission-critical portfolio of over 100,000 IT assets, ensuring high availability and service reliability.
+- Championed a shift to proactive operations by implementing an AIOps-driven framework, significantly reducing manual incident response effort and improving MTTR.
+- Partnered with platform and engineering teams to embed service management into DevOps workflows, supporting AWS migrations and improving change success rates.
+- Led a $30M+ vendor displacement program to insource critical infrastructure services, which enhanced operational agility, control, and service quality.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Governed global ITIL frameworks for Incident, Problem, and Change Management, standardizing processes which improved audit compliance and reduced cross-team friction.
+- Built and scaled the global Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing a world-class shared service function.
+- Managed a $25M annual OPEX budget, achieving over $8M in savings through strategic automation, vendor renegotiation, and software license optimization.
+- Drove continuous improvement in service desk operations by integrating AI-driven insights, accelerating incident response and resolution times.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting for major telecom and BFSI clients, leading ITIL assessments and implementing tailored frameworks to enhance service delivery and compliance.
+- Led Problem and Change Management functions, driving root cause analysis (RCA) and chairing the Change Advisory Board (CAB) to ensure risk-controlled change implementation.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Managed major release deployments for British Telecom, ensuring minimal business disruption through meticulous planning and execution.
+- Deployed and administered enterprise monitoring solutions including Nagios and HP OpenView to improve system observability and proactive alerting.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as a primary escalation point for high-impact technical incidents, providing expert troubleshooting for mission-critical telecom systems.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+ITSM & AIOps: ServiceNow, Jira Service Management, Datadog, Splunk, New Relic, ScienceLogic
+Cloud: Azure, AWS, GCP
+Automation & Dev: Python, Ansible, Shell Scripting, GitHub Actions
+Monitoring: Azure Monitor, CloudWatch, Grafana, Prometheus, Tanzu, Zabbix
+BI & FinOps: Power BI, CoreStack, Flexera
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- ITIL v3
+- COBIT 4.1
+- IBM Architect & Consulting Badges
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]

@@ -1,0 +1,93 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+linkedin.com/in/keshavkarn
+[/CONTACT]
+
+[SUMMARY]
+Accomplished IT executive with over 21 years of experience leading global service delivery, ITSM transformation, and operational excellence for Fortune 500 enterprises. Proven track record in building and scaling high-performing teams to manage mission-critical infrastructure and platform operations. Expertise in modernizing service management functions by integrating AIOps, observability, and automation to drive proactive, customer-centric outcomes. Deep experience aligning ITIL v4 principles with DevOps and SRE practices to enhance service reliability and business value. Positioned to lead the transformation of service operations and champion digital service management as Director - Service Management at Equinix.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Digital Service Management Strategy
+- ITIL v4 Process Modernization (IPC)
+- AIOps & Observability Integration
+- Incident & Problem Management at Scale
+- DevOps & SRE Collaboration
+- Service Delivery Automation & Orchestration
+- Customer Journey-Centric Operations
+- Global Team Leadership & Mentoring
+- Stakeholder Management & Executive Reporting
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic ITSM advisory engagements for enterprise clients, conducting maturity assessments and developing transformation roadmaps aligned with ITIL v4 and NIST standards.
+- Performed in-depth analysis of client pain points across service operations, providing actionable recommendations to improve reliability, customer experience, and process efficiency.
+- Engineered an AI-driven automation framework to identify and remediate repeat failures, improving service stability by 60% for a major healthcare provider.
+- Directed FinOps consulting teams to develop hybrid-cloud cost optimization dashboards, enabling proactive budget management and data-driven decision-making.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed global service reliability engineering and platform operations for mission-critical data center portfolios, managing over 100,000 physical IT assets.
+- Championed a shift to proactive operations by implementing an Agentic AI system to autonomously analyze and respond to AIOps insights, reducing manual intervention.
+- Led a $30M+ vendor displacement program to insource critical infrastructure services, enhancing operational agility and control.
+- Partnered with platform and engineering teams to drive DevOps enablement initiatives, including AWS migrations and embedding service management into CI/CD workflows.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Standardized and governed ITIL-based frameworks for global service delivery, ensuring consistent execution of Incident, Problem, and Change Management processes.
+- Built and scaled the global Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing a world-class shared service function.
+- Managed a $25M annual OPEX budget, achieving $8M in savings through strategic automation, vendor renegotiation, and software license optimization.
+- Drove continuous improvement in contact center operations by integrating AI-driven insights, significantly accelerating incident response and resolution times.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting for major telecom and BFSI clients, conducting ITIL assessments and implementing tailored frameworks to enhance service delivery and compliance.
+- Led Problem and Change Management functions, driving root cause analysis (RCA), chairing the Change Advisory Board (CAB), and ensuring risk-controlled change implementation.
+- Introduced standardized operating procedures and performance dashboards that significantly improved delivery quality and speed for managed service accounts.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Managed major release deployments for British Telecom, ensuring minimal business disruption through meticulous planning and execution.
+- Deployed and administered enterprise monitoring solutions including Nagios, Zabbix, and HP OpenView to improve system observability and proactive alerting.
+- Led application support for NHS UK, ensuring high availability and timely issue resolution for critical healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as a key escalation point for high-impact technical incidents, providing expert troubleshooting for mission-critical telecom systems.
+- Authored technical documentation and standard operating procedures (SOPs), contributing to a 15% reduction in ticket resolution times.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Engineered a scalable backend platform using an agentic AI architecture to automate personalized learning path generation and resource delivery.
+- Developed API-driven workflows for automated diagnostics and remediation, directly applying principles of AIOps to a product engineering context.
+- Implemented CI/CD pipelines using GitHub Actions to automate build, testing, and deployment processes, enabling rapid and reliable feature releases.
+
+Ready4Exam
+- Architected and built a modular backend service to manage user data, assessments, and content, focusing on reusable components and service utilities.
+- Implemented robust observability by creating data pipelines for logs and user analytics, enabling proactive performance monitoring and issue detection.
+- Designed and managed data models for optimal query performance and scalability, ensuring a responsive user experience during peak loads.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+ITSM & AIOps: ServiceNow, Jira Service Management, Datadog, Splunk, New Relic, ScienceLogic
+Cloud: Azure, AWS, GCP
+Automation & Dev: Python, JavaScript, Shell Scripting, Ansible, GitHub Actions
+Monitoring: Azure Monitor, CloudWatch, Grafana, Prometheus, Tanzu, Zabbix
+BI & FinOps: Power BI, CoreStack, Flexera
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- ITIL v3
+- COBIT 4.1
+- IBM Architect & Consulting Badges
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
