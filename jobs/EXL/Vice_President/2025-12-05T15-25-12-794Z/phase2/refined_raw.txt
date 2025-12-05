@@ -1,0 +1,70 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Executive leader with over 16 years of experience directing global teams in the design and deployment of large-scale Digital CX and Conversational AI solutions. Proven expertise in delivering client-facing engagement platforms using Google CCAI, Dialogflow, and Vertex AI. Adept at translating complex business needs into robust, scalable AI products, leveraging LLMs, RAG, and deep learning frameworks (PyTorch, TensorFlow) to enhance customer satisfaction and drive business growth.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Directed the end-to-end delivery of a client-facing Conversational AI solution using Google CCAI and Dialogflow, improving first-contact resolution by 40% for a tier-1 financial services client.
+- Built and scaled a global AI & Cloud Center of Excellence from 10 to over 250 professionals, managing a $25M P&L and delivering $8M in operational efficiencies while enhancing solution delivery capabilities.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+Digital CX Strategy | Google CCAI & Dialogflow | Vertex AI | Conversational AI | LLMs & RAG | Deep Learning (PyTorch/TensorFlow) | Client Engagement & Leadership | Cloud AI Architecture (GCP, AWS, Azure) | Software Development Leadership | DevOps & CI/CD
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic client engagements to design and deploy enterprise-grade Digital CX solutions on Google Cloud AI, leveraging Dialogflow and Vertex AI to enhance customer interaction and service resolution.
+- Architected a customer-facing conversational AI solution using PyTorch and advanced NLP techniques, improving first-contact resolution and transforming the digital customer experience for a leading healthcare provider.
+- Advised senior client stakeholders on optimizing cloud spend for large-scale AI model training and deployment, establishing robust FinOps governance for LLM and deep learning workloads.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed the product engineering and architecture of a multi-tenant Conversational AI platform, enabling enterprise clients to deploy custom chatbots and voice agents that improved customer engagement by 30%.
+- Led a diverse, global team of AI engineers and developers in building and shipping cutting-edge AI solutions, fostering a culture of innovation and agile delivery.
+- Drove a $30M strategic initiative to establish in-house AI/ML engineering capabilities, enhancing solution development velocity and reducing reliance on third-party vendors for critical CX projects.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Spearheaded the modernization of enterprise contact center platforms by integrating machine learning, NLP, and early-stage transformer models, setting the foundation for current-generation Conversational AI solutions.
+- Owned a $25M global P&L for AI-driven service delivery, achieving $8M in savings through strategic automation and platform optimization while improving client satisfaction scores.
+- Provided executive leadership for complex digital service engagements with major financial clients, ensuring the successful development and deployment of AI-powered customer support technologies.
+[/EXPERIENCE]
+
+[PROJECTS]
+Generative AI Chatbot for Enterprise Knowledge Management
+- Architected and built a custom GPT-style conversational agent using PyTorch and a transformer-based neural network to provide instant, context-aware answers from a proprietary knowledge base.
+- Implemented a Retrieval-Augmented Generation (RAG) pipeline to ensure factual accuracy and integrated Scikit-learn for performance evaluation and model fine-tuning.
+- Demonstrated a 90%+ query resolution accuracy in a proof-of-concept, showcasing a viable path to significantly reducing internal support costs and improving employee self-service.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Conversational AI: Google CCAI, Google Dialogflow, Vertex AI, RAG, LLM Fine-Tuning, NLP
+AI/ML Frameworks: PyTorch, TensorFlow, Scikit-learn, Keras, Transformers, Reinforcement Learning
+Cloud Platforms: Google Cloud Platform (GCP), AWS, Microsoft Azure
+DevOps & Tools: CI/CD, Git, Ansible, ServiceNow, Jira, Datadog
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3 Foundation
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee
+- Master’s in Information Technology – Manipal Academy of Higher Education
+- Bachelor of Science – Anugrah Narayan College, Patna University
+[/EDUCATION]

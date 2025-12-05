@@ -1,0 +1,81 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Accomplished technology executive with 21+ years of experience leading global teams in the delivery of complex AI-driven solutions and digital CX transformations. Proven expertise in leveraging Conversational AI, LLMs, and multi-cloud platforms (AWS, Azure, GCP) to enhance customer experience and drive operational excellence. Adept at managing large-scale programs and advising enterprise clients on technology strategy. A strategic leader focused on delivering measurable business outcomes through innovative AI/ML solutions.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Spearheaded the design and deployment of AI-driven solutions, including an Agentic AI system and automation frameworks using machine learning, reducing service failures by 60% and enhancing digital service reliability.
+- Directed global technology programs with P&L ownership of $25M+, delivering $8M in savings while scaling a global Center of Excellence from 10 to 250+ professionals across 5 countries.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+AI/ML Solution Delivery | Conversational AI Strategy | LLMs & RAG Architecture | Digital CX Transformation | Global Team Leadership | Stakeholder & Client Management | Cloud Platforms (AWS, Azure, GCP) | DevOps & CI/CD | FinOps & Budget Management
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic client engagements, advising enterprise healthcare and BFSI leaders on digital transformation and AI-driven service modernization strategies aligned with ITIL and NIST.
+- Architected and delivered an AI-driven automation framework using machine learning models to reduce repeat service failures by 60%, directly improving customer experience.
+- Directed FinOps advisory teams to develop hybrid-cloud cost optimization models for AI/ML workloads, enabling proactive budget management for clients.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed global service reliability engineering for mission-critical digital platforms, leading a diverse team of professionals to ensure high availability for customer-facing services.
+- Championed the adoption of Conversational and Agentic AI solutions, including an autonomous AIOps response system, to enhance service delivery and operational efficiency.
+- Led a $30M+ strategic program to insource critical infrastructure and software development services, improving agility and reducing third-party dependency.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Owned a $25M global P&L, delivering $8M in operational savings through large-scale automation, strategic vendor negotiation, and software license optimization.
+- Provided global executive leadership for complex digital service engagements with major financial clients, ensuring consistent delivery and high client satisfaction.
+- Built and scaled a global Center of Excellence from 10 to 250+ professionals across 5 countries, establishing best practices for managing capacity for cloud and AI platforms.
+- Drove the modernization of contact center technologies by integrating AI/ML-driven insights, laying the groundwork for advanced Conversational AI implementations.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers.
+- Implemented robust Problem and Change Management governance, chairing CAB meetings and ensuring risk-controlled deployments.
+- Conducted ITIL maturity assessments and implemented tailored frameworks to enhance service compliance and operational efficiency.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring tools including Nagios, Zabbix, and HP OpenView for clients such as British Telecom.
+- Led application support for NHS UK, ensuring timely resolution of issues across critical national healthcare platforms.
+- Managed major release deployments with minimal business disruption.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as the technical escalation point for mission-critical telecom systems, providing rapid troubleshooting to reduce service downtime.
+- Authored standard operating procedures (SOPs) and technical documentation.
+- Trained and mentored L1/L2 support engineers to improve team-wide capabilities.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud Platforms: AWS, Microsoft Azure, Google Cloud Platform (GCP)
+AI & Machine Learning: Natural Language Processing (NLP), PyTorch, TensorFlow, Scikit-learn
+DevOps & ITSM: CI/CD, Git, Ansible, ServiceNow, Jira, Datadog, Prometheus
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3 Foundation
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee
+- Master’s in Information Technology – Manipal Academy of Higher Education
+- Bachelor of Science – Anugrah Narayan College, Patna University
+[/EDUCATION]
