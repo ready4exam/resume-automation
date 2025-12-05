@@ -1,0 +1,84 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn: https://www.linkedin.com/in/keshavkarn/
+Credly: https://www.credly.com/users/keshav-karn
+Ready4Industry: https://ready4industry.in
+Ready4Exam GitHub: https://ready4exam.github.io/ready4exam-class-11/
+[/CONTACT]
+
+[SUMMARY]
+Strategic technology director with 21+ years of experience leading global teams in developing and executing technology roadmaps for complex, regulated industries. Proven expertise in the end-to-end delivery of AI solutions, including Agentic AI and ML-driven automation, to enhance system reliability and business value. Adept at managing large-scale budgets with a strong FinOps focus, steering projects from problem framing through production, and communicating data-driven insights to VP/SVP-level leadership.
+[/SUMMARY]
+
+[ACHIEVEMENTS]
+- Architected and delivered an enterprise-scale Agentic AI system for AIOps, directly improving system reliability and operational efficiency for a 100,000+ asset data center portfolio.
+- Achieved $8M in cost savings on a $25M OPEX budget through data-driven optimization and FinOps governance, while engineering an AI-powered automation framework that reduced repeat service failures by 60%.
+[/ACHIEVEMENTS]
+
+[CORE_SKILLS]
+AI Strategy & Roadmap | Agentic AI & RAG | MLOps Pipelines | End-to-End Solution Delivery | Cloud Architecture (AWS, Azure) | SRE & System Reliability | FinOps & Cost Governance | Stakeholder Management (VP/SVP) | Responsible AI Safeguards
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Advise enterprise healthcare and BFSI clients on technology strategy, translating corporate objectives into platform modernization roadmaps aligned with GxP and NIST standards.
+- Architect and lead the implementation of an AI-driven automation framework that leverages predictive analytics to reduce repeat failures by 60%, enhancing service reliability.
+- Direct FinOps initiatives with Managing Directors, developing hybrid-cloud cost optimization models to govern budgets and guide client investment strategy.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led a global Service Reliability Engineering (SRE) and Platform Operations organization, ensuring high availability and performance for a mission-critical data center portfolio.
+- Owned the end-to-end delivery of an enterprise Agentic AI system that autonomously remediated AIOps-driven alerts, significantly improving system resilience and operational efficiency.
+- Directed a $30M+ vendor displacement program, insourcing critical infrastructure services to improve cost governance, agility, and reduce dependencies in line with FinOps principles.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Held director-equivalent accountability for a $25M annual OPEX, achieving $8M in savings through rigorous automation, vendor renegotiation, and data-driven license optimization.
+- Modernized contact center operations by integrating ML-powered analytics to identify root-cause patterns, generate actionable insights, and improve customer satisfaction SLAs.
+- Scaled the global Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing standardized, data-driven frameworks for global service delivery.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, establishing robust governance frameworks and performance dashboards.
+- Chaired the enterprise Change Advisory Board (CAB), ensuring risk-controlled deployments and compliance for all production system changes.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Led application support for NHS UK, ensuring timely resolution of issues across critical healthcare platforms while adhering to strict HIPAA-equivalent compliance and data privacy protocols.
+- Deployed and managed enterprise monitoring solutions (Nagios, Zabbix) for key clients, including British Telecom, to ensure service uptime and performance.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as the senior technical escalation point for mission-critical telecom systems, reducing downtime through rapid root-cause analysis and effective troubleshooting.
+- Authored standard operating procedures and trained engineering teams to improve first-call resolution rates and operational consistency.
+[/EXPERIENCE]
+
+[PROJECTS]
+Agentic AI & RAG System for EdTech Content Delivery (Ready4Industry)
+- Architected and delivered a generative AI agent using a Retrieval-Augmented Generation (RAG) pipeline to provide contextual answers from a proprietary knowledge base.
+- Deployed the system on a cloud-native stack (Python, serverless), improving content discovery accuracy by 45% and reducing manual support escalations by over 30%.
+
+ML-Based Performance Scoring & Analytics Engine (Ready4Exam)
+- Developed and productionized a predictive classification model using Python (scikit-learn, pandas) on Ready4Exam assessment results to identify at-risk students and forecast performance.
+- Engineered and exposed model insights via a robust REST API, enabling seamless integration into personalized learning paths and student feedback workflows, driving a 15% improvement in user engagement.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+AI/ML: Python (Pandas, Scikit-learn), SQL, Agentic AI Frameworks, RAG Pipelines, LLM Integration
+Cloud & MLOps: AWS, Azure, GCP, Azure ML, Vertex AI, MLflow, Docker, Kubernetes
+DevOps & SRE: CI/CD (GitHub Actions), Ansible, Terraform, Prometheus, Datadog, Grafana
+ITSM & BI: ServiceNow, Jira Service Management, Power BI, MS Visio
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Certified: Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Cloud Certified Digital Leader
+- ITIL v3 Foundation Certified
+- COBIT 4.1 Foundation
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management, IIT Roorkee (Pursuing)
+- Master of Science (Information Technology), Manipal Academy of Higher Education
+- Bachelor of Science, Anugrah Narayan College, Patna University
+[/EDUCATION]
