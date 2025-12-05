@@ -1,0 +1,90 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+linkedin.com/in/keshavkarn
+[/CONTACT]
+
+[SUMMARY]
+An accomplished senior IT executive with over 21 years of experience leading global technology service delivery, large-scale business transformation, and operational excellence for Fortune 500 companies. Proven expertise in building and scaling high-performance global teams, managing multi-million dollar budgets, and defining strategic vision aligned with enterprise objectives. Adept at steering cultural, organizational, and technological change within complex, matrixed environments.
+Specialized in transforming IT delivery centers into value-driven organizations by leveraging automation, AI/ML, cloud platforms, and agile/DevOps practices. Excels in stakeholder management, talent acquisition, and ensuring service excellence against stringent SLAs. Positioned to drive strategic transformation and operational maturity as Managing Director, IT Global Capability Center at Eurofins.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- GCC Leadership & Strategy
+- Business & IT Transformation
+- Global Stakeholder Management
+- People Leadership & Talent Acquisition
+- Innovation & Continuous Improvement (AI/ML, Automation)
+- Service Delivery & Operational Excellence (SLA Management)
+- Financial & Budget Management (P&L, FinOps)
+- Agile & DevOps Methodologies
+- Risk Management & Compliance
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Advised enterprise healthcare and BFSI clients on IT strategy and transformation, leading ITSM assessments to ensure alignment with NIST and ITIL standards.
+- Architected an AI-driven automation framework that reduced repeat service failures by 60%, significantly improving operational reliability and efficiency.
+- Directed a FinOps team to develop hybrid-cloud cost optimization dashboards, enabling proactive budget management and data-driven financial decisions.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led global technology service delivery and reliability engineering for mission-critical data center portfolios, overseeing 100,000+ physical IT assets.
+- Spearheaded a $30M+ vendor displacement program, successfully insourcing critical infrastructure services to enhance agility and operational control.
+- Championed cloud adoption and DevOps enablement, including AWS migrations and the development of an Agentic AI system for autonomous AIOps response.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, delivering $8M in savings through strategic automation, vendor renegotiation, and software license optimization.
+- Built and scaled the global Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing a key transversal capability.
+- Provided global delivery leadership for complex service engagements (e.g., Scotiabank), ensuring consistent quality, compliance, and SLA achievement across delivery centers.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, enhancing service delivery speed and quality.
+- Led Problem and Change Management functions, driving root cause analysis (RCA), chairing the Change Advisory Board (CAB), and ensuring governance.
+- Conducted ITIL assessments and implemented tailored frameworks to improve process maturity, compliance, and operational efficiency for clients.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring solutions (Nagios, Zabbix, HP OpenView) to ensure high availability for critical infrastructure.
+- Managed major release deployments with minimal business disruption for key accounts, including British Telecom.
+- Provided application support for NHS UK, ensuring timely issue resolution across critical national healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as a technical SME, handling high-impact escalations and supporting mission-critical telecom systems to minimize service downtime.
+- Authored standard operating procedures (SOPs) and trained L1/L2 engineers to improve first-call resolution rates and team capability.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Architected and engineered an agentic AI workflow to automate the generation, delivery, and assessment of personalized learning content.
+- Developed a scalable backend platform using modern cloud services, API-driven integrations, and serverless functions for optimal performance and cost-efficiency.
+- Implemented a full CI/CD pipeline using GitHub Actions, enabling automated testing and zero-touch deployments to accelerate delivery cycles.
+
+Ready4Exam
+- Built a data-driven assessment platform leveraging ML models to analyze user performance and generate customized study plans and practice exams.
+- Engineered robust data pipelines for ingesting, processing, and analyzing user interaction metrics to drive continuous platform improvement.
+- Designed and implemented a secure, multi-tenant platform architecture, incorporating RBAC models to ensure data privacy and integrity.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure, AWS, GCP, CoreStack, Flexera, CloudWatch, Azure Monitor
+ITSM & Automation: ServiceNow, Jira Service Management, Ansible, Python, JavaScript
+Monitoring & Observability: Datadog, New Relic, Prometheus, ScienceLogic, Tanzu
+Methodologies: Agile, DevOps, ITIL, COBIT, FinOps
+BI & Modeling: Power BI, MS Visio, Grafana
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- ITIL v3 & COBIT 4.1
+- Multiple IBM Architect & Consulting Badges
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]

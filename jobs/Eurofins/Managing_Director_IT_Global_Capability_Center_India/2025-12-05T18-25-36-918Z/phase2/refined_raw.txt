@@ -1,0 +1,77 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+linkedin.com/in/keshavkarn
+[/CONTACT]
+
+[SUMMARY]
+Accomplished senior IT executive with over 21 years of experience leading global technology service delivery, large-scale business transformation, and operational excellence for Fortune 500 companies. Proven expertise in building and scaling high-performance global teams, managing multi-million dollar budgets, and defining strategic vision aligned with enterprise objectives. Adept at steering cultural, organizational, and technological change within complex, matrixed environments.
+Specialized in transforming IT delivery centers into value-driven organizations by leveraging automation, AI/ML, cloud platforms, and Agile/DevOps practices. Excels in stakeholder management, talent acquisition, and ensuring service excellence against stringent SLAs. Positioned to lead the transformation of the IT GCC into the value-driven, innovative organization envisioned by Eurofins.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- GCC Leadership & Strategy
+- Business & IT Transformation
+- Global Stakeholder Management
+- People Leadership & Talent Acquisition
+- Innovation & Continuous Improvement (AI, Automation)
+- Service Delivery & Operational Excellence (SLA Management)
+- Financial & Budget Management (P&L, FinOps)
+- Site Reliability Engineering (SRE) & DevOps
+- Risk Management & Compliance
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Directed strategic IT transformation initiatives for enterprise healthcare and BFSI clients, identifying opportunities to improve service reliability and align with NIST/ITIL frameworks.
+- Spearheaded the design of an AI-driven automation framework to reduce repeat service failures by over 60%, enhancing operational stability.
+- Led FinOps advisory to develop hybrid-cloud cost optimization models, enabling proactive budget management for clients.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed global Site Reliability Engineering (SRE) and technology service delivery for a mission-critical data center portfolio of 100,000+ assets, achieving 99.99% uptime.
+- Led a strategic $30M+ vendor insourcing program, enhancing operational control, improving service agility, and achieving significant cost efficiencies.
+- Drove cloud adoption and DevOps transformation, overseeing AWS migrations and pioneering an Agentic AI system to automate AIOps response, reducing manual intervention by 40%.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, delivering $8M in sustained cost savings through strategic automation, vendor consolidation, and software license optimization.
+- Established and scaled the global Capacity Management Center of Excellence from 10 to 250+ professionals across 5 countries, creating a pivotal shared service capability for the enterprise.
+- Oversaw global service delivery for key financial services clients, ensuring consistent quality, compliance, and achievement of all contractual SLAs across multiple delivery centers.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Provided ITSM consulting to major BFSI and telecom clients, leading process maturity assessments and implementing ITIL-based frameworks to enhance operational efficiency.
+- Led Problem and Change Management functions, chairing the Change Advisory Board (CAB) and driving root cause analysis to improve service stability.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Managed enterprise monitoring solutions and major release deployments for key accounts like British Telecom, ensuring high availability and minimal business disruption.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as a technical escalation point for mission-critical telecom systems and developed foundational operational procedures (SOPs) for L1/L2 teams.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud Platforms: Azure, AWS, GCP
+Service Management & Automation: ServiceNow, Jira, Ansible, Python
+Observability & Monitoring: Datadog, New Relic, Prometheus, ScienceLogic
+Financial Management: FinOps, CoreStack, Flexera
+Methodologies: Agile, DevOps, ITIL, COBIT, SRE
+BI & Modeling: Power BI, MS Visio, Grafana
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- ITIL v3 & COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
