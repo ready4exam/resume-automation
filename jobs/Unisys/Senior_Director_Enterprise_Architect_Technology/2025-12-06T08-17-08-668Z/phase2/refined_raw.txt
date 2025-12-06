@@ -1,0 +1,87 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+linkedin.com/in/keshavkarn
+[/CONTACT]
+
+[SUMMARY]
+Accomplished technology executive with over 21 years of experience in enterprise architecture, technology strategy, and leading global Site Reliability Engineering (SRE) organizations. Proven expertise in defining long-term technology vision, mentoring high-performing teams of architects and engineers, and driving the modernization of complex legacy systems. Skilled in transitioning enterprise platforms to secure, cloud-native, and API-driven microservices architectures. Aligns technology roadmaps with strategic business goals by implementing FinOps principles, enforcing architectural governance, and driving innovation across product portfolios. Positioned to provide strategic leadership and drive technology excellence as Principal Enterprise Architect at TARGET_COMPANY.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Enterprise Architecture & Technology Strategy
+- Product Division Leadership & Modernization
+- Cloud-Native & Microservices Architecture
+- FinOps & Cloud Cost Optimization
+- Leading High-Performing Architect & Engineer Teams
+- Agile Methodologies & DevSecOps Practices
+- Legacy System Transformation & Innovation
+- Executive Stakeholder Influence & Partnership
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Define enterprise architecture and technology strategy for enterprise healthcare and BFSI clients, aligning technology roadmaps with NIST and ITIL standards to enhance security and operational governance.
+- Architected an AI-driven automation framework that reduced repeat system failures by 60%, directly improving platform reliability and supporting secure software engineering practices.
+- Lead FinOps initiatives to develop hybrid-cloud cost optimization models, delivering proactive budget management and informing architectural trade-off decisions for product stakeholders.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led a global Service Reliability Engineering (SRE) organization accountable for the reliability, security, and scalability of mission-critical data center portfolios supporting enterprise-grade products.
+- Directed a $30M+ vendor displacement program, re-architecting and insourcing critical infrastructure services to enhance product agility and reduce operational dependency.
+- Championed cloud modernization initiatives, including strategic AWS migrations and the development of an Agentic AI system to autonomously action AIOps insights, improving incident response.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, delivering $8M in savings through strategic automation, architectural optimization, and enterprise license rationalization.
+- Scaled a global Center of Excellence from 10 to 250 members across 5 countries, mentoring and developing a high-performing team of technology leads and engineers.
+- Established enterprise architecture principles and governance for global delivery teams, ensuring process consistency and reliability for major financial services clients like Scotiabank.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Provided architectural oversight during the design and implementation of ITSM and automation strategies for major telecom and BFSI customers, enhancing operational governance and delivery efficiency.
+- Chaired the Change Advisory Board (CAB) to enforce architecture principles and ensure risk-controlled deployments, maintaining the integrity of enterprise-grade systems.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Led major release deployments for British Telecom within an Agile framework using Jira, ensuring minimal business disruption for mission-critical platforms.
+- Provided application support leadership for NHS UK, ensuring timely resolution of issues across national healthcare systems to meet stringent reliability requirements.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as the senior escalation point for mission-critical telecom systems, performing root-cause analysis and driving rapid resolution to minimize service downtime.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Architected an AI-powered career readiness platform, defining a modular, microservices-based backend strategy to enable personalized learning paths at scale.
+- Designed API-driven automation principles for content ingestion and analytics pipelines, establishing a framework for seamless integration with third-party data sources.
+- Established DevSecOps best practices, implementing CI/CD workflows with GitHub Actions to enforce automated testing, secure deployments, and accelerate feature delivery.
+
+Ready4Exam
+- Led the architectural design of an agentic AI system for an adaptive exam platform, enabling autonomous content curation and personalized user feedback.
+- Defined the architecture for scalable backend services focused on security, performance, and reliability for user authentication, data persistence, and real-time tracking.
+- Designed event-driven data models and automation strategies to capture user interactions, providing critical insights for the continuous refinement of learning algorithms.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud: AWS, Azure, GCP
+Architecture: Microservices, API-Driven Design, Cloud-Native, Event-Driven Systems
+DevOps & Automation: CI/CD, GitHub Actions, Ansible, Python, Shell Scripting
+Methodologies & Governance: Agile, DevSecOps, ITIL, COBIT, FinOps, Jira
+Observability & SRE: Datadog, Prometheus, Grafana, New Relic, Azure Monitor
+BI & Data: Power BI, Data Modeling
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee
+- Master’s in Information Technology – Manipal Academy of Higher Education
+- Bachelor of Science – Anugrah Narayan College, Patna University
+[/EDUCATION]

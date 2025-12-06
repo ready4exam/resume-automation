@@ -1,0 +1,93 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+linkedin.com/in/keshavkarn
+[/CONTACT]
+
+[SUMMARY]
+An accomplished technology executive with over 21 years of experience leading enterprise architecture, software engineering, and global IT operations. Proven expertise in defining technology vision and strategy, mentoring high-performing engineering teams, and driving the modernization of complex legacy systems. Skilled in transitioning organizations to cloud-native, API-driven, and microservices-based architectures across regulated industries. Aligns technology roadmaps with strategic business goals by evaluating emerging technologies, implementing secure software engineering practices, and enforcing architectural governance. Positioned to provide strategic leadership and drive technology excellence as Senior Director – Enterprise Architect & Technology at Unisys.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Enterprise Architecture & Technology Strategy
+- Legacy System Modernization & Innovation
+- Cloud-Native & Microservices Architecture
+- Agile Methodologies & DevSecOps Practices
+- Technology Leadership & Team Mentorship
+- Software Engineering & API-Driven Design
+- Platform Engineering & Automation
+- Stakeholder Engagement & Executive Influence
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Provided strategic leadership on enterprise architecture and ITSM frameworks for enterprise healthcare and BFSI clients, aligning technology roadmaps with NIST and ITIL standards.
+- Architected and engineered an AI-driven automation framework that reduced repeat system failures by 60%, directly improving service reliability and operational governance.
+- Led a FinOps advisory team to develop hybrid-cloud cost optimization dashboards and accelerators, enabling proactive budget management and informing architectural decisions.
+- Collaborated with executive leadership across global business units to deliver comprehensive platform modernization and technology strategy roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led a global Service Reliability Engineering (SRE) organization responsible for mission-critical data center portfolios, enhancing platform reliability, security, and scalability.
+- Directed a $30M+ vendor displacement program, insourcing critical infrastructure services and re-architecting solutions to improve agility and reduce operational dependency.
+- Championed cloud modernization initiatives, including strategic AWS migrations and the development of an Agentic AI system to autonomously action AIOps insights.
+- Oversaw platform operations for over 100,000 physical IT assets, ensuring high availability and performance standards were met for enterprise-grade products.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, achieving $8M in savings through strategic automation, architectural optimization, and enterprise license rationalization.
+- Provided global delivery leadership for complex service engagements with clients like Scotiabank, establishing architecture principles and ensuring process consistency across global centers.
+- Scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, building a high-performing team of technology leads and engineers.
+- Modernized contact center platforms by integrating AI-driven insights, significantly accelerating incident response times and improving customer experience.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, providing architectural oversight during design and implementation phases.
+- Implemented and governed Problem and Change Management frameworks, chairing the Change Advisory Board (CAB) to ensure risk-controlled deployments and system integrity.
+- Led ITIL assessments and implemented tailored frameworks to enhance compliance, operational governance, and delivery efficiency for enterprise clients.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring solutions including Nagios, Zabbix, and HP OpenView to ensure performance and reliability of critical infrastructure.
+- Led major release deployments for British Telecom, ensuring minimal business disruption through structured planning and execution within an Agile framework using Jira.
+- Provided application support leadership for NHS UK, ensuring timely resolution of issues across critical national healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Served as the senior escalation point for mission-critical telecom systems, performing root-cause analysis and driving rapid resolution to minimize service downtime.
+- Authored standard operating procedures (SOPs) and technical documentation to standardize engineering practices and improve team performance.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Architected and developed an AI-powered career readiness platform using a modular, microservices-based backend to deliver personalized learning paths.
+- Engineered API-driven automation for content ingestion, user assessment, and analytics pipelines, enabling seamless integration with third-party data sources.
+- Implemented CI/CD workflows using GitHub Actions for automated testing and deployment, ensuring high code quality and rapid feature delivery.
+
+Ready4Exam
+- Designed and built an agentic AI system for an adaptive exam preparation platform, enabling autonomous content curation and personalized feedback for users.
+- Developed scalable backend services for user authentication, data persistence, and real-time progress tracking, focusing on security and performance.
+- Engineered data models and event-driven automation to capture user interactions, feeding insights into a central analytics engine to continuously refine learning algorithms.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud: Azure, AWS, GCP
+Architecture: Microservices, API-Driven Design, Cloud-Native, Event-Driven Systems
+DevOps & Automation: GitHub Actions, Ansible, CI/CD, Python, JavaScript, Shell
+ITSM & Governance: ServiceNow, Jira, ITIL, COBIT
+Observability: Datadog, New Relic, Prometheus, Grafana, Azure Monitor, CloudWatch
+BI & Data: Power BI, MS Visio, Data Modeling
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee
+- Master’s in Information Technology – Manipal Academy of Higher Education
+- Bachelor of Science – Anugrah Narayan College, Patna University
+[/EDUCATION]
