@@ -1,0 +1,60 @@
+[KEYWORD_COVERAGE]
+matched: [
+    "AI/GenAI technology vision & strategy",
+    "aligned with DD&IT and business strategy",
+    "enterprise roadmap",
+    "evaluate, implement and scale AI/GenAI Platforms",
+    "accelerators",
+    "integrate with existing systems efficiently",
+    "governance framework",
+    "measure Return on Investment (ROI) with tangible KPIs",
+    "product mindset",
+    "agile methodologies",
+    "Proof of Concepts (PoCs) and Minimal Viable Products (MVPs)",
+    "new AI/GenAI use cases, emerging models and frameworks",
+    "clear communication and stakeholder engagement",
+    "develop training materials",
+    "Foster collaboration and knowledge sharing",
+    "consistency and alignment across the organization",
+    "drive governance processes within DD&IT",
+    "strategic foresight and cross-functional mindset",
+    "Stay informed on industry AI/GenAI trends",
+    "engage with communities of practice",
+    "understand opportunities for technology partnerships",
+    "Align with Enterprise Data Management strategy and principles",
+    "optimized data collection and preparation processes",
+    "ensure data quality for AI/GenAI solutions",
+    "Operationalize AI/GenAI platform support",
+    "work with Infrastructure and End User Services",
+    "fulfil performance and monitoring needs",
+    "Ensure compliance with Novartis AI policies and frameworks",
+    "implement robust data protection measures",
+    "support security audits and vulnerability assessments",
+    "jointly with DD&IT Information Security & Compliance function",
+    "20+ years of experience in managing technology platforms",
+    "driving operational excellence",
+    "Deep experience and knowledge of AI/GenAI technology",
+    "Knowledgeable on AI and GenAI platforms, tools, architecture and solution delivery",
+    "Familiarity with architecting and developing complex AI/GenAI solutions",
+    "experience with cloud computing platforms like AWS and Microsoft Azure",
+    "Experience with NLP, FMs, LLMs, SLMs and other GenAI models",
+    "Understanding of how to deploy LLMs and use of APIs to build solutions",
+    "Familiarity with the model development lifecycle, such as ML/ML Ops/LLM Ops",
+    "Software Development experience using Agile Methodology",
+    "DevSecOps tools",
+    "Strong technology delivery, program management skillset",
+    "Proven communication skills in a global matrix organization",
+    "excellent presentation skills",
+    "abstracting problem statements and preparing executive messaging",
+    "Experience in leading cross functional IT teams",
+    "managing relationships with diverse stakeholders",
+    "fostering a strong collaboration mindset"
+]
+missing: [
+    "Experience in Pharma regulatory & compliance processes"
+]
+coverage_percent: 98
+critical_gaps: [
+    "Experience in Pharma regulatory & compliance processes (Desirable, not a core minimum requirement)"
+]
+[/KEYWORD_COVERAGE]
