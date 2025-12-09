@@ -1,0 +1,107 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+Highly accomplished IT Executive with over 20 years of global leadership experience in defining AI/GenAI technology vision & strategy and driving operational excellence within complex, regulated environments. Possesses deep expertise in evaluating, implementing, and scaling enterprise AI/GenAI platforms, tools, and architectures, integrating efficiently with existing systems. Adept at establishing robust governance frameworks for technology proliferation, measuring ROI with tangible KPIs, and qualifying successful PoCs/MVPs for scaling, leveraging a product mindset and Agile methodologies. Proven success architecting and developing complex AI/GenAI solutions on AWS and Microsoft Azure, proficient in NLP, FMs, LLMs, SLMs, and the full ML/LLM Ops lifecycle. Positioned to drive the AI/GenAI platform vision, strategy, and operational excellence as Head AI Platform at Novartis.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- AI/GenAI Platform Strategy & Vision
+- ML/LLM Ops & MLOps Lifecycle Management
+- Cloud Architecture (AWS, Azure, GCP)
+- FinOps & Cloud Cost Optimization
+- Agile & DevSecOps Methodologies
+- Product Management (AI/GenAI Solutions)
+- Data Governance & Data Quality for AI
+- Software Engineering & Automation (Python, JavaScript)
+- Global Service Reliability Engineering & Platform Operations
+- Cross-functional Team Leadership
+- Regulatory Compliance & Risk Management
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+Role: IT Strategy & FinOps Advisor
+- Provided strategic advisory to enterprise healthcare and BFSI clients, focusing on IT strategy, ITSM assessments, and compliance with NIST and ITIL standards.
+- Engineered a custom AI-driven automation framework and GPT for ITSM operations and security reasoning, reducing repeat failures by 60% and significantly improving service reliability.
+- Directed FinOps initiatives, developing hybrid-cloud cost dashboards and accelerators that drove proactive budget optimization and demonstrated tangible ROI for platform investments.
+- Cultivated strong relationships with global leadership across US, LatAm, Europe, and APAC, delivering comprehensive platform modernization roadmaps and strategic technology initiatives.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+Role: Head – Global Service Reliability Engineering & Platform Operations
+- Oversaw global technology service delivery and SRE for large-scale, mission-critical data center portfolios, enhancing reliability, performance, and capacity management.
+- Led a $30M+ vendor displacement program, insourcing critical infrastructure services to improve agility, reduce dependencies, and optimize operational costs.
+- Championed Cloud & DevOps enablement initiatives, including strategic AWS migrations and the development of an Agentic AI system for autonomous response to AIOps insights.
+- Managed operations for over 100,000 physical IT assets (servers, network devices), ensuring high availability, performance, and compliance with stringent operational SLAs.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+Role: Director-Equivalent – ITSM & Capacity Management
+- Managed $25M annual OPEX, achieving $8M in savings through strategic automation, vendor renegotiation, and proactive license optimization across global operations.
+- Provided global delivery leadership for complex service engagements, including a key project for Scotiabank and enhancing healthcare platforms like Avance Health, ensuring consistent excellence across global centers.
+- Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, standardizing ITIL-based frameworks for end-to-end capacity planning and optimization.
+- Modernized contact center operations by integrating AI-driven insights to accelerate response times and enhance service delivery efficiency for global clients.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+Role: ITSM & Automation Leader
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, leading to significant improvements in service delivery and operational efficiency.
+- Introduced standardized operating procedures (SOPs) and performance dashboards that enhanced delivery speed, quality, and facilitated data-driven decision-making.
+- Led Problem and Change Management, driving Root Cause Analysis, implementing risk-controlled changes, chairing Change Advisory Boards (CAB), and ensuring robust governance.
+- Conducted ITIL assessments and implemented tailored frameworks to enhance compliance, streamline processes, and improve overall IT service management maturity.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+Role: Lead – Infrastructure & Monitoring Solutions
+- Deployed and managed enterprise monitoring tools, including Nagios, Zabbix, and HP OpenView, enhancing observability and proactive issue detection across critical infrastructure.
+- Led major release deployments for British Telecom, ensuring minimal disruption and adherence to stringent change management protocols.
+- Provided critical application support for NHS UK, ensuring timely resolution of issues across key healthcare platforms and maintaining high service availability.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+Role: Technical SME & Support Escalation Lead
+- Handled high-impact escalations and provided expert support for mission-critical telecom systems, significantly reducing resolution times.
+- Reduced system downtime through rapid issue resolution, effective troubleshooting, and proactive problem identification.
+- Trained L1/L2 engineers on complex systems and authored comprehensive SOP documentation to improve support team efficiency and knowledge base.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Architected and engineered an Agentic AI platform designed for industry-specific automation, integrating modular backend components for API-driven workflows.
+- Developed a custom GPT model using PyTorch and Mistral, demonstrating advanced natural language processing capabilities and domain-specific knowledge integration.
+- Implemented robust data pipeline automation for continuous learning and service reliability improvements, focusing on scalable engineering practices and secure integration.
+
+Ready4Exam
+- Developed an end-to-end educational assessment platform utilizing purely GenAI models for content generation, adaptive testing, and personalized learning paths.
+- Engineered cloud-native serverless functions and event-driven automation on AWS/Azure, optimizing for performance, scalability, and cost efficiency.
+- Focused on user-centric interface design and backend logic development to ensure seamless user experience and secure data handling, embodying a full-stack product engineering approach.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+AI/GenAI: LLMs, FMs, SLMs, NLP, PyTorch, Mistral, Agentic AI, AI/GenAI Platforms, Prompt Engineering
+Cloud Platforms: Azure, AWS, GCP, CloudFormation, Terraform
+ML/LLM Ops: ML/LLM Model Development Lifecycle, Data Collection & Preparation, MLOps Pipelines
+Dev & Automation: Python, JavaScript, Shell Scripting, GitHub Actions, API Integration, Backend Engineering, CI/CD
+Observability & Monitoring: Datadog, Prometheus, Grafana, New Relic, Azure Monitor, CloudWatch, ScienceLogic
+ITSM & Workflow: ServiceNow, Remedy, Jira Service Management
+Infrastructure: Ansible, VMware Tanzu, Docker, Kubernetes, Nagios, Zabbix, SolarWinds
+FinOps & Cloud Cost: CoreStack, ECAM, Flexera, Cloud Cost Dashboards
+Data Management: Supabase, Data Quality, ETL-style flows
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]

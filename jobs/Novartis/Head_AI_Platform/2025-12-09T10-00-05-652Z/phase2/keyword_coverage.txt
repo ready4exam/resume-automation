@@ -1,0 +1,57 @@
+[KEYWORD_COVERAGE]
+matched:
+- 20+ years experience (technology platforms, operational excellence)
+- Master’s degree (desirable)
+- AI/GenAI technology vision & strategy
+- Enterprise roadmap (AI/GenAI)
+- AI/GenAI Platforms (evaluate, implement, scale, integrate)
+- Governance framework (tech proliferation, ROI, KPIs)
+- Product mindset
+- Agile methodologies
+- Proof of Concepts (PoCs)
+- Minimal Viable Products (MVPs)
+- New AI/GenAI use cases
+- Emerging models and frameworks (AI/GenAI)
+- Qualify PoCs/MVPs for scaling
+- Communication (AI/GenAI platforms, capabilities)
+- Stakeholder engagement
+- Collaboration & knowledge sharing
+- Governance processes (priorities, risks, strategic foresight)
+- Cross-functional mindset
+- Industry AI/GenAI trends
+- Communities of practice (AI/GenAI)
+- Technology partnerships
+- DD&IT Architecture leads (collaboration)
+- Enterprise Data Management strategy
+- Optimized data collection and preparation processes
+- Data quality for AI/GenAI solutions
+- Operationalize AI/GenAI platform support
+- Continuous improvement
+- Infrastructure and End User Services (performance/monitoring needs)
+- Robust data protection measures
+- Security audits
+- Vulnerability assessments
+- DD&IT Information Security & Compliance (collaboration)
+- Deep experience/knowledge of AI/GenAI technology
+- AI and GenAI platforms, tools, architecture, solution delivery
+- Architecting/developing complex AI/GenAI solutions
+- Cloud computing platforms
+- AWS
+- Microsoft Azure
+- NLP
+- FMs (Foundation Models)
+- LLMs (Large Language Models)
+- SLMs (Small Language Models)
+- Deploy LLMs and use APIs
+- Model development lifecycle (ML/ML Ops/LLM Ops)
+- Software Development
+- DevSecOps tools
+- Pharma regulatory & compliance (desirable)
+- Strong technology delivery, program management skillset
+missing:
+- Training materials (AI/GenAI)
+- Novartis AI policies and frameworks (compliance)
+coverage_percent: 96
+critical_gaps:
+- Novartis AI policies and frameworks (compliance)
+[/KEYWORD_COVERAGE]
