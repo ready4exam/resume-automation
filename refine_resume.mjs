@@ -9,59 +9,85 @@ import {
   AlignmentType,
 } from "docx";
 
-// ---------------------------------------------------
-// GEMINI SETUP
-// ---------------------------------------------------
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const PRIMARY_MODEL = "gemini-pro-latest";
-const FALLBACK_MODELS = ["gemini-flash-latest", "gemini-2.0-flash"];
+// ========================================================================
+//  GEMINI SETUP — BULLETPROOF FREE-TIER CONFIGURATION
+// ========================================================================
 
-// ---------------------------------------------------
-// CLI ARGS
-// ---------------------------------------------------
+// BEST free model with 1M token window
+const MODEL_CHAIN = [
+  "gemini-2.5-flash",
+  "gemini-flash-latest",
+  "gemini-2.0-flash",
+  "gemini-2.5-flash-lite"
+];
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+// ========================================================================
+//  CLI HELPERS
+// ========================================================================
 function getArg(flag, def = "") {
   const idx = process.argv.indexOf(flag);
   if (idx === -1 || idx === process.argv.length - 1) return def;
   return process.argv[idx + 1];
 }
 
-// ---------------------------------------------------
-// GEMINI CALL WITH FALLBACK
-// ---------------------------------------------------
+// ========================================================================
+//  BULLETPROOF GEMINI CALL ENGINE (FREE-TIER SAFE)
+// ========================================================================
 async function callGemini(prompt) {
-  const models = [PRIMARY_MODEL, ...FALLBACK_MODELS];
-  let lastErr = null;
+  let lastError = null;
 
-  for (const modelName of models) {
+  for (const model of MODEL_CHAIN) {
+    console.log(`\n⚡ Trying model: ${model}`);
+
     try {
-      console.log(`Phase-2 using model: ${modelName}`);
-      const model = genAI.getGenerativeModel({ model: modelName });
-      const result = await model.generateContent(prompt);
-      const txt = result.response.text() || "";
+      const m = genAI.getGenerativeModel({ model });
+      const result = await m.generateContent(prompt);
+      const text = result.response.text();
 
-      if (!txt.trim()) {
-        console.log("Model returned empty response. Trying fallback...");
+      if (!text || !text.trim()) {
+        console.log(`⚠ Model ${model} returned empty text → trying next`);
         continue;
       }
-      return txt;
+
+      console.log(`✅ SUCCESS with ${model}`);
+      return text;
     } catch (err) {
-      lastErr = err;
       const status = err?.status;
-      console.error(`Model ${modelName} failed (${status}): ${err.message}`);
-      if (status === 500 || status === 503) {
-        console.log("Transient error — switching model...");
+      lastError = err;
+
+      // Log failure
+      console.log(`❌ Model ${model} failed (status ${status}): ${err.message}`);
+
+      // QUOTA EXHAUSTED → Switch immediately
+      if (status === 429) {
+        console.log(`🔄 QUOTA EXHAUSTED for ${model} → switching`);
         continue;
       }
-      throw err;
+
+      // Transient errors → retry same model with backoff
+      if (status === 500 || status === 503) {
+        console.log(`🔁 Retrying ${model} after backoff...`);
+        await new Promise((res) => setTimeout(res, 1000));
+        continue;
+      }
+
+      // Any other error → skip
+      console.log(`⏭ Non-recoverable error → skipping model`);
+      continue;
     }
   }
 
-  throw lastErr || new Error("All models failed or empty output.");
+  throw (
+    lastError ||
+    new Error("All models failed or produced no output.")
+  );
 }
 
-// ---------------------------------------------------
-// TEXT HELPERS
-// ---------------------------------------------------
+// ========================================================================
+//  TEXT HELPERS
+// ========================================================================
 function extract(tag, text) {
   const re = new RegExp(`\\[${tag}\\]([\\s\\S]*?)\\[\\/${tag}\\]`, "i");
   const m = text.match(re);
@@ -75,9 +101,9 @@ function splitLines(txt) {
     .filter((x) => x.length > 0);
 }
 
-// ---------------------------------------------------
-// DOCX BUILDER — FIX ALL TO CALIBRI
-// ---------------------------------------------------
+// ========================================================================
+//  DOCX BUILDER (Calibiri + fully preserved formatting)
+// ========================================================================
 const FONT = "Calibri";
 
 async function buildDocx(text, outPath) {
@@ -91,9 +117,9 @@ async function buildDocx(text, outPath) {
   const CERT = extract("CERTIFICATIONS", text);
   const EDU = extract("EDUCATION", text);
 
-  const BODY_SIZE = 22; // 11pt
-  const HEADING_SIZE = 26; // 13pt
-  const NAME_SIZE = 38; // 19pt
+  const BODY_SIZE = 22;
+  const HEADING_SIZE = 26;
+  const NAME_SIZE = 38;
 
   function run(t, opts = {}) {
     return new TextRun({ text: t, font: FONT, size: BODY_SIZE, ...opts });
@@ -124,11 +150,16 @@ async function buildDocx(text, outPath) {
 
   const children = [];
 
-  // -------------------- FIXED HEADER --------------------
+  // -------------------- HEADER (FIXED) --------------------
   children.push(
     new Paragraph({
       children: [
-        new TextRun({ text: "Keshav Karn", font: FONT, size: NAME_SIZE, bold: true }),
+        new TextRun({
+          text: "Keshav Karn",
+          font: FONT,
+          size: NAME_SIZE,
+          bold: true,
+        }),
       ],
       alignment: AlignmentType.LEFT,
       spacing: { after: 40 },
@@ -145,7 +176,9 @@ async function buildDocx(text, outPath) {
   children.push(
     new Paragraph({
       children: [
-        run("LinkedIn: https://www.linkedin.com/in/keshavkarn/ | Credly: https://www.credly.com/users/keshav-karn"),
+        run(
+          "LinkedIn: https://www.linkedin.com/in/keshavkarn/ | Credly: https://www.credly.com/users/keshav-karn"
+        ),
       ],
       spacing: { after: 20 },
     })
@@ -154,7 +187,9 @@ async function buildDocx(text, outPath) {
   // -------------------- SUMMARY --------------------
   if (SUMMARY) {
     children.push(heading("PROFESSIONAL SUMMARY"));
-    splitLines(SUMMARY).forEach((line) => children.push(new Paragraph({ children: [run(line)], spacing: { after: 80 } })));
+    splitLines(SUMMARY).forEach((l) =>
+      children.push(new Paragraph({ children: [run(l)], spacing: { after: 80 } }))
+    );
   }
 
   // -------------------- ACHIEVEMENTS --------------------
@@ -192,7 +227,9 @@ async function buildDocx(text, outPath) {
         })
       );
 
-      arr.slice(1).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
+      arr.slice(1).forEach((l) =>
+        children.push(bullet(l.replace(/^-+\s*/, "")))
+      );
 
       buf = [];
     }
@@ -208,13 +245,11 @@ async function buildDocx(text, outPath) {
   if (PROJ && PROJ.trim()) {
     children.push(heading("PROJECTS"));
     splitLines(PROJ).forEach((line) => {
-      if (line.startsWith("-")) children.push(bullet(line.replace(/^-+\s*/, "")));
+      if (line.startsWith("-"))
+        children.push(bullet(line.replace(/^-+\s*/, "")));
       else
         children.push(
-          new Paragraph({
-            children: [run(line)],
-            spacing: { after: 80 },
-          })
+          new Paragraph({ children: [run(line)], spacing: { after: 80 } })
         );
     });
   }
@@ -222,13 +257,17 @@ async function buildDocx(text, outPath) {
   // -------------------- TECHNICAL SKILLS --------------------
   if (TECH) {
     children.push(heading("TECHNICAL SKILLS"));
-    splitLines(TECH).forEach((l) => children.push(new Paragraph({ children: [run(l)], spacing: { after: 80 } })));
+    splitLines(TECH).forEach((l) =>
+      children.push(new Paragraph({ children: [run(l)], spacing: { after: 80 } }))
+    );
   }
 
   // -------------------- CERTIFICATIONS --------------------
   if (CERT) {
     children.push(heading("CERTIFICATIONS"));
-    splitLines(CERT).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
+    splitLines(CERT).forEach((l) =>
+      children.push(bullet(l.replace(/^-+\s*/, "")))
+    );
   }
 
   // -------------------- EDUCATION --------------------
@@ -261,9 +300,9 @@ async function buildDocx(text, outPath) {
   fs.writeFileSync(outPath, buffer);
 }
 
-// ---------------------------------------------------
-// MAIN: Recruiter review → Rewrite
-// ---------------------------------------------------
+// ========================================================================
+//  MAIN PIPELINE
+// ========================================================================
 async function main() {
   const jdFile = getArg("--job-desc-file");
   const rawFile = getArg("--raw-file");
@@ -276,9 +315,14 @@ async function main() {
 
   const jd = fs.readFileSync(jdFile, "utf8");
   const raw = fs.readFileSync(rawFile, "utf8");
-  const systemPrompt = fs.readFileSync(path.join("templates", "system_prompt.txt"), "utf8");
+  const systemPrompt = fs.readFileSync(
+    path.join("templates", "system_prompt.txt"),
+    "utf8"
+  );
 
-  // ---------------- REVIEW ----------------
+  // ===========================
+  // 1️⃣ REVIEW STAGE (calls Gemini)
+  // ===========================
   const reviewPrompt = `
 You are a senior recruiter performing a strict evaluation of a candidate applying for a high-level technology leadership role.
 
@@ -307,16 +351,19 @@ RESUME:
 ${raw}
 `;
 
+  console.log("\n📌 Running REVIEW stage...");
   let review = await callGemini(reviewPrompt);
   if (!review.includes("[REVIEW]")) {
     review = "[REVIEW]\n(No review returned)\n[/REVIEW]";
   }
 
-  // ---------------- IMPROVE ----------------
+  // ===========================
+  // 2️⃣ IMPROVEMENT STAGE
+  // ===========================
   const improvePrompt = `
 ${systemPrompt}
 
-You are now rewriting the resume using:
+Rewrite the resume using:
 - REVIEW_NOTES
 - JOB_DESCRIPTION
 - ORIGINAL_RESUME
@@ -330,16 +377,10 @@ ${jd}
 ORIGINAL_RESUME:
 ${raw}
 
-IMPORTANT:
-✔ use strict tag format ONLY  
-✔ ensure SUMMARY strongly aligns  
-✔ add 1-line “fit for role” closing sentence  
-✔ PROJECTS only when applicable (infra+dev or dev-only)  
-✔ Use ALL Calibri formatting conventions indirectly (handled by DOCX)  
-
-Now output ONLY the tagged resume, no commentary.
+OUTPUT STRICTLY AS TAGGED RESUME ONLY. NO COMMENTARY.
 `;
 
+  console.log("\n📌 Running IMPROVEMENT stage...");
   const improved = await callGemini(improvePrompt);
 
   fs.mkdirSync(outDir, { recursive: true });
@@ -347,12 +388,13 @@ Now output ONLY the tagged resume, no commentary.
   fs.writeFileSync(path.join(outDir, "review.txt"), review, "utf8");
   fs.writeFileSync(path.join(outDir, "refined_raw.txt"), improved, "utf8");
 
+  console.log("\n📌 Building DOCX...");
   await buildDocx(improved, path.join(outDir, "refined_resume.docx"));
 
-  console.log("Refinement complete.");
+  console.log("\n🎉 Resume refinement COMPLETE.");
 }
 
 main().catch((err) => {
-  console.error(err);
+  console.error("\n❌ FATAL ERROR:", err);
   process.exit(1);
 });
