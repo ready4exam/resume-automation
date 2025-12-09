@@ -1,0 +1,49 @@
+[KEYWORD_COVERAGE]
+matched: [
+  "Cohesive strategy for the enterprise data and AI team",
+  "Drive the long term objectives, success criteria and continuous performance measurement vs goals",
+  "Communicate to stakeholders across businesses",
+  "Prioritize initiatives",
+  "Ensure effective execution of data and AI projects",
+  "Smooth integration of enterprise data and AI solutions into day-to-day business functions",
+  "Supporting the operationalization of the data and AI strategy",
+  "Monitor and track the progress of data and AI projects, ensuring alignment with business goals, timelines, and resource availability",
+  "Cross-functional collaboration",
+  "Broader digital transformation objectives",
+  "Foster innovation, knowledge-sharing, and best practices to drive the successful execution and adoption of data and AI initiatives",
+  "Implementation of effective governance frameworks",
+  "Projects delivered on-time and within budget",
+  "Risk management efforts (identifying potential risks and ensuring mitigation strategies)",
+  "Maintaining compliance standards across all enterprise data assets",
+  "Data and AI led business transformations through adequate change management, business process reengineering, solution support",
+  "Oversee the integration of data and AI initiatives into business operations, ensuring alignment with key business processes",
+  "Track the performance of data and AI projects, recommending adjustments as necessary to ensure business value is being realized",
+  "Development of a vendor strategy, ensuring that third-party vendors support data and AI project timelines and quality requirements",
+  "Manage vendor relationships, participating in negotiations to secure favorable terms and establish long-term, collaborative partnerships",
+  "Fostering a culture of innovation, learning, and continuous improvement across the data and AI teams",
+  "Build skill sets both within the functional team and across the organization",
+  "Serve as a key point of contact for enterprise data and AI teams, facilitating communication and alignment with other technology teams",
+  "Prepare regular progress updates for executive leadership, highlighting key initiatives, risks, and opportunities",
+  "10+ years of experience in strategic planning, data management, AI project governance, technology leadership, and cross-functional collaboration",
+  "5 years in a senior leadership role"
+]
+missing: [
+  "Create impact stories",
+  "Maintaining data quality",
+  "Maintaining data privacy",
+  "Maintain balanced scorecards to track KPIs and measure project success against defined objectives",
+  "Creation of training and development programs to build data literacy",
+  "Support the development of succession plans for team members",
+  "Cultivate a transparent communication culture, ensuring clarity across teams and stakeholders on project goals and outcomes"
+]
+coverage_percent: 79
+critical_gaps: [
+  "Create impact stories",
+  "Maintaining data quality",
+  "Maintaining data privacy",
+  "Maintain balanced scorecards to track KPIs and measure project success against defined objectives",
+  "Creation of training and development programs to build data literacy",
+  "Support the development of succession plans for team members",
+  "Cultivate a transparent communication culture, ensuring clarity across teams and stakeholders on project goals and outcomes"
+]
+[/KEYWORD_COVERAGE]

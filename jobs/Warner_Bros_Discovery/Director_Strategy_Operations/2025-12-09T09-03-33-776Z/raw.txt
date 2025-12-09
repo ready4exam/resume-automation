@@ -1,0 +1,98 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn
+[/CONTACT]
+
+[SUMMARY]
+An accomplished and outcome-driven IT executive with 21+ years of global experience in strategic planning, technology leadership, and operational excellence, driving large-scale digital transformation initiatives. Proven expertise in developing and executing cohesive Data and AI Strategy, implementing robust governance frameworks, and fostering cross-functional collaboration across engineering, AI, analytics, and product teams. Adept at optimizing business processes, managing vendor relationships, and leveraging FinOps and SRE methodologies to enhance performance and achieve strategic objectives. Positioned to drive enterprise data and AI strategy execution and operational excellence as Director, Strategy & Operations at Warner Bros. Discovery.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Data and AI Strategy & Execution
+- Cross-functional Leadership & Collaboration
+- Governance, Risk & Compliance Management
+- Business Process Reengineering & Optimization
+- Cloud FinOps & Cost Management
+- Site Reliability Engineering (SRE)
+- Agile & DevOps Methodologies
+- Stakeholder & Vendor Management
+- Platform & Automation Engineering
+- Digital Transformation Leadership
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic advisory engagements for enterprise clients, developing IT and data strategies aligned with NIST and ITIL, contributing to effective governance frameworks.
+- Engineered and implemented an AI-driven automation framework, significantly reducing repeat failures by 60% and enhancing service reliability and operational efficiency.
+- Directed FinOps initiatives, creating hybrid-cloud cost dashboards and accelerators that drove proactive budget optimization and substantial cloud cost savings.
+- Cultivated strong relationships with global leadership and cross-functional teams to deliver critical platform modernization roadmaps and digital transformation objectives.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Headed global Service Reliability Engineering and platform operations for mission-critical data center portfolios, significantly enhancing service reliability and capacity management.
+- Orchestrated a $30M+ vendor displacement program, insourcing critical infrastructure services to enhance agility, reduce operational costs, and improve vendor strategy.
+- Championed Cloud & DevOps enablement, including strategic AWS migrations and the development of an Agentic AI system for autonomous AIOps response, driving innovation.
+- Managed the operationalization of 100,000+ physical IT assets, ensuring high availability and performance in alignment with enterprise data and AI operational needs.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, achieving $8M in savings through strategic automation, vendor renegotiation, and license optimization, aligning with FinOps principles.
+- Provided global delivery leadership for complex service engagements, ensuring consistent execution and adherence to governance frameworks across multiple global centers.
+- Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, fostering a culture of innovation and skill development.
+- Standardized ITIL-based frameworks for end-to-end capacity management, establishing robust governance and performance optimization processes.
+- Modernized contact center operations by integrating AI-driven insights, accelerating response times and improving overall business process efficiency.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major enterprise customers, enhancing business process management and operational efficiency.
+- Introduced Standard Operating Procedures (SOPs) and performance dashboards that significantly improved delivery speed, quality, and project transparency.
+- Led Problem and Change Management, driving Root Cause Analysis, implementing risk-controlled changes, chairing Change Advisory Boards, and ensuring strong governance.
+- Conducted ITIL assessments and implemented tailored frameworks, ensuring compliance and continuous improvement in service delivery.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed enterprise monitoring tools (Nagios, Zabbix, HP OpenView) to establish robust performance tracking for critical infrastructure.
+- Managed major release deployments for British Telecom, ensuring minimal disruption and effective operationalization of new services.
+- Led application support for NHS UK, providing timely resolution of issues across critical healthcare platforms and contributing to service reliability.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Handled high-impact escalations for mission-critical telecom systems, contributing to risk mitigation and continuous service availability.
+- Reduced system downtime by implementing rapid issue resolution and effective troubleshooting strategies.
+- Developed and delivered training programs for L1/L2 engineers and authored Standard Operating Procedure (SOP) documentation, fostering knowledge sharing and skill development.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Engineered an AI-powered platform for automated industry insights generation, leveraging large language models for data synthesis and strategic reporting.
+- Developed modular backend components and API integrations for seamless data ingestion and content delivery, emphasizing platform scalability and reliability.
+- Implemented robust automation pipelines using GitHub Actions for CI/CD, ensuring rapid deployment and continuous improvement of the platform.
+
+Ready4Exam
+- Designed and built an Agentic AI system for personalized learning paths and adaptive assessment generation, focusing on user-centric product engineering.
+- Orchestrated backend logic for data model management, performance optimization, and secure user authentication within a cloud-native environment.
+- Leveraged serverless functions and event-driven architectures to create a highly responsive and scalable platform for educational content delivery.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure, AWS, GCP, Azure Monitor, CloudWatch, Grafana, CoreStack, Flexera, FinOps tools
+Monitoring & Observability: Datadog, New Relic, Prometheus, ScienceLogic, Zabbix, Distributed Tracing, Telemetry Correlation
+Automation & DevOps: GitHub Actions, CI/CD, Ansible, Infrastructure-as-Code, Automated Diagnostics, Workflow Orchestration
+Development & Scripting: Python, JavaScript, Shell Scripting, API Design & Integration, Serverless Functions, Backend Logic
+ITSM & Platform: ServiceNow, Remedy, Jira Service Management, VMware Tanzu, Data Center Operations
+BI & Modeling: Power BI, MS Visio, Performance Dashboards
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
