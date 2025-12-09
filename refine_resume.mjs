@@ -1,3 +1,7 @@
+// ============================================================================
+// refine_resume.mjs — FINAL PRODUCTION VERSION (Free-Tier Bulletproof Engine)
+// ============================================================================
+
 import fs from "fs";
 import path from "path";
 import { GoogleGenerativeAI } from "@google/generative-ai";
@@ -9,34 +13,32 @@ import {
   AlignmentType,
 } from "docx";
 
-// ========================================================================
-//  GEMINI SETUP — BULLETPROOF FREE-TIER CONFIGURATION
-// ========================================================================
-
-// BEST free model with 1M token window
+// ============================================================================
+//  MODEL CHAIN — FREE TIER FRIENDLY (AUTO FAILOVER)
+// ============================================================================
 const MODEL_CHAIN = [
-  "gemini-2.5-flash",
-  "gemini-flash-latest",
-  "gemini-2.0-flash",
-  "gemini-2.5-flash-lite"
+  "gemini-2.5-flash",       // Best free model
+  "gemini-flash-latest",    // Backup
+  "gemini-2.0-flash",       // Backup
+  "gemini-2.5-flash-lite"   // Lowest cost last fallback
 ];
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-// ========================================================================
-//  CLI HELPERS
-// ========================================================================
+// ============================================================================
+//  ARG PARSER
+// ============================================================================
 function getArg(flag, def = "") {
-  const idx = process.argv.indexOf(flag);
-  if (idx === -1 || idx === process.argv.length - 1) return def;
-  return process.argv[idx + 1];
+  const i = process.argv.indexOf(flag);
+  if (i === -1 || i === process.argv.length - 1) return def;
+  return process.argv[i + 1];
 }
 
-// ========================================================================
-//  BULLETPROOF GEMINI CALL ENGINE (FREE-TIER SAFE)
-// ========================================================================
+// ============================================================================
+//  BULLETPROOF LLM CALL (FAILOVER ENGINE)
+// ============================================================================
 async function callGemini(prompt) {
-  let lastError = null;
+  let lastErr = null;
 
   for (const model of MODEL_CHAIN) {
     console.log(`\n⚡ Trying model: ${model}`);
@@ -44,50 +46,44 @@ async function callGemini(prompt) {
     try {
       const m = genAI.getGenerativeModel({ model });
       const result = await m.generateContent(prompt);
-      const text = result.response.text();
+      const txt = result.response.text();
 
-      if (!text || !text.trim()) {
-        console.log(`⚠ Model ${model} returned empty text → trying next`);
+      if (!txt || !txt.trim()) {
+        console.log(`⚠ Empty output from ${model} → Trying next...`);
         continue;
       }
 
       console.log(`✅ SUCCESS with ${model}`);
-      return text;
+      return txt;
     } catch (err) {
+      lastErr = err;
       const status = err?.status;
-      lastError = err;
 
-      // Log failure
-      console.log(`❌ Model ${model} failed (status ${status}): ${err.message}`);
+      console.log(`❌ ${model} failed (${status}): ${err.message}`);
 
-      // QUOTA EXHAUSTED → Switch immediately
+      // QUOTA exhausted — switch model immediately
       if (status === 429) {
-        console.log(`🔄 QUOTA EXHAUSTED for ${model} → switching`);
+        console.log("🔄 Quota exhausted → switching model");
         continue;
       }
 
-      // Transient errors → retry same model with backoff
+      // transient server error — retry same model with delay
       if (status === 500 || status === 503) {
-        console.log(`🔁 Retrying ${model} after backoff...`);
-        await new Promise((res) => setTimeout(res, 1000));
+        console.log("🔁 Retrying...");
+        await new Promise((r) => setTimeout(r, 1000));
         continue;
       }
 
-      // Any other error → skip
-      console.log(`⏭ Non-recoverable error → skipping model`);
-      continue;
+      console.log("⏭ Non-recoverable → skipping");
     }
   }
 
-  throw (
-    lastError ||
-    new Error("All models failed or produced no output.")
-  );
+  throw lastErr || new Error("All models failed.");
 }
 
-// ========================================================================
+// ============================================================================
 //  TEXT HELPERS
-// ========================================================================
+// ============================================================================
 function extract(tag, text) {
   const re = new RegExp(`\\[${tag}\\]([\\s\\S]*?)\\[\\/${tag}\\]`, "i");
   const m = text.match(re);
@@ -101,9 +97,9 @@ function splitLines(txt) {
     .filter((x) => x.length > 0);
 }
 
-// ========================================================================
-//  DOCX BUILDER (Calibiri + fully preserved formatting)
-// ========================================================================
+// ============================================================================
+//  DOCX BUILDER (Calibiri Preserved)
+// ============================================================================
 const FONT = "Calibri";
 
 async function buildDocx(text, outPath) {
@@ -124,22 +120,14 @@ async function buildDocx(text, outPath) {
   function run(t, opts = {}) {
     return new TextRun({ text: t, font: FONT, size: BODY_SIZE, ...opts });
   }
-
   function heading(t) {
     return new Paragraph({
       children: [
-        new TextRun({
-          text: t,
-          font: FONT,
-          bold: true,
-          size: HEADING_SIZE,
-          allCaps: true,
-        }),
+        new TextRun({ text: t, font: FONT, bold: true, size: HEADING_SIZE, allCaps: true }),
       ],
       spacing: { before: 200, after: 100 },
     });
   }
-
   function bullet(t) {
     return new Paragraph({
       text: t,
@@ -150,41 +138,26 @@ async function buildDocx(text, outPath) {
 
   const children = [];
 
-  // -------------------- HEADER (FIXED) --------------------
-  children.push(
-    new Paragraph({
-      children: [
-        new TextRun({
-          text: "Keshav Karn",
-          font: FONT,
-          size: NAME_SIZE,
-          bold: true,
-        }),
-      ],
-      alignment: AlignmentType.LEFT,
-      spacing: { after: 40 },
-    })
-  );
+  // ---------------- HEADER ----------------
+  children.push(new Paragraph({
+    children: [new TextRun({ text: "Keshav Karn", font: FONT, size: NAME_SIZE, bold: true })],
+    alignment: AlignmentType.LEFT,
+    spacing: { after: 40 },
+  }));
 
-  children.push(
-    new Paragraph({
-      children: [run("Hyderabad, India | 8520977573 | keshav.karn@gmail.com")],
-      spacing: { after: 20 },
-    })
-  );
+  children.push(new Paragraph({
+    children: [run("Hyderabad, India | 8520977573 | keshav.karn@gmail.com")],
+    spacing: { after: 20 },
+  }));
 
-  children.push(
-    new Paragraph({
-      children: [
-        run(
-          "LinkedIn: https://www.linkedin.com/in/keshavkarn/ | Credly: https://www.credly.com/users/keshav-karn"
-        ),
-      ],
-      spacing: { after: 20 },
-    })
-  );
+  children.push(new Paragraph({
+    children: [
+      run("LinkedIn: https://www.linkedin.com/in/keshavkarn/ | Credly: https://www.credly.com/users/keshav-karn"),
+    ],
+    spacing: { after: 20 },
+  }));
 
-  // -------------------- SUMMARY --------------------
+  // ---------------- SUMMARY ----------------
   if (SUMMARY) {
     children.push(heading("PROFESSIONAL SUMMARY"));
     splitLines(SUMMARY).forEach((l) =>
@@ -192,13 +165,13 @@ async function buildDocx(text, outPath) {
     );
   }
 
-  // -------------------- ACHIEVEMENTS --------------------
+  // ---------------- ACH ----------------
   if (ACH) {
     children.push(heading("ACHIEVEMENTS"));
     splitLines(ACH).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
   }
 
-  // -------------------- CORE SKILLS --------------------
+  // ---------------- CORE SKILLS ----------------
   if (CORE) {
     children.push(heading("CORE SKILLS"));
     children.push(
@@ -209,7 +182,7 @@ async function buildDocx(text, outPath) {
     );
   }
 
-  // -------------------- EXPERIENCE --------------------
+  // ---------------- EXPERIENCE ----------------
   if (EXP) {
     children.push(heading("EXPERIENCE"));
     const lines = EXP.split("\n");
@@ -227,10 +200,7 @@ async function buildDocx(text, outPath) {
         })
       );
 
-      arr.slice(1).forEach((l) =>
-        children.push(bullet(l.replace(/^-+\s*/, "")))
-      );
-
+      arr.slice(1).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
       buf = [];
     }
 
@@ -241,20 +211,16 @@ async function buildDocx(text, outPath) {
     flush();
   }
 
-  // -------------------- PROJECTS --------------------
+  // ---------------- PROJECTS ----------------
   if (PROJ && PROJ.trim()) {
     children.push(heading("PROJECTS"));
     splitLines(PROJ).forEach((line) => {
-      if (line.startsWith("-"))
-        children.push(bullet(line.replace(/^-+\s*/, "")));
-      else
-        children.push(
-          new Paragraph({ children: [run(line)], spacing: { after: 80 } })
-        );
+      if (line.startsWith("-")) children.push(bullet(line.replace(/^-+\s*/, "")));
+      else children.push(new Paragraph({ children: [run(line)], spacing: { after: 80 } }));
     });
   }
 
-  // -------------------- TECHNICAL SKILLS --------------------
+  // ---------------- TECH SKILLS ----------------
   if (TECH) {
     children.push(heading("TECHNICAL SKILLS"));
     splitLines(TECH).forEach((l) =>
@@ -262,35 +228,24 @@ async function buildDocx(text, outPath) {
     );
   }
 
-  // -------------------- CERTIFICATIONS --------------------
+  // ---------------- CERTIFICATIONS ----------------
   if (CERT) {
     children.push(heading("CERTIFICATIONS"));
-    splitLines(CERT).forEach((l) =>
-      children.push(bullet(l.replace(/^-+\s*/, "")))
-    );
+    splitLines(CERT).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
   }
 
-  // -------------------- EDUCATION --------------------
+  // ---------------- EDUCATION ----------------
   if (EDU) {
     children.push(heading("EDUCATION"));
     splitLines(EDU).forEach((l) =>
-      children.push(
-        new Paragraph({
-          text: l.replace(/^-+\s*/, ""),
-          bullet: { level: 0 },
-        })
-      )
+      children.push(new Paragraph({ text: l.replace(/^-+\s*/, ""), bullet: { level: 0 } }))
     );
   }
 
   const doc = new Document({
     sections: [
       {
-        properties: {
-          page: {
-            margin: { top: 1440, bottom: 1440, left: 1150, right: 1150 },
-          },
-        },
+        properties: { page: { margin: { top: 1440, bottom: 1440, left: 1150, right: 1150 } } },
         children,
       },
     ],
@@ -300,9 +255,9 @@ async function buildDocx(text, outPath) {
   fs.writeFileSync(outPath, buffer);
 }
 
-// ========================================================================
+// ============================================================================
 //  MAIN PIPELINE
-// ========================================================================
+// ============================================================================
 async function main() {
   const jdFile = getArg("--job-desc-file");
   const rawFile = getArg("--raw-file");
@@ -315,27 +270,97 @@ async function main() {
 
   const jd = fs.readFileSync(jdFile, "utf8");
   const raw = fs.readFileSync(rawFile, "utf8");
-  const systemPrompt = fs.readFileSync(
-    path.join("templates", "system_prompt.txt"),
-    "utf8"
-  );
+  const systemPrompt = fs.readFileSync(path.join("templates", "system_prompt.txt"), "utf8");
 
-  // ===========================
-  // 1️⃣ REVIEW STAGE (calls Gemini)
-  // ===========================
+  fs.mkdirSync(outDir, { recursive: true });
+
+  // ======================================================================
+  // 0️⃣ Extract company + job title for final filename
+  // ======================================================================
+  function extractCompanyTitle(jdText) {
+    const line = jdText.split("\n")[0].trim();
+
+    let company = "Company";
+    let title = "Role";
+
+    if (line.includes("-")) {
+      const [c, t] = line.split("-");
+      company = c.trim().split(" ")[0];
+      title = t.trim().replace(/\s+/g, "_");
+    } else {
+      const w = line.split(" ");
+      company = w[0];
+      title = w.slice(1).join("_") || "Role";
+    }
+
+    return { company, title };
+  }
+
+  const { company, title } = extractCompanyTitle(jd);
+  const finalDocName = `resume_${company}_${title}.docx`;
+
+  // ======================================================================
+  // 1️⃣ Keyword Coverage Stage
+  // ======================================================================
+  console.log("\n📌 Running Keyword Coverage...");
+
+  const coveragePrompt = `
+Extract important JD keywords and compare with resume.
+
+Return ONLY:
+
+[KEYWORD_COVERAGE]
+matched: [list]
+missing: [list]
+coverage_percent: 00
+critical_gaps: [list]
+[/KEYWORD_COVERAGE]
+
+JOB DESCRIPTION:
+${jd}
+
+RESUME:
+${raw}
+`;
+
+  const coverage = await callGemini(coveragePrompt);
+  fs.writeFileSync(path.join(outDir, "keyword_coverage.txt"), coverage);
+
+  // ======================================================================
+  // 2️⃣ Recruiter Summary Enhancement
+  // ======================================================================
+  console.log("\n📌 Enhancing Summary...");
+
+  const summaryPrompt = `
+Rewrite ONLY the PROFESSIONAL SUMMARY using a recruiter tone.
+Insert essential JD keywords.
+End with a one-line “Fit for Role” statement.
+
+Return ONLY:
+
+[SUMMARY]
+<text>
+[/SUMMARY]
+
+JOB DESCRIPTION:
+${jd}
+
+RESUME:
+${raw}
+
+KEYWORD_COVERAGE:
+${coverage}
+`;
+
+  let optimizedSummary = await callGemini(summaryPrompt);
+  optimizedSummary = extract("SUMMARY", optimizedSummary);
+
+  // ======================================================================
+  // 3️⃣ Review Stage
+  // ======================================================================
+  console.log("\n📌 Running REVIEW...");
+
   const reviewPrompt = `
-You are a senior recruiter performing a strict evaluation of a candidate applying for a high-level technology leadership role.
-
-You MUST identify:
-• Missing alignment between summary and JD  
-• Missing keywords for Agentic AI / SRE / Cloud / FinOps / Leadership  
-• Weak bullets lacking measurable impact  
-• Tone mismatches (seniority not reflected)  
-• Sections too long, vague, or irrelevant  
-• Any ATS risks  
-• Whether PROJECTS are relevant or should be suppressed  
-• Whether SUMMARY needs a final “fit for role” line  
-
 Return ONLY:
 
 [REVIEW]
@@ -351,25 +376,32 @@ RESUME:
 ${raw}
 `;
 
-  console.log("\n📌 Running REVIEW stage...");
   let review = await callGemini(reviewPrompt);
-  if (!review.includes("[REVIEW]")) {
-    review = "[REVIEW]\n(No review returned)\n[/REVIEW]";
-  }
+  if (!review.includes("[REVIEW]")) review = "[REVIEW]\n(No review)\n[/REVIEW]";
 
-  // ===========================
-  // 2️⃣ IMPROVEMENT STAGE
-  // ===========================
+  // ======================================================================
+  // 4️⃣ Full Resume Rewrite (Final Output)
+  // ======================================================================
+  console.log("\n📌 Rewriting Resume...");
+
   const improvePrompt = `
 ${systemPrompt}
 
-Rewrite the resume using:
-- REVIEW_NOTES
-- JOB_DESCRIPTION
-- ORIGINAL_RESUME
+Rewrite the entire resume using:
+- OPTIMIZED SUMMARY
+- REVIEW
+- KEYWORD COVERAGE
+- JOB DESCRIPTION
+- ORIGINAL RESUME
+
+OPTIMIZED_SUMMARY:
+${optimizedSummary}
 
 REVIEW_NOTES:
 ${review}
+
+KEYWORD_COVERAGE:
+${coverage}
 
 JOB_DESCRIPTION:
 ${jd}
@@ -377,19 +409,22 @@ ${jd}
 ORIGINAL_RESUME:
 ${raw}
 
-OUTPUT STRICTLY AS TAGGED RESUME ONLY. NO COMMENTARY.
+OUTPUT ONLY TAGGED RESUME.
 `;
 
-  console.log("\n📌 Running IMPROVEMENT stage...");
   const improved = await callGemini(improvePrompt);
 
-  fs.mkdirSync(outDir, { recursive: true });
+  // Save intermediate outputs
+  fs.writeFileSync(path.join(outDir, "optimized_summary.txt"), optimizedSummary);
+  fs.writeFileSync(path.join(outDir, "review.txt"), review);
+  fs.writeFileSync(path.join(outDir, "refined_raw.txt"), improved);
 
-  fs.writeFileSync(path.join(outDir, "review.txt"), review, "utf8");
-  fs.writeFileSync(path.join(outDir, "refined_raw.txt"), improved, "utf8");
+  // ======================================================================
+  // 5️⃣ Build DOCX
+  // ======================================================================
+  console.log(`\n📌 Building DOCX → ${finalDocName}`);
 
-  console.log("\n📌 Building DOCX...");
-  await buildDocx(improved, path.join(outDir, "refined_resume.docx"));
+  await buildDocx(improved, path.join(outDir, finalDocName));
 
   console.log("\n🎉 Resume refinement COMPLETE.");
 }
