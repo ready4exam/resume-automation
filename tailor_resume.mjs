@@ -2,43 +2,79 @@ import fs from "fs";
 import path from "path";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// =====================================================
+//  BULLETPROOF FREE-TIER MODEL ROTATION
+// =====================================================
+
+// Best → fallback → fallback → backup
+const MODEL_CHAIN = [
+  "gemini-2.5-flash",
+  "gemini-flash-latest",
+  "gemini-2.0-flash",
+  "gemini-2.5-flash-lite"
+];
+
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-const PRIMARY_MODEL = "gemini-pro-latest";
-const FALLBACK_MODELS = ["gemini-flash-latest", "gemini-2.0-flash"];
-
+// Helper to get CLI arguments
 function getArg(flag, def = "") {
   const idx = process.argv.indexOf(flag);
   if (idx === -1 || idx === process.argv.length - 1) return def;
   return process.argv[idx + 1];
 }
 
-async function generateWithFallback(prompt) {
-  const models = [PRIMARY_MODEL, ...FALLBACK_MODELS];
-  let lastErr = null;
+// =====================================================
+//  BULLETPROOF FALLBACK ENGINE
+// =====================================================
+async function callModel(model, prompt, attempt = 1) {
+  try {
+    console.log(`\n🚀 Attempt ${attempt}: Trying model → ${model}`);
+    const m = genAI.getGenerativeModel({ model });
+    const response = await m.generateContent(prompt);
+    const text = response.response.text();
 
-  for (const model of models) {
-    try {
-      console.log("Using model:", model);
-      const m = genAI.getGenerativeModel({ model });
-      const r = await m.generateContent(prompt);
-      const text = r.response.text() || "";
+    if (!text.trim()) throw new Error("Empty response from model.");
+    console.log(`✅ SUCCESS using model ${model}`);
+    return text;
+  } catch (err) {
+    console.log(`❌ Model failed → ${model}`);
+    console.log(`   Reason: ${err.message || err}`);
 
-      if (!text.trim()) {
-        lastErr = new Error("Empty response");
-        continue;
+    // Retry logic for temporary server issues
+    if (err.status === 500 || err.status === 503) {
+      if (attempt < 3) {
+        const wait = 1000 * attempt;
+        console.log(`   🔄 Retrying same model after ${wait}ms...`);
+        await new Promise((res) => setTimeout(res, wait));
+        return callModel(model, prompt, attempt + 1);
       }
-      return text;
-    } catch (err) {
-      lastErr = err;
-      if (err.status === 500 || err.status === 503) continue;
-      throw err;
     }
-  }
 
-  throw lastErr;
+    // Quota Exhausted → move to next model
+    if (err.status === 429) {
+      console.log(`   ⚠️ QUOTA EXHAUSTED for ${model}, switching model...`);
+      return null;
+    }
+
+    // Any other error = real failure → skip model
+    console.log(`   ⚠️ NON-RETRYABLE ERROR. Skipping this model.`);
+    return null;
+  }
 }
 
+// Main function to try all models safely
+async function generateBulletproof(prompt) {
+  for (const model of MODEL_CHAIN) {
+    const result = await callModel(model, prompt);
+    if (result) return result; // success
+  }
+
+  throw new Error("❌ All free models exhausted or failed.");
+}
+
+// =====================================================
+//  BUSINESS LOGIC FOR RESUME GENERATION
+// =====================================================
 async function main() {
   const company = getArg("--company");
   const jobTitle = getArg("--job-title");
@@ -48,7 +84,7 @@ async function main() {
   const methodsArg = getArg("--methods", "");
 
   if (!company || !jobTitle || !jdFile) {
-    console.error("Missing required arguments.");
+    console.error("❌ Missing required arguments.");
     process.exit(1);
   }
 
@@ -65,7 +101,7 @@ async function main() {
   if (methods.includes("agile")) methodList.push("Agile");
   if (methods.includes("finops")) methodList.push("FinOps");
 
-  // Load files
+  // Load templates + resume assets
   const baseResume = fs.readFileSync("base_resume.md", "utf8");
   const systemPrompt = fs.readFileSync("templates/system_prompt.txt", "utf8");
   const jdText = fs.readFileSync(jdFile, "utf8");
@@ -76,17 +112,20 @@ async function main() {
       : "";
 
   const upper = company.toUpperCase();
-  const isBig = ["GOOGLE", "MICROSOFT", "AMAZON", "AWS", "META", "APPLE", "NETFLIX"]
+  const isBigTech = ["GOOGLE", "MICROSOFT", "AMAZON", "AWS", "META", "APPLE", "NETFLIX"]
     .some((x) => upper.includes(x));
 
   const devGoogleTemplate =
-    isBig && fs.existsSync("development_google_template.md")
+    isBigTech && fs.existsSync("development_google_template.md")
       ? fs.readFileSync("development_google_template.md", "utf8")
       : "(none)";
 
   const includeProjects =
     resumeMode === "DEV_ONLY" || resumeMode === "INFRA_PLUS_DEV" ? "YES" : "NO";
 
+  // =====================================================
+  //  FINAL AI PROMPT ASSEMBLY
+  // =====================================================
   const prompt = `
 ${systemPrompt}
 
@@ -115,22 +154,25 @@ ${devGoogleTemplate}
 ================================================
   `.trim();
 
-  const aiText = await generateWithFallback(prompt);
+  // =====================================================
+  //  RUN BULLETPROOF GENERATION
+  // =====================================================
+  console.log("\n🔥 Starting bulletproof resume generation...");
+  const aiText = await generateBulletproof(prompt);
 
-  // Output folder
-  let safeCompany = company.replace(/[^a-z0-9]+/gi, "_") || "Unknown_Company";
-  let safeRole = jobTitle.replace(/[^a-z0-9]+/gi, "_") || "Unknown_Role";
-  const stamp = new Date().toISOString().replace(/[:.]/g, "-");
+  // Output directory organization
+  const safeCompany = company.replace(/[^a-z0-9]+/gi, "_") || "Unknown_Company";
+  const safeRole = jobTitle.replace(/[^a-z0-9]+/gi, "_") || "Unknown_Role";
+  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const outDir = path.join("jobs", safeCompany, safeRole, timestamp);
 
-  const outDir = path.join("jobs", safeCompany, safeRole, stamp);
   fs.mkdirSync(outDir, { recursive: true });
-
   fs.writeFileSync(path.join(outDir, "raw.txt"), aiText, "utf8");
 
-  console.log("RAW written:", outDir + "/raw.txt");
+  console.log(`\n✅ RAW resume written to: ${outDir}/raw.txt\n`);
 }
 
 main().catch((err) => {
-  console.error(err);
+  console.error("\n❌ FATAL ERROR:", err);
   process.exit(1);
 });
