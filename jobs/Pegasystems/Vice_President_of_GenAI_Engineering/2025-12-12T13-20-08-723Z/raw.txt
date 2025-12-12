@@ -1,0 +1,103 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India | 8520977573 | keshav.karn@gmail.com | LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+A highly accomplished and strategic IT executive with 21+ years of global leadership experience, specializing in driving large-scale technology transformations and operational excellence across regulated enterprise environments. Proven expertise in defining and executing Generative AI strategies, launching AI-powered products, and building high-performing engineering organizations that balance rapid innovation with robust security, compliance, and governance. Adept at leveraging deep technical knowledge in AI/ML, cloud-native architectures, and FinOps to deliver measurable business value and optimize large-scale infrastructure. Positioned to drive enterprise Generative AI strategy, innovation, and adoption as Vice President of GenAI Engineering at Pegasystems.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- **Strategic AI Leadership:** Generative AI Strategy, AI/ML Product Vision, Enterprise AI Adoption, Responsible AI Governance, GTM Strategy, Innovation & Research, P&L Management.
+- **Engineering & Architecture:** GenAI Architectures (LLMs, RAG, Agentic Systems), MLOps & AI Observability, Cloud-Native Architectures (Microservices, Kubernetes, APIs), Enterprise SaaS Platforms, Secure SDLC.
+- **Global Team Leadership:** Large-Scale Team Building & Mentorship (50+), Cross-functional Collaboration, Talent Development, Engineering Excellence, Distributed Team Management.
+- **Operations & Optimization:** Site Reliability Engineering (SRE), FinOps & Cloud Cost Governance, Data Center Operations, ITSM & Service Delivery, Vendor & Ecosystem Management.
+- **Stakeholder Engagement:** Executive Communication, Business Value Articulation, Market Engagement & Thought Leadership, Strategic Partnerships, Regulatory Compliance.
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+## **PwC — Senior Manager**
+**Sep 2024 – Present**
+**Role:** IT Strategy & FinOps Advisor
+
+- Led strategic engagements for enterprise healthcare and BFSI clients, advising on IT strategy, responsible AI governance, and FinOps best practices, ensuring alignment with NIST and ITIL standards for regulated sectors.
+- Engineered and advised on GenAI-powered automation frameworks, enhancing service reliability and operational efficiency by reducing repeat failures by **60%** for critical client systems.
+- Directed FinOps initiatives, developing hybrid-cloud cost optimization strategies and dashboards that drove proactive budget management and demonstrated substantial savings for enterprise clients.
+- Cultivated strong relationships with global leadership across US, LatAm, Europe, and APAC to deliver high-impact platform modernization and GenAI adoption roadmaps.
+
+## **Kyndryl Solutions Pvt. Ltd. — Associate Director**
+**Sep 2021 – Aug 2024**
+**Role:** Head – Global Service Reliability Engineering & Platform Operations
+
+- Spearheaded global Service Reliability Engineering and Platform Operations for mission-critical data center portfolios, overseeing **100,000+ physical IT assets** and ensuring exceptional reliability and capacity management at enterprise scale.
+- Championed Cloud & DevOps enablement initiatives, including strategic AWS migrations and the development of an Agentic AI system for autonomous response to AIOps insights, enhancing operational agility and efficiency.
+- Directed a **$30M+ vendor displacement program**, successfully insourcing critical infrastructure services, improving control, reducing dependencies, and establishing robust MLOps practices for AI-driven operations.
+- Led and mentored a globally distributed engineering team, fostering a culture of continuous improvement, engineering excellence, and operational maturity across complex hybrid environments.
+
+## **IBM India Pvt. Ltd. — Global Process Owner**
+**Jan 2014 – Aug 2021**
+**Role:** Director-Equivalent – ITSM & Capacity Management
+
+- Managed a **$25M annual OPEX budget**, achieving **$8M in savings** through strategic automation, vendor renegotiation, and license optimization initiatives across global operations.
+- Provided global delivery leadership for complex, large-scale service engagements (e.g., Scotiabank), ensuring consistent ITSM and capacity management frameworks across international centers.
+- Built and scaled the Capacity Management Center of Excellence from **10 to 250 members** across 5 countries, establishing global standards and best practices for ITIL-based capacity management.
+- Modernized contact center operations by integrating AI-driven insights to accelerate response times and enhance service delivery effectiveness.
+
+## **Wipro Technologies — Senior Consultant**
+**Jun 2010 – Nov 2013**
+**Role:** ITSM & Automation Leader
+
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, driving significant improvements in service delivery speed and quality.
+- Introduced Standard Operating Procedures (SOPs) and performance dashboards that significantly improved delivery speed and quality across managed services engagements.
+- Led Problem and Change Management processes, driving Root Cause Analysis (RCA), implementing risk-controlled changes, chairing Change Advisory Boards (CAB), and ensuring robust governance.
+- Conducted ITIL assessments and implemented tailored frameworks to enhance compliance, operational efficiency, and service maturity for enterprise clients.
+
+## **Tech Mahindra Ltd. — Senior Technical Associate**
+**Oct 2006 – May 2010**
+**Role:** Lead – Infrastructure & Monitoring Solutions
+
+- Deployed enterprise monitoring tools including Nagios, Zabbix, and HP OpenView, establishing comprehensive infrastructure visibility for major clients.
+- Managed major release deployments for British Telecom with minimal disruption, demonstrating strong command of change management and operational readiness.
+- Led application support for NHS UK, ensuring timely resolution of issues and high availability for critical healthcare platforms.
+
+## **Mainstay Teleservices — Sr. 2nd Line Specialist**
+**Mar 2003 – Oct 2006**
+**Role:** Technical SME & Support Escalation Lead
+
+- Served as Technical Subject Matter Expert and Support Escalation Lead, handling high-impact incidents and supporting mission-critical telecom systems.
+- Reduced system downtime through rapid issue resolution, advanced troubleshooting, and effective root cause analysis.
+- Trained L1/L2 engineers and authored comprehensive SOP documentation, significantly improving team capabilities and service consistency.
+[/EXPERIENCE]
+
+[PROJECTS]
+**Ready4Industry: Enterprise GenAI Automation Platform**
+Led the architecture and development of an enterprise-grade Generative AI platform designed to automate complex workflows and enhance decision-making in financial services. Integrated advanced LLM orchestration, Retrieval-Augmented Generation (RAG), and agentic systems to deliver industry-specific solutions, demonstrating capability to balance innovation with compliance and security for regulated environments.
+
+**Ready4Exam: Advanced AI-driven Knowledge Retrieval System**
+Designed and implemented an AI-driven knowledge retrieval system, leveraging fine-tuned LLMs and vector embeddings to process and synthesize vast datasets for complex problem-solving scenarios. Focused on optimizing inference, ensuring data privacy, and evaluating model accuracy, showcasing expertise in advanced AI engineering and responsible AI practices.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure, AWS, GCP, Cloud FinOps Platforms (CoreStack, Flexera, Apptio), Cost Management, Budgeting
+AI/ML/GenAI: LLM Orchestration, RAG Architectures, Agentic Systems, MLOps Platforms, Model Evaluation Frameworks, Prompt Management, Responsible AI Tooling
+Monitoring & Observability: Datadog, New Relic, Prometheus, Grafana, ScienceLogic, AIOps Platforms, Distributed Tracing, Telemetry Correlation
+ITSM & Automation: ServiceNow, Jira Service Management, Ansible, Python, JavaScript, Shell Scripting, CI/CD (GitHub Actions)
+Architecture: Microservices, Kubernetes, APIs, Cloud-Native Design, Enterprise SaaS Architectures
+Data & Analytics: Power BI, MS Visio, Data Pipelines, ETL
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
