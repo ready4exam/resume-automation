@@ -1,0 +1,98 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn
+[/CONTACT]
+
+[SUMMARY]
+A highly accomplished ServiceNow Architect with 21+ years of global experience, specializing in architecture, design, and end-to-end implementation across complex enterprise environments. Deep expertise spans ITSM, ITOM (Discovery, Event Management, AIOps), CMDB, and robust integrations with critical platforms like AWS, Azure, SCCM, and Jira. Proven ability to define governance models, ensure CMDB health & discovery accuracy, and architect solutions for platform scalability. Adept at guiding technical teams in scripting (JavaScript, Glide APIs, Business Rules), workflow automation (Flow Designer, Integration Hub), and leveraging REST/SOAP APIs and MID Server for seamless data flow. Advised leadership on platform roadmap, upgrades, and strategic enhancements, applying Agile, DevOps, and CI/CD principles. Engineered Agentic AI frameworks for predictive insights and automated cost governance in AWS using Bedrock, developed comprehensive automation frameworks for IT cost models at IBM, and designed ServiceNow workflows for automated service delivery incorporating AIOps at Kyndryl. Positioned to drive architectural innovation and align ServiceNow solutions with strategic business goals as a ServiceNow Architect at TARGET_COMPANY.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- ServiceNow Architecture & Implementation
+- ITSM, ITOM (Discovery, Event Management), CMDB
+- API-driven Automation & Workflow Orchestration
+- AI Automation & Agentic AI Frameworks
+- FinOps & Cloud Cost Optimization
+- Agile Methodologies & DevOps Practices
+- JavaScript, Glide APIs, Business Rules, Flow Designer
+- Integration Hub & REST/SOAP APIs
+- Governance & Platform Scalability
+- CMDB Health & Discovery Accuracy
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Engineered an Agentic AI framework for predictive insights and automated cost governance in AWS using Bedrock, reducing repeat failures by 60% and optimizing cloud spend.
+- Led ITSM assessments and strategic advisory engagements for enterprise healthcare and BFSI clients, ensuring alignment with NIST and ITIL standards.
+- Directed a FinOps team in developing hybrid-cloud cost dashboards and accelerators, driving proactive budget optimization and financial accountability.
+- Built strong relationships with global leadership across US, LatAm, Europe, and APAC to deliver platform modernization roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led the design and implementation of ServiceNow workflows for automated service delivery, leveraging an Agentic AI system to autonomously respond to AIOps insights and improve service reliability.
+- Oversaw global technology service delivery for large-scale mission-critical data center portfolios, enhancing reliability and capacity management for 100,000+ physical IT assets.
+- Championed Cloud & DevOps enablement initiatives, including successful AWS migrations and the integration of advanced automation capabilities.
+- Led a $30M+ vendor displacement program, insourcing critical infrastructure services to improve agility and reduce external dependencies.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Spearheaded the development of a comprehensive automation framework to optimize IT cost models and operational efficiency, managing $25M annual OPEX and generating $8M savings through process automation, vendor renegotiation, and license optimization.
+- Provided global delivery leadership for complex service engagements (e.g., Scotiabank), ensuring consistent ITSM framework adoption across global centers.
+- Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, standardizing ITIL-based frameworks.
+- Modernized contact center operations by integrating AI-driven insights to accelerate response times and enhance service quality.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, significantly improving delivery speed and quality.
+- Introduced standardized operating procedures (SOPs) and performance dashboards, leading to enhanced service delivery metrics.
+- Led Problem and Change Management, driving Root Cause Analysis, implementing risk-controlled changes, and chairing the Change Advisory Board (CAB) to ensure robust governance.
+- Conducted ITIL assessments and implemented tailored frameworks to enhance compliance and operational efficiency.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed enterprise monitoring tools including Nagios, Zabbix, and HP OpenView to ensure robust infrastructure oversight.
+- Managed major release deployments for British Telecom with minimal disruption, ensuring high service availability.
+- Led application support for NHS UK, ensuring timely resolution of issues across critical healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Handled high-impact escalations and provided expert support for mission-critical telecom systems.
+- Reduced system downtime through rapid issue resolution and effective troubleshooting methodologies.
+- Trained L1/L2 engineers and authored comprehensive SOP documentation to standardize support processes.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Architected and developed an Agentic AI platform leveraging LLMs for automated enterprise workflow orchestration and intelligent data processing, enhancing operational efficiency.
+- Engineered API integrations and backend logic to connect with various enterprise systems, enabling seamless data flow and triggering automated actions based on AI insights.
+- Implemented robust CI/CD pipelines using GitHub Actions for continuous delivery and deployment, ensuring high-quality and reliable platform updates.
+
+Ready4Exam
+- Led the full-stack development of an AI-driven learning platform, integrating advanced machine learning models for personalized content delivery and assessment generation.
+- Designed and implemented a scalable backend infrastructure using cloud-native services, ensuring high availability and performance for a growing user base.
+- Developed automated data pipelines for real-time analytics and user feedback processing, enabling continuous platform improvement and feature iteration.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud: Azure, AWS, GCP, Azure Monitor, CloudWatch
+ITSM Tools: ServiceNow, Remedy, Jira Service Management
+Automation & Orchestration: JavaScript, Python, Shell Scripting, Glide APIs, Business Rules, Flow Designer, Integration Hub, REST/SOAP APIs, MID Server, GitHub Actions, Ansible
+Monitoring & Observability: Datadog, Prometheus, New Relic, ScienceLogic, SolarWinds, Zabbix
+Infrastructure: VMware Tanzu, HP OpenView, CMDB, SCCM
+FinOps: Grafana, CoreStack, ECAM, Flexera, Cloud Cost Optimization
+BI & Modeling: Power BI, MS Visio
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]

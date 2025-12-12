@@ -1,0 +1,15 @@
+[REVIEW]
+- item 1: Led architecture and end-to-end implementation of ServiceNow solutions.
+- item 2: Defined governance models and ensured CMDB health & discovery accuracy.
+- item 3: Oversaw integrations with AWS, Azure, SCCM, Jira, SAP, etc.
+- item 4: Guided technical teams in scripting, workflows, and automation.
+- item 5: Advised leadership on platform roadmap, upgrades, and enhancements.
+- item 6: Expertise in ITSM, ITOM (Discovery, Event Mgmt), CMDB & integrations.
+- item 7: Skilled in JavaScript, Glide APIs, Flow Designer, and Business Rules.
+- item 8: Experience with Integration Hub, REST/SOAP APIs, MID Server.
+- item 9: Implemented ITOM.
+- item 10: Implemented AIOPS.
+- item 11: Developed many automation put it under IBM as creating automation of cost model.
+- item 12: In Pwc is add about agentic AI for cost governance in AWS using bedrock.
+- item 13: In Kyndryl mention about creating workflows in servicenow.
+[/REVIEW]

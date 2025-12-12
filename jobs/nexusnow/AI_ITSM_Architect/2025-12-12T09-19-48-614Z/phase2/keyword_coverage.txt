@@ -1,0 +1,8 @@
+```
+[KEYWORD_COVERAGE]
+matched: [ServiceNow Architect, ServiceNow architecture, design & development, ITSM, ITOM, Discovery, Event Management, CMDB, ServiceNow Integrations, Platform scalability, Governance models, CMDB health & discovery accuracy, Platform roadmap, upgrades, enhancements, Technical teams guidance, Scripting, Workflows, Automation, JavaScript, Glide APIs, Flow Designer, Integration Hub, REST/SOAP APIs, MID Server, AWS integrations, Azure integrations, SCCM integrations, Jira integrations, 5+ years in ServiceNow architecture, design & development, AI automation, Virtual Agent, Agile, DevOps, CI/CD in ServiceNow]
+missing: [Business Rules, SAP integrations, ServiceNow CSA, CIS-ITSM, CIS-ITOM, Multi-instance environment, Now Intelligence]
+coverage_percent: 82
+critical_gaps: [Business Rules, ServiceNow CSA, CIS-ITSM, CIS-ITOM]
+[/KEYWORD_COVERAGE]
+```
