@@ -96,6 +96,10 @@
     <div class="checkbox-row">
       <input type="checkbox" id="finops" /> <span>FinOps</span>
     </div>
+    <!-- ✅ NEW AI CHECKBOX -->
+    <div class="checkbox-row">
+      <input type="checkbox" id="ai" /> <span>AI</span>
+    </div>
 
     <!-- 🔵 OPTIONAL Upload -->
     <label>Upload Your Resume (Optional)</label>
@@ -128,6 +132,7 @@
 
     const agile = document.getElementById("agile").checked;
     const finops = document.getElementById("finops").checked;
+    const ai = document.getElementById("ai").checked; // ✅ NEW
 
     const statusEl = document.getElementById("status");
 
@@ -138,7 +143,6 @@
 
     let encodedResume = "(none)";
 
-    // 🔵 ONLY use uploaded resume if present
     if (fileInput.files.length > 0) {
       const file = fileInput.files[0];
       const text = await file.text();
@@ -152,6 +156,7 @@
     const methodologies = [];
     if (agile) methodologies.push("Agile");
     if (finops) methodologies.push("FinOps");
+    if (ai) methodologies.push("AI"); // ✅ NEW
 
     // GitHub Issue Body
     const bodyLines = [
