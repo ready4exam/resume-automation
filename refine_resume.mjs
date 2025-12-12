@@ -1,5 +1,5 @@
 // ============================================================================
-// refine_resume.mjs — FINAL PRODUCTION VERSION (Free-Tier Bulletproof Engine)
+// refine_resume.mjs — FINAL PRODUCTION VERSION (Safe Filename + Free-Tier Engine)
 // ============================================================================
 
 import fs from "fs";
@@ -17,10 +17,10 @@ import {
 //  MODEL CHAIN — FREE TIER FRIENDLY (AUTO FAILOVER)
 // ============================================================================
 const MODEL_CHAIN = [
-  "gemini-2.5-flash",       // Best free model
-  "gemini-flash-latest",    // Backup
-  "gemini-2.0-flash",       // Backup
-  "gemini-2.5-flash-lite"   // Lowest cost last fallback
+  "gemini-2.5-flash",
+  "gemini-flash-latest",
+  "gemini-2.0-flash",
+  "gemini-2.5-flash-lite",
 ];
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -61,13 +61,11 @@ async function callGemini(prompt) {
 
       console.log(`❌ ${model} failed (${status}): ${err.message}`);
 
-      // QUOTA exhausted — switch model immediately
       if (status === 429) {
         console.log("🔄 Quota exhausted → switching model");
         continue;
       }
 
-      // transient server error — retry same model with delay
       if (status === 500 || status === 503) {
         console.log("🔁 Retrying...");
         await new Promise((r) => setTimeout(r, 1000));
@@ -98,7 +96,27 @@ function splitLines(txt) {
 }
 
 // ============================================================================
-//  DOCX BUILDER (Calibiri Preserved)
+//  SAFE FILENAME HELPERS
+// ============================================================================
+function safePart(str, max = 30) {
+  return str
+    .replace(/[^a-zA-Z0-9]/g, "_")
+    .replace(/_+/g, "_")
+    .substring(0, max)
+    .replace(/^_+|_+$/g, "");
+}
+
+// timestamp for uniqueness
+function timestamp() {
+  const d = new Date();
+  const pad = (n) => n.toString().padStart(2, "0");
+  return `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}_${pad(
+    d.getHours()
+  )}${pad(d.getMinutes())}`;
+}
+
+// ============================================================================
+//  DOCX BUILDER
 // ============================================================================
 const FONT = "Calibri";
 
@@ -123,7 +141,13 @@ async function buildDocx(text, outPath) {
   function heading(t) {
     return new Paragraph({
       children: [
-        new TextRun({ text: t, font: FONT, bold: true, size: HEADING_SIZE, allCaps: true }),
+        new TextRun({
+          text: t,
+          font: FONT,
+          bold: true,
+          size: HEADING_SIZE,
+          allCaps: true,
+        }),
       ],
       spacing: { before: 200, after: 100 },
     });
@@ -138,26 +162,36 @@ async function buildDocx(text, outPath) {
 
   const children = [];
 
-  // ---------------- HEADER ----------------
-  children.push(new Paragraph({
-    children: [new TextRun({ text: "Keshav Karn", font: FONT, size: NAME_SIZE, bold: true })],
-    alignment: AlignmentType.LEFT,
-    spacing: { after: 40 },
-  }));
+  // HEADER
+  children.push(
+    new Paragraph({
+      children: [
+        new TextRun({ text: "Keshav Karn", font: FONT, size: NAME_SIZE, bold: true }),
+      ],
+      alignment: AlignmentType.LEFT,
+      spacing: { after: 40 },
+    })
+  );
 
-  children.push(new Paragraph({
-    children: [run("Hyderabad, India | 8520977573 | keshav.karn@gmail.com")],
-    spacing: { after: 20 },
-  }));
+  children.push(
+    new Paragraph({
+      children: [run("Hyderabad, India | 8520977573 | keshav.karn@gmail.com")],
+      spacing: { after: 20 },
+    })
+  );
 
-  children.push(new Paragraph({
-    children: [
-      run("LinkedIn: https://www.linkedin.com/in/keshavkarn/ | Credly: https://www.credly.com/users/keshav-karn"),
-    ],
-    spacing: { after: 20 },
-  }));
+  children.push(
+    new Paragraph({
+      children: [
+        run(
+          "LinkedIn: https://www.linkedin.com/in/keshavkarn/ | Credly: https://www.credly.com/users/keshav-karn"
+        ),
+      ],
+      spacing: { after: 20 },
+    })
+  );
 
-  // ---------------- SUMMARY ----------------
+  // SUMMARY
   if (SUMMARY) {
     children.push(heading("PROFESSIONAL SUMMARY"));
     splitLines(SUMMARY).forEach((l) =>
@@ -165,13 +199,13 @@ async function buildDocx(text, outPath) {
     );
   }
 
-  // ---------------- ACH ----------------
+  // ACHIEVEMENTS
   if (ACH) {
     children.push(heading("ACHIEVEMENTS"));
     splitLines(ACH).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
   }
 
-  // ---------------- CORE SKILLS ----------------
+  // CORE SKILLS
   if (CORE) {
     children.push(heading("CORE SKILLS"));
     children.push(
@@ -182,7 +216,7 @@ async function buildDocx(text, outPath) {
     );
   }
 
-  // ---------------- EXPERIENCE ----------------
+  // EXPERIENCE
   if (EXP) {
     children.push(heading("EXPERIENCE"));
     const lines = EXP.split("\n");
@@ -200,7 +234,10 @@ async function buildDocx(text, outPath) {
         })
       );
 
-      arr.slice(1).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
+      arr.slice(1).forEach((l) =>
+        children.push(bullet(l.replace(/^-+\s*/, "")))
+      );
+
       buf = [];
     }
 
@@ -211,16 +248,20 @@ async function buildDocx(text, outPath) {
     flush();
   }
 
-  // ---------------- PROJECTS ----------------
-  if (PROJ && PROJ.trim()) {
+  // PROJECTS
+  if (PROJ) {
     children.push(heading("PROJECTS"));
     splitLines(PROJ).forEach((line) => {
-      if (line.startsWith("-")) children.push(bullet(line.replace(/^-+\s*/, "")));
-      else children.push(new Paragraph({ children: [run(line)], spacing: { after: 80 } }));
+      if (line.startsWith("-"))
+        children.push(bullet(line.replace(/^-+\s*/, "")));
+      else
+        children.push(
+          new Paragraph({ children: [run(line)], spacing: { after: 80 } })
+        );
     });
   }
 
-  // ---------------- TECH SKILLS ----------------
+  // TECHNICAL SKILLS
   if (TECH) {
     children.push(heading("TECHNICAL SKILLS"));
     splitLines(TECH).forEach((l) =>
@@ -228,24 +269,33 @@ async function buildDocx(text, outPath) {
     );
   }
 
-  // ---------------- CERTIFICATIONS ----------------
+  // CERTIFICATIONS
   if (CERT) {
     children.push(heading("CERTIFICATIONS"));
-    splitLines(CERT).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
+    splitLines(CERT).forEach((l) =>
+      children.push(bullet(l.replace(/^-+\s*/, "")))
+    );
   }
 
-  // ---------------- EDUCATION ----------------
+  // EDUCATION
   if (EDU) {
     children.push(heading("EDUCATION"));
     splitLines(EDU).forEach((l) =>
-      children.push(new Paragraph({ text: l.replace(/^-+\s*/, ""), bullet: { level: 0 } }))
+      children.push(
+        new Paragraph({
+          text: l.replace(/^-+\s*/, ""),
+          bullet: { level: 0 },
+        })
+      )
     );
   }
 
   const doc = new Document({
     sections: [
       {
-        properties: { page: { margin: { top: 1440, bottom: 1440, left: 1150, right: 1150 } } },
+        properties: {
+          page: { margin: { top: 1440, bottom: 1440, left: 1150, right: 1150 } },
+        },
         children,
       },
     ],
@@ -270,13 +320,14 @@ async function main() {
 
   const jd = fs.readFileSync(jdFile, "utf8");
   const raw = fs.readFileSync(rawFile, "utf8");
-  const systemPrompt = fs.readFileSync(path.join("templates", "system_prompt.txt"), "utf8");
+  const systemPrompt = fs.readFileSync(
+    path.join("templates", "system_prompt.txt"),
+    "utf8"
+  );
 
   fs.mkdirSync(outDir, { recursive: true });
 
-  // ======================================================================
-  // 0️⃣ Extract company + job title for final filename
-  // ======================================================================
+  // Extract company + job title
   function extractCompanyTitle(jdText) {
     const line = jdText.split("\n")[0].trim();
 
@@ -297,11 +348,15 @@ async function main() {
   }
 
   const { company, title } = extractCompanyTitle(jd);
-  const finalDocName = `resume_${company}_${title}.docx`;
 
-  // ======================================================================
-  // 1️⃣ Keyword Coverage Stage
-  // ======================================================================
+  // FINAL SAFE FILENAME
+  const safeCompany = safePart(company, 25);
+  const safeTitle = safePart(title, 35);
+  const finalDocName = `resume_${safeCompany}_${safeTitle}_${timestamp()}.docx`;
+
+  // ======================
+  // STAGE 1 — KEYWORD COVERAGE
+  // ======================
   console.log("\n📌 Running Keyword Coverage...");
 
   const coveragePrompt = `
@@ -326,9 +381,9 @@ ${raw}
   const coverage = await callGemini(coveragePrompt);
   fs.writeFileSync(path.join(outDir, "keyword_coverage.txt"), coverage);
 
-  // ======================================================================
-  // 2️⃣ Recruiter Summary Enhancement
-  // ======================================================================
+  // ======================
+  // STAGE 2 — SUMMARY REWRITE
+  // ======================
   console.log("\n📌 Enhancing Summary...");
 
   const summaryPrompt = `
@@ -354,10 +409,11 @@ ${coverage}
 
   let optimizedSummary = await callGemini(summaryPrompt);
   optimizedSummary = extract("SUMMARY", optimizedSummary);
+  fs.writeFileSync(path.join(outDir, "optimized_summary.txt"), optimizedSummary);
 
-  // ======================================================================
-  // 3️⃣ Review Stage
-  // ======================================================================
+  // ======================
+  // STAGE 3 — REVIEW NOTES
+  // ======================
   console.log("\n📌 Running REVIEW...");
 
   const reviewPrompt = `
@@ -378,10 +434,11 @@ ${raw}
 
   let review = await callGemini(reviewPrompt);
   if (!review.includes("[REVIEW]")) review = "[REVIEW]\n(No review)\n[/REVIEW]";
+  fs.writeFileSync(path.join(outDir, "review.txt"), review);
 
-  // ======================================================================
-  // 4️⃣ Full Resume Rewrite (Final Output)
-  // ======================================================================
+  // ======================
+  // STAGE 4 — FULL RESUME REWRITE
+  // ======================
   console.log("\n📌 Rewriting Resume...");
 
   const improvePrompt = `
@@ -413,15 +470,11 @@ OUTPUT ONLY TAGGED RESUME.
 `;
 
   const improved = await callGemini(improvePrompt);
-
-  // Save intermediate outputs
-  fs.writeFileSync(path.join(outDir, "optimized_summary.txt"), optimizedSummary);
-  fs.writeFileSync(path.join(outDir, "review.txt"), review);
   fs.writeFileSync(path.join(outDir, "refined_raw.txt"), improved);
 
-  // ======================================================================
-  // 5️⃣ Build DOCX
-  // ======================================================================
+  // ======================
+  // STAGE 5 — BUILD DOCX
+  // ======================
   console.log(`\n📌 Building DOCX → ${finalDocName}`);
 
   await buildDocx(improved, path.join(outDir, finalDocName));
