@@ -71,16 +71,16 @@
 <div class="container">
   <h2>AI Resume Tailor (GitHub Issue Trigger)</h2>
   <p>
-    Fill the details and click <b>Create GitHub Issue</b>. A new tab will open on GitHub with a pre-filled Issue.  
-    Check it and click <b>"Submit new issue"</b> to start the resume generation.
+    Uploading a resume is optional — if you do NOT upload, the system will use
+    the default base resume stored in the workflow.
   </p>
 
   <form id="resumeForm">
     <label>Company Name</label>
-    <input id="company" placeholder="e.g., Google, Microsoft, Cognizant" required />
+    <input id="company" required />
 
     <label>Job Title</label>
-    <input id="jobTitle" placeholder="e.g., Engagement Delivery Lead" required />
+    <input id="jobTitle" required />
 
     <label>Resume Type</label>
     <select id="resumeMode">
@@ -97,11 +97,15 @@
       <input type="checkbox" id="finops" /> <span>FinOps</span>
     </div>
 
+    <!-- 🔵 OPTIONAL Upload -->
+    <label>Upload Your Resume (Optional)</label>
+    <input type="file" id="baseResume" accept=".txt,.md,.pdf,.docx" />
+
     <label>Job Description</label>
-    <textarea id="jobDesc" placeholder="Paste the full job description here..." required></textarea>
+    <textarea id="jobDesc" required></textarea>
 
     <label>Extra Instructions (Optional)</label>
-    <textarea id="extra" placeholder="Any additional instructions..."></textarea>
+    <textarea id="extra"></textarea>
 
     <button type="submit">Create GitHub Issue</button>
   </form>
@@ -110,10 +114,9 @@
 </div>
 
 <script>
-  // Set this to your repo: owner/repo
   const repoFullName = "ready4exam/resume-automation";
 
-  document.getElementById("resumeForm").addEventListener("submit", function (e) {
+  document.getElementById("resumeForm").addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const company = document.getElementById("company").value.trim();
@@ -121,6 +124,7 @@
     const resumeMode = document.getElementById("resumeMode").value;
     const jobDesc = document.getElementById("jobDesc").value.trim();
     const extra = document.getElementById("extra").value.trim();
+    const fileInput = document.getElementById("baseResume");
 
     const agile = document.getElementById("agile").checked;
     const finops = document.getElementById("finops").checked;
@@ -132,16 +136,32 @@
       return;
     }
 
+    let encodedResume = "(none)";
+
+    // 🔵 ONLY use uploaded resume if present
+    if (fileInput.files.length > 0) {
+      const file = fileInput.files[0];
+      const text = await file.text();
+
+      encodedResume =
+        "-----BEGIN UPLOADED RESUME-----\n" +
+        text +
+        "\n-----END UPLOADED RESUME-----";
+    }
+
     const methodologies = [];
     if (agile) methodologies.push("Agile");
     if (finops) methodologies.push("FinOps");
 
-    // Body format that the workflow will parse
+    // GitHub Issue Body
     const bodyLines = [
       `Company: ${company}`,
       `Job Title: ${jobTitle}`,
       `Resume Mode: ${resumeMode}`,
       `Methodologies: ${methodologies.join(",")}`,
+      "",
+      "Uploaded Resume (Optional):",
+      encodedResume,
       "",
       "Job Description:",
       jobDesc,
@@ -160,7 +180,7 @@
 
     statusEl.innerHTML =
       "✅ Opening GitHub Issue page in a new tab...<br>" +
-      "Make sure you are logged into GitHub, then click <b>\"Submit new issue\"</b> there.";
+      "Click <b>Submit new issue</b> to start the resume generation.";
 
     window.open(url, "_blank");
   });
