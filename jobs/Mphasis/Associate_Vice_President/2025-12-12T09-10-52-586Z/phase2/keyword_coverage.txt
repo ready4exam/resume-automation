@@ -1,0 +1,6 @@
+[KEYWORD_COVERAGE]
+matched: [Delivery Head, Global Delivery Leadership, 1000+ Employees Management, $5M+ Revenue Portfolio, Enterprise Product Engineering (R&D), Enterprise Devices (Servers/Storage/Network/Hybrid Cloud), Operational Excellence, Executive Stakeholder Management (C-Suite), Strategic Transformation, AI and Automation, FinOps / Budget Management, IT Service Delivery Frameworks (ITIL), 15+ Years Experience]
+missing: [Firmware Development, Hardware/Firmware QA Leadership]
+coverage_percent: 87
+critical_gaps: [Lack of explicit leadership or transformation experience in the specific R&D areas of Firmware development or Hardware/Firmware QA]
+[/KEYWORD_COVERAGE]

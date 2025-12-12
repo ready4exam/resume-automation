@@ -1,0 +1,99 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+Highly accomplished IT executive and Delivery Head with 21+ years of global experience, specializing in strategic service delivery, operational excellence, and large-scale transformation within the Enterprise R&D and Product Engineering domain. Proven ability to lead complex global portfolios ($5M+ annual revenue) and manage high-performing, distributed teams exceeding 1000 employees across APAC, US, and Europe. Expertise in modernizing service delivery models, driving cost efficiency through FinOps, and integrating advanced automation and Agentic AI into R&D and platform operations. Adept at cultivating trusted client relationships at the C-suite level and accelerating technological adoption in mission-critical environments (servers, storage, network, hybrid cloud). Positioned to drive strategic R&D service transformation and global operational profitability as Associate Vice President at Mphasis.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Global Service Delivery Leadership (1000+ Staff)
+- Enterprise Product Engineering (R&D) Management
+- Strategic AI and Automation Transformation
+- Agile Delivery Frameworks
+- P&L and Financial Management ($5M+ Portfolio)
+- SRE, Cloud Operations, and FinOps Advisory
+- Executive Stakeholder Management
+- Enterprise Devices (Server/Storage/Network) Service
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+PwC — Senior Manager (Sep 2024 – Present)
+Role: IT Strategy & FinOps Advisor
+- Provided strategic advisory to enterprise BFSI and Healthcare clients on IT service modernization, focusing on governance alignment (NIST, ITIL) and operational resiliency.
+- Engineered and implemented an AI-driven automation framework that successfully reduced repeat service failures by 60%, significantly improving overall service reliability metrics across client platforms.
+- Led FinOps engagements to design and deploy hybrid-cloud cost visualization dashboards and accelerators, optimizing cloud consumption and driving proactive budget accountability for multi-million dollar spending.
+- Cultivated executive relationships across US, LatAm, Europe, and APAC to guide the execution of enterprise-wide platform and technology transformation roadmaps.
+
+Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+Role: Head – Global Service Reliability Engineering & Platform Operations
+- Led global service delivery and reliability engineering for a massive portfolio of mission-critical data center and infrastructure assets, focusing on performance, capacity management, and high availability.
+- Directed a complex $30M+ vendor displacement program, successfully insourcing critical infrastructure services to enhance organizational agility, reduce TCO, and secure strategic capabilities.
+- Championed Cloud & DevOps transformation initiatives, including strategic AWS migrations and the implementation of an Agentic AI system for autonomous response based on AIOps telemetry.
+- Managed end-to-end operations and service quality for over 100,000 physical IT assets (servers, network infrastructure, storage devices) essential for Enterprise R&D activities.
+
+IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+Role: Director-Equivalent – ITSM & Capacity Management
+- Managed and optimized a significant $25M annual OPEX budget across global delivery centers, achieving $8M in documented savings through targeted automation, vendor renegotiation, and robust license optimization strategies.
+- Provided global delivery leadership for complex, high-stakes service engagements (e.g., Scotiabank), ensuring consistent application of ITIL and operational standards across multiple international locations.
+- Built and scaled the Global Capacity Management Center of Excellence from a nascent team of 10 to a mature organization of 250 highly skilled members operating across 5 countries.
+- Drove contact center modernization by integrating AI-driven insights and workflow automation, leading to measurable acceleration in incident response and resolution times for key clients.
+
+Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+Role: ITSM & Automation Leader
+- Delivered strategic ITSM consulting services and developed scalable automation strategies for major BFSI and telecom clientele, focusing on process efficiency and governance improvement.
+- Introduced standardized operating procedures (SOPs) and comprehensive performance dashboards, significantly improving visibility, delivery speed, and quality assurance metrics.
+- Led rigorous Problem and Change Management processes, driving Root Cause Analysis (RCA), chairing the Change Advisory Board (CAB), and ensuring risk-controlled, high-compliance changes.
+
+Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+Role: Lead – Infrastructure & Monitoring Solutions
+- Led the deployment and configuration of large-scale enterprise monitoring solutions including Nagios, Zabbix, and HP OpenView, establishing robust observability across client environments.
+- Managed major infrastructure and application release deployments for British Telecom, executing cutovers and stabilization activities with minimal service disruption.
+- Provided specialized application support for NHS UK, ensuring timely resolution of high-priority issues impacting critical healthcare platform operations.
+
+Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+Role: Technical SME & Support Escalation Lead
+- Handled and resolved high-impact technical escalations for mission-critical telecom systems, significantly reducing Mean Time To Resolution (MTTR).
+- Authored detailed Standard Operating Procedures (SOPs) and documentation, and conducted technical training for L1/L2 engineers to improve organizational first-call resolution capability.
+[/EXPERIENCE]
+
+[PROJECTS]
+Ready4Industry
+- Architected an Agentic AI workflow automation platform designed to ingest complex technical documentation and dynamically generate API-driven deployment scripts for cloud services.
+- Developed backend service utilities and API schemas using Python, focusing on modularity, robust logging integration, and secure user access controls (RBAC).
+- Engineered a CI/CD pipeline using GitHub Actions to automate testing, build, and zero-touch deployment of platform components, ensuring rapid, reliable delivery of enhancements.
+
+Ready4Exam
+- Implemented an event-driven automation framework leveraging serverless functions to scale resource provisioning and optimize platform responsiveness based on real-time user load and demand spikes.
+- Utilized JavaScript and Python scripting for creating automated diagnostic tools that correlated telemetry data, improving system reliability and reducing manual intervention required for troubleshooting.
+- Designed user-centric interfaces and operational dashboards (using HTML/JS) to provide engineering teams with real-time insights into service health, SLO adherence, and application performance metrics.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud: Azure, AWS, GCP, Azure Monitor, CloudWatch, Tanzu
+Automation & Dev: Python, JavaScript, Shell Scripting, API Orchestration, GitHub Actions CI/CD, Serverless Functions
+SRE & Monitoring: Datadog, Prometheus, ScienceLogic, New Relic, AIOps, SLO-based Monitoring, Telemetry Correlation
+ITSM & Tools: ServiceNow, Remedy, Jira Service Management, ITIL Frameworks, Service Delivery KPI Governance
+Infrastructure & IaC: Ansible, VMware, HP OpenView, SolarWinds, Networking Fundamentals
+FinOps & BI: Grafana, Power BI, CoreStack, ECAM, Flexera, Cloud Cost Optimization
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
