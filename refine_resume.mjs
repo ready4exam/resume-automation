@@ -1,10 +1,10 @@
 // ============================================================================
-// refine_resume.mjs — FINAL PRODUCTION VERSION (Safe Filename + Free-Tier Engine)
+// refine_resume.mjs — VP-ENHANCED PRODUCTION VERSION (Safe Filename + Free-Tier Engine)
 // ============================================================================
 
 import fs from "fs";
 import path from "path";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google-generative-ai/google-generative-ai";
 import {
   Document,
   Packer,
@@ -106,17 +106,8 @@ function safePart(str, max = 30) {
     .replace(/^_+|_+$/g, "");
 }
 
-// timestamp for uniqueness
-function timestamp() {
-  const d = new Date();
-  const pad = (n) => n.toString().padStart(2, "0");
-  return `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}_${pad(
-    d.getHours()
-  )}${pad(d.getMinutes())}`;
-}
-
 // ============================================================================
-//  DOCX BUILDER
+//  DOCX BUILDER (UNCHANGED – DO NOT MODIFY FORMAT)
 // ============================================================================
 const FONT = "Calibri";
 
@@ -162,7 +153,7 @@ async function buildDocx(text, outPath) {
 
   const children = [];
 
-  // HEADER
+  // HEADER (UNCHANGED)
   children.push(
     new Paragraph({
       children: [
@@ -183,9 +174,7 @@ async function buildDocx(text, outPath) {
   children.push(
     new Paragraph({
       children: [
-        run(
-          "LinkedIn: https://www.linkedin.com/in/keshavkarn/ | Credly: https://www.credly.com/users/keshav-karn"
-        ),
+        run("LinkedIn: https://www.linkedin.com/in/keshavkarn/ | Credly: https://www.credly.com/users/keshav-karn"),
       ],
       spacing: { after: 20 },
     })
@@ -193,7 +182,7 @@ async function buildDocx(text, outPath) {
 
   // SUMMARY
   if (SUMMARY) {
-    children.push(heading("PROFESSIONAL SUMMARY"));
+    children.push(heading("EXECUTIVE SUMMARY"));
     splitLines(SUMMARY).forEach((l) =>
       children.push(new Paragraph({ children: [run(l)], spacing: { after: 80 } }))
     );
@@ -201,13 +190,13 @@ async function buildDocx(text, outPath) {
 
   // ACHIEVEMENTS
   if (ACH) {
-    children.push(heading("ACHIEVEMENTS"));
+    children.push(heading("LEADERSHIP SNAPSHOT"));
     splitLines(ACH).forEach((l) => children.push(bullet(l.replace(/^-+\s*/, ""))));
   }
 
   // CORE SKILLS
   if (CORE) {
-    children.push(heading("CORE SKILLS"));
+    children.push(heading("CORE STRENGTHS"));
     children.push(
       new Paragraph({
         children: [run(splitLines(CORE).join(" | "))],
@@ -250,7 +239,7 @@ async function buildDocx(text, outPath) {
 
   // PROJECTS
   if (PROJ) {
-    children.push(heading("PROJECTS"));
+    children.push(heading("PORTFOLIO PROJECTS"));
     splitLines(PROJ).forEach((line) => {
       if (line.startsWith("-"))
         children.push(bullet(line.replace(/^-+\s*/, "")));
@@ -263,7 +252,7 @@ async function buildDocx(text, outPath) {
 
   // TECHNICAL SKILLS
   if (TECH) {
-    children.push(heading("TECHNICAL SKILLS"));
+    children.push(heading("TECHNICAL LEADERSHIP SKILLS"));
     splitLines(TECH).forEach((l) =>
       children.push(new Paragraph({ children: [run(l)], spacing: { after: 80 } }))
     );
@@ -306,7 +295,7 @@ async function buildDocx(text, outPath) {
 }
 
 // ============================================================================
-//  MAIN PIPELINE
+//  MAIN PIPELINE — MINIMAL CHANGES BUT VP-LEVEL CONTENT ENABLED
 // ============================================================================
 async function main() {
   const jdFile = getArg("--job-desc-file");
@@ -349,10 +338,11 @@ async function main() {
 
   const { company, title } = extractCompanyTitle(jd);
 
-  // FINAL SAFE FILENAME
   const safeCompany = safePart(company, 25);
   const safeTitle = safePart(title, 35);
-  const finalDocName = `resume_${safeCompany}_${safeTitle}_${timestamp()}.docx`;
+
+  // ❗ TIMESTAMP REMOVED for clean filename
+  const finalDocName = `resume_${safeCompany}_${safeTitle}.docx`;
 
   // ======================
   // STAGE 1 — KEYWORD COVERAGE
@@ -387,9 +377,9 @@ ${raw}
   console.log("\n📌 Enhancing Summary...");
 
   const summaryPrompt = `
-Rewrite ONLY the PROFESSIONAL SUMMARY using a recruiter tone.
+Rewrite ONLY the Executive Summary using VP-level tone.
 Insert essential JD keywords.
-End with a one-line “Fit for Role” statement.
+End with a one-line leadership fit statement.
 
 Return ONLY:
 
@@ -437,16 +427,28 @@ ${raw}
   fs.writeFileSync(path.join(outDir, "review.txt"), review);
 
   // ======================
-  // STAGE 4 — FULL RESUME REWRITE
-  // ======================
-  console.log("\n📌 Rewriting Resume...");
+  // STAGE 4 — FULL RESUME REWRITE (VP STYLE)
+//  ======================
+  console.log("\n📌 Rewriting Resume in VP Style...");
 
   const improvePrompt = `
 ${systemPrompt}
 
-Rewrite the entire resume using:
+You must rewrite the entire resume in a VP/Head/Director-level style.
+
+MANDATORY VP INSTRUCTIONS:
+- SUMMARY: Must include 4–6 sentence Executive Summary + a Leadership Snapshot block.
+- CORE_SKILLS: Group skills into Leadership, AI Strategy, Cloud/Platform, Engineering, and Operations.
+- EXPERIENCE: For each company, rewrite using strategic subheadings:
+  Scope of Leadership, Strategic Impact, Operational Excellence, AI/Innovation Leadership, Cloud/Platform Modernization,
+  Global Stakeholder Influence, Financial Impact (NO P&L).
+- PROJECTS: Rewrite as enterprise transformation initiatives.
+- TECHNICAL_SKILLS: Keep concise and grouped by domain.
+- DO NOT add new tags; output ONLY inside existing tags.
+
+Rewrite using:
 - OPTIMIZED SUMMARY
-- REVIEW
+- REVIEW NOTES
 - KEYWORD COVERAGE
 - JOB DESCRIPTION
 - ORIGINAL RESUME
@@ -466,7 +468,7 @@ ${jd}
 ORIGINAL_RESUME:
 ${raw}
 
-OUTPUT ONLY TAGGED RESUME.
+OUTPUT ONLY THE TAGGED RESUME.
 `;
 
   const improved = await callGemini(improvePrompt);
