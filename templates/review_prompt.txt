@@ -5,25 +5,38 @@ This is PHASE 2: REVIEW + FIX.
 You are refining an already tailored resume, not generating from scratch.
 
 INPUTS:
-- TARGET_COMPANY
-- TARGET_ROLE
-- JOB_DESCRIPTION (summarized if available)
-- TAILORED_RESUME
+- JOB_DESCRIPTION
+- PHASE_1_RESUME
 - RESUME_MODE
 
 ====================================================
 REVIEW OBJECTIVE
 ====================================================
 
-Ensure the resume would be SHORTLISTED for a VP role.
+Ensure the resume would be SHORTLISTED for a VP / Head role.
 
-Evaluate for:
+Evaluate and silently correct for:
 - Executive presence and leadership scope
 - Clear ownership of AI / platform / transformation outcomes
 - Strong alignment to JOB_DESCRIPTION
 - Strategic thinking over individual contribution
-- Zero repetition or filler language
 - Business impact clarity
+- Conciseness and skim-ability
+
+====================================================
+ANTI-DUPLICATION & ANTI-OVERDOING (MANDATORY)
+====================================================
+
+- Each concept, capability, or achievement may appear ONLY ONCE in the entire resume.
+- If a theme appears in SUMMARY, it MUST NOT reappear in CORE_SKILLS or EXPERIENCE.
+- If a capability appears in CORE_SKILLS, it MUST NOT be restated verbosely in EXPERIENCE.
+- Remove:
+  - Reworded repetition
+  - Inflated adjectives
+  - Over-explained leadership statements
+- Prefer signal over density.
+
+If content feels impressive but redundant, SIMPLIFY or REMOVE it.
 
 ====================================================
 MANDATORY ACTION
@@ -31,11 +44,11 @@ MANDATORY ACTION
 
 If the resume is not clearly SELECT-ready:
 - Identify gaps silently
-- Fix ALL gaps in the resume itself
-- Remove redundancy aggressively
+- Fix ALL gaps directly in the resume
 - Elevate wording to VP / Head level
+- Remove redundancy aggressively
 - Do NOT fabricate facts or metrics
-- Do NOT add P&L unless present
+- Do NOT add P&L unless explicitly present
 
 ====================================================
 FORMAT ENFORCEMENT (STRICT)
@@ -47,25 +60,27 @@ Output ONLY the final corrected resume using EXACT tags:
 [/CONTACT]
 
 [SUMMARY]
-4–6 executive sentences, final line connects to TARGET_ROLE at TARGET_COMPANY
+4–6 executive sentences.
+Final line MUST connect the candidate to TARGET_ROLE at TARGET_COMPANY.
 [/SUMMARY]
 
 [CORE_SKILLS]
-Grouped, concise, leadership-first
+Grouped, concise, leadership-first capabilities only.
 [/CORE_SKILLS]
 
 [EXPERIENCE]
-Company: Company — Role (Dates on same line)
-- Impact bullets only (no repetition)
+Company: Company Name — Role Title (Dates on SAME line)
+- Impact bullets only (no repetition, no filler)
 [/EXPERIENCE]
 
 [PROJECTS]
 ONLY if RESUME_MODE = INFRA_PLUS_DEV
-Show leadership in Ready4Industry and Ready4Exam
+Include ONLY Ready4Industry and Ready4Exam
+Show leadership, vision, AI leverage, platform thinking
 [/PROJECTS]
 
 [TECHNICAL_SKILLS]
-Executive depth, grouped
+Executive technical depth, grouped by domain
 [/TECHNICAL_SKILLS]
 
 [CERTIFICATIONS]
