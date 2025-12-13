@@ -5,82 +5,109 @@ This is PHASE 2: REVIEW + FIX.
 You are refining an already tailored resume, not generating from scratch.
 
 INPUTS:
+- TARGET_COMPANY
+- TARGET_ROLE
 - JOB_DESCRIPTION
-- PHASE_1_RESUME
+- TAILORED_RESUME
 - RESUME_MODE
+- BASE_RESUME
 
 ====================================================
 REVIEW OBJECTIVE
 ====================================================
 
-Ensure the resume would be SHORTLISTED for a VP / Head role.
+Ensure this resume would be SHORTLISTED for a VP / Head role.
 
-Evaluate and silently correct for:
-- Executive presence and leadership scope
+Evaluate for:
+- Executive presence and leadership credibility
 - Clear ownership of AI / platform / transformation outcomes
 - Strong alignment to JOB_DESCRIPTION
 - Strategic thinking over individual contribution
-- Business impact clarity
-- Conciseness and skim-ability
+- ZERO repetition, inflation, or over-engineering
+- Clear articulation of business value
 
 ====================================================
-ANTI-DUPLICATION & ANTI-OVERDOING (MANDATORY)
+MANDATORY ACTIONS (SILENT)
 ====================================================
 
-- Each concept, capability, or achievement may appear ONLY ONCE in the entire resume.
-- If a theme appears in SUMMARY, it MUST NOT reappear in CORE_SKILLS or EXPERIENCE.
-- If a capability appears in CORE_SKILLS, it MUST NOT be restated verbosely in EXPERIENCE.
-- Remove:
-  - Reworded repetition
-  - Inflated adjectives
-  - Over-explained leadership statements
-- Prefer signal over density.
-
-If content feels impressive but redundant, SIMPLIFY or REMOVE it.
-
-====================================================
-MANDATORY ACTION
-====================================================
-
-If the resume is not clearly SELECT-ready:
+If resume is not clearly SELECT-ready:
 - Identify gaps silently
 - Fix ALL gaps directly in the resume
-- Elevate wording to VP / Head level
-- Remove redundancy aggressively
-- Do NOT fabricate facts or metrics
-- Do NOT add P&L unless explicitly present
+- Remove duplication and overstatement aggressively
+- Collapse repetitive language
+- Elevate wording to VP / executive level
+- Do NOT fabricate facts, metrics, revenue, or P&L
+- Do NOT add new companies or roles
 
 ====================================================
-FORMAT ENFORCEMENT (STRICT)
+CAREER COMPLETENESS RULE (STRICT)
 ====================================================
 
-Output ONLY the final corrected resume using EXACT tags:
+- ALL roles present in BASE_RESUME MUST appear in EXPERIENCE.
+- Early-career roles (including the first company) MUST NOT be removed.
+- Condensation is allowed ONLY by reducing bullets, NOT by deleting roles.
+- If space is limited, retain early roles with 1–2 concise impact bullets.
+- Dropping any company from BASE_RESUME is a FAILURE.
+
+====================================================
+ANTI-DUPLICATION & ANTI-OVERDOING RULE (STRICT)
+====================================================
+
+- NO concept may appear in more than ONE section.
+- SUMMARY must NOT echo EXPERIENCE or PROJECTS.
+- PROJECTS must NOT repeat EXPERIENCE.
+- CORE_SKILLS must NOT restate SUMMARY.
+- Remove buzzwords unless they add NEW meaning.
+- Prefer fewer, stronger statements over verbosity.
+
+====================================================
+PROJECTS ENFORCEMENT (STRICT)
+====================================================
+
+Include PROJECTS ONLY if:
+- RESUME_MODE = INFRA_PLUS_DEV OR DEV_ONLY
+
+Projects MUST be rewritten EXACTLY as executive initiatives:
+
+AI-Enabled Academic Strategy & Institutional Intelligence Leadership  
+Founder & Executive Architect — AI-Driven Education Platforms
+
+Focus on:
+- Founder-level ownership
+- Platform vision and AI leverage
+- Institutional scale and monetization model
+- Executive decision-making and measurable ROI
+- NO feature lists
+- NO developer task detail
+
+====================================================
+FORMAT ENFORCEMENT (NON-NEGOTIABLE)
+====================================================
+
+Output ONLY the corrected resume using EXACT tags:
 
 [CONTACT]
 [/CONTACT]
 
 [SUMMARY]
-4–6 executive sentences.
-Final line MUST connect the candidate to TARGET_ROLE at TARGET_COMPANY.
+4–6 executive sentences; final line connects to TARGET_ROLE at TARGET_COMPANY
 [/SUMMARY]
 
 [CORE_SKILLS]
-Grouped, concise, leadership-first capabilities only.
+Grouped, concise, leadership-first
 [/CORE_SKILLS]
 
 [EXPERIENCE]
-Company: Company Name — Role Title (Dates on SAME line)
-- Impact bullets only (no repetition, no filler)
+Company: Company — Role (Dates on same line)
+- Impact bullets only
 [/EXPERIENCE]
 
 [PROJECTS]
-ONLY if RESUME_MODE = INFRA_PLUS_DEV
-Include ONLY Ready4Industry and Ready4Exam
-Show leadership, vision, AI leverage, platform thinking
+(Only if allowed)
 [/PROJECTS]
 
 [TECHNICAL_SKILLS]
-Executive technical depth, grouped by domain
+Executive depth, grouped
 [/TECHNICAL_SKILLS]
 
 [CERTIFICATIONS]
