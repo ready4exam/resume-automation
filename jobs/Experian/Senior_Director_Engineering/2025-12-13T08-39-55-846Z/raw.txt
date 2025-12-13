@@ -1,0 +1,85 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+An accomplished Senior Director Engineering candidate with 21+ years of global experience in leading product engineering, platform operations, and strategic technology transformation within the financial services and data domains. Proven expertise in building high-performing teams, fostering engineering excellence, and delivering enterprise-scale solutions on modern cloud-native platforms. Drives impactful operational improvements, TCO reduction through FinOps, and scalable AI adoption strategies across diverse global stakeholders. Eager to contribute to Experian's strategic direction by enhancing engineering capabilities and delivering superior customer outcomes.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Engineering Leadership & Mentorship, Strategic Planning & Execution, Product & Platform Engineering, Cloud Native Architecture, FinOps & TCO Optimization, AI/ML Strategy & Adoption, Service Reliability Engineering (SRE), Agile & Scaled Agile Delivery, Organizational Change Management, Global Stakeholder Engagement, Risk & Security Management, Talent Development & Coaching
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+PwC — Senior Manager, IT Strategy & FinOps Advisory (Sep 2024 – Present)
+- Led strategic advisory engagements for enterprise healthcare and BFSI clients, aligning IT strategy with business objectives and compliance standards.
+- Designed and implemented an AI-driven automation framework, reducing incident recurrence by 60% and enhancing service resilience for critical systems.
+- Directed FinOps initiatives, delivering hybrid-cloud cost optimization dashboards and accelerators that drove proactive budget management across global operations.
+- Cultivated strong relationships with global leadership across US, LatAm, Europe, and APAC to shape and deliver comprehensive platform modernization roadmaps.
+
+Kyndryl Solutions Pvt. Ltd. — Associate Director, Head – Global Service Reliability Engineering & Platform Operations (Sep 2021 – Aug 2024)
+- Directed global technology service delivery for large-scale mission-critical data center portfolios, ensuring high availability and robust capacity management.
+- Spearheaded a $30M+ vendor displacement program, successfully insourcing critical infrastructure services to improve operational agility and reduce external dependencies.
+- Championed Cloud & DevOps enablement, including strategic AWS migrations and the development of an Agentic AI system for autonomous response to AIOps insights.
+- Managed the operational integrity and performance of over 100,000 physical IT assets, ensuring continuous service for enterprise clients.
+
+IBM India Pvt. Ltd. — Global Process Owner, Enterprise ITSM & Capacity Management (Jan 2014 – Aug 2021)
+- Managed $25M in annual OPEX, achieving $8M in savings through strategic automation, vendor renegotiation, and license optimization initiatives.
+- Provided global delivery leadership for complex service engagements, ensuring consistent ITSM process execution across multiple international centers (US, LatAm, Europe, APAC).
+- Scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing global standards and operational consistency.
+- Standardized ITIL-based frameworks for end-to-end capacity management and streamlined ITSM processes across diverse geographies.
+- Modernized contact center operations through the integration of AI-driven insights, accelerating response times and improving customer experience.
+
+Wipro Technologies — Senior Consultant, ITSM & Automation Advisory (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, enhancing operational efficiency and compliance.
+- Implemented Standard Operating Procedures and performance dashboards that significantly improved service delivery speed and quality.
+- Led problem and change management processes, including root cause analysis, risk-controlled changes, and chairing Change Advisory Board (CAB) meetings.
+- Conducted ITIL assessments and deployed tailored frameworks to enhance service governance and operational efficiency for enterprise clients.
+
+Tech Mahindra Ltd. — Senior Technical Lead, Infrastructure & Monitoring (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring tools including Nagios, Zabbix, and HP OpenView across large-scale infrastructure environments.
+- Led major release deployments for British Telecom, ensuring minimal service disruption and adherence to strict operational windows.
+- Managed application support for NHS UK, providing timely resolution of issues across critical healthcare platforms and ensuring high service availability.
+
+Mainstay Teleservices — Technical SME & Support Escalation Lead (Mar 2003 – Oct 2006)
+- Handled high-impact technical escalations and provided expert support for mission-critical telecom systems.
+- Significantly reduced system downtime through rapid issue resolution, advanced troubleshooting, and proactive problem identification.
+- Trained L1/L2 engineers and developed comprehensive Standard Operating Procedures documentation to enhance team capabilities and process consistency.
+[/EXPERIENCE]
+
+[PROJECTS]
+- AI-Enabled Academic Strategy & Institutional Intelligence Leadership
+- Founder & Executive Architect — AI-Driven Education Platforms
+- Platform vision, monetization model, and enterprise scalability
+- AI-driven dashboards, analytics, and decision intelligence
+- End-to-end leadership across AI strategy, architecture, delivery, and ROI
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud Platforms & FinOps: Azure, AWS, Google Cloud Platform, Azure Monitor, CloudWatch, Grafana, CoreStack, ECAM, Flexera
+SRE & Observability: ScienceLogic, Datadog, New Relic, Prometheus, Tanzu, Distributed Tracing, SLO-based Monitoring
+Software Engineering & Automation: API-driven automation, Backend logic development, CI/CD with GitHub Actions, Python, JavaScript, Shell Scripting, Automated Diagnostics, Data Pipeline Automation
+DevOps & Infrastructure-as-Code: Build/Release/Deploy Pipelines, Environment Orchestration, Ansible, VMware Tanzu
+ITSM & Enterprise Tools: ServiceNow, Remedy, Jira Service Management, ITIL Frameworks
+Security & Networking: Vulnerability Management, Network Infrastructure, Security Dashboards, Risk Mitigation
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
