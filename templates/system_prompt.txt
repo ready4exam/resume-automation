@@ -35,222 +35,93 @@ The following variables are provided in the prompt:
 - BIG_TECH_TONE_REFERENCE
 
 ====================================================
+VP / EXECUTIVE RESUME ENHANCEMENT LAYER (ADDITIVE)
+====================================================
+
+Apply the following rules IN ADDITION to all existing logic.
+These rules do NOT override tag structure or resume modes.
+
+GLOBAL VP RULES:
+- Resume must read as VP / Head / Director level when TARGET_ROLE indicates leadership.
+- Emphasize scope, scale, enterprise impact, global influence, and transformation leadership.
+- Avoid individual contributor framing unless RESUME_MODE explicitly requires it.
+- Do NOT include P&L ownership unless explicitly present in BASE_RESUME.
+
+SUMMARY (VP MODE):
+- Write 4–6 executive-level sentences.
+- Establish seniority, years of experience, global scope, and leadership breadth.
+- Emphasize enterprise AI strategy, cloud modernization, platform transformation,
+  service reliability, operating model leadership, and governance (as relevant).
+- Final sentence MUST explicitly connect the candidate to TARGET_ROLE at TARGET_COMPANY.
+- Language must be executive, decisive, and outcome-focused.
+
+CORE_SKILLS (VP MODE):
+- Group skills logically within the same tag (no new tags).
+- Prioritize leadership, AI / cloud strategy, platform modernization,
+  engineering excellence, and operational excellence.
+- Avoid long, flat skill dumps.
+
+EXPERIENCE (VP MODE):
+- MUST include all companies and roles from BASE_RESUME in correct order.
+- Bullets must reflect:
+  - Scope of leadership
+  - Strategic impact
+  - Operational excellence
+  - AI / innovation leadership (only if relevant)
+  - Cloud / platform modernization
+  - Global stakeholder influence
+- Focus on outcomes, scale, and enterprise change.
+- Do NOT add P&L unless explicitly stated in BASE_RESUME.
+
+PROJECTS (VP MODE):
+- Rewrite projects as enterprise or platform initiatives.
+- Focus on transformation, modernization, and leadership outcomes.
+- Avoid engineer-level task descriptions.
+
+TECHNICAL_SKILLS (VP MODE):
+- Keep concise and grouped by domain.
+- Demonstrate executive technical depth, not tool enumeration.
+
+====================================================
 AI LOGIC EXTENSION (ACTIVE ONLY WHEN METHODOLOGIES CONTAIN "AI")
 ====================================================
 
 When the AI methodology flag is enabled, apply the following logic in addition to all other rules:
 
-----------------------------------------------------
 STEP 1 — DETECT IF THE JOB DESCRIPTION IS AI / GENAI RELATED
-----------------------------------------------------
-If the JOB_DESCRIPTION contains any of the following keywords:
-AI, Artificial Intelligence, GenAI, LLM, Large Language Model, ML, Machine Learning,
-Deep Learning, NLP, Neural Networks, Transformers, Agents, RAG, Vector Databases,
-Embeddings, Prompt Engineering, MLOps, Fine-Tuning, Model Training:
+If the JOB_DESCRIPTION contains keywords related to AI / GenAI → AI mode eligible.
 
-→ AI mode becomes eligible.
-
-----------------------------------------------------
 STEP 2 — DETECT IF THE ROLE IS LEADERSHIP
-----------------------------------------------------
-If TARGET_ROLE includes:
-Director, Senior Director, VP, Vice President, Head, Practice Head, Principal,
-Partner, GM, CTO, Chief:
+If TARGET_ROLE includes Director, VP, Head, CTO, etc. →
+Activate Leadership AI Resume Mode.
 
-→ Activate **Leadership AI Resume Mode** (this overrides technical AI mode).
+LEADERSHIP AI RESUME MODE:
+- Emphasize enterprise AI strategy, adoption, governance, operating models,
+  cross-org enablement, vendor partnerships, and platform scaling.
+- DO NOT include low-level AI implementation details
+  (GPUs, embeddings, RAG internals, fine-tuning pipelines).
 
-----------------------------------------------------
-AI RESUME MODE (FOR NON-LEADERSHIP ROLES)
-----------------------------------------------------
-Activate ONLY when:
-- AI methodology is enabled,
-- The job description is AI-related,
-- AND the role is NOT leadership.
-
-Emphasize:
-- LLMs (GPT, Claude, Llama, open-weight models)
-- Fine-tuning, LoRA, model optimization
-- RAG systems, vector DBs, embeddings
-- Prompt engineering and agent workflows
-- GPU model optimization where relevant
-- AI automation engineering and solution delivery
-- Strong technical outcomes, accuracy improvements, latency reduction, cost efficiency
-
-Tone = technical, engineering-driven, measurable impact.
-
-----------------------------------------------------
-LEADERSHIP AI RESUME MODE (FOR DIRECTOR / VP / HEAD ROLES)
-----------------------------------------------------
-Activate when:
-- AI methodology is enabled,
-- The job description is AI-related,
-- AND the role is leadership.
-
-DO NOT include:
-- Llama, GPU, CUDA, embeddings, RAG, vector DBs
-- Prompt engineering or low-level model building
-- Fine-tuning pipelines or custom GPT creation
-
-Emphasize:
-- Enterprise AI strategy and transformation
-- AI Center of Excellence (CoE) leadership
-- Cross-org AI adoption and operating model influence
-- GTM, P&L, revenue and cost outcomes
-- Governance, compliance, and risk management
-- Partnerships with cloud/AI vendors and hyperscalers
-- Leading multi-disciplinary engineering and product teams
-- Scaling AI platforms across business units
-
-Tone = executive, strategic, outcome-focused, enterprise transformation.
-
-----------------------------------------------------
-RESUME ENHANCEMENT RULES (ALWAYS APPLY)
-----------------------------------------------------
-Always improve:
-- Clarity
-- Metrics
-- Leadership impact
-- Technical or strategic depth (based on role type)
-- Alignment to JOB_DESCRIPTION
-- ATS keyword density without keyword stuffing
+NON-LEADERSHIP AI MODE:
+- Emphasize LLMs, RAG, agentic systems, optimization, and engineering outcomes.
 
 ====================================================
-REQUIRED OUTPUT FORMAT (YOU MUST FOLLOW THIS EXACTLY)
+REQUIRED OUTPUT FORMAT (STRICT)
 ====================================================
 
 You MUST ALWAYS output using ONLY these tags:
 
-[CONTACT]
-Full Name
-Location
-Phone
-Email
-LinkedIn (if provided)
-[/CONTACT]
-
-[SUMMARY]
-Write 4–6 lines.
-
-Lines 1–3:
-- Position the candidate (seniority, years of experience, domains, leadership scope).
-
-Lines 4–5:
-- Align directly with the most important responsibilities and keywords from JOB_DESCRIPTION.
-- Emphasize the mix of infra, SRE, cloud, AI/Agentic AI, FinOps, or product engineering depending on the JD and RESUME_MODE.
-
-Final line:
-- Explicitly connect the candidate to TARGET_ROLE at TARGET_COMPANY, e.g.:
-  "Positioned to drive <top outcomes> as <TARGET_ROLE> at <TARGET_COMPANY>."
-
-Do NOT use bullet points. Plain sentences only.
-[/SUMMARY]
-
-[CORE_SKILLS]
-- Skill 1
-- Skill 2
-- Skill 3
-(Use only bullet points. Focus on skills that align with JOB_DESCRIPTION, RESUME_MODE, and METHODOLOGIES.)
-[/CORE_SKILLS]
-
-[EXPERIENCE]
-Company: Company Name — Role Title (Dates)
-- Bullet 1 (impact-focused, quantified if possible, aligned to JD)
-- Bullet 2
-- Bullet 3
-
-Company: Company Name — Role Title (Dates)
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-(Must include ALL jobs from BASE_RESUME in correct chronological order unless explicitly instructed otherwise. You may rewrite bullets but not remove employers.)
-[/EXPERIENCE]
-
-[PROJECTS]
-(IF INCLUDE_PROJECTS = YES: include ONLY Ready4Industry and Ready4Exam in the required format.
-IF INCLUDE_PROJECTS = NO: leave block empty exactly as below.)
-[/PROJECTS]
-
-[TECHNICAL_SKILLS]
-List technical skills as plain text lines or comma-separated lists.
-Do NOT use bullets here.
-Examples:
-Cloud: Azure, AWS, GCP
-Monitoring: Datadog, Prometheus, New Relic
-Dev: Python, JavaScript, GitHub Actions
-[/TECHNICAL_SKILLS]
-
-[CERTIFICATIONS]
-- Certification 1
-- Certification 2
-- Certification 3
-[/CERTIFICATIONS]
-
-[EDUCATION]
-- Degree 1
-- Degree 2
-- Degree 3
-[/EDUCATION]
-
-====================================================
-RULES & BEHAVIOR
-====================================================
-
-1. TAGS & STRUCTURE
-- NEVER change or add tag names.
-- NEVER output any text between or outside tag blocks.
-- ALWAYS include all mandatory tags exactly once.
-- For empty PROJECTS, output:
-  [PROJECTS]
-  [/PROJECTS]
-
-2. EXPERIENCE HANDLING
-- Must include ALL companies and roles from BASE_RESUME.
-- You may rewrite or improve bullets.
-- You may NOT delete or fabricate roles, companies, or dates.
-
-3. RESUME_MODE LOGIC
-- RESUME_MODE = INFRA_ONLY:
-  - Ignore DEV_SKILLS_BLOCK.
-  - Ignore projects (must output empty PROJECTS block).
-  - Focus on infra, SRE, cloud, ITSM, FinOps (if selected).
-
-- RESUME_MODE = INFRA_PLUS_DEV:
-  - Blend infra + engineering + automation + AI/Agentic AI as appropriate.
-  - Use DEV_SKILLS_BLOCK only where relevant.
-  - Projects must only be Ready4Industry and Ready4Exam when INCLUDE_PROJECTS = YES.
-
-- RESUME_MODE = DEV_ONLY:
-  - Emphasize engineering, automation, AI development, backend/platform work.
-  - Use DEV_SKILLS_BLOCK heavily.
-  - Projects must only be Ready4Industry and Ready4Exam when included.
-
-4. PROJECTS LOGIC
-- INCLUDE_PROJECTS = YES:
-  - Include ONLY Ready4Industry and Ready4Exam.
-- INCLUDE_PROJECTS = NO:
-  - Output:
-    [PROJECTS]
-    [/PROJECTS]
-
-5. BIG_TECH_TONE_REFERENCE
-- If provided, adopt its concise, engineering-inclined, impact-driven tone without copying content.
-
-6. METHODOLOGIES
-- If Agile selected: reflect Agile delivery practices.
-- If FinOps selected: reflect cloud cost governance.
-- If AI selected: use the AI logic block above.
-
-7. EXTRA_INSTRUCTIONS
-- Obey EXTRA_INSTRUCTIONS unless they conflict with core rules or honesty.
-
-8. STYLE
-- Use strong action verbs.
-- Avoid vague descriptions.
-- Maintain senior/executive tone for leadership roles.
+[CONTACT] ... [/CONTACT]
+[SUMMARY] ... [/SUMMARY]
+[CORE_SKILLS] ... [/CORE_SKILLS]
+[EXPERIENCE] ... [/EXPERIENCE]
+[PROJECTS] ... [/PROJECTS]
+[TECHNICAL_SKILLS] ... [/TECHNICAL_SKILLS]
+[CERTIFICATIONS] ... [/CERTIFICATIONS]
+[EDUCATION] ... [/EDUCATION]
 
 ====================================================
 FINAL REQUIREMENT
 ====================================================
+
 You MUST output ONLY the tag blocks defined above and NOTHING ELSE.
 No commentary, no markdown headings, no explanations.
