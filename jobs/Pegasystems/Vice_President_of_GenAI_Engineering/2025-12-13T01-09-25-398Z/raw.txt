@@ -1,0 +1,102 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India | 8520977573 | keshav.karn@gmail.com | LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+A senior technology executive with 21+ years of global leadership, deep expertise driving Generative AI strategy, engineering, and enterprise adoption. Specializing in scalable AI/ML solutions, cloud-native platforms, and highly reliable operations within regulated sectors. Proven track record in launching and scaling AI-powered products, defining multi-year roadmaps, and leading large, globally distributed engineering teams (250+ members) to deliver measurable business value. A proponent of responsible AI, robust governance, MLOps best practices, and FinOps principles to balance innovation with enterprise security, compliance, and cost efficiency. Positioned to drive transformative GenAI engineering and strategic outcomes as Vice President of GenAI Engineering at Pegasystems.
+[/SUMMARY]
+
+[CORE_SKILLS]
+- Generative AI Strategy & Engineering: AI/ML Engineering, LLM Orchestration, RAG & Agentic Architectures, MLOps, Model Evaluation & Governance
+- Executive Leadership & GTM: Global Team Leadership (50+), Strategic Roadmapping, P&L Management, Cross-functional Alignment, Vendor Ecosystem Management, Thought Leadership
+- Cloud & Platform Modernization: Cloud-Native Architectures, Microservices, Kubernetes, AWS/Azure, SRE, FinOps, Data Center Transformation
+- Enterprise Governance & Compliance: Responsible AI Frameworks, Data Privacy, Security & Compliance (NIST, ITIL), Risk Management
+- Automation & Reliability: AI-Driven Automation, AIOps, Observability, CI/CD, Process Optimization, Service Reliability Engineering
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+## **PwC — Senior Manager**
+**Sep 2024 – Present**
+**Role:** IT Strategy & FinOps Advisor
+
+- Spearheaded strategic advisory for enterprise clients in regulated sectors, aligning AI/ML and IT service management initiatives with NIST and ITIL for robust governance and compliance.
+- Architected and deployed an AI-driven automation framework that reduced repeat system failures by 60%, significantly elevating service reliability across critical operations.
+- Led a FinOps practice in developing advanced hybrid-cloud cloud cost dashboards and accelerators, driving proactive budget optimization and substantial savings across client portfolios.
+- Cultivated influential relationships with global leadership (US, LatAm, Europe, APAC) to champion and deliver multi-year platform modernization and GenAI readiness roadmaps.
+
+## **Kyndryl Solutions Pvt. Ltd. — Associate Director**
+**Sep 2021 – Aug 2024**
+**Role:** Head – Global Service Reliability Engineering & Platform Operations
+
+- Directed global service reliability and platform operations for large-scale, mission-critical data center portfolios, overseeing 100,000+ IT assets and ensuring sustained high availability.
+- Spearheaded a $30M+ vendor displacement and insourcing program, strategically migrating critical infrastructure services to enhance agility and reduce third-party dependencies.
+- Championed Cloud & DevOps enablement, including strategic AWS migrations and pioneering an Agentic AI system for autonomous response to AIOps insights, significantly enhancing operational efficiency.
+- Established and scaled MLOps practices for AI/ML lifecycle management, ensuring robust model evaluation, deployment, and observability across enterprise applications.
+- Led large, globally distributed engineering teams responsible for platform modernization and operational excellence.
+
+## **IBM India Pvt. Ltd. — Global Process Owner**
+**Jan 2014 – Aug 2021**
+**Role:** Director-Equivalent – ITSM & Capacity Management
+
+- Managed a $25M annual OPEX budget, achieving $8M in savings through strategic automation, vendor renegotiation, and FinOps-driven license optimization initiatives.
+- Provided global delivery leadership for complex, high-stakes service engagements (e.g., Scotiabank), ensuring consistent and high-quality service across international centers.
+- Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, fostering talent development and establishing a global standard.
+- Standardized ITIL-based frameworks for end-to-end capacity management, enhancing operational predictability and resource allocation at enterprise scale.
+- Modernized contact center operations by integrating AI-driven insights, accelerating response times and improving customer experience.
+
+## **Wipro Technologies — Senior Consultant**
+**Jun 2010 – Nov 2013**
+**Role:** ITSM & Automation Leader
+
+- Delivered comprehensive ITSM consulting and automation strategies for major telecom and BFSI clients, driving operational efficiencies.
+- Introduced standardized operating procedures (SOPs) and performance dashboards, significantly improving service delivery speed and quality.
+- Led Problem and Change Management, driving root cause analysis (RCA), implementing risk-controlled changes, and chairing the Change Advisory Board (CAB) to ensure robust governance.
+- Conducted ITIL assessments and implemented tailored frameworks that enhanced compliance and optimized IT service delivery processes for complex customer environments.
+
+## **Tech Mahindra Ltd. — Senior Technical Associate**
+**Oct 2006 – May 2010**
+**Role:** Lead – Infrastructure & Monitoring Solutions
+
+- Deployed and managed enterprise monitoring tools (e.g., Nagios, Zabbix, HP OpenView) to establish robust observability across critical infrastructure.
+- Managed major release deployments for large-scale clients like British Telecom, consistently achieving minimal disruption and high system stability.
+- Led application support for NHS UK, ensuring timely resolution of issues and sustained performance for critical national healthcare platforms.
+
+## **Mainstay Teleservices — Sr. 2nd Line Specialist**
+**Mar 2003 – Oct 2006**
+**Role:** Technical SME & Support Escalation Lead
+
+- Handled high-impact escalations and provided expert support for mission-critical telecom systems, ensuring operational continuity.
+- Reduced system downtime through rapid issue resolution, advanced troubleshooting, and proactive problem management.
+- Mentored and trained L1/L2 engineers, contributing to team capability development and authoring comprehensive SOP documentation.
+[/EXPERIENCE]
+
+[PROJECTS]
+- Ready4Industry: Spearheaded the conceptualization and pilot implementation of a secure enterprise Generative AI platform for enhanced knowledge discovery and workflow automation, demonstrating a clear path for integration of RAG architectures and custom LLM orchestration. Focused on establishing robust data privacy, model governance, and compliance frameworks to ensure responsible AI adoption within a regulated environment.
+
+- Ready4Exam: Developed a comparative analysis framework for leading Generative AI models (e.g., open-source vs. proprietary), evaluating their capabilities, performance benchmarks, ethical implications, and total cost of ownership (TCO) to inform strategic build/buy decisions for enterprise AI solutions.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure Monitor, CloudWatch, Grafana, CoreStack, ECAM, Flexera, Azure, AWS, GCP
+Monitoring & Observability: ScienceLogic, Datadog, New Relic, Prometheus, Tanzu, Distributed Tracing, Telemetry Correlation
+ITSM & Automation: ServiceNow, Remedy, Jira Service Management, Ansible, GitHub Actions, CI/CD, Scripting (Python, JavaScript, Shell)
+Infrastructure & Platforms: VMware Tanzu, HP OpenView, SolarWinds, Zabbix, Microservices, Kubernetes, APIs
+BI & Modeling: Power BI, MS Visio, Data Models, Query Tuning
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]

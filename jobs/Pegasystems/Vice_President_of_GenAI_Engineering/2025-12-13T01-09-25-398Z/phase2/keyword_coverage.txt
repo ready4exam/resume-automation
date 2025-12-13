@@ -1,0 +1,6 @@
+[KEYWORD_COVERAGE]
+matched: ['AI/ML', 'enterprise-scale AI products', 'launching enterprise-scale AI products', 'GenAI technologies', 'LLMs', 'RAG', 'agentic architectures', 'MLOps', 'model evaluation', 'prompt management', 'observability', 'responsible AI', 'data privacy', 'security', 'compliance', 'governance', 'global team', 'engineering', 'research', 'thought leadership', 'modern AI stacks', 'enterprise SaaS architectures', 'cloud-native deployments', 'microservices', 'Kubernetes', 'APIs', 'global leadership', 'AI-driven workflow automation', 'enterprise B2B scale', 'NLP']
+missing: ['AI driven workflow automation', 'executive presence', 'stakeholder management', 'translate complex technology into clear business value', 'build/buy/partner decision-making']
+coverage_percent: 83
+critical_gaps: []
+[/KEYWORD_COVERAGE]

@@ -1,0 +1,3 @@
+Seasoned technology executive with 21+ years of global leadership, specializing in defining and executing enterprise Generative AI (GenAI) strategies. Proven success launching and scaling AI/ML products, with deep expertise in LLMs, RAG, and agentic architectures. Extensive experience in cloud-native deployments (microservices, Kubernetes, APIs) and establishing robust MLOps, model evaluation, and observability practices. Adept at balancing rapid innovation with stringent security, compliance, and governance requirements within regulated environments. Drives measurable business value through AI-driven workflow automation and leads high-performing global engineering teams.
+
+Fit for Role: Visionary leader to drive Pega's GenAI engineering and strategic outcomes.

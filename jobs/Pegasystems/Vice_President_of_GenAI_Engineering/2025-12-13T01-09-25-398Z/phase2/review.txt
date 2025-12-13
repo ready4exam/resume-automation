@@ -1,0 +1,17 @@
+[REVIEW]
+- 15+ years in software leadership, with 7+ years leading AI/ML initiatives: **Met** (21 years total, 7+ years leading AI/ML initiatives)
+- 5+ years leading AI/ML initiatives with direct experience in Generative AI (LLMs, RAG, agentic systems) and NLP: **Met** (Summary states deep expertise driving Generative AI strategy, engineering, and enterprise adoption; Projects mention RAG architectures and custom LLM orchestration; Experience mentions Agentic AI system)
+- Proven track record launching and scaling AI-powered products/features at enterprise B2B scale: **Met** (Summary states proven track record in launching and scaling AI-powered products; Experience mentions AI-driven automation framework)
+- Deep technical expertise with modern AI stacks and enterprise SaaS architectures; strong knowledge of cloud-native deployments (e.g., microservices, Kubernetes, APIs): **Met** (Core Skills list includes Cloud & Platform Modernization, Microservices, Kubernetes, APIs; Technical Skills list includes Kubernetes, APIs, Microservices)
+- Experience leading globally distributed engineering teams (50+ members) and driving cross-functional alignment: **Met** (Summary states leading large, globally distributed engineering teams (250+ members); Experience mentions leading large, globally distributed engineering teams)
+- Strong command of responsible AI, data privacy, security, and model governance in regulated environments: **Met** (Summary mentions proponent of responsible AI, robust governance; Core Skills list includes Enterprise Governance & Compliance, Responsible AI Frameworks, Data Privacy, Security & Compliance; Projects mention establishing robust data privacy, model governance, and compliance frameworks)
+- Exceptional communication, executive presence, and stakeholder management; ability to translate complex technology into clear business value: **Implied** (Summary highlights executive leadership and GTM, and translating complex technology into business value; Experience shows experience with global leadership and strategic advisory)
+- **Additional Preferred Qualifications:**
+    - Advanced degree (MS or PhD) in Computer Science, Artificial Intelligence, or a related field: **Partially Met** (Master’s in Information Technology, Post Graduate Programme in Project Management)
+    - Experience with Pega software: **Not Explicitly Met**
+    - Demonstrated experience building research-oriented engineering teams and academic/industry partnerships: **Partially Met** (Experience mentions building and scaling teams, fostering talent development; Projects show conceptualization and pilot implementation)
+    - Experience establishing MLOps practices, model evaluation frameworks, and AI observability at scale: **Met** (Core Skills includes MLOps, Model Evaluation & Governance; Experience mentions Established and scaled MLOps practices; Projects mention evaluating capabilities, performance benchmarks)
+    - Familiarity with the AI vendor ecosystem and strategic build/buy/partner decision-making: **Met** (Projects mention comparative analysis for strategic build/buy decisions)
+    - History of thought leadership (publications, patents, conference speaking) in AI/ML or GenAI: **Not Explicitly Met**
+- **Extra:** include MLops during Kyndryl responsiblities: **Met** (Experience for Kyndryl states "Established and scaled MLOps practices for AI/ML lifecycle management")
+[/REVIEW]
