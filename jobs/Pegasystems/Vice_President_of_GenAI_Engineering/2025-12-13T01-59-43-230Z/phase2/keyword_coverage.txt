@@ -1,0 +1,6 @@
+[KEYWORD_COVERAGE]
+matched: ['AI/ML', 'Generative AI', 'LLMs', 'RAG', 'agentic systems', 'NLP', 'enterprise-scale AI products', 'responsible AI', 'governance', 'compliance', 'security', 'LLM orchestration', 'MLops', 'model evaluation', 'prompt management', 'observability', 'vendor ecosystem', 'strategic roadmap', 'global team leadership', 'cloud-native deployments', 'microservices', 'Kubernetes', 'APIs', 'stakeholder management', 'talent development', 'thought leadership', 'enterprise B2B scale', 'executive presence', 'data privacy', 'AI Evangelism']
+missing: ['enterprise-grade security', 'prioritize investments', 'set KPIs', 'agentic architectures', 'engineering excellence', 'academia', 'strategic customer dialogues', 'research-oriented engineering teams', 'academic/industry partnerships', 'AI vendor ecosystem', 'strategic build/buy/partner decision-making', 'publications', 'patents', 'conference speaking']
+coverage_percent: 77
+critical_gaps: []
+[/KEYWORD_COVERAGE]

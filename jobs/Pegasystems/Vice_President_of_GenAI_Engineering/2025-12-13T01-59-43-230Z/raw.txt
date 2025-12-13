@@ -1,0 +1,91 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+[SUMMARY]
+A visionary technology executive with over 21 years of global experience, specializing in transforming enterprise IT landscapes through strategic leadership, AI innovation, and operational excellence. Proven track record in defining and executing multi-year roadmaps for platform modernization, cloud adoption, and the integration of cutting-edge AI/ML solutions. Expertise in establishing robust governance frameworks, driving significant cost efficiencies through FinOps principles, and leading globally distributed engineering teams to achieve measurable business outcomes. Adept at translating complex technical strategies into tangible business value for BFSI, Insurance, and Healthcare sectors. As an experienced leader in AI-driven automation and advanced analytics, I am poised to define and lead Pegasystems' Generative AI Engineering strategy and drive its next wave of innovation.
+[/SUMMARY]
+[CORE_SKILLS]
+Strategic Leadership, AI/GenAI Strategy & Vision, Enterprise AI Product Launch, Platform Modernization, Engineering Excellence, Operational Excellence, Global Team Leadership, Cloud Native Architectures, MLOps, Model Evaluation, Prompt Management, Observability, Responsible AI, Data Privacy, Security & Governance, FinOps, Stakeholder Management, Cross-functional Collaboration, Vendor Ecosystem Management, AI Evangelism, Talent Development & Mentorship.
+[/CORE_SKILLS]
+[EXPERIENCE]
+## **PwC — Senior Manager**
+**Sep 2024 – Present**
+- Led strategic advisory engagements focused on ITSM assessment and optimization for enterprise healthcare and BFSI clients, ensuring stringent alignment with NIST and ITIL standards.
+- Architected and implemented an AI-driven automation framework that achieved a **60% reduction** in repeat failures, significantly elevating service reliability.
+- Directed a FinOps initiative to develop comprehensive hybrid-cloud cost dashboards and accelerators, enabling proactive and strategic budget optimization.
+- Cultivated robust relationships with global leadership across US, LatAm, Europe, and APAC to architect and deliver transformative platform modernization roadmaps.
+
+## **Kyndryl Solutions Pvt. Ltd. — Associate Director**
+**Sep 2021 – Aug 2024**
+- Directed global technology service delivery for extensive, mission-critical data center portfolios, demonstrating significant enhancements in reliability and capacity management.
+- Spearheaded a strategic **$30M+ vendor displacement program**, successfully insourcing key infrastructure services to enhance organizational agility and mitigate external dependencies.
+- Championed critical Cloud & DevOps enablement initiatives, including large-scale AWS migrations and the development of an Agentic AI system designed for autonomous response to AIOps insights.
+- Managed the operational integrity of over **100,000 physical IT assets** (servers, network devices), ensuring sustained high availability and peak performance.
+- Established and matured MLOps practices and model evaluation frameworks for AI/ML initiatives, ensuring operational readiness and efficacy.
+
+## **IBM India Pvt. Ltd. — Global Process Owner**
+**Jan 2014 – Aug 2021**
+- Managed an annual OPEX budget of **$25M**, achieving **$8M in savings** through strategic automation, vendor contract renegotiations, and optimized license management.
+- Provided overarching global delivery leadership for complex, large-scale service engagements, ensuring consistent operational excellence across multiple global delivery centers.
+- Scaled the Capacity Management Center of Excellence from an initial team of **10 to 250 members** across 5 countries, establishing a critical capability for enterprise IT planning.
+- Standardized ITIL-based frameworks to govern end-to-end capacity management processes, enhancing efficiency and predictability.
+- Modernized contact center operations by integrating AI-driven insights to dramatically accelerate response and resolution times.
+
+## **Wipro Technologies — Senior Consultant**
+**Jun 2010 – Nov 2013**
+- Delivered high-impact ITSM consulting and automation strategies for major clients in the telecom and BFSI sectors.
+- Introduced standardized operating procedures (SOPs) and advanced dashboards that demonstrably improved delivery speed and service quality.
+- Led Problem and Change Management functions, driving root cause analysis, implementing risk-controlled changes, chairing the Change Advisory Board (CAB), and ensuring robust governance.
+- Conducted comprehensive ITIL assessments and implemented tailored frameworks to enhance compliance and operational efficiency for critical enterprise systems.
+
+## **Tech Mahindra Ltd. — Senior Technical Associate**
+**Oct 2006 – May 2010**
+- Deployed and managed enterprise-grade monitoring tools, including Nagios, Zabbix, and HP OpenView, across large-scale infrastructures.
+- Orchestrated major release deployments with minimal service disruption for British Telecom's critical systems.
+- Led application support for NHS UK, ensuring timely and effective resolution of complex issues across vital healthcare platforms.
+
+## **Mainstay Teleservices — Sr. 2nd Line Specialist**
+**Mar 2003 – Oct 2006**
+- Managed and resolved high-impact technical escalations for mission-critical telecom systems.
+- Significantly reduced system downtime through rapid issue resolution and advanced troubleshooting methodologies.
+- Provided technical training and mentorship to L1/L2 engineers and authored critical SOP documentation.
+[/EXPERIENCE]
+[PROJECTS]
+## **AI-Driven Automation Framework**
+Engineered an enterprise-wide AI-driven automation framework to proactively identify and resolve recurring IT infrastructure issues. This initiative resulted in a **60% reduction** in repeat failures and a substantial improvement in overall service reliability.
+
+## **Agentic AI System for AIOps**
+Spearheaded the development and deployment of an Agentic AI system designed to autonomously analyze AIOps insights and trigger remediation actions. This project enhanced incident response times and reduced manual intervention in critical infrastructure operations.
+
+## **Hybrid-Cloud Cost Optimization Dashboards**
+Led a FinOps team to architect and develop advanced hybrid-cloud cost dashboards and accelerators. This strategic initiative enabled proactive budget management and drove significant cost optimization across cloud and on-premise environments.
+
+## **Contact Center AI Integration**
+Led the modernization of contact center operations by integrating AI-driven insights. This transformation significantly accelerated response times and improved the efficiency of customer support workflows.
+[/PROJECTS]
+[TECHNICAL_SKILLS]
+**AI/ML:** LLMs, RAG, Agentic Systems, NLP, AIOps, Prompt Engineering, Model Evaluation Frameworks
+**Cloud & FinOps:** Azure Monitor, AWS CloudWatch, Grafana, CoreStack, ECAM, Flexera, FinOps Best Practices
+**Monitoring & Observability:** Datadog, New Relic, Prometheus, ScienceLogic, Tanzu, Distributed Tracing, Telemetry Correlation
+**ITSM & Automation:** ServiceNow, Remedy, Jira Service Management, Ansible, CI/CD (GitHub Actions), API-driven Automation, JavaScript, Python, Shell Scripting
+**Infrastructure:** VMware Tanzu, HP OpenView, SolarWinds, Zabbix, Kubernetes, Microservices
+**BI & Analytics:** Power BI, MS Visio
+[/TECHNICAL_SKILLS]
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
