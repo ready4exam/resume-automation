@@ -1,0 +1,76 @@
+[CONTACT]
+Hyderabad, India
+8520977573
+keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+An accomplished technology executive with 21+ years of global leadership experience, including 7+ years in AI/ML initiatives and 5+ years directly leading Generative AI implementations across diverse enterprise environments. Proven expertise in defining strategic vision, architecting advanced GenAI platforms, and driving end-to-end development from research to scalable deployment. Adept at balancing rapid innovation with stringent enterprise-grade security, compliance, and responsible AI governance, leading globally distributed engineering teams to deliver measurable business value. Poised to shape the future of AI-driven workflow automation and deliver transformative solutions for global enterprise clients at Pegasystems.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Generative AI Strategy & Vision, AI/ML Product Development, Large Language Models (LLMs), RAG & Agentic Systems, Enterprise AI Governance, Responsible AI, MLOps, Cloud-Native Architecture, Global Engineering Leadership, Cross-functional Alignment, Talent Development, Thought Leadership, FinOps, Digital Transformation
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Advised enterprise healthcare and BFSI clients on IT strategy and FinOps, ensuring alignment with NIST and ITIL standards for critical infrastructure.
+- Designed and operationalized an AI-driven automation framework that reduced repeat service failures by 60% and enhanced system reliability at enterprise scale.
+- Led FinOps initiatives, developing hybrid-cloud cost optimization strategies and accelerators for complex client environments.
+- Cultivated relationships with global leadership across US, LatAm, Europe, and APAC to deliver advanced platform modernization roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Headed Global Service Reliability Engineering & Platform Operations for mission-critical data center portfolios, ensuring enhanced reliability and capacity management.
+- Championed Cloud & DevOps enablement, including strategic AWS migrations and the development of an Agentic AI system for autonomous AIOps response, integrating MLOps best practices.
+- Managed a $30M+ vendor displacement program, insourcing critical infrastructure services to improve operational agility and reduce dependency across global operations.
+- Oversaw operations for 100,000+ physical IT assets, focusing on high availability, performance, and enterprise resilience.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Provided global delivery leadership for complex, multi-country service engagements, maintaining consistency and quality across international centers.
+- Grew the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing global ITIL-based frameworks for operational excellence.
+- Modernized contact center operations by integrating AI-driven insights to accelerate response times and enhance service delivery.
+- Managed $25M annual OPEX, achieving $8M in savings through strategic automation, vendor renegotiation, and license optimization.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, enhancing service quality and operational efficiency.
+- Introduced standardized operating procedures and performance dashboards that significantly improved delivery speed and quality across client engagements.
+- Led Problem and Change Management, driving root cause analysis, implementing risk-controlled changes, and ensuring robust governance frameworks.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise monitoring tools, ensuring comprehensive visibility and proactive issue identification for large-scale IT environments.
+- Led major release deployments with minimal disruption for British Telecom, demonstrating strong command of change management processes.
+- Directed application support for NHS UK, ensuring timely resolution of critical issues across healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Handled high-impact escalations and provided specialized support for mission-critical telecom systems, reducing downtime through rapid resolution.
+- Developed and authored SOP documentation, enhancing knowledge transfer and L1/L2 engineer training.
+[/EXPERIENCE]
+
+[PROJECTS]
+- AI-Enabled Academic Strategy & Institutional Intelligence Leadership
+- Founder & Executive Architect — AI-Driven Education Platforms
+- Platform vision, monetization model, and enterprise scalability
+- AI-driven dashboards, analytics, and decision intelligence
+- End-to-end leadership across AI strategy, architecture, delivery, and ROI
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Generative AI Architectures (LLM Orchestration, RAG, Agentic Systems), MLOps & AI Observability (Model Evaluation, Prompt Management, Performance Monitoring), Cloud-Native Architectures (Microservices, Kubernetes, APIs, AWS, Azure), Software Engineering (Python, JavaScript, Shell, API Automation, CI/CD with GitHub Actions), Enterprise Integration & Automation, Data Pipeline Engineering, Security & Compliance (Data Privacy, Model Governance, Responsible AI Frameworks), FinOps Tools (Azure Monitor, CloudWatch, Grafana, CoreStack)
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
