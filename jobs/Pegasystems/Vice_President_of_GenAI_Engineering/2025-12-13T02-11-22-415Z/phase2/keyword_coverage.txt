@@ -1,0 +1,44 @@
+```
+[KEYWORD_COVERAGE]
+matched: [
+    "Generative AI (GenAI)",
+    "AI/ML Expertise (deep)",
+    "LLMs, RAG, Agentic Systems",
+    "NLP",
+    "Launching/Scaling AI Products (enterprise-scale B2B)",
+    "AI-driven workflow automation",
+    "MLOps",
+    "Prompt management",
+    "Observability (AI/ML)",
+    "Enterprise SaaS architectures",
+    "Cloud-native deployments (microservices, Kubernetes, APIs)",
+    "Software Leadership (15+ years)",
+    "AI/ML Leadership (7+ years, 5+ GenAI)",
+    "Global/Distributed Engineering Teams (50+ members)",
+    "Strategic Leadership & Roadmap (GenAI vision, multi-year)",
+    "Technical Execution (end-to-end development, research to deployment)",
+    "Architectural consistency, security, compliance",
+    "Vendor ecosystem management (cost, risk)",
+    "Talent Development (recruit, mentor global teams)",
+    "Responsible AI, Data Privacy, Security, Model Governance (regulated environments)",
+    "Communication, Executive Presence, Stakeholder Management",
+    "Business Value Translation (technology to business value)",
+    "Cross-functional alignment"
+]
+missing: [
+    "Model evaluation",
+    "Thought Leadership (publications, conferences, insights)",
+    "Pega software experience (preferred)",
+    "Research-oriented engineering teams (preferred)",
+    "Academic/Industry Partnerships (preferred)",
+    "Advanced degree (MS/PhD in CS/AI) (preferred)",
+    "Trialling GenAI technologies / understanding pitfalls"
+]
+coverage_percent: 73
+critical_gaps: [
+    "Model evaluation",
+    "Thought Leadership (publications, conferences, insights)",
+    "Trialling GenAI technologies / understanding pitfalls"
+]
+[/KEYWORD_COVERAGE]
+```

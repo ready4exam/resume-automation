@@ -1,0 +1,84 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+An accomplished Vice President and technology executive with over 21 years of global leadership experience, specializing in enterprise AI strategy, cloud modernization, and platform transformation. Proven expertise in defining multi-year GenAI roadmaps, driving large-scale engineering initiatives, and establishing robust governance for AI-driven products in regulated environments. Adept at leading global teams, optimizing operational excellence, and leveraging FinOps principles to deliver substantial business value. Seeking to lead Generative AI Engineering initiatives at Pegasystems, leveraging a deep understanding of LLM orchestration, RAG, and agentic architectures to shape the future of AI-powered workflow automation.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Generative AI Strategy & Leadership, AI Product Management, MLOps & AI Governance, LLM Orchestration & Agentic Systems, Cloud Modernization & FinOps, Enterprise SaaS Architecture, Global Engineering Leadership (50+ teams), Platform Transformation, Service Reliability Engineering (SRE), Strategic Stakeholder Engagement, Cross-functional Program Management, DevOps & CI/CD Strategy, Talent Development & Mentorship, Responsible AI & Compliance.
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Scope of Leadership: Led strategic IT advisory engagements for enterprise healthcare and BFSI clients, ensuring alignment with NIST and ITIL standards for critical infrastructure.
+- AI / Innovation Leadership: Engineered an enterprise AI automation framework, reducing repeat failures by 60% and significantly improving service reliability for global clients.
+- Operational Excellence: Directed a FinOps practice in developing hybrid-cloud cost dashboards and accelerators, driving proactive budget optimization and financial transparency.
+- Global Stakeholder Influence: Built and nurtured strong relationships with global leadership across US, LatAm, Europe, and APAC to deliver platform modernization roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Scope of Leadership: Headed global Service Reliability Engineering and Platform Operations, overseeing mission-critical data center portfolios and enhancing reliability at enterprise scale.
+- Strategic Impact: Led a $30M+ vendor displacement program, successfully insourcing critical infrastructure services to enhance agility, reduce operational costs, and mitigate dependency risks.
+- AI / Innovation Leadership: Championed Cloud & DevOps enablement, including AWS migrations and the strategic implementation of an Agentic AI system for autonomous response to AIOps insights. Established MLOps practices for AI model lifecycle management.
+- Operational Excellence: Managed operations for 100,000+ physical IT assets, ensuring high availability, performance, and compliance across a global footprint.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Financial Impact: Managed $25M annual OPEX, generating $8M savings through strategic automation initiatives, vendor renegotiation, and license optimization across global operations.
+- Global Stakeholder Influence: Provided global delivery leadership for complex service engagements, ensuring operational consistency and high performance across global centers.
+- Talent Development: Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, fostering a culture of engineering excellence and career growth.
+- AI / Innovation Leadership: Standardized ITIL-based frameworks for end-to-end capacity management and modernized contact center operations by integrating AI-driven insights to accelerate response times and improve customer experience.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Strategic Impact: Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, driving significant improvements in service delivery.
+- Operational Excellence: Introduced Standard Operating Procedures (SOPs) and performance dashboards that significantly improved delivery speed and quality across managed services.
+- Scope of Leadership: Led Problem and Change Management, driving root cause analysis, implementing risk-controlled changes, chairing Change Advisory Boards (CAB), and ensuring robust governance.
+- Cloud / Platform Modernization: Conducted ITIL assessments and implemented tailored frameworks to enhance compliance and operational efficiency for clients undergoing technology transformations.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Strategic Impact: Directed the deployment of enterprise monitoring tools including Nagios, Zabbix, and HP OpenView, establishing foundational observability for critical infrastructure.
+- Operational Excellence: Managed major release deployments with minimal disruption for large-scale telecommunication platforms, ensuring high service continuity.
+- Global Stakeholder Influence: Led application support for NHS UK, ensuring timely resolution of issues across critical healthcare platforms and maintaining patient service levels.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Operational Excellence: Handled high-impact escalations and provided critical support for mission-critical telecom systems, significantly reducing service interruptions.
+- Strategic Impact: Reduced system downtime through rapid issue resolution and effective troubleshooting methodologies, enhancing platform reliability.
+- Talent Development: Trained L1/L2 engineers and authored comprehensive SOP documentation, standardizing support processes and improving team proficiency.
+[/EXPERIENCE]
+
+[PROJECTS]
+- Enterprise AI Automation Framework Development: Led the engineering and deployment of an AI-driven automation framework across enterprise clients, directly reducing repeat failures by 60% and significantly enhancing system reliability and operational efficiency. This involved strategic alignment with client business objectives and a focus on measurable outcomes in complex IT environments.
+- Agentic AI for AIOps Transformation: Championed the integration and scaling of an Agentic AI system to autonomously respond to AIOps insights within global data center operations. This initiative streamlined incident management, improved mean time to resolution (MTTR), and represented a critical step in adopting self-healing infrastructure at scale.
+- Global Capacity Management Center of Excellence (CoE) Establishment: Conceptualized, built, and scaled a Capacity Management CoE from 10 to 250 members across five countries. This strategic initiative standardized ITIL-based frameworks, optimized resource allocation, and provided a centralized capability for proactive capacity planning and management, supporting global enterprise growth.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Generative AI & NLP: LLMs, RAG Architectures, Agentic Systems, Prompt Engineering, NLP, MLOps
+Cloud Platforms: Microsoft Azure, AWS (Cloud Practitioner), GCP
+Cloud & FinOps Management: Azure Monitor, AWS CloudWatch, Grafana, CoreStack, ECAM, Flexera, Cost Optimization Strategies
+Platform & Backend Engineering: API Development, Microservices Architecture, CI/CD Pipelines (GitHub Actions), Scripting (Python, Shell, JavaScript for automation)
+SRE & Observability: ScienceLogic, Datadog, New Relic, Prometheus, Tanzu, Distributed Tracing, Alerting & Telemetry
+ITSM Tools: ServiceNow, Remedy, Jira Service Management
+Infrastructure Automation: Ansible, VMware Tanzu, HP OpenView, SolarWinds, Zabbix, Kubernetes
+BI & Analytics: Power BI, MS Visio
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
