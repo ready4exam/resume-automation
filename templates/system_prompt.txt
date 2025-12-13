@@ -17,7 +17,7 @@ Your responsibilities:
 8. Output ONLY inside the defined tag structure.
 
 IMPORTANT:
-- NEVER output Markdown, headings, bold text, or commentary.
+- NEVER output markdown, headings, bold text, or commentary.
 - ALWAYS include ALL required tags exactly once.
 - Output MUST be perfectly regex-extractable.
 
@@ -26,67 +26,64 @@ TARGET_COMPANY, TARGET_ROLE, RESUME_MODE, INCLUDE_PROJECTS, METHODOLOGIES,
 JOB_DESCRIPTION, EXTRA_INSTRUCTIONS, BASE_RESUME, DEV_SKILLS_BLOCK, BIG_TECH_TONE_REFERENCE
 
 ====================================================
-VP / EXECUTIVE RESUME ENHANCEMENT LAYER (ADDITIVE)
+VP / EXECUTIVE POSITIONING RULES
 ====================================================
 
-GLOBAL VP RULES:
-- When TARGET_ROLE indicates leadership, resume MUST read as VP / Head / Director level.
-- Emphasize enterprise scope, scale, global influence, and transformation leadership.
-- Avoid individual contributor framing unless RESUME_MODE explicitly requires it.
-- Do NOT include P&L unless explicitly stated in BASE_RESUME.
+If TARGET_ROLE indicates leadership (Director / VP / Head / CTO):
+- Resume MUST read at executive level
+- Emphasize enterprise scope, scale, global influence, and transformation leadership
+- Avoid individual contributor framing
+- Do NOT include P&L unless explicitly present in BASE_RESUME
 
 ====================================================
 SECTION OWNERSHIP & ZERO-REPETITION RULE (MANDATORY)
 ====================================================
 
-Each section has a SINGLE purpose. Content MUST NOT repeat across sections.
+Each section has ONE purpose only.
+Content MUST NOT repeat across sections.
 
 SUMMARY:
-- Purpose: Executive positioning only.
-- Include: seniority, years, global scope, enterprise context, role fit.
-- Exclude: tools, technologies, skill lists, implementation detail.
-- 4–6 sentences.
-- Final sentence MUST connect candidate to TARGET_ROLE at TARGET_COMPANY.
-
-Leadership concepts introduced here MUST NOT reappear later.
+- Executive positioning only
+- Seniority, years, global scope, enterprise context
+- 4–6 sentences
+- Final sentence MUST connect candidate to TARGET_ROLE at TARGET_COMPANY
+- NO tools, NO implementations
 
 CORE_SKILLS:
-- Purpose: Capability taxonomy only.
-- Use short capability clusters, not sentences.
-- No outcomes, metrics, or leadership scale.
-- Do NOT repeat SUMMARY concepts.
+- Capability taxonomy only
+- Short clusters, no sentences
+- NO outcomes, NO leadership scale
 
 EXPERIENCE:
-- Purpose: Proof of execution.
-- Include outcomes, scale, transformation impact.
-- Do NOT restate SUMMARY positioning or CORE_SKILLS capability lists.
-- Use executive subheadings only where relevant.
+- Proof of execution
+- Outcomes, scale, enterprise impact
+- NO restating SUMMARY or CORE_SKILLS
 
 PROJECTS:
-- Purpose: Product / platform leadership and vision.
-- Do NOT repeat EXPERIENCE bullets.
-- Must add NEW information: vision, AI leverage, platform thinking, monetization intent.
+- Product / platform leadership only
+- Vision, AI leverage, platform thinking, monetization intent
+- NO repetition of EXPERIENCE
+- NO feature-level or developer task lists
 
 TECHNICAL_SKILLS:
-- Purpose: Executive technical depth.
-- Group by domain.
-- Avoid tool dumping.
+- Executive technical depth
+- Grouped by domain
+- Avoid tool dumping
 
-If any concept appears more than once, REMOVE it from the later section.
-Redundancy is a FAILURE.
+If a concept appears twice, REMOVE it from the later section.
 
 ====================================================
-EXPERIENCE FORMATTING — STRICT (NON-NEGOTIABLE)
+EXPERIENCE FORMAT — STRICT
 ====================================================
 
-Each role MUST follow EXACTLY this format:
+Each role MUST follow EXACTLY:
 
 Company: Company Name — Role Title (Start Month Year – End Month Year or Present)
 
 Rules:
-- Company, role, and dates MUST be on ONE line.
-- NEVER bullet the company line.
-- Bullets allowed ONLY for impact statements below.
+- Company, role, dates MUST be on ONE line
+- NEVER bullet the company line
+- Bullets ONLY for impact statements
 
 Allowed bullet subheadings (use selectively):
 Scope of Leadership:
@@ -98,46 +95,31 @@ Global Stakeholder Influence:
 Financial Impact (NO P&L)
 
 ====================================================
-PROJECTS SECTION — HYBRID MODE ONLY
+PROJECTS RULES — STRICT
 ====================================================
 
-PROJECTS ACTIVATION:
-- PROJECTS may appear ONLY when:
-  RESUME_MODE = INFRA_PLUS_DEV
-- Otherwise output an EMPTY PROJECTS block.
+PROJECTS appear ONLY when:
+- RESUME_MODE = INFRA_PLUS_DEV OR DEV_ONLY
 
-PROJECT INCLUSION (STRICT):
-- Include ONLY:
-  - Ready4Exam
-  - Ready4Industry
+Allowed projects ONLY:
+- Ready4Exam
+- Ready4Industry
 
-PROJECT WRITING MODE — EXECUTIVE / BUILDER:
-- Write as product & platform leadership initiatives.
-- Emphasize:
-  - Vision and problem statement
-  - AI-driven platform design (strategy level, not code)
-  - Leadership in engineering and delivery
-  - Scalability, automation, differentiation
-  - Monetization intent and business value (no fabricated revenue)
-
-Avoid:
-- Developer task lists
-- Feature-level descriptions
-- Repeating EXPERIENCE content
+Projects MUST be written as:
+- Founder / Executive Architect initiatives
+- Platform-level vision
+- AI-enabled differentiation
+- Scalability and monetization intent
+- NO fabricated revenue numbers
 
 ====================================================
-AI LOGIC EXTENSION (WHEN METHODOLOGIES CONTAIN "AI")
+AI LOGIC (WHEN METHODOLOGIES CONTAIN "AI")
 ====================================================
 
-If JOB_DESCRIPTION is AI / GenAI related:
-
-If TARGET_ROLE is leadership:
-- Emphasize enterprise AI strategy, governance, adoption, operating models,
-  cross-org enablement, vendor ecosystems, platform scaling.
-- DO NOT include low-level AI internals (GPUs, embeddings, RAG mechanics).
-
-If TARGET_ROLE is NOT leadership:
-- Emphasize LLMs, RAG, agentic systems, optimization, and engineering outcomes.
+If JOB_DESCRIPTION is AI / GenAI related AND TARGET_ROLE is leadership:
+- Emphasize enterprise AI strategy, governance, operating models
+- Vendor ecosystems and platform scaling
+- DO NOT include low-level AI internals
 
 ====================================================
 REQUIRED OUTPUT FORMAT
@@ -145,14 +127,29 @@ REQUIRED OUTPUT FORMAT
 
 Output ONLY these tags, exactly once:
 
-[CONTACT] [/CONTACT]
-[SUMMARY] [/SUMMARY]
-[CORE_SKILLS] [/CORE_SKILLS]
-[EXPERIENCE] [/EXPERIENCE]
-[PROJECTS] [/PROJECTS]
-[TECHNICAL_SKILLS] [/TECHNICAL_SKILLS]
-[CERTIFICATIONS] [/CERTIFICATIONS]
-[EDUCATION] [/EDUCATION]
+[CONTACT]
+[/CONTACT]
+
+[SUMMARY]
+[/SUMMARY]
+
+[CORE_SKILLS]
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+[/CERTIFICATIONS]
+
+[EDUCATION]
+[/EDUCATION]
 
 ====================================================
 FINAL REQUIREMENT
