@@ -1,0 +1,94 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+Visionary technology executive with 21+ years of global leadership experience, specializing in enterprise-scale AI/ML transformations and strategic innovation across regulated sectors. Proven expertise in defining and executing multi-year GenAI roadmaps, launching secure, compliant, and high-value AI-powered products. Adept at leading and scaling globally distributed engineering organizations, fostering a culture of technical excellence and responsible AI innovation. Drives significant business impact through advanced platform solutions, leveraging deep insights into LLM orchestration, RAG, and agentic architectures. An accomplished leader ready to shape the future of AI-driven workflow automation as Vice President of GenAI Engineering at Pegasystems.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Generative AI Strategy & Product Leadership
+Enterprise AI/ML Governance & Adoption
+Cloud-Native Architecture & Platform Engineering
+MLOps & AI Observability
+Global Engineering Leadership & Talent Development
+FinOps & Strategic Cost Management
+Responsible AI & Compliance Frameworks
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+Strategic Impact: Advised enterprise clients on IT strategy and GenAI adoption frameworks, aligning with NIST and ITIL standards for regulated environments.
+AI / Innovation Leadership: Engineered an AI-driven automation framework, reducing repeat failures by 60% and significantly improving service reliability for critical operations.
+Financial Impact: Directed FinOps teams in developing hybrid-cloud cost optimization dashboards and accelerators, driving proactive budget management and efficiency.
+Global Stakeholder Influence: Built robust relationships with global leadership (US, LatAm, Europe, APAC) to drive enterprise-wide platform modernization roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+Scope of Leadership: Led global SRE and platform operations for mission-critical data center portfolios, overseeing 100,000+ physical IT assets across global regions.
+AI / Innovation Leadership: Championed Cloud & DevOps enablement, including strategic AWS migrations and the deployment of an Agentic AI system for autonomous AIOps response.
+Operational Excellence: Established robust MLOps practices and observability frameworks to enhance reliability and performance of AI-powered systems at scale.
+Strategic Impact: Directed a $30M+ vendor displacement program, insourcing critical infrastructure services to enhance agility, reduce operational costs, and improve control.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+Scope of Leadership: Provided global delivery leadership for complex, high-stakes service engagements (e.g., Scotiabank), ensuring consistent excellence across international centers.
+Strategic Impact: Managed $25M annual operational expenditures, generating $8M in savings through strategic automation, vendor renegotiation, and license optimization initiatives.
+Talent Development: Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing global talent and operational standards.
+AI / Innovation Leadership: Modernized contact center operations by integrating AI-driven insights, significantly accelerating response times and improving service quality.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+Strategic Impact: Led ITSM consulting and automation strategy engagements for major telecom and BFSI clients, driving significant improvements in service delivery speed and quality.
+Operational Excellence: Introduced standardized operating procedures and performance dashboards, enhancing process efficiency and governance across critical IT operations.
+Transformation Impact: Directed Problem and Change Management, leading Root Cause Analysis (RCA) and ensuring risk-controlled changes with robust governance frameworks.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+Operational Excellence: Led the deployment and management of enterprise monitoring tools (e.g., Nagios, Zabbix, HP OpenView) for critical client infrastructures.
+Global Stakeholder Influence: Managed major release deployments for British Telecom, ensuring minimal disruption and high availability across complex systems.
+Service Delivery: Directed application support for NHS UK, ensuring timely resolution of issues across critical healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+Operational Excellence: Led resolution of high-impact escalations for mission-critical telecom systems, significantly reducing downtime and improving service continuity.
+Talent Development: Trained L1/L2 engineers and authored comprehensive Standard Operating Procedures (SOPs), enhancing team capabilities and operational consistency.
+[/EXPERIENCE]
+
+[PROJECTS]
+Project: Ready4Exam (Conceptual) – GenAI-Powered Adaptive Learning Platform
+Vision: Architected and led the strategic vision for a GenAI-powered adaptive learning platform, designed to revolutionize personalized education and dynamic assessment at scale.
+AI-Driven Platform Design: Orchestrated the integration of advanced LLMs for real-time content generation, personalized curriculum adaptation, and automated feedback loops, ensuring accuracy and ethical AI governance.
+Leadership & Delivery: Directed cross-functional engineering and product teams from concept to prototype, establishing architectural patterns for scalability, security, and multi-tenancy in a regulated environment.
+Strategic Impact: Defined the platform's differentiation through intelligent tutoring agents and dynamic assessment creation, projecting significant enhancements in learner engagement and knowledge retention, with clear pathways for subscription and enterprise licensing models.
+
+Project: Ready4Industry (Conceptual) – Enterprise GenAI Solutioning & Automation Platform
+Vision: Spearheaded the conceptualization and strategic blueprint for an enterprise-grade GenAI platform aimed at accelerating complex workflow automation and solutioning for global industries.
+AI-Driven Platform Design: Guided the development of a secure, modular platform leveraging LLMs for intelligent process mapping, API integration, and automated code generation, embedding responsible AI principles from inception.
+Leadership & Delivery: Drove the technical architecture, MLOps strategy, and engineering roadmap for a scalable, cloud-native platform capable of integrating with diverse enterprise systems and data sources.
+Strategic Impact: Designed for significant operational efficiency gains, rapid time-to-market for new enterprise applications, and the creation of new revenue streams through industry-specific GenAI solution templates and API monetization.
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Generative AI & MLOps: LLMs, RAG, Agentic Systems, NLP, Prompt Engineering, Model Evaluation, AI Observability, Responsible AI Frameworks
+Cloud & Platform Engineering: Azure, AWS, GCP, Kubernetes, Microservices, APIs, Cloud-Native Architectures, Serverless Functions, Data Pipelines, Enterprise SaaS Architectures
+SRE & Operational Excellence: Site Reliability Engineering, Distributed Tracing, Telemetry, Alerting, SLO-based Monitoring, Incident Management, High Availability
+DevOps & Automation: CI/CD (GitHub Actions), Infrastructure-as-Code, API-driven Automation, Python, JavaScript, Shell Scripting
+FinOps & Cost Optimization: Cloud Cost Management, Budget Optimization, Resource Governance, FinOps Tools (CoreStack, Flexera, ECAM)
+ITSM & Enterprise Tools: ServiceNow, Remedy, Jira Service Management, ITSM Frameworks (ITIL, NIST)
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
