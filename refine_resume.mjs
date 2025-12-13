@@ -4,7 +4,7 @@
 
 import fs from "fs";
 import path from "path";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google-generative-ai";
 import {
   Document,
   Packer,
@@ -177,6 +177,9 @@ async function main() {
   const jdFile = getArg("--job-desc-file");
   const rawFile = getArg("--raw-file");
   const outDir = getArg("--out-dir", "output");
+  const targetCompany = getArg("--company", "");
+  const targetRole = getArg("--role", "");
+  const resumeMode = getArg("--resume-mode", "");
 
   if (!jdFile || !rawFile) {
     console.error("Usage: node refine_resume.mjs --job-desc-file jd.txt --raw-file raw.txt");
@@ -189,8 +192,15 @@ async function main() {
 
   fs.mkdirSync(outDir, { recursive: true });
 
+  // ------------------------------------------------------------------------
+  // FINAL PHASE-2 PROMPT (with EXTRA_INSTRUCTIONS auto-read by model)
+  // ------------------------------------------------------------------------
   const prompt = `
 ${reviewPrompt}
+
+TARGET_COMPANY: ${targetCompany}
+TARGET_ROLE: ${targetRole}
+RESUME_MODE: ${resumeMode}
 
 JOB_DESCRIPTION:
 ${jd}
@@ -199,17 +209,18 @@ PHASE_1_RESUME:
 ${phase1}
 
 TASK:
-Review as VP hiring manager.
-If gaps exist, FIX THEM.
-If neutral, strengthen positioning.
-If already strong, refine for clarity.
-Avoid repetition. Avoid overdoing.
+You MUST enforce:
+- EXTRA_INSTRUCTIONS displayed in PHASE_1_RESUME
+- Company-line format repair
+- VP-level language correction
+- Zero duplication, zero inflation
+
 Output ONLY the final tagged resume.
 `.trim();
 
   const finalText = await callGemini(prompt);
 
-  const company = safePart(jd.split("\n")[0], 25);
+  const company = safePart(targetCompany || jd.split("\n")[0], 25);
   const file = `resume_final_${company}.docx`;
 
   await buildDocx(finalText, path.join(outDir, file));
