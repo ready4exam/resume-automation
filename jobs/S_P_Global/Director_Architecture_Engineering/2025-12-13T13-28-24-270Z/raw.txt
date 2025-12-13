@@ -1,0 +1,94 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+An accomplished IT executive with 21+ years of global experience, driving technology strategy, platform modernization, and operational excellence across highly regulated sectors. Proven leader in architecting resilient distributed systems, implementing AI-driven automation, and spearheading large-scale engineering transformations. Adept at optimizing infrastructure through FinOps principles and fostering innovation to enhance service reliability and business agility. Positioned to lead architectural engineering initiatives for high-performance financial analysis platforms at S&P Global.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Strategic Technology Leadership
+Enterprise Architecture
+Distributed Systems Engineering
+AI/ML Solutioning
+Platform Modernization
+Service Reliability Engineering
+Cloud FinOps
+API Design & Development
+Engineering Program Management
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Directed strategic technology advisory for enterprise clients, integrating architecture best practices for regulated BFSI sectors.
+- Architected and implemented an AI-driven automation framework, significantly reducing system failures and enhancing service reliability.
+- Spearheaded FinOps initiatives, delivering hybrid-cloud cost optimization strategies and dashboards for proactive resource management.
+- Collaborated with global leadership to define and execute platform modernization roadmaps, driving strategic architectural transformation.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led global SRE and platform operations for mission-critical distributed systems, ensuring high reliability and capacity management.
+- Directed a $30M+ infrastructure insourcing program, enhancing platform agility and strategic control over critical services.
+- Drove cloud enablement and AWS migrations, deploying an Agentic AI system for autonomous response to AIOps insights.
+- Managed operational integrity of 100,000+ IT assets, optimizing for high availability and performance across a vast distributed estate.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed $25M annual OPEX, realizing $8M savings by architecting automation and optimizing vendor contracts for platform efficiency.
+- Provided global delivery leadership for complex financial sector engagements, ensuring architectural consistency across distributed centers.
+- Built and scaled a global Capacity Management Center of Excellence (10 to 250 members) to optimize resource allocation for distributed platforms.
+- Standardized frameworks for end-to-end capacity management, enhancing system resilience and performance.
+- Modernized contact center operations by integrating AI-driven insights, accelerating incident response and resolution.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Consulted on automation strategies for major BFSI customers, enhancing operational workflows and system integration.
+- Implemented standard operating procedures and performance dashboards, accelerating delivery and quality for complex IT services.
+- Led problem and change management, implementing risk-controlled changes and root cause analysis for critical IT systems.
+- Conducted IT assessments and implemented tailored frameworks to enhance system compliance and operational efficiency.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and configured enterprise monitoring solutions for complex infrastructure environments.
+- Managed major release deployments, ensuring minimal disruption for critical telecommunications platforms.
+- Led application support for critical healthcare platforms, ensuring timely issue resolution and service continuity.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Resolved high-impact technical escalations for mission-critical telecommunications systems.
+- Minimized system downtime through rapid incident resolution and advanced troubleshooting techniques.
+- Provided technical training and authored standard operating procedures for frontline engineering teams.
+[/EXPERIENCE]
+
+[PROJECTS]
+- AI-Enabled Academic Strategy & Institutional Intelligence Leadership
+- Founder & Executive Architect — AI-Driven Education Platforms
+- Platform vision, monetization model, and enterprise scalability
+- AI-driven dashboards, analytics, and decision intelligence
+- End-to-end leadership across AI strategy, architecture, delivery, and ROI
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Programming & Scripting: Java, Python, JavaScript, Shell Scripting
+Cloud Platforms & Distributed Systems: AWS, Azure, GCP, Apache Ignite, Containerization (Docker, Kubernetes), Microservices Architecture, Serverless
+AI/ML & Data Tools: AI/ML Frameworks & Platforms, Power BI, Advanced Analytics Tools
+Observability & Monitoring: Datadog, New Relic, Prometheus, Grafana, CloudWatch, Azure Monitor, ScienceLogic, Zabbix, Enterprise Log Management
+DevOps & Automation: GitHub Actions, Ansible, Infrastructure as Code, CI/CD Pipelines
+FinOps & Cost Management: Flexera, CoreStack, Cloud Cost Optimization Platforms
+IT Service Management: ServiceNow, Jira Service Management, Remedy
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
