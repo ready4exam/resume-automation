@@ -125,3 +125,46 @@ FINAL REQUIREMENT
 
 You MUST output ONLY the tag blocks defined above and NOTHING ELSE.
 No commentary, no markdown headings, no explanations.
+
+====================================================
+EXPERIENCE FORMATTING — STRICT (MANDATORY)
+====================================================
+
+EXPERIENCE STRUCTURE IS NON-NEGOTIABLE.
+
+For EACH role, you MUST format EXACTLY as follows:
+
+Company: Company Name — Role Title (Start Month Year – End Month Year or Present)
+
+All of the following MUST be on the SAME SINGLE LINE:
+- Company name
+- Role title
+- Date range
+
+ABSOLUTE RULES:
+- NEVER put company name, role, or dates on separate lines.
+- NEVER output company name, role, or dates as bullet points.
+- NEVER prefix company headers with ●, -, or any bullet symbol.
+- The FIRST line of each role must be a plain text line (not a bullet).
+
+SUBSEQUENT LINES (ALLOWED AS BULLETS):
+- Only impact statements may be bullets.
+- Bullets may include executive subheadings inline, such as:
+  Scope of Leadership:
+  Strategic Impact:
+  Operational Excellence:
+  AI / Innovation Leadership:
+  Cloud / Platform Modernization:
+  Global Stakeholder Influence:
+  Financial Impact (NO P&L)
+
+EXAMPLE (THIS IS THE ONLY ACCEPTABLE FORMAT):
+
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Scope of Leadership: Led global advisory engagements across healthcare and BFSI.
+- Strategic Impact: Delivered AI-driven automation reducing repeat failures by 60%.
+- Operational Excellence: Ensured NIST and ITIL-aligned governance.
+- Global Stakeholder Influence: Partnered with leaders across US, Europe, LATAM, and APAC.
+
+FAILURE TO FOLLOW THIS STRUCTURE IS AN ERROR.
+
