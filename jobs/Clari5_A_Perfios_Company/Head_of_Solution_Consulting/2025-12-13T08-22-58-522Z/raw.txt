@@ -1,0 +1,83 @@
+[CONTACT]
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+A highly accomplished executive with 21+ years of global leadership in enterprise software solutioning, pre-sales engineering, and strategic advisory, consistently driving technical wins for complex, multi-stakeholder deals. Proven expertise in building, leading, and scaling high-performance solution consulting teams across international markets (US, LatAm, Europe, APAC), with deep domain acumen in financial services, fraud, AML/KYC, and payment technologies. Adept at translating intricate technical landscapes into compelling business value for C-level stakeholders, developing robust solution architectures, and standardizing methodologies to optimize sales cycles. Leverages a strong foundation in AI-driven platform modernization and operational excellence to deliver transformative impact. Poised to lead Clari5's Solution Consulting organization, delivering differentiated value in fraud and financial crime prevention.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Solution Consulting Leadership: Pre-Sales Strategy, Global Team Building, Resource Allocation, Sales Enablement
+Enterprise Client Engagement: C-Level Advisory, Technical Win Ownership, RFP/RFI Leadership, Executive Presence
+Domain Expertise: Financial Services, Fraud Management, AML/KYC, Payments, Risk & Compliance Technology
+Solution Design & Architecture: Value Proposition Development, Business Case Creation, Platform Integration, Proof-of-Concept (PoC)
+Operational Excellence: Solution Consulting Methodologies, Playbook Development, Demo Environments, Reusable Assets
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic advisory engagements for enterprise healthcare and BFSI clients, ensuring alignment with industry standards and business objectives.
+- Engineered an AI-driven automation framework, reducing repeat failures by 60% and significantly improving service reliability for clients.
+- Directed FinOps initiatives, developing hybrid-cloud cost dashboards and accelerators to drive proactive budget optimization for large-scale operations.
+- Cultivated strong relationships with global leadership across US, LatAm, Europe, and APAC to deliver comprehensive platform modernization roadmaps.
+
+Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed global technology service delivery for large-scale mission-critical data center portfolios, enhancing reliability and capacity management.
+- Led a $30M+ vendor displacement program, insourcing critical infrastructure services to improve operational agility and reduce third-party dependency.
+- Championed Cloud & DevOps enablement, including AWS migrations and an Agentic AI system for autonomous response to AIOps insights.
+- Managed operations for 100,000+ physical IT assets, ensuring high availability and performance across complex enterprise environments.
+
+IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Provided global delivery leadership for complex financial services engagements (e.g., Scotiabank), ensuring consistent service excellence across global centers.
+- Managed $25M annual OPEX, generating $8M savings through automation, vendor renegotiation, and license optimization for enterprise operations.
+- Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, establishing global best practices.
+- Modernized contact center operations by integrating AI-driven insights to accelerate response times and improve customer experience.
+
+Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, driving operational efficiency.
+- Introduced standard operating procedures and performance dashboards, significantly improving delivery speed and quality.
+- Led Problem and Change Management, driving root cause analysis, implementing risk-controlled changes, and ensuring robust governance.
+
+Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed enterprise monitoring tools including Nagios, Zabbix, and HP OpenView for critical infrastructure.
+- Managed major release deployments for British Telecom, ensuring minimal disruption to service.
+
+Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Handled high-impact escalations and provided technical expertise for mission-critical telecom systems.
+- Reduced downtime through rapid issue resolution and effective troubleshooting.
+[/EXPERIENCE]
+
+[PROJECTS]
+- AI-Enabled Academic Strategy & Institutional Intelligence Leadership
+- Founder & Executive Architect — AI-Driven Education Platforms
+- Platform vision, monetization model, and enterprise scalability
+- AI-driven dashboards, analytics, and decision intelligence
+- End-to-end leadership across AI strategy, architecture, delivery, and ROI
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud Platforms & FinOps: Azure (Monitor), AWS (CloudWatch), GCP, CoreStack, ECAM, Flexera, Infrastructure-as-Code
+AI/Automation & Engineering: AI/ML Ops, Agentic AI Systems, API-driven Automation, Python, Shell Scripting, CI/CD (GitHub Actions), Data Pipeline Automation
+Platform & Backend: Backend Logic Development, API Design (Schemas, Endpoints), Data Modeling (Indexing, Query Tuning), Authentication, RBAC, Serverless Functions
+Observability & SRE: Datadog, New Relic, Prometheus, Grafana, ScienceLogic, Distributed Tracing, SLOs, Telemetry Correlation, Alert Hygiene
+ITSM & Infrastructure: ServiceNow, Remedy, Jira Service Management, Ansible, VMware Tanzu, HP OpenView, SolarWinds, Zabbix
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
