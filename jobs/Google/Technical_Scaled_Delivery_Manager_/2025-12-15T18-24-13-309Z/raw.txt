@@ -1,0 +1,90 @@
+[CONTACT]
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+An accomplished IT executive with 21+ years of global experience in technical delivery, scaled operations, and platform engineering leadership. Proven expertise in driving digital transformation, integrating AI-driven automation, and optimizing complex technical workflows across diverse enterprises. Adept at leading large cross-functional teams, managing vendor ecosystems, and translating strategic business goals into robust technical solutions. Drives significant operational efficiencies and enhances customer experience through innovative use of data analytics and emerging technologies. Poised to leverage deep technical acumen and leadership in a Technical Scaled Delivery Manager role at Google.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Strategic Technical Leadership
+Scaled Delivery & Operations Management
+Platform & Reliability Engineering
+AI/Automation & Digital Transformation
+Cross-functional Program Leadership
+Data-driven Optimization & Analytics
+Global Vendor & Stakeholder Management
+Technical Subject Matter Expertise
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Advised enterprise clients on technical strategy and FinOps, ensuring platform modernization aligned with industry standards and business objectives.
+- Engineered an AI-driven automation framework, including customGPT solutions, which proactively identified and reduced repeat technical failures.
+- Led FinOps initiatives, utilizing PowerBI-driven dashboards and creating accelerators for hybrid-cloud cost optimization and proactive budget management.
+- Collaborated with global leadership and cross-functional teams to define and execute complex platform modernization roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Drove global service reliability and operations for mission-critical data center portfolios, ensuring enhanced availability for 100,000+ IT assets.
+- Directed a $30M+ strategic vendor displacement program, insourcing critical infrastructure services to boost agility and control, and developing accelerators for service transition.
+- Championed Cloud & DevOps initiatives, including AWS migrations and deploying an Agentic AI system for autonomous response to AIOps insights.
+- Optimized technical workflows and managed operational reviews across global infrastructure, improving overall performance and efficiency.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed $25M annual OPEX, generating $8M in savings through strategic automation initiatives and vendor renegotiation for optimal technical service delivery.
+- Provided global delivery leadership for complex engagements, establishing consistent operational standards and ensuring technical execution across diverse teams.
+- Scaled a Capacity Management Center of Excellence from 10 to 250 members across 5 countries, fostering a culture of data-driven resource optimization.
+- Modernized contact center operations by integrating AI-driven insights and automation, significantly accelerating response times and improving customer experience.
+- Acted as the technical and operational bridge between business stakeholders and vendor teams, ensuring alignment and seamless execution.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Designed and implemented ITSM and automation strategies for major telecom and BFSI clients, enhancing service delivery and operational efficiency.
+- Introduced standardized operating procedures and performance dashboards, leading to measurable improvements in delivery speed and service quality.
+- Led critical Problem and Change Management processes, driving root cause analysis and ensuring risk-controlled technical changes across enterprise platforms.
+- Conducted ITIL assessments and tailored framework implementations to enhance compliance and operational resilience for client environments.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed and managed enterprise-grade infrastructure monitoring solutions for large-scale operations.
+- Directed major technical release deployments, ensuring minimal disruption and high availability for critical telecom services.
+- Provided lead application support for NHS UK, overseeing timely resolution of issues across vital healthcare platforms and ensuring service continuity.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Provided expert technical support for mission-critical telecom systems, resolving high-impact escalations and minimizing service downtime.
+- Authored standard operating procedures and trained support engineers, enhancing team capability in rapid issue resolution.
+[/EXPERIENCE]
+
+[PROJECTS]
+- AI-Enabled Academic Strategy & Institutional Intelligence Leadership
+- Founder & Executive Architect — AI-Driven Education Platforms
+- Platform vision, monetization model, and enterprise scalability
+- AI-driven dashboards, analytics, and decision intelligence
+- End-to-end leadership across AI strategy, architecture, delivery, and ROI
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud Platforms & Engineering: Google Cloud (BigQuery, Cloud Functions, Cloud Run, Compute Engine), AWS, Azure, Serverless Architectures, Microservices, Infrastructure-as-Code.
+Data & Analytics: SQL/MySQL, Data Analysis, Business Intelligence Platforms, ETL Pipelines, Data Modeling, Query Optimization.
+Automation & Orchestration: API-driven Automation, Workflow Engines, CI/CD (GitHub Actions), Python, JavaScript, Shell Scripting, Automated Diagnostics & Remediation.
+Observability & SRE: Distributed Tracing, Log Correlation, Alert Hygiene, SLO-based Monitoring, Incident Management, Telemetry, System Reliability.
+Platform Operations & ITSM: IT Service Management (ServiceNow, Jira), Capacity Management, Global Operations, FinOps, Vendor Management Systems.
+Monitoring & Telemetry: Datadog, New Relic, Prometheus, CloudWatch, Azure Monitor.
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
