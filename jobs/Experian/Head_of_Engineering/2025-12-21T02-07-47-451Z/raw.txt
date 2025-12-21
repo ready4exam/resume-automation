@@ -1,0 +1,90 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+A highly accomplished technology executive with over two decades of global leadership, specializing in engineering excellence and strategic digital transformation. Proven expertise in building, mentoring, and inspiring high-performing teams to deliver innovative, scalable, and secure cloud-native solutions. Adept at driving platform modernization, adopting AI/ML, and optimizing engineering practices to achieve critical business objectives and recover complex programs. Prepared to leverage deep architectural understanding and business acumen to lead Experian's engineering strategy, advance key products like Consumer Sync and Data Enrichment, and accelerate cloud migration initiatives on AWS.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Technical Architecture Leadership
+Global Engineering Management
+Cloud & Platform Modernization
+AI/ML Strategy & Implementation
+DevOps & CI/CD Excellence
+Strategic Program Delivery
+Business Acumen & Stakeholder Engagement
+Governance & Compliance Leadership
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic advisory engagements for enterprise clients, guiding technical architecture and IT modernization aligned with cloud-native patterns and industry best practices.
+- Directed the engineering of an AI-driven automation framework, significantly enhancing service reliability and operational efficiency.
+- Championed FinOps initiatives, developing hybrid-cloud cost dashboards and accelerators to drive proactive budget optimization and resource management.
+- Fostered strong relationships with global leadership and senior stakeholders to align technical vision with business objectives and drive platform transformation roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Led global engineering operations for mission-critical data center portfolios, ensuring high availability, performance, and capacity management for enterprise services.
+- Directed a $30M+ vendor displacement program, insourcing critical infrastructure services to enhance engineering agility and strategic control over core platforms.
+- Drove Cloud & DevOps enablement, including significant AWS migrations and the implementation of an Agentic AI system for autonomous AIOps response.
+- Oversaw the operational excellence for over 100,000 physical IT assets, ensuring robust security, compliance, and data protection practices were embedded.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed a $25M annual OPEX budget, achieving $8M savings through engineering automation, vendor optimization, and license management.
+- Provided global engineering delivery leadership for complex, mission-critical service engagements, ensuring consistent execution across international centers.
+- Built and scaled a Capacity Management Center of Excellence, fostering team growth and expertise across five countries.
+- Drove the modernization of contact center operations by integrating AI-driven insights, significantly accelerating response times and improving service quality.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Advised major telecom and BFSI clients on ITSM and automation strategies, enhancing their technical capabilities and operational efficiency.
+- Developed and implemented SOPs and performance dashboards, leading to measurable improvements in engineering delivery speed and quality.
+- Spearheaded Problem and Change Management, driving root cause analysis and implementing risk-controlled changes to ensure robust governance across critical systems.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Oversaw the deployment of enterprise monitoring solutions, establishing foundational observability for critical infrastructure.
+- Directed major release deployments, ensuring minimal disruption and high availability for large-scale telecommunications services.
+- Provided leadership in application support for critical healthcare platforms, ensuring timely resolution and maintaining service integrity.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Managed high-impact technical escalations for mission-critical telecom systems, demonstrating hands-on problem-solving and rapid issue resolution.
+- Contributed to team capability development by training L1/L2 engineers and authoring standard operating procedures for critical support processes.
+[/EXPERIENCE]
+
+[PROJECTS]
+- AI-Enabled Academic Strategy & Institutional Intelligence Leadership
+- Founder & Executive Architect — AI-Driven Education Platforms
+- Platform vision, monetization model, and enterprise scalability
+- AI-driven dashboards, analytics, and decision intelligence
+- End-to-end leadership across AI strategy, architecture, delivery, and ROI
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & Infrastructure: AWS, Azure, Cloud-native Architectures, VMware Tanzu, Ansible
+Programming & Automation: Python, JavaScript, Shell Scripting, API-driven automation
+DevOps & SRE: CI/CD Pipelines, GitHub Actions, Infrastructure-as-Code
+Observability & Monitoring: Datadog, New Relic, Prometheus, Grafana, CloudWatch, Azure Monitor, ScienceLogic, Zabbix
+AI/ML & Data: AI/ML Solutions, Data Pipeline Automation, Advanced Analytics
+Enterprise Systems: ServiceNow, Jira Service Management, Remedy, HP OpenView, SolarWinds, CoreStack, Flexera
+System Design: Backend Engineering, API Architecture, Serverless Functions
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+- Microsoft Azure Solutions Architect Expert
+- AWS Certified Cloud Practitioner
+- FinOps Certified Practitioner
+- Google Digital Leader
+- IBM Architect & Consulting Badges
+- ITIL v3
+- COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+- Post Graduate Programme in Project Management – IIT Roorkee, 2025
+- Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+- Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
