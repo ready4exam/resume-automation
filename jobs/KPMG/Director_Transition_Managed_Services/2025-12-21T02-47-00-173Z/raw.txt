@@ -1,0 +1,101 @@
+[CONTACT]
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+Highly accomplished IT executive with 21+ years of global experience in strategic leadership, service transition, and managed services. Proven expertise in driving complex BPO/KPO and technology platform transitions, emphasizing operational excellence and lean/AI transformation across global delivery models. Possesses a strong background in financial services, regulated environments, ensuring SOX and cyber compliance. Adept at leading large, cross-functional teams and engaging global stakeholders to achieve business objectives and enhance enterprise scalability and efficiency. Well-suited to drive strategic transitions at KPMG as Director - Transition, Managed Services.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Transition & Managed Services Leadership
+Global Operations & Service Delivery
+AI & Lean Transformation Strategy
+Executive Stakeholder Engagement
+High-Performance Team Leadership
+Financial & Regulatory Compliance
+Operational Excellence & Quality Assurance
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led ITSM assessments and strategic advisory engagements for enterprise healthcare and BFSI clients, ensuring NIST/ITIL compliance and readiness for complex managed service transitions.
+- Engineered an AI-driven automation framework, reducing repeat failures by 60% and enhancing service reliability across managed services engagements.
+- Directed FinOps teams in developing hybrid-cloud cost dashboards and accelerators, driving proactive budget optimization for large-scale platform operations.
+- Cultivated strong relationships with global leadership across US, LatAm, Europe, and APAC to deliver platform modernization roadmaps and increase AI adoption across service delivery engagements.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Oversaw global technology service delivery for large-scale mission-critical data center portfolios, enhancing reliability and capacity management for managed services.
+- Led a $30M+ vendor displacement program, insourcing critical infrastructure services to improve agility and reduce dependency in a complex transition.
+- Championed Cloud & DevOps enablement initiatives, including AWS migrations and an Agentic AI system to autonomously respond to AIOps insights.
+- Managed operations of 100,000+ physical IT assets, ensuring high availability and performance across regulated environments.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed $25M annual OPEX, generating $8M savings through automation, vendor renegotiation, and license optimization for global service delivery.
+- Provided global delivery leadership for complex service engagements (e.g., Scotiabank), ensuring consistency and quality across global centers.
+- Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, fostering people leadership and talent development.
+- Standardized ITIL-based frameworks for end-to-end capacity management and managed services transitions.
+- Modernized contact center operations by integrating AI-driven insights to accelerate response times and enhance efficiency.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, aligning with operational excellence goals.
+- Introduced SOPs and dashboards that significantly improved managed services delivery speed and quality, supporting transition phases.
+- Led Problem/Change Management—drove RCA, implemented risk-controlled changes, chaired CAB, and ensured governance for critical systems.
+- Conducted ITIL assessments and implemented tailored frameworks to enhance compliance and operational efficiency.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed enterprise monitoring tools including Nagios, Zabbix, and HP OpenView for robust infrastructure oversight.
+- Managed major release deployments with minimal disruption for British Telecom, emphasizing meticulous planning and execution in transitions.
+- Led application support for NHS UK, ensuring timely resolution of issues across critical healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Handled high-impact escalations and supported mission-critical telecom systems, reducing downtime through rapid resolution.
+- Reduced downtime through rapid issue resolution and effective troubleshooting, maintaining service continuity.
+- Trained L1/L2 engineers and authored SOP documentation, enhancing team capabilities and knowledge transfer.
+
+Company: ENTREPRENEURIAL VENTURES | AI-Driven Academic Intelligence Ready4Industry & Ready4Exam | Founder & Executive Architect (Live Platforms: ready4industry.in | Architecture Source)
+- AI-Native Ecosystem Architecture: Founded and architected a proprietary K-12 assessment engine using Google Gemini API to automate the generation of NCERT-aligned pedagogical content.
+- Deployed the unique LPG (Learn, Practice, Grow) mastery model to personalize student remediation paths within a live, revenue-generating environment.
+- Secure Commercial Infrastructure: Engineered a serverless, scalable platform using Firebase Authentication and Supabase.
+- Implemented a copyrighted Double-Lock security protocol (Grade + Stream validation) and Silent Trial logic to enforce granular access control and B2B subscription validity.
+- Institutional Business Intelligence: Built executive-grade Looker Dashboards providing role-based insights for Principals and Educators.
+- Developed Cognitive Weakness Heatmaps and predictive risk modeling to transform raw exam data into actionable institutional strategy.
+- IP & Strategic Leadership: Successfully filed Indian Copyright (Software & Literary) for the platform’s source code and administrative methodology.
+- Led end-to-end product strategy, from defining the Manual-First RBAC governance model to establishing a scalable licensing architecture for institutional adoption.
+[/EXPERIENCE]
+
+[PROJECTS]
+- AI-Enabled Academic Strategy & Institutional Intelligence Leadership
+- Founder & Executive Architect — AI-Driven Education Platforms
+- Platform vision, monetization model, and enterprise scalability
+- AI-driven dashboards, analytics, and decision intelligence
+- End-to-end leadership across AI strategy, architecture, delivery, and ROI
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps Platforms: Azure Monitor, CloudWatch, Grafana, CoreStack, ECAM, Flexera, AWS, GCP
+Observability & Monitoring: ScienceLogic, Datadog, New Relic, Prometheus, Tanzu, Distributed Tracing, Telemetry Correlation, Alerting
+ITSM & Service Management: ServiceNow, Remedy, Jira Service Management
+Infrastructure & Automation: Ansible, VMware Tanzu, HP OpenView, SolarWinds, Zabbix, Infrastructure-as-Code, Serverless Functions, CI/CD (GitHub Actions)
+Backend & Platform Engineering: API Design & Integration, Data Modeling, Authentication, RBAC, Scalable Architecture, Microservices
+Software Engineering (Scripting): Python, JavaScript, Shell Scripting, Automated Diagnostics, Workflow Orchestration
+Business Intelligence & Visualization: Power BI, MS Visio, Looker Dashboards, Analytics Pipelines
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
