@@ -1,0 +1,96 @@
+[CONTACT]
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+A highly accomplished IT executive with 21+ years of global experience in leading technology service delivery and operational excellence. Proven expertise in building trusted client relationships, spearheading platform modernization, and driving enterprise-wide transformation programs. Adept at leading complex service engagements, ensuring stringent SLA adherence, and managing major incident resolution through strategic oversight and executive communication. Skilled in fostering high-performing teams, optimizing delivery performance, and implementing continuous improvement across multi-client portfolios. Poised to drive exceptional ServiceNow delivery and strategic client success as Delivery Head at Aelum Consulting.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Strategic Leadership
+ServiceNow Program Delivery
+Client & Stakeholder Management
+Incident & Escalation Management
+SLA & KPI Governance
+Executive Reporting & Communication
+Team Leadership & Mentoring
+Process Improvement & Governance
+Budget & Resource Optimization
+Multi-Engagement Oversight
+Platform Modernization
+AI & Automation Strategy
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led strategic advisory and ITSM engagements for enterprise clients, aligning solutions with industry best practices and governance standards.
+- Engineered an AI-driven automation framework to proactively reduce recurring incidents by 60%, enhancing service reliability across client portfolios.
+- Directed FinOps initiatives, developing cost optimization dashboards and accelerators for hybrid-cloud environments, aligning with budget oversight.
+- Cultivated strategic relationships with global leadership to champion and deliver enterprise-wide platform modernization roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Oversaw global technology service delivery for large-scale mission-critical portfolios, enhancing reliability and capacity management.
+- Led a $30M+ vendor displacement program, insourcing critical infrastructure services to improve operational agility and reduce external dependencies.
+- Championed Cloud & DevOps enablement, including AWS migrations and developing an Agentic AI system for autonomous response to AIOps insights.
+- Managed global operations of 100,000+ IT assets, ensuring high availability, performance, and adherence to service delivery standards.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed $25M annual OPEX, realizing $8M savings through automation, vendor renegotiation, and license optimization initiatives.
+- Provided global delivery leadership for complex enterprise service engagements, ensuring consistent execution across diverse global centers.
+- Built and scaled the Capacity Management Center of Excellence from 10 to 250 members across 5 countries, fostering team growth.
+- Standardized ITIL-based frameworks for comprehensive capacity management, enhancing operational governance and best practices.
+- Modernized contact center operations through AI-driven insights, significantly accelerating response times and improving service delivery.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers, enhancing service operations.
+- Introduced standardized operating procedures (SOPs) and performance dashboards, significantly improving delivery speed and quality.
+- Led Problem and Change Management, driving root cause analysis, implementing risk-controlled changes, and ensuring governance through CAB leadership.
+- Conducted ITIL assessments and implemented tailored frameworks to enhance compliance and operational efficiency.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed enterprise monitoring tools to enhance infrastructure visibility and proactive issue detection.
+- Managed major release deployments for critical systems, ensuring minimal disruption and adherence to change management protocols.
+- Led application support for critical healthcare platforms, ensuring timely issue resolution and maintaining service continuity.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Handled high-impact escalations and provided critical support for mission-critical telecom systems.
+- Reduced system downtime through rapid issue resolution and effective troubleshooting techniques.
+- Mentored L1/L2 engineers and developed standard operating procedure (SOP) documentation to enhance support capabilities.
+[/EXPERIENCE]
+
+[PROJECTS]
+- AI-Enabled Academic Strategy & Institutional Intelligence Leadership
+- Founder & Executive Architect — AI-Driven Education Platforms
+- Platform vision, monetization model, and enterprise scalability
+- AI-driven dashboards, analytics, and decision intelligence
+- End-to-end leadership across AI strategy, architecture, delivery, and ROI
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+ServiceNow & ITSM Platforms: ServiceNow, Remedy, Jira Service Management
+Cloud Platforms & FinOps: Azure, AWS, GCP, CoreStack, Flexera, ECAM, Hybrid-Cloud Cost Optimization
+SRE & Observability Engineering: ScienceLogic, Datadog, New Relic, Prometheus, Tanzu, Nagios, Zabbix, HP OpenView, Distributed Tracing, Telemetry Correlation, SLO-based Monitoring
+Automation & DevOps: API-driven Automation, Workflow Orchestration, CI/CD (GitHub Actions), Infrastructure-as-Code, Ansible, VMware Tanzu
+Platform & Backend Engineering: API Design, Modular Backend Components, Data Modeling, Serverless Functions, Event-Driven Automation
+Programming & Scripting: JavaScript, Python, Shell Scripting
+BI & Analytics: Power BI, MS Visio, Operational Dashboards, Service Health Analytics
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
