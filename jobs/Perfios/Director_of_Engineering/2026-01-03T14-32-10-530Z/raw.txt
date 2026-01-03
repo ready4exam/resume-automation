@@ -1,0 +1,83 @@
+[CONTACT]
+Keshav Karn
+Hyderabad, India
+Phone: 8520977573
+Email: keshav.karn@gmail.com
+LinkedIn | Credly
+[/CONTACT]
+
+[SUMMARY]
+Highly accomplished IT executive with 21+ years of global experience in leading complex technology and infrastructure engineering initiatives. Expert in driving operational excellence, platform modernization, and strategic service delivery for enterprise-scale environments, with deep roots in BFSI. Adept at transforming critical systems, implementing AI-driven automation, and managing large, geographically dispersed engineering teams to enhance reliability and performance. Proven ability to align robust technology strategies with business objectives, fostering innovation and continuous improvement. Seeking to leverage deep expertise in infrastructure, SRE, and cloud operations to drive engineering excellence as Director of Engineering at Perfios.
+[/SUMMARY]
+
+[CORE_SKILLS]
+Strategic Leadership
+Service Delivery Management
+Infrastructure & Operations
+Project & Program Management
+Transformation & Innovation
+[/CORE_SKILLS]
+
+[EXPERIENCE]
+Company: PwC — Senior Manager (Sep 2024 – Present)
+- Led ITSM assessments and strategic advisory engagements for enterprise healthcare and BFSI clients, ensuring alignment with NIST and ITIL standards.
+- Engineered an AI-driven automation framework, reducing repeat failures by 60% and improving service reliability.
+- Directed a FinOps team in developing hybrid-cloud cost dashboards and accelerators, driving proactive budget optimization.
+- Built strong relationships with global leadership across US, LatAm, Europe, and APAC to deliver platform modernization roadmaps.
+
+Company: Kyndryl Solutions Pvt. Ltd. — Associate Director (Sep 2021 – Aug 2024)
+- Directed global service reliability engineering for mission-critical data center platforms, enhancing availability and performance across large-scale portfolios.
+- Led a $30M+ vendor displacement program, insourcing critical infrastructure services to improve agility and reduce dependency.
+- Championed Cloud & DevOps enablement initiatives, including AWS migrations and an Agentic AI system to autonomously respond to AIOps insights.
+- Managed operations of 100,000+ physical IT assets (servers, network devices) ensuring high availability and performance.
+
+Company: IBM India Pvt. Ltd. — Global Process Owner (Jan 2014 – Aug 2021)
+- Managed $25M annual OPEX, generating $8M savings through automation, vendor renegotiation, and license optimization.
+- Provided global delivery leadership for complex service engagements (e.g., Scotiabank), ensuring consistency across global centers.
+- Built and scaled the Capacity Management Center of Excellence from 10 → 250 members across 5 countries.
+- Standardized ITIL-based frameworks for end-to-end capacity management.
+- Modernized contact center operations by integrating AI-driven insights to accelerate response times.
+
+Company: Wipro Technologies — Senior Consultant (Jun 2010 – Nov 2013)
+- Delivered ITSM consulting and automation strategies for major telecom and BFSI customers.
+- Introduced SOPs and dashboards that significantly improved delivery speed and quality.
+- Led Problem/Change Management—drove RCA, implemented risk-controlled changes, chaired CAB, and ensured governance.
+- Conducted ITIL assessments and implemented tailored frameworks to enhance compliance and efficiency.
+
+Company: Tech Mahindra Ltd. — Senior Technical Associate (Oct 2006 – May 2010)
+- Deployed enterprise monitoring tools including Nagios, Zabbix, and HP OpenView.
+- Managed major release deployments with minimal disruption for British Telecom.
+- Led application support for NHS UK, ensuring timely resolution of issues across critical healthcare platforms.
+
+Company: Mainstay Teleservices — Sr. 2nd Line Specialist (Mar 2003 – Oct 2006)
+- Handled high-impact escalations and supported mission-critical telecom systems.
+- Reduced downtime through rapid issue resolution and effective troubleshooting.
+- Trained L1/L2 engineers and authored SOP documentation.
+[/EXPERIENCE]
+
+[PROJECTS]
+[/PROJECTS]
+
+[TECHNICAL_SKILLS]
+Cloud & FinOps: Azure Monitor, CloudWatch, Grafana, CoreStack, ECAM, Flexera
+Monitoring: ScienceLogic, Datadog, New Relic, Prometheus, Tanzu
+ITSM Tools: ServiceNow, Remedy, Jira Service Management
+Infrastructure: Ansible, VMware Tanzu, HP OpenView, SolarWinds, Zabbix
+BI & Modeling: Power BI, MS Visio
+[/TECHNICAL_SKILLS]
+
+[CERTIFICATIONS]
+Microsoft Azure Solutions Architect Expert
+AWS Certified Cloud Practitioner
+FinOps Certified Practitioner
+Google Digital Leader
+IBM Architect & Consulting Badges
+ITIL v3
+COBIT 4.1
+[/CERTIFICATIONS]
+
+[EDUCATION]
+Post Graduate Programme in Project Management – IIT Roorkee, 2025
+Master’s in Information Technology – Manipal Academy of Higher Education, 2002
+Bachelor of Science – Anugrah Narayan College, Patna University, 1999
+[/EDUCATION]
